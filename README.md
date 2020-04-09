@@ -8,7 +8,7 @@ En este respositorio encontrarás versiones .csv de datos de COVID19 en Chile, l
 
 Los datos disponibles son los siguientes:
 * [confirmados.csv](csv/confirmados.csv): Total de pacientes confirmados como positivos de COVID19 por región desde 07 de marzo de 2020
-* [confirmados_comunas.csv](csv/confirmados_comunas.csv): Total de pacientes confirmados como positivos de COVID19 por comuna para datos reportados los días 30 de marzo, 1 de abril, 3 de abril y 6 de abril (no hay más informes detallados por comuna)
+* [confirmados_comunas.csv](csv/confirmados_comunas.csv): Total de pacientes confirmados como positivos de COVID19 por comuna para datos reportados los días 30 de marzo y 1, 3, 6 y 8 de abril (no hay más informes detallados por comuna)
 * [pacientes_en_uci.csv](csv/pacientes_en_uci.csv): Total de pacientes hospitalizados en la Unidad de Cuidados Intensivos (UCI) por región desde el 1 de abril de 2020
 * [muertes.csv](csv/muertes.csv): Total de muertes por COVID19 por región desde el 1 de abril de 2020
 * [notificaciones.csv](csv/notificaciones.csv): Total de casos notificados (tests) por tipo de institución (ISP, Hospital, Privado) desde el 1 de abril de 2020
