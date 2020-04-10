@@ -22,7 +22,7 @@ def update_files():
         csv_reader = csv.DictReader(csv_file, delimiter=",")
         confirmed_header = csv_reader.fieldnames
         if confirmed_header[-1] == date:
-            print("lasjdklsa")
+            print("El documento ya se encuentra actualizado")
             return
         confirmed_header.append(date)
         confirmed_data = list(csv_reader)
