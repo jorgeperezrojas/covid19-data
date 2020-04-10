@@ -1,7 +1,7 @@
 import pathlib
 
 BASE_PATH = pathlib.Path(__file__).resolve().parent.parent.absolute()
-VIRTUAL_ENV = "route/to/venv"
+VIRTUAL_ENV = "/Users/sayhello/.pyenv/versions/covid19-data/bin/python"
 GOV_PAGE_URL = "https://www.minsal.cl/nuevo-coronavirus-2019-ncov/casos-confirmados-en-chile-covid-19/"
 REGIONS_JSON_FILE = "{}/src/regions.json".format(BASE_PATH)
 CONFIRMED_CSV_PATH = "{}/csv/confirmados.csv".format(BASE_PATH)
