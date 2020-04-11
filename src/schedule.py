@@ -1,11 +1,13 @@
 from crontab import CronTab
 from getpass import getuser
+import subprocess as cmd
 
-from constants import CRON_EXECUTABLE, VIRTUAL_ENV
+from getdata.scraping.helpers.constants import CRON_EXECUTABLE, VIRTUAL_ENV
 
 user = getuser()
 
 cron = CronTab(user=user)
 job = cron.new(command="{} {} >> ~/cron.log 2>&1".format(VIRTUAL_ENV, CRON_EXECUTABLE))
-job.setall("00,15,30,45 8-12 * * *")
+job.setall("00,15,30,45 8-13 * * *")
+cmd.run("rm -f cron.log", shell=True, cwd="~/")
 cron.write()
