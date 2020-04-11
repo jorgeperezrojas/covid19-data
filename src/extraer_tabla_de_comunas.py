@@ -163,16 +163,14 @@ def extrae_comunas_por_region(textos_tablas_de_regiones, permisivo=False):
                 info += "\nDATOS EXTRAIDOS\n" + "-"*20 + "\n" + str(datos_comunas)
                 print(info)
 
-                print(c)
-
         datos_comunas_por_region.append(datos_comunas)
 
     return datos_comunas_por_region
 
 
 
-archivo = '../../informes/Reporte_COVID_19_06_04_2020.pdf'
-#archivo = '../../informes/INFORME_EP_COVID19_20200408.pdf'
+#archivo = '../../informes/Reporte_COVID_19_06_04_2020.pdf'
+archivo = '../../informes/INFORME_EP_COVID19_20200408.pdf'
 texto = copia_texto_desde_archivo(archivo)
 textos_tablas_de_regiones = extrae_texto_para_cada_region(texto)
 datos_comunas_por_region = extrae_comunas_por_region(textos_tablas_de_regiones, permisivo=True)
