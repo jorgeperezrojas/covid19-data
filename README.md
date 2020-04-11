@@ -11,7 +11,7 @@ Los datos disponibles son los siguientes:
 * [confirmados_comunas.csv](csv/confirmados_comunas.csv): Total de pacientes confirmados como positivos de COVID19 por comuna para datos reportados desde el lunes 30 de marzo (según el Minsal estos datos se liberarán los lunes, miércoles y viernes de cada semana)
 * [pacientes_en_uci.csv](csv/pacientes_en_uci.csv): Total de pacientes hospitalizados en la Unidad de Cuidados Intensivos (UCI) por región desde el 1 de abril de 2020
 * [muertes.csv](csv/muertes.csv): Total de muertes por COVID19 por región desde el 1 de abril de 2020
-* [notificaciones.csv](csv/notificaciones.csv): Total de casos notificados (tests) por tipo de institución (ISP, Hospital, Privado) desde el 1 de abril de 2020
+* [notificaciones.csv](csv/notificaciones.csv): Total de casos notificados (tests) por tipo de institución (ISP, Hospital, Privado) desde el 1 de abril de 2020 (Este es un dato un tanto ambiguo. El Minsal lo reporta como "tests notificados" pero parece estar ligado mas a un "reporte de sospecha" en el sistema Epivigila.)
 
 ## Fuentes
 
