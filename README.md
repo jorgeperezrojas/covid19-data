@@ -8,14 +8,14 @@ En este respositorio encontrarás versiones .csv de datos de COVID19 en Chile, l
 
 Los datos disponibles son los siguientes:
 * [confirmados.csv](csv/confirmados.csv): Total de pacientes confirmados como positivos de COVID19 por región desde 07 de marzo de 2020
-* [confirmados_comunas.csv](csv/confirmados_comunas.csv): Total de pacientes confirmados como positivos de COVID19 por comuna para datos reportados los días 30 de marzo y 1, 3, 6 y 8 de abril (no hay más informes detallados por comuna)
+* [confirmados_comunas.csv](csv/confirmados_comunas.csv): Total de pacientes confirmados como positivos de COVID19 por comuna para datos reportados desde el lunes 30 de marzo (según el Minsal estos datos se liberarán los lunes, miércoles y viernes de cada semana)
 * [pacientes_en_uci.csv](csv/pacientes_en_uci.csv): Total de pacientes hospitalizados en la Unidad de Cuidados Intensivos (UCI) por región desde el 1 de abril de 2020
 * [muertes.csv](csv/muertes.csv): Total de muertes por COVID19 por región desde el 1 de abril de 2020
 * [notificaciones.csv](csv/notificaciones.csv): Total de casos notificados (tests) por tipo de institución (ISP, Hospital, Privado) desde el 1 de abril de 2020
 
 ## Fuentes
 
-Todos los datos de este repositorio han sido extraidos desde fuentes oficiales a partir del 10 de marzo de 2020, principalmente desde los siguientes sitios:
+Los datos de este repositorio han sido extraidos desde fuentes oficiales a partir del 10 de marzo de 2020, principalmente desde los siguientes sitios:
 * [Informes COVID 19 (Depto. Epidemiología Minsal)](http://epi.minsal.cl/informes-covid-19/) 
 * [Reportes COVID 19 Diarios (Gobierno de Chile)](https://www.gob.cl/coronavirus/cifrasoficiales/#reportes)
 * [Resumen diario COVID 19 (Minsal)](https://www.minsal.cl/nuevo-coronavirus-2019-ncov/casos-confirmados-en-chile-covid-19/)
@@ -32,6 +32,7 @@ Lo anterior copia los datos de [confirmados.csv](csv/confirmados.csv) pero puede
 
 ## Agradecimientos
 
-Hasta ahora han aportado 🥰:
+Gente que ha aportado🥰 con datos, chequeos, código, reportando errores, etc.:
 * [pbecerra](https://github.com/pabecerra)
 * [Daniel Gomez M.](https://github.com/danielgomezm)
+* [SebastiánR](https://twitter.com/SebastinR14)
