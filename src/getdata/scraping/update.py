@@ -115,9 +115,9 @@ def update_recovered():
             writer = csv.DictWriter(csv_file, fieldnames=national_header)
             writer.writeheader()
             writer.writerows(national_data)
-    date = datetime.date.today().strftime("%m/%d/%y")
-    message = "recuperados al {}".format(date)
-    git_commit_and_push(message)
+        date = datetime.date.today().strftime("%m/%d/%y")
+        message = "recuperados al {}".format(date)
+        git_commit_and_push(message)
 
 
 if __name__ == "__main__":
