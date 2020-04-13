@@ -44,3 +44,4 @@ pydevd*.log
 nodeLanguageServer/**
 nodeLanguageServer.*/**
 .vscode/
+src/covid-chile.json
