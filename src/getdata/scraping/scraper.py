@@ -4,6 +4,7 @@ import ast
 from bs4 import BeautifulSoup as soup
 from urllib.request import urlopen as ureq
 from urllib.request import Request, urlopen
+import ssl
 
 from ..scraping.helpers.utils import format_date_last_update, undotter
 
@@ -41,6 +42,7 @@ def get_gov_page():
 
 
 def get_minsal_recovered():
+    ssl._create_default_https_context = ssl._create_unverified_context
     uclient = ureq(MINSAL_PAGE_URL)
     page_html = uclient.read()
     uclient.close()

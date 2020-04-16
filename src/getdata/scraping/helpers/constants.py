@@ -1,9 +1,10 @@
 import pathlib
+import os
 
 BASE_PATH = (
     pathlib.Path(__file__).resolve().parent.parent.parent.parent.parent.absolute()
 )
-VIRTUAL_ENV = "/Users/sayhello/.pyenv/versions/covid19-data/bin/python"
+VIRTUAL_ENV = os.getenv("COVID19_VENV")
 GOV_PAGE_URL = "https://www.gob.cl/coronavirus/cifrasoficiales/"
 MINSAL_PAGE_URL = "https://www.minsal.cl/nuevo-coronavirus-2019-ncov/casos-confirmados-en-chile-covid-19/"
 REGIONS_JSON_FILE = "{}/src//getdata/scraping/helpers/regions.json".format(BASE_PATH)
