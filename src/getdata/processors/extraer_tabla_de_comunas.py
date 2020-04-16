@@ -1,3 +1,4 @@
+import csv
 import subprocess
 import pyautogui
 import pyperclip
@@ -7,22 +8,29 @@ import ipdb
 
 # TODO: hacerle un main para que se pueda correr desde la linea de comando
 
-def copia_texto_desde_archivo(archivo, app='Preview'):
+# Estos números son 1 + la cantidad de comunas de cada región
+# Se usan para chequear que se hayan obtenidos todos los datos
+cantidad_comunas = [5,8,10,10,16,39,53,34,31,22,34,33,13,31,11,12]
+
+def copia_texto_desde_archivo(archivo, s_time=3, app='Google Chrome'):
     # Copia el texto (Cmd+C) desde una ventana a un texto (Cmd+V)
     # No es la mejor forma, pero el Minsal no nos da mucha opción :-(
-    x,y  = 50, 50
+    x,y  = 500, 300
 
     subprocess.Popen(['open', '-na', app, archivo])
     time.sleep(2)
     
     pyautogui.moveTo(x, y)
     pyautogui.click()
+    pyautogui.scroll(-100, x, y)
+    time.sleep(2)
+
     
     pyautogui.hotkey('command', 'a')
-    time.sleep(5)
+    time.sleep(s_time)
     
     pyautogui.hotkey('command', 'c')
-    time.sleep(5)
+    time.sleep(s_time)
     
     pyautogui.hotkey('command', 'w')
     time.sleep(1)
@@ -30,12 +38,135 @@ def copia_texto_desde_archivo(archivo, app='Preview'):
     text = pyperclip.paste()
     return text
 
-def extrae_texto_para_cada_region(texto):
+def lee_datos_csv_para_heurística(archivo='data_for_preprocessing.csv',
+        columna_region=0, columna_comuna=2, columna_habitantes=1):
+    # Asume un archivo de datos de comunas ordenado por region (dato columna 0) 
+    # y el nombre de las comunas con datos de habitantes
+    with open(archivo) as infile:
+        reader = csv.reader(infile)
+        pre_datos_de_regiones = []
+        for row in reader:
+            posible_region = row[columna_region]
+            if posible_region != '':
+                # comienza una nueva región
+                nueva_region = []
+                pre_datos_de_regiones.append(nueva_region)
+            comuna = row[columna_comuna]
+            habitantes = int(row[columna_habitantes])
+            nueva_region.append((comuna,habitantes))
 
+    # Chequea cierta consistencia en los datos
+    assert len(pre_datos_de_regiones) == 16
+    for c,pre_datos_region in zip(cantidad_comunas,pre_datos_de_regiones):
+        assert len(pre_datos_region) == c
+
+    return pre_datos_de_regiones
+
+def formatea_numero_como_re_y_string_numero(cantidad):
+    cantidad_str = str(int(cantidad))
+    out_re, out = '', ''
+    for i,c in enumerate(cantidad_str[::-1]):
+        if i != 0 and i % 3 == 0:
+            out_re = r'\.' + out_re
+            out = '.' + out
+        out_re = c + out_re
+        out = c + out
+    return (out_re, out)
+
+def busca_primer_numero_en_texto(sub_texto,texto='',__re=''):
+    # extrae el primer número válido
+    re_numero = r'(-|[.0-9]+)'
+    mo = re.search(re_numero, sub_texto)
+    if not mo:
+        out = '***'
+    else:
+        out = mo.expand(r'\1')
+    return out
+
+def busca_primer_float_en_texto(sub_texto,texto='',__re=''):
+    # extrae el primer string de la forma \d,\d 
+    re_float = r'([0-9]+,[0-9]+)'
+    mo = re.search(re_float, sub_texto)
+    if not mo:
+        out = '***'
+    else:
+        out = mo.expand(r'\1')
+    return out    
+
+def extrae_casos_como_string_desde_texto_region(texto, datos_habitantes_region):
+    casos = []
+    tasas = []
+    for h1,h2 in zip(datos_habitantes_region[:-1], datos_habitantes_region[1:]):
+        re_1, _ = formatea_numero_como_re_y_string_numero(h1)
+        re_2, _ = formatea_numero_como_re_y_string_numero(h2)
+        re_search = re_1 + r'((.|\n)*)' + re_2
+        mo = re.search(re_search, texto)
+        if not mo:
+            caso = '***'
+            tasa = '***'
+        else:
+            sub_texto = mo.expand(r'\1')    
+            caso = busca_primer_numero_en_texto(sub_texto,texto,re_search)
+            tasa = busca_primer_float_en_texto(sub_texto,texto,re_search)
+        casos.append(caso)
+        tasas.append(tasa)
+    re_total_hab, _ = formatea_numero_como_re_y_string_numero(datos_habitantes_region[-1])
+    re_final = re_total_hab + r'((.|\n)*)'
+    mo = re.search(re_final, texto)
+    if not mo:
+        total = '***'
+        tasa_total = '***'
+    else:
+        sub_texto = mo.expand(r'\1')
+        total = busca_primer_numero_en_texto(sub_texto,texto,re_final)
+        tasa_total = busca_primer_float_en_texto(sub_texto,texto,re_final)
+    casos.append(total)
+    tasas.append(tasa_total)
+    return casos, tasas
+
+def extrae_tasas_como_string(texto):
+    # busca todos los strings con el formato "\d+,\d+"
+    re_tasas = r'([0-9]+,[0-9]+)'
+    textos_tasas = re.findall(re_tasas, texto)
+    return textos_tasas
+
+def chequea_consistencia(comunas, textos_tasas, textos_casos, habitantes, permisivo=False):
+    # acá debería chequear que todos los datos concuerdan
+    if not permisivo:
+        if len(textos_tasas) != len(comunas):
+            ipdb.set_trace()
+        # assert len(textos_tasas) == len(comunas)
+    else: 
+        if len(textos_tasas) != len(comunas):
+            # TODO: Decidir qué hacer acá
+            pass
+
+
+def extrae_tasas_y_casos_por_region(textos_tablas_de_regiones, pre_datos_de_regiones, permisivo=False):
+    # heurística para extraer todas las tasas de las comunas de cada region
+    tasas_comunas_por_region = []
+    casos_comunas_por_region = []
+
+    for texto_tabla_region,datos_region in zip(textos_tablas_de_regiones,pre_datos_de_regiones):
+        comunas = [c for c,_ in datos_region]
+        habitantes = [h for _,h in datos_region]
+
+        textos_casos, textos_tasas = extrae_casos_como_string_desde_texto_region(texto_tabla_region, habitantes)
+        # textos_tasas = extrae_tasas_como_string(texto_tabla_region)
+
+        chequea_consistencia(comunas, textos_tasas, textos_casos, habitantes)
+        
+        tasas_comunas_por_region.append(textos_tasas)
+        casos_comunas_por_region.append(textos_casos)
+
+    return casos_comunas_por_region, tasas_comunas_por_region
+
+
+def extrae_texto_para_cada_region(texto):
     # Extrae el texto correspondiente a las tablas con las comunas por región
     # Supone que cada de cada región comienza con un encabezado y termina 
     # con la primera aparición del string `Total`
-    re_tablas_de_comunas = r'(Poblaci.*Confirmados(T[^o]|To[^t]|[^T])*Total\n.*\n *([0-9]+,[0-9]+)?)'
+    re_tablas_de_comunas = r'(Poblaci[^T]*Confirmado(T[^o]|To[^t]|[^T])*Total[\n ]*[.0-9]*[\n ]*[.0-9]+[\n ]*[,0-9]+)'
     textos_tablas_de_regiones = re.findall(re_tablas_de_comunas, texto)
     
     # Si se extrayeron menos de 16 regiones lanza un error
@@ -43,135 +174,63 @@ def extrae_texto_para_cada_region(texto):
 
     return [x[0] for x in textos_tablas_de_regiones]
 
+def genera_datos_salida(comuna, habitantes, casos, tasa):
+    # primero limpia casos y tasa
+    casos = re.sub(r'\.','',casos)
+    tasa = re.sub(r',','.',tasa)
+    # chequea posibles erroes
+    ERR = False
+    TC = False
 
-def deja_solo_datos(texto_tabla_region):
-    # Supone que el texto de entrada tiene todos los datos de comunas correspondientes a una región.
-    texto_out = texto_tabla_region
+    if casos == '***':
+        ERR = True
+    elif casos != '-':
+        casos = int(casos)
 
-    # Primero busca si existe un "Por determinar" y lo elimina (junto con el número)
-    re_por_determinar = '[^\n0-9]+determinar[^0-9]*([0-9]+)[^\n0-9]*\n'
-    texto_out = re.sub(re_por_determinar, '', texto_out)
-
-    # Si una línea contiene al menos un número la deja, de otra forma la elimina
-    re_linea_no_datos = r'[^\-\n0-9]+\n'
-    texto_out = re.sub(re_linea_no_datos, '\n', texto_out)
-
-    # Elimina las lineas en blanco
-    re_multiples_saltos = r'\n+'
-    texto_out = re.sub(re_multiples_saltos, '\n', texto_out)    
-
-    # Elimina posible linea inicial en blanco
-    lineas = texto_out.split('\n')
-    if lineas[0].strip() == "":
-        texto_out = '\n'.join(lineas[1:])
-
-    return texto_out
-
-def intenta_extraer_datos_consistentes_de_lineas_seguidas(lineas, i):
-    re_dato_1 = r' *([0-9]+) *'
-    re_dato_2 = r' *([-0-9]+) *'
-    re_dato_3 = r' *([0-9]+\.[0-9]+) *'
-    re_espacio = r' +'
-
-    re_dato_1_2 = re_dato_1 + re_espacio + re_dato_2
-    re_dato_2_3 = re_dato_2 + re_espacio + re_dato_3
-
-    #ipdb.set_trace()
-
-    # intenta el caso en que hay dos datos en la primera linea y un dato en la siguiente
-    if re.fullmatch(re_dato_1_2, lineas[i]) and re.fullmatch(re_dato_3, lineas[i+1]):
-        linea_datos_1_2 = re.sub(re_dato_1_2, r'\1,\2', lineas[i])
-        linea_datos_3 = re.sub(re_dato_3, r'\1', lineas[i+1])
-        linea_datos = f'{linea_datos_1_2},{linea_datos_3}'
-        inc = 1
-    # intenta el caso en que hay un dato en la primera linea y dos datos en la siguiente
-    elif re.fullmatch(re_dato_1, lineas[i]) and re.fullmatch(re_dato_2_3, lineas[i+1]):
-        linea_datos_1 = re.sub(re_dato_1, r'\1', lineas[i])
-        linea_datos_2_3 = re.sub(re_dato_2_3, r'\1\2', lineas[i+1])
-        linea_datos = f'{linea_datos_1},{linea_datos_2_3}'
-        inc = 1
-    # intenta el caso en que hay un dato en cada una de las tres lineas siguientes
-    elif re.fullmatch(re_dato_1, lineas[i]) and re.fullmatch(re_dato_2, lineas[i+1]) and re.fullmatch(re_dato_3, lineas[i+2]):
-        linea_datos_1 = re.sub(re_dato_1, r'\1', lineas[i])
-        linea_datos_2 = re.sub(re_dato_2, r'\1', lineas[i+1])
-        linea_datos_3 = re.sub(re_dato_3, r'\1', lineas[i+2])
-        linea_datos = f'{linea_datos_1},{linea_datos_2},{linea_datos_3}'
-        inc = 2
+    if tasa == '***':
+        ERR = True
     else:
-        return (None,0)
+        tasa = float(tasa)
 
-    out = linea_datos.split(',')
-    return (out, inc)
+    # chequea que tasa y casos concuerden
+    if casos != '-' and casos != '***' and tasa != '***':
+        if round(tasa * habitantes/100000) != casos:
+            ERR = True
 
-def extrae_datos_comunas(texto_tabla_solo_datos):
-    # Primero cambia puntos por nada
-    texto = re.sub(r'\.', '', texto_tabla_solo_datos)
-    # Ahora cambia comas por puntos
-    texto = re.sub(',', '.', texto)
+    if casos == '-' and tasa > 0:
+        casos = round(tasa * habitantes/100000)
+        if casos > 5:
+            ERR = True
+        TC = True
 
-    # Procesa linea a linea
-    lineas = texto.split('\n')
+    out =  [habitantes, comuna, casos, tasa]
+    if ERR:
+        out = out + ['CHEQUEAR!']
+    if TC:
+        out = out + ['(calculo desde tasa)']
 
-    # Datos para guardar
-    datos = []
+    return out
 
-    # Iteracion tipo C para tener más control
-    i = 0
-    while i < len(lineas):
-        # chequea si cumple el formato
-        re_dato_limpio = r' *([0-9]+) +([-0-9]+) +([0-9]+.[0-9]+) *'
-        if re.match(re_dato_limpio, lineas[i]):
-            # extrae dato
-            linea_datos = re.sub(re_dato_limpio, r'\1,\2,\3', lineas[i])
-            datos.append(linea_datos.split(','))
-        else:
-            # si no cumple con el formato limpio aplica heurísticas simples (por ahora)
-            if re.match('[^0-9]', lineas[i].strip()):
-                # si el primer caracter es no dígito, ignora la línea
-                pass
-            else:
-                # si no, trata de extraer datos de varias líneas seguidas
-                d, inc = intenta_extraer_datos_consistentes_de_lineas_seguidas(lineas, i)
-                if d != None:
-                    datos.append(d)
-                    i = i + inc
-                else:
-                    # No se pudo hacer match (tal vez habría que reportar el error?)
-                    pass
-        i = i + 1
-    return datos
-
-def extrae_comunas_por_region(textos_tablas_de_regiones, permisivo=False):
-    # Estos números son 1 + la cantidad de comunas de cada región
-    # Se usan para chequear que se hayan obtenidos todos los datos
-    cantidad_comunas = [5,8,10,10,16,39,53,34,31,22,34,33,13,31,11,12]
-    datos_comunas_por_region = []
-
-    for c,texto_tabla_region in zip(cantidad_comunas,textos_tablas_de_regiones):
-        # Intenta dejar solo datos
-        texto_tabla_solo_datos = deja_solo_datos(texto_tabla_region)
-
-        # Procesa por linea para extraer datos
-        datos_comunas = extrae_datos_comunas(texto_tabla_solo_datos)
-
-        if not permisivo:
-            assert len(datos_comunas) == c
-        else:
-            if len(datos_comunas) != c:
-                info = "Hay inconsistencia en datos extraidos para una región. Debería revisar...\n"
-                info += "\nTEXTO\n" + "-"*20 + "\n" + texto_tabla_region 
-                info += "\nDATOS EXTRAIDOS\n" + "-"*20 + "\n" + str(datos_comunas)
-                print(info)
-
-        datos_comunas_por_region.append(datos_comunas)
-
-    return datos_comunas_por_region
+def genera_archivos_de_salida(pre_datos_de_regiones, casos_por_region, tasas_por_region, nombre_archivo='out_gs.csv'):
+    with open(nombre_archivo,'w') as outfile_gs:
+        writer = csv.writer(outfile_gs)
+        for datos_region, casos_region, tasas_region in zip(pre_datos_de_regiones, casos_por_region, tasas_por_region):
+            for dr, casos, tasa in zip(datos_region, casos_region, tasas_region):
+                comuna, habitantes = dr
+                datos = genera_datos_salida(comuna, habitantes, casos, tasa)
+                writer.writerow(datos)
+            writer.writerow([])
 
 
 
-#archivo = '../../informes/Reporte_COVID_19_06_04_2020.pdf'
-archivo = '../../informes/INFORME_EP_COVID19_20200408.pdf'
+
+# NO FUNCIONA DATOS AL REVES archivo = '../../../reports/Informe_EPI_03_04_2020.pdf'
+#archivo = '../../../reports/Reporte_COVID_19_06_04_2020.pdf'
+#archivo = '../../../reports/INFORME_EP_COVID19_20200408.pdf'
+#archivo = '../../../reports/Informe_EPI_10_04_2020.pdf'
+archivo = '../../../reports/INFORME_EPI_COVID19_20200313.pdf'
 texto = copia_texto_desde_archivo(archivo)
 textos_tablas_de_regiones = extrae_texto_para_cada_region(texto)
-datos_comunas_por_region = extrae_comunas_por_region(textos_tablas_de_regiones, permisivo=True)
-
+pre_datos_de_regiones = lee_datos_csv_para_heurística()
+casos_por_region, tasas_por_region = extrae_tasas_y_casos_por_region(textos_tablas_de_regiones,pre_datos_de_regiones)
+genera_archivos_de_salida(pre_datos_de_regiones, casos_por_region, tasas_por_region)
