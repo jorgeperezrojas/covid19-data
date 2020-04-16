@@ -4,6 +4,7 @@ En este respositorio encontrarás versiones .csv de datos de COVID19 en Chile, l
 
 ¡Pueden usar los datos para lo que quieran! Pero por favor🙏 sean responsables si hacen predicciones con ellos. Cualquiera que quiera ayudar es muy bienvenid@. Pueden hacer un *Pull Request*, abrir un *Issue* o escribir a jperez_arroba_dcc.uchile.cl.
 
+
 ## Datos
 
 Los datos disponibles son los siguientes:
@@ -12,6 +13,7 @@ Los datos disponibles son los siguientes:
 * [pacientes_en_uci.csv](csv/pacientes_en_uci.csv): Total de pacientes hospitalizados en la Unidad de Cuidados Intensivos (UCI) por región desde el 1 de abril de 2020
 * [muertes.csv](csv/muertes.csv): Total de muertes por COVID19 por región desde el 1 de abril de 2020
 * [notificaciones.csv](csv/notificaciones.csv): Total de casos notificados (tests) por tipo de institución (ISP, Hospital, Privado) desde el 1 de abril de 2020 (Este es un dato un tanto ambiguo. El Minsal lo reporta como "tests notificados" pero parece estar ligado mas a un "reporte de sospecha" en el sistema Epivigila.)
+* [resumen_nacional.csv](csv/resumen_nacional.csv): Cantidad total de contagiados, muertos y recuperados en todo el país ordenados por día. Sobre los pacientes recuperados, por favor leer el disclaimer en la sección de Fuentes.
 
 ## Fuentes
 
@@ -20,11 +22,15 @@ Los datos de este repositorio han sido extraidos desde fuentes oficiales a parti
 * [Reportes COVID 19 Diarios (Gobierno de Chile)](https://www.gob.cl/coronavirus/cifrasoficiales/#reportes)
 * [Resumen diario COVID 19 (Minsal)](https://www.minsal.cl/nuevo-coronavirus-2019-ncov/casos-confirmados-en-chile-covid-19/)
 
-La cantidad de confirmados en días previos al 10 de marzo, las obtuvimos desde informaciones varias de prensa. No reportamos los pacientes de COVID19 recuperados pues hay serias dudas de que este número sea fidedigno y tenga algún sentido práctico.
+La cantidad de confirmados en días previos al 10 de marzo, las obtuvimos desde informaciones varias de prensa.
+
+**DISCLAIMER**: Hay que tener mucho ojo con los datos sobre *pacientes recuperados*, puesto que se basan sólo en un cálculo estadístico que hace el Ministerio de Salud. De ninguna manera corresponden a datos sobre pacientes que se haya comprobado estén curados y no hayan recaído. En este repositorio sólo se recopila dicha información. Estas cifras y todos los datos aquí alojados son de responsabilidad exclusiva del gobierno y del MINSAL y el uso que les des depende complemente de ti.
 
 ## Cómo usarlos
 
-Si sabes cómo usar un archivo .csv puedes simplemente descargar el que quieras y listo. Si no estás acostumbrad@ a usar archivos .csv puedes importarlo directamente por ejemplo en una planilla de [Google Sheets](https://docs.google.com/spreadsheets/) y usar la función `IMPORTDATA` de esta forma (en cualquier celda)
+Puedes acceder a algunos de los datasets más importantes que aquí almacenamos por medio de la API del proyecto hermano [``chile-coronapi``](https://github.com/sanguineti/chile-coronapi). Dicha API consume los datos directamente desde este repositorio. Puedes consultar la documentación de ``chile-coronapi`` directamente desde su repositorio, en donde encontrarás todos los endpoints disponibles de momento.
+
+Por otra parte, si sabes cómo usar un archivo .csv puedes simplemente descargar el que quieras y listo. Si no estás acostumbrad@ a usar archivos .csv puedes importarlo directamente por ejemplo en una planilla de [Google Sheets](https://docs.google.com/spreadsheets/) y usar la función `IMPORTDATA` de esta forma (en cualquier celda)
 ```
 =IMPORTDATA("https://raw.githubusercontent.com/jorgeperezrojas/covid19-data/master/csv/confirmados.csv")
 ```
