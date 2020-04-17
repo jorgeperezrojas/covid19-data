@@ -46,3 +46,6 @@ def generate():
     df = pd.merge(df, nuevos_muertes_long, how="left", on=join_columns)
 
     df.to_csv("../../../csv/long_regiones.csv", index=False, float_format="%.0f")
+
+if __name__ == "__main__":
+    generate()
