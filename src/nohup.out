@@ -1,3 +1,46 @@
 From github.com:jorgeperezrojas/covid19-data
  * branch            master     -> FETCH_HEAD
 Already up to date.
+[master ca05e85] Actualizacion de datos csv
+ Committer: Kelly Wagemann <kwageman@Fondecyt1140790.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 3 insertions(+)
+ create mode 100644 src/nohup.out
+From github.com:jorgeperezrojas/covid19-data
+ * branch            master     -> FETCH_HEAD
+warning: fetch updated the current branch head.
+fast-forwarding your working tree from
+commit 823b971a4677354869a28ddd70f62a0077f1fb4f.
+error: The following untracked working tree files would be overwritten by merge:
+	src/nohup.out
+Please move or remove them before you merge.
+Aborting
+fatal: Cannot fast-forward your working tree.
+After making sure that you saved anything precious from
+$ git diff 823b971a4677354869a28ddd70f62a0077f1fb4f
+output, run
+$ git reset --hard
+to recover.
+Traceback (most recent call last):
+  File "automatic_commit.py", line 26, in <module>
+    cmd.run("git pull origin master", check=True, shell=True)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/subprocess.py", line 512, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command 'git pull origin master' returned non-zero exit status 128.
+To github.com:jorgeperezrojas/covid19-data.git
+   823b971..ca05e85  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+From github.com:jorgeperezrojas/covid19-data
+ * branch            master     -> FETCH_HEAD
+Already up to date.
