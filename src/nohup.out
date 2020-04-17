@@ -83,3 +83,6 @@ After doing this, you may fix the identity used for this commit with:
 To github.com:jorgeperezrojas/covid19-data.git
    259f4e6..0849316  master -> master
 Branch 'master' set up to track remote branch 'master' from 'origin'.
+From github.com:jorgeperezrojas/covid19-data
+ * branch            master     -> FETCH_HEAD
+Already up to date.
