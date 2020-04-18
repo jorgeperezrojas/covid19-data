@@ -1,5 +1,3 @@
-#-----------------------WARNING: NEEDS TO BE TESTED ----------------------------------
-
 #-----------------------"covid_chile_csv"---------------------------
 #indexes: numer of sheet -1.
 # 0: confirmados
