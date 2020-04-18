@@ -17,6 +17,7 @@ CONFIRMED_COMUNAS_CSV_PATH = "{}/csv/confirmados_comunas.csv".format(BASE_PATH)
 PATIENTS_ICU_CSV_PATH = "{}/csv/pacientes_en_uci.csv".format(BASE_PATH)
 PCRS_REGION = "{}/csv/pcrs_region.csv".format(BASE_PATH)
 CRON_EXECUTABLE = "{}/src/update_files.py".format(BASE_PATH)
+CRON_EXECUTABLE_CSV = "{}/src/auto_update_csv.py".format(BASE_PATH)
 NATIONAL_REPORT_PATH = "{}/csv/resumen_nacional.csv".format(BASE_PATH)
 
 SCOPE_FEEDS = "https://spreadsheets.google.com/feeds"
