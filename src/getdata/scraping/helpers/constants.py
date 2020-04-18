@@ -9,7 +9,7 @@ GOV_PAGE_URL = "https://www.gob.cl/coronavirus/cifrasoficiales/"
 MINSAL_PAGE_URL = "https://www.minsal.cl/nuevo-coronavirus-2019-ncov/casos-confirmados-en-chile-covid-19/"
 
 REGIONS_JSON_FILE = "{}/src//getdata/scraping/helpers/regions.json".format(BASE_PATH)
-SPREADSHEET_JSON_FILE = "{}/src//getdata/scraping/helpers/covid-chile.json".format(BASE_PATH)
+SPREADSHEET_JSON_FILE = "{}/src/getdata/scraping/helpers/covid-chile.json".format(BASE_PATH)
 CONFIRMED_CSV_PATH = "{}/csv/confirmados.csv".format(BASE_PATH)
 DEATHS_CSV_PATH = "{}/csv/muertes.csv".format(BASE_PATH)
 NOTIFICATIONS_CSV_PATH = "{}/csv/notificaciones.csv".format(BASE_PATH)
