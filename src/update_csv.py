@@ -17,7 +17,7 @@ client = gspread.authorize(creds)
 
 def update_csv(old_csv_name, csv_delimiter, sheet_number):
 
-    sheet=client.open(SPREADSHEET_JSON_FILE).get_worksheet(sheet_number)
+    sheet=client.open("covid_chile_csv").get_worksheet(sheet_number)
     first_row_new = sheet.row_values(1)
     source_sheet = sheet.get_all_values()
     data_sheet = pd.DataFrame(source_sheet)
