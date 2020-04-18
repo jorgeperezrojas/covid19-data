@@ -45,3 +45,6 @@ nodeLanguageServer/**
 nodeLanguageServer.*/**
 .vscode/
 src/getdata/scraping/helpers/covid-chile.json
+src/covid-chile.json
+src/update_csv_old.py
+src/automatic_commit.py
