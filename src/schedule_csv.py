@@ -9,8 +9,8 @@ from getdata.scraping.helpers.constants import CRON_EXECUTABLE_CSV, VIRTUAL_ENV
 
 user = getuser()
 HOME = os.getenv("HOME")
-cron = CronTab(user=user)
-job_csv = cron.new(command="{} {} >> ~/cron.log 2>&1".format(VIRTUAL_ENV, CRON_EXECUTABLE_CSV))
+cron_csv = CronTab(user=user)
+job_csv = cron_csv.new(command="{} {} >> ~/cron.log 2>&1".format(VIRTUAL_ENV, CRON_EXECUTABLE_CSV))
 job_csv.minute.every(5)
-cmd.run("rm -f cron.log", shell=True, cwd=HOME)
-cron.write()
+cmd.run("rm -f cron_csv.log", shell=True, cwd=HOME)
+cron_csv.write()
