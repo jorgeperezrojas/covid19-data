@@ -45,3 +45,4 @@ nodeLanguageServer/**
 nodeLanguageServer.*/**
 .vscode/
 src/getdata/scraping/helpers/covid-chile.json
+src/dummy.py
