@@ -5,6 +5,7 @@ BASE_PATH = (
     pathlib.Path(__file__).resolve().parent.parent.parent.parent.parent.absolute()
 )
 VIRTUAL_ENV = os.getenv("COVID19_VENV")
+VIRTUAL_ENV_AUTO_CSV = "/usr/bin/env python3"
 GOV_PAGE_URL = "https://www.gob.cl/coronavirus/cifrasoficiales/"
 MINSAL_PAGE_URL = "https://www.minsal.cl/nuevo-coronavirus-2019-ncov/casos-confirmados-en-chile-covid-19/"
 
