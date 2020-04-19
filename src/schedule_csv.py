@@ -1,4 +1,3 @@
-# -----------------------WARNING: NEEDS TO BE TESTED ----------------------------------
 import os
 from crontab import CronTab
 from getpass import getuser
