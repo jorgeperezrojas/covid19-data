@@ -119,7 +119,7 @@ def update_recovered():
         try:
             generate()
         except Exception as e:
-            print("Sorry, can't generate. The reason is: {}").format(e)
+            print("Sorry, can't generate. The reason is: {}".format(e))
         date = datetime.date.today().strftime("%m/%d/%y")
         message = "recuperados al {}".format(date)
         git_commit_and_push(message)
