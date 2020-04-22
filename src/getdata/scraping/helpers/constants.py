@@ -20,6 +20,7 @@ PCRS_REGION = "{}/csv/pcrs_region.csv".format(BASE_PATH)
 CRON_EXECUTABLE = "{}/src/update_files.py".format(BASE_PATH)
 CRON_EXECUTABLE_CSV = "{}/src/auto_update_csv.py".format(BASE_PATH)
 NATIONAL_REPORT_PATH = "{}/csv/resumen_nacional.csv".format(BASE_PATH)
+INFOGRAM_LINK = "https://infogram.com/nuevo-mapa-coronavirus-1hkv2n1q3w9z6x3"
 
 SCOPE_FEEDS = "https://spreadsheets.google.com/feeds"
 SCOPE_SPREADSHEET = "https://www.googleapis.com/auth/spreadsheets"
