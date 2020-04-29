@@ -22,6 +22,7 @@ def copia_texto_desde_archivo(archivo, s_time=3, app='Google Chrome'):
     
     pyautogui.moveTo(x, y)
     pyautogui.click()
+    time.sleep(2)
     pyautogui.scroll(-100, x, y)
     time.sleep(2)
 
@@ -222,15 +223,22 @@ def genera_archivos_de_salida(pre_datos_de_regiones, casos_por_region, tasas_por
             writer.writerow([])
 
 
+def main():
+    # NO FUNCIONA DATOS AL REVES archivo = '../../../reports/Informe_EPI_03_04_2020.pdf'
+    #archivo = '../../../reports/Reporte_COVID_19_06_04_2020.pdf'
+    #archivo = '../../../reports/INFORME_EP_COVID19_20200408.pdf'
+    #archivo = '../../../reports/Informe_EPI_10_04_2020.pdf'
+    #archivo = '../../../reports/INFORME_EPI_COVID19_20200313.pdf'
+    #archivo = '../../../reports/Informe_EPI_15_04_2020.pdf'
+    #archivo = '../../../reports/Informe-Epidemiológico-17_04_2020_Corregido-V2.pdf'
+    #archivo = '../../../reports/Informe_EPI_PUB_20042020.pdf'
+    #archivo = '../../../reports/Informe_EPI_24042020.pdf'
+    archivo = '../../../reports/Informe-EPI-27042020.pdf'
+    texto = copia_texto_desde_archivo(archivo, 5)
+    textos_tablas_de_regiones = extrae_texto_para_cada_region(texto)
+    pre_datos_de_regiones = lee_datos_csv_para_heurística()
+    casos_por_region, tasas_por_region = extrae_tasas_y_casos_por_region(textos_tablas_de_regiones,pre_datos_de_regiones)
+    genera_archivos_de_salida(pre_datos_de_regiones, casos_por_region, tasas_por_region)
 
-
-# NO FUNCIONA DATOS AL REVES archivo = '../../../reports/Informe_EPI_03_04_2020.pdf'
-#archivo = '../../../reports/Reporte_COVID_19_06_04_2020.pdf'
-#archivo = '../../../reports/INFORME_EP_COVID19_20200408.pdf'
-#archivo = '../../../reports/Informe_EPI_10_04_2020.pdf'
-archivo = '../../../reports/INFORME_EPI_COVID19_20200313.pdf'
-texto = copia_texto_desde_archivo(archivo)
-textos_tablas_de_regiones = extrae_texto_para_cada_region(texto)
-pre_datos_de_regiones = lee_datos_csv_para_heurística()
-casos_por_region, tasas_por_region = extrae_tasas_y_casos_por_region(textos_tablas_de_regiones,pre_datos_de_regiones)
-genera_archivos_de_salida(pre_datos_de_regiones, casos_por_region, tasas_por_region)
+if __name__ == '__main__':
+    main()
