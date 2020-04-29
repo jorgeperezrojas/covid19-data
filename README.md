@@ -13,7 +13,7 @@ Los datos disponibles son los siguientes:
 * [pacientes_en_uci.csv](csv/pacientes_en_uci.csv): Total de pacientes hospitalizados en la Unidad de Cuidados Intensivos (UCI) por región desde el 1 de abril de 2020
 * [muertes.csv](csv/muertes.csv): Total de muertes por COVID19 por región desde el 1 de abril de 2020
 * [notificaciones.csv](csv/notificaciones.csv): Total de casos notificados (tests) por tipo de institución (ISP, Hospital, Privado) desde el 1 de abril de 2020 (Este es un dato un tanto ambiguo. El Minsal lo reporta como "tests notificados" pero parece estar ligado mas a un "reporte de sospecha" en el sistema Epivigila.)
-* [resumen_nacional.csv](csv/resumen_nacional.csv): Cantidad total de contagiados, muertos y recuperados en todo el país ordenados por día. Sobre los pacientes recuperados, por favor leer el disclaimer en la sección de Fuentes.
+* [resumen_nacional.csv](csv/resumen_nacional.csv): Cantidad total de contagiados y muertos en todo el país ordenados por día. No reportamos los pacientes "recuperados" pues la estadística reportada por el Minsal es nada más que una fórmula (`recuperados[t] = confirmados[t-14] - muertos[t]`).
 
 ## Fuentes
 
@@ -24,7 +24,7 @@ Los datos de este repositorio han sido extraidos desde fuentes oficiales a parti
 
 La cantidad de confirmados en días previos al 10 de marzo, las obtuvimos desde informaciones varias de prensa.
 
-**DISCLAIMER**: Hay que tener mucho ojo con los datos sobre *pacientes recuperados*, puesto que se basan sólo en un cálculo estadístico que hace el Ministerio de Salud. De ninguna manera corresponden a datos sobre pacientes que se haya comprobado estén curados y no hayan recaído. En este repositorio sólo se recopila dicha información. Estas cifras y todos los datos aquí alojados son de responsabilidad exclusiva del gobierno y del MINSAL y el uso que les des depende complemente de ti.
+**DISCLAIMER**: Hay que tener mucho ojo con los datos presentados en este repositorio, pues en su mayoría provienen de información oficial que ha esta en entredicho en varias ocasiones. Por esta misa razón, nosotros no reportamos a los *pacientes recuperados* pues de ninguna manera corresponden a datos sobre pacientes que se haya comprobado estén curados y no hayan recaído. Las cifras y todos los datos aquí alojados son de responsabilidad exclusiva del gobierno y del MINSAL y el uso que les des depende complemente de ti.
 
 ## Cómo usarlos
 
