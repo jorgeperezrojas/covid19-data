@@ -10,7 +10,7 @@ Después de clonar el repositorio (`git clone https://github.com/jorgeperezrojas
 bash src/recuperado/get_data.sh
 ```
 
-Esto generará dos archivos `mexico.csv` y `colombia.csv` en la carpeta `csv` con datos desagregados de ambos países descargados desde sus respectivos sitios de datos abiertos (links en refeencias).
+Esto generará dos archivos `mexico.csv` y `colombia.csv` en la carpeta `csv` con datos desagregados de ambos países descargados desde sus respectivos sitios de datos abiertos (links en referencias).
 
 Luego de descargar los datos, para obtener la información de muertos en México y sus tiempos desde el inicio de síntomas, debes hacer:
 ```
