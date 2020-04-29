@@ -14,6 +14,7 @@ from ..scraping.helpers.constants import (
     DEATHS_CSV_PATH,
     NATIONAL_REPORT_PATH,
 )
+from ..processors.generate_consolidated_data import generate
 
 
 def update_files():
@@ -115,6 +116,10 @@ def update_recovered():
             writer = csv.DictWriter(csv_file, fieldnames=national_header)
             writer.writeheader()
             writer.writerows(national_data)
+        try:
+            generate()
+        except Exception as e:
+            print("Sorry, can't generate. The reason is: {}".format(e))
         date = datetime.date.today().strftime("%m/%d/%y")
         message = "recuperados al {}".format(date)
         git_commit_and_push(message)

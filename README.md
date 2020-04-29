@@ -28,7 +28,7 @@ La cantidad de confirmados en días previos al 10 de marzo, las obtuvimos desde 
 
 ## Cómo usarlos
 
-Puedes acceder a algunos de los datasets más importantes que aquí almacenamos por medio de la API del proyecto hermano [``chile-coronapi``](https://github.com/sanguineti/chile-coronapi). Dicha API consume los datos directamente desde este repositorio. Puedes consultar la documentación de ``chile-coronapi`` directamente desde su repositorio, en donde encontrarás todos los endpoints disponibles de momento.
+Puedes acceder a algunos de los datasets más importantes que aquí almacenamos por medio de la API del proyecto hermano [``chile-coronapi``](https://github.com/sanguineti/chile-coronapi). Dicha API consume los datos directamente desde este repositorio. Puedes consultar la documentación de [``chile-coronapi``](https://github.com/sanguineti/chile-coronapi) directamente desde su repositorio, en donde encontrarás todos los endpoints disponibles de momento.
 
 Por otra parte, si sabes cómo usar un archivo .csv puedes simplemente descargar el que quieras y listo. Si no estás acostumbrad@ a usar archivos .csv puedes importarlo directamente por ejemplo en una planilla de [Google Sheets](https://docs.google.com/spreadsheets/) y usar la función `IMPORTDATA` de esta forma (en cualquier celda)
 ```

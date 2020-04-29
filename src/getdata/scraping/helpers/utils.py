@@ -1,5 +1,4 @@
 import json
-import datetime
 import subprocess as cmd
 
 from .constants import REGIONS_JSON_FILE, BASE_PATH
