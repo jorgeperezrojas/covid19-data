@@ -1,6 +1,6 @@
 # RECUPERADO
 
-Este repositorio replica los cálculos de la nota ["RECUPERADO: La estadística del Minsal que se burla de los chilenos más afectados por el Coronavirus"](not_yet). Para poder replicarlos se necesita solo tener instalado [`sqlite`](https://sqlite.org/index.html)
+Este repositorio replica los cálculos de la nota ["RECUPERADO: La estadística del Minsal que se burla de los chilenos más afectados por el Coronavirus"](https://users.dcc.uchile.cl/~jperez/covid/recuperado.html) (publicada también por [CIPER](https://ciperchile.cl/2020/04/30/academico-acusa-que-estadistica-del-minsal-considera-recuperados-a-personas-que-estan-en-riesgo-de-morir/)). Para poder replicarlos se necesita solo tener instalado [`sqlite`](https://sqlite.org/index.html)
 
 ### Datos de México y Colombia
 
