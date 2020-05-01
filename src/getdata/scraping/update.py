@@ -8,7 +8,7 @@ from ..scraping.helpers.utils import (
     get_regions_info,
     git_commit_and_push,
 )
-from .scraper import get_gov_page, get_minsal_recovered
+from .scraper import get_gov_page
 from ..scraping.helpers.constants import (
     CONFIRMED_CSV_PATH,
     DEATHS_CSV_PATH,
@@ -59,9 +59,9 @@ def update_files():
                 dict_per_region[regions_data.index(name_region)] = {
                     "region": row[0],
                     "region_id": regions_data.index(name_region) + 1,
-                    "new_daily_cases": undotter(row[1]),
-                    "confirmed": undotter(row[2]),
-                    "deaths": undotter(row[4]),
+                    "new_daily_cases": undotter(row[2]),
+                    "confirmed": undotter(row[1]),
+                    "deaths": undotter(row[5]),
                 }
 
     # add latest gov confirmed data to csv
@@ -81,10 +81,9 @@ def update_files():
 
     if date != national_data[-1]["dia"]:
         national_dict = {
-            "confirmados": rows[-1][2],
+            "confirmados": rows[-1][1],
             "dia": date,
-            "muertes": rows[-1][4],
-            "recuperados": national_data[-1]["recuperados"],
+            "muertes": rows[-1][5],
         }
         national_data.append(national_dict)
 
@@ -92,37 +91,13 @@ def update_files():
             writer = csv.DictWriter(csv_file, fieldnames=national_header)
             writer.writeheader()
             writer.writerows(national_data)
-
+    try:
+        generate()
+    except Exception as e:
+        print("Sorry, can't generate. The reason is: {}".format(e))
     date = datetime.date.today().strftime("%m/%d/%y")
     message = "contagios y muertes al {}".format(date)
     git_commit_and_push(message)
-
-
-def update_recovered():
-    minsal_data = get_minsal_recovered()
-    recovered, date = map(minsal_data.get, ("recovered", "date"))
-
-    with open(NATIONAL_REPORT_PATH) as csv_file:
-        csv_reader = csv.DictReader(csv_file, delimiter=",")
-        national_header = csv_reader.fieldnames
-        national_data = list(csv_reader)
-
-    if (
-        date == national_data[-1]["dia"]
-        and national_data[-1]["recuperados"] == national_data[-2]["recuperados"]
-    ):
-        national_data[-1]["recuperados"] = recovered
-        with open(NATIONAL_REPORT_PATH, "w", newline="") as csv_file:
-            writer = csv.DictWriter(csv_file, fieldnames=national_header)
-            writer.writeheader()
-            writer.writerows(national_data)
-        try:
-            generate()
-        except Exception as e:
-            print("Sorry, can't generate. The reason is: {}".format(e))
-        date = datetime.date.today().strftime("%m/%d/%y")
-        message = "recuperados al {}".format(date)
-        git_commit_and_push(message)
 
 
 if __name__ == "__main__":

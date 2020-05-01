@@ -1,4 +1,3 @@
-from getdata.scraping.update import update_files, update_recovered
+from getdata.scraping.update import update_files
 
 update_files()
-update_recovered()
