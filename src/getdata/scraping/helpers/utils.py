@@ -5,7 +5,7 @@ from .constants import REGIONS_JSON_FILE, BASE_PATH
 
 
 def undotter(string_number):
-    return int(string_number.replace(".", ""))
+    return int(string_number.replace(".", "").replace(",", ""))
 
 
 def format_date_last_update(
