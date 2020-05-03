@@ -17,6 +17,8 @@ def generate_difference(df, strat_column=2, copy_previous=True):
 def df_to_long(df, value_name, id_vars=["codigo", "region"], var_name="fecha"):
     return df.melt(id_vars=id_vars, var_name=var_name, value_name=value_name)
 
+def df_comuna_to_long(df, value_name, id_vars=["codigo_region", "region", "codigo_comuna", "comuna"], var_name="fecha"):
+    return df.melt(id_vars=id_vars, var_name=var_name, value_name=value_name)
 
 def generate():
     confirmados_file = "../../../csv/confirmados.csv"
@@ -46,6 +48,11 @@ def generate():
     df = pd.merge(df, nuevos_muertes_long, how="left", on=join_columns)
 
     df.to_csv("../../../csv/long_regiones.csv", index=False, float_format="%.0f")
+
+    cci_file = "../../../csv/confirmados_comunas_interpolado.csv"
+    cci_df = pd.read_csv(cci_file)
+    cci_long = df_comuna_to_long(cci_df, "positivos_acumulados")
+    cci_long.to_csv("../../../csv/long_confirmados_comunas_interpolado.csv", index=False, float_format="%.0f")
 
 if __name__ == "__main__":
     generate()
