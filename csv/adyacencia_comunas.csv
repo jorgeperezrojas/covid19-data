@@ -1,1700 +1,1700 @@
-05804,Villa Alemana,05802,Limache
-05804,Villa Alemana,05801,Quilpué
-05803,Olmué,05501,Quillota
-05803,Olmué,05503,Hijuelas
-05803,Olmué,05802,Limache
-05803,Olmué,05801,Quilpué
-05803,Olmué,13303,Tiltil
-05109,Viña del Mar,05103,Concón
-05109,Viña del Mar,05801,Quilpué
-05801,Quilpué,05804,Villa Alemana
-05801,Quilpué,05803,Olmué
-05801,Quilpué,05103,Concón
-05801,Quilpué,05802,Limache
-05801,Quilpué,05109,Viña del Mar
-05801,Quilpué,13303,Tiltil
-05801,Quilpué,05102,Casablanca
-05801,Quilpué,13302,Lampa
-05801,Quilpué,13503,Curacaví
-13401,San Bernardo,13603,Isla de Maipo
-13401,San Bernardo,13102,Cerrillos
-13401,San Bernardo,13116,Lo Espejo
-13401,San Bernardo,13202,Pirque
-13401,San Bernardo,13105,El Bosque
-13401,San Bernardo,13403,Calera de Tango
-13401,San Bernardo,13119,Maipú
-13401,San Bernardo,13112,La Pintana
-13401,San Bernardo,13601,Talagante
-13401,San Bernardo,13402,Buin
-13401,San Bernardo,13201,Puente Alto
-13401,San Bernardo,13109,La Cisterna
-09101,Temuco,09121,Cholchol
-09101,Temuco,09119,Vilcún
-09101,Temuco,09111,Nueva Imperial
-09101,Temuco,09106,Galvarino
-09101,Temuco,09112,Padre las Casas
-09101,Temuco,09108,Lautaro
-09207,Lumaco,09121,Cholchol
-09207,Lumaco,09102,Carahue
-09207,Lumaco,09210,Traiguén
-09207,Lumaco,09106,Galvarino
-09207,Lumaco,08204,Contulmo
-09207,Lumaco,09208,Purén
-09207,Lumaco,08207,Tirúa
-09207,Lumaco,09206,Los Sauces
-13303,Tiltil,05803,Olmué
-13303,Tiltil,05303,Rinconada
-13303,Tiltil,05503,Hijuelas
-13303,Tiltil,05703,Llaillay
-13303,Tiltil,05801,Quilpué
-13303,Tiltil,13301,Colina
-13303,Tiltil,13302,Lampa
-07106,Pelarco,07110,San Rafael
-07106,Pelarco,07108,Río Claro
-07106,Pelarco,07101,Talca
-07106,Pelarco,07109,San Clemente
-05602,Algarrobo,05604,El Quisco
-05602,Algarrobo,05102,Casablanca
-05302,Calle Larga,05701,San Felipe
-05302,Calle Larga,13301,Colina
-05302,Calle Larga,05301,Los Andes
-05302,Calle Larga,05303,Rinconada
-02103,Sierra Gorda,02203,San Pedro de Atacama
-02103,Sierra Gorda,02302,María Elena
+01101,Iquique,01107,Alto Hospicio
+01101,Iquique,01401,Pozo Almonte
+01101,Iquique,01404,Huara
+01101,Iquique,02301,Tocopilla
+01107,Alto Hospicio,01101,Iquique
+01107,Alto Hospicio,01401,Pozo Almonte
+01107,Alto Hospicio,01404,Huara
+01401,Pozo Almonte,01101,Iquique
+01401,Pozo Almonte,01107,Alto Hospicio
+01401,Pozo Almonte,01404,Huara
+01401,Pozo Almonte,01405,Pica
+01401,Pozo Almonte,02201,Calama
+01401,Pozo Almonte,02301,Tocopilla
+01401,Pozo Almonte,02302,María Elena
+01402,Camiña,01403,Colchane
+01402,Camiña,01404,Huara
+01402,Camiña,15102,Camarones
+01403,Colchane,01402,Camiña
+01403,Colchane,01404,Huara
+01403,Colchane,01405,Pica
+01403,Colchane,15102,Camarones
+01403,Colchane,15201,Putre
+01404,Huara,01101,Iquique
+01404,Huara,01107,Alto Hospicio
+01404,Huara,01401,Pozo Almonte
+01404,Huara,01402,Camiña
+01404,Huara,01403,Colchane
+01404,Huara,01405,Pica
+01404,Huara,15102,Camarones
+01405,Pica,01401,Pozo Almonte
+01405,Pica,01403,Colchane
+01405,Pica,01404,Huara
+01405,Pica,02201,Calama
+01405,Pica,02202,Ollagüe
+01405,Pica,02302,María Elena
+02101,Antofagasta,02102,Mejillones
+02101,Antofagasta,02103,Sierra Gorda
+02101,Antofagasta,02104,Taltal
+02101,Antofagasta,02203,San Pedro de Atacama
+02101,Antofagasta,03202,Diego de Almagro
+02102,Mejillones,02101,Antofagasta
+02102,Mejillones,02103,Sierra Gorda
+02102,Mejillones,02301,Tocopilla
+02102,Mejillones,02302,María Elena
+02103,Sierra Gorda,02101,Antofagasta
 02103,Sierra Gorda,02102,Mejillones
 02103,Sierra Gorda,02201,Calama
-02103,Sierra Gorda,02101,Antofagasta
-16205,Portezuelo,16206,Ránquil
-16205,Portezuelo,16305,San Nicolás
-16205,Portezuelo,16204,Ninhue
-16205,Portezuelo,16101,Chillán
-16205,Portezuelo,16207,Treguaco
-16205,Portezuelo,16203,Coelemu
-08107,Penco,08110,Talcahuano
-08107,Penco,08104,Florida
-08107,Penco,08101,Concepción
-08107,Penco,08111,Tomé
-14204,Río Bueno,10307,San Pablo
-14204,Río Bueno,10304,Puyehue
-14204,Río Bueno,14203,Lago Ranco
-14204,Río Bueno,14201,La Unión
-13124,Pudahuel,13106,Estación Central
-13124,Pudahuel,13119,Maipú
-13124,Pudahuel,13128,Renca
-13124,Pudahuel,13302,Lampa
-13124,Pudahuel,13117,Lo Prado
-13124,Pudahuel,13503,Curacaví
-13124,Pudahuel,13125,Quilicura
-13124,Pudahuel,13103,Cerro Navia
-09118,Toltén,14106,Mariquina
-09118,Toltén,09114,Pitrufquén
-09118,Toltén,09107,Gorbea
-09118,Toltén,09117,Teodoro Schmidt
-14106,Mariquina,09118,Toltén
-14106,Mariquina,14103,Lanco
-14106,Mariquina,14101,Valdivia
-14106,Mariquina,14105,Máfil
-14106,Mariquina,09109,Loncoche
-14106,Mariquina,09107,Gorbea
-06106,Graneros,06102,Codegua
-06106,Graneros,06101,Rancagua
-06106,Graneros,13502,Alhué
-06106,Graneros,06110,Mostazal
-10207,Queilén,10203,Chonchi
-06305,Nancagua,06308,Placilla
-06305,Nancagua,06303,Chimbarongo
-06305,Nancagua,06117,San Vicente
-06305,Nancagua,06310,Santa Cruz
-06305,Nancagua,06302,Chépica
-06109,Malloa,06117,San Vicente
-06109,Malloa,06301,San Fernando
-06109,Malloa,06114,Quinta de Tilcoco
-06109,Malloa,06115,Rengo
-08310,San Rosendo,08304,Laja
-08310,San Rosendo,08109,Santa Juana
-08310,San Rosendo,08313,Yumbel
-08310,San Rosendo,08105,Hualqui
-12401,Natales,11302,O'Higgins
-12401,Natales,11303,Tortel
-12401,Natales,12103,Río Verde
-12401,Natales,12102,Laguna Blanca
-12401,Natales,12402,Torres del Paine
-02104,Taltal,03202,Diego de Almagro
-02104,Taltal,03201,Chañaral
+02103,Sierra Gorda,02203,San Pedro de Atacama
+02103,Sierra Gorda,02302,María Elena
 02104,Taltal,02101,Antofagasta
+02104,Taltal,03201,Chañaral
+02104,Taltal,03202,Diego de Almagro
+02201,Calama,01401,Pozo Almonte
+02201,Calama,01405,Pica
+02201,Calama,02103,Sierra Gorda
+02201,Calama,02202,Ollagüe
+02201,Calama,02203,San Pedro de Atacama
+02201,Calama,02302,María Elena
+02202,Ollagüe,01405,Pica
+02202,Ollagüe,02201,Calama
+02203,San Pedro de Atacama,02101,Antofagasta
+02203,San Pedro de Atacama,02103,Sierra Gorda
+02203,San Pedro de Atacama,02201,Calama
+02301,Tocopilla,01101,Iquique
+02301,Tocopilla,01401,Pozo Almonte
+02301,Tocopilla,02102,Mejillones
+02301,Tocopilla,02302,María Elena
+02302,María Elena,01401,Pozo Almonte
+02302,María Elena,01405,Pica
+02302,María Elena,02102,Mejillones
+02302,María Elena,02103,Sierra Gorda
+02302,María Elena,02201,Calama
+02302,María Elena,02301,Tocopilla
+03101,Copiapó,03102,Caldera
+03101,Copiapó,03103,Tierra Amarilla
+03101,Copiapó,03201,Chañaral
+03101,Copiapó,03202,Diego de Almagro
+03101,Copiapó,03301,Vallenar
+03101,Copiapó,03304,Huasco
+03102,Caldera,03101,Copiapó
+03102,Caldera,03201,Chañaral
+03103,Tierra Amarilla,03101,Copiapó
+03103,Tierra Amarilla,03301,Vallenar
+03103,Tierra Amarilla,03302,Alto del Carmen
+03201,Chañaral,02104,Taltal
+03201,Chañaral,03101,Copiapó
+03201,Chañaral,03102,Caldera
+03201,Chañaral,03202,Diego de Almagro
+03202,Diego de Almagro,02101,Antofagasta
+03202,Diego de Almagro,02104,Taltal
+03202,Diego de Almagro,03101,Copiapó
+03202,Diego de Almagro,03201,Chañaral
+03301,Vallenar,03101,Copiapó
+03301,Vallenar,03103,Tierra Amarilla
+03301,Vallenar,03302,Alto del Carmen
+03301,Vallenar,03303,Freirina
+03301,Vallenar,03304,Huasco
+03301,Vallenar,04104,La Higuera
+03302,Alto del Carmen,03103,Tierra Amarilla
+03302,Alto del Carmen,03301,Vallenar
+03302,Alto del Carmen,04104,La Higuera
+03302,Alto del Carmen,04106,Vicuña
+03303,Freirina,03301,Vallenar
+03303,Freirina,03304,Huasco
+03303,Freirina,04104,La Higuera
+03304,Huasco,03101,Copiapó
+03304,Huasco,03301,Vallenar
+03304,Huasco,03303,Freirina
+04101,La Serena,04102,Coquimbo
+04101,La Serena,04103,Andacollo
+04101,La Serena,04104,La Higuera
+04101,La Serena,04106,Vicuña
+04102,Coquimbo,04101,La Serena
+04102,Coquimbo,04103,Andacollo
+04102,Coquimbo,04301,Ovalle
+04103,Andacollo,04101,La Serena
+04103,Andacollo,04102,Coquimbo
+04103,Andacollo,04106,Vicuña
+04103,Andacollo,04301,Ovalle
+04103,Andacollo,04305,Río Hurtado
+04104,La Higuera,03301,Vallenar
+04104,La Higuera,03302,Alto del Carmen
+04104,La Higuera,03303,Freirina
+04104,La Higuera,04101,La Serena
+04104,La Higuera,04106,Vicuña
+04105,Paiguano,04106,Vicuña
+04105,Paiguano,04305,Río Hurtado
+04106,Vicuña,03302,Alto del Carmen
+04106,Vicuña,04101,La Serena
+04106,Vicuña,04103,Andacollo
+04106,Vicuña,04104,La Higuera
+04106,Vicuña,04105,Paiguano
+04106,Vicuña,04305,Río Hurtado
+04201,Illapel,04202,Canela
+04201,Illapel,04203,Los Vilos
+04201,Illapel,04204,Salamanca
+04201,Illapel,04302,Combarbalá
+04201,Illapel,04303,Monte Patria
+04202,Canela,04201,Illapel
+04202,Canela,04203,Los Vilos
+04202,Canela,04301,Ovalle
+04202,Canela,04302,Combarbalá
+04202,Canela,04304,Punitaqui
+04203,Los Vilos,04201,Illapel
+04203,Los Vilos,04202,Canela
+04203,Los Vilos,04204,Salamanca
+04203,Los Vilos,05401,La Ligua
+04203,Los Vilos,05404,Petorca
+04204,Salamanca,04201,Illapel
+04204,Salamanca,04203,Los Vilos
+04204,Salamanca,05402,Cabildo
+04204,Salamanca,05404,Petorca
+04204,Salamanca,05705,Putaendo
+04301,Ovalle,04102,Coquimbo
+04301,Ovalle,04103,Andacollo
+04301,Ovalle,04202,Canela
+04301,Ovalle,04303,Monte Patria
+04301,Ovalle,04304,Punitaqui
+04301,Ovalle,04305,Río Hurtado
+04302,Combarbalá,04201,Illapel
+04302,Combarbalá,04202,Canela
+04302,Combarbalá,04303,Monte Patria
+04302,Combarbalá,04304,Punitaqui
+04303,Monte Patria,04201,Illapel
+04303,Monte Patria,04301,Ovalle
+04303,Monte Patria,04302,Combarbalá
+04303,Monte Patria,04304,Punitaqui
+04303,Monte Patria,04305,Río Hurtado
+04304,Punitaqui,04202,Canela
+04304,Punitaqui,04301,Ovalle
+04304,Punitaqui,04302,Combarbalá
+04304,Punitaqui,04303,Monte Patria
+04305,Río Hurtado,04103,Andacollo
+04305,Río Hurtado,04105,Paiguano
+04305,Río Hurtado,04106,Vicuña
+04305,Río Hurtado,04301,Ovalle
+04305,Río Hurtado,04303,Monte Patria
+05102,Casablanca,05602,Algarrobo
+05102,Casablanca,05603,Cartagena
+05102,Casablanca,05604,El Quisco
+05102,Casablanca,05605,El Tabo
+05102,Casablanca,05801,Quilpué
+05102,Casablanca,13503,Curacaví
+05102,Casablanca,13504,María Pinto
+05103,Concón,05107,Quintero
+05103,Concón,05109,Viña del Mar
+05103,Concón,05501,Quillota
+05103,Concón,05801,Quilpué
+05103,Concón,05802,Limache
+05105,Puchuncaví,05107,Quintero
+05105,Puchuncaví,05405,Zapallar
+05105,Puchuncaví,05501,Quillota
+05105,Puchuncaví,05504,La Cruz
+05105,Puchuncaví,05506,Nogales
+05107,Quintero,05103,Concón
+05107,Quintero,05105,Puchuncaví
+05107,Quintero,05501,Quillota
+05109,Viña del Mar,05103,Concón
+05109,Viña del Mar,05801,Quilpué
+05301,Los Andes,05302,Calle Larga
+05301,Los Andes,05303,Rinconada
 05301,Los Andes,05304,San Esteban
 05301,Los Andes,05701,San Felipe
 05301,Los Andes,05706,Santa María
-05301,Los Andes,13301,Colina
-05301,Los Andes,13203,San José de Maipo
 05301,Los Andes,13115,Lo Barnechea
-05301,Los Andes,05302,Calle Larga
-05301,Los Andes,05303,Rinconada
-16106,Pinto,16104,El Carmen
-16106,Pinto,16101,Chillán
-16106,Pinto,16108,San Ignacio
-16106,Pinto,16105,Pemuco
-16106,Pinto,16302,Coihueco
-16106,Pinto,16109,Yungay
-16106,Pinto,08302,Antuco
-06308,Placilla,06305,Nancagua
-06308,Placilla,06303,Chimbarongo
-06308,Placilla,06117,San Vicente
-06308,Placilla,06301,San Fernando
-03303,Freirina,04104,La Higuera
-03303,Freirina,03301,Vallenar
-03303,Freirina,03304,Huasco
-06303,Chimbarongo,06305,Nancagua
-06303,Chimbarongo,06308,Placilla
-06303,Chimbarongo,06301,San Fernando
-06303,Chimbarongo,07308,Teno
-06303,Chimbarongo,06302,Chépica
-06111,Olivar,06103,Coinco
-06111,Olivar,06116,Requínoa
-06111,Olivar,06105,Doñihue
-06111,Olivar,06101,Rancagua
-04302,Combarbalá,04304,Punitaqui
-04302,Combarbalá,04303,Monte Patria
-04302,Combarbalá,04201,Illapel
-04302,Combarbalá,04202,Canela
-06108,Machalí,06301,San Fernando
-06108,Machalí,06115,Rengo
-06108,Machalí,06116,Requínoa
-06108,Machalí,13203,San José de Maipo
-06108,Machalí,06102,Codegua
-06108,Machalí,06101,Rancagua
-05601,San Antonio,05606,Santo Domingo
-05601,San Antonio,13504,María Pinto
-05601,San Antonio,13501,Melipilla
-05601,San Antonio,13505,San Pedro
-05601,San Antonio,05603,Cartagena
-15101,Arica,15201,Putre
-15101,Arica,15102,Camarones
-15101,Arica,15202,General Lagos
-06206,Paredones,07302,Hualañé
-06206,Paredones,06201,Pichilemu
-06206,Paredones,07309,Vichuquén
-06206,Paredones,06309,Pumanque
-06206,Paredones,06304,Lolol
-09106,Galvarino,09121,Cholchol
-09106,Galvarino,09210,Traiguén
-09106,Galvarino,09101,Temuco
-09106,Galvarino,09207,Lumaco
-09106,Galvarino,09113,Perquenco
-09106,Galvarino,09108,Lautaro
-01404,Huara,01401,Pozo Almonte
-01404,Huara,01405,Pica
-01404,Huara,01101,Iquique
-01404,Huara,01403,Colchane
-01404,Huara,01107,Alto Hospicio
-01404,Huara,15102,Camarones
-01404,Huara,01402,Camiña
-09103,Cunco,09119,Vilcún
-09103,Cunco,09112,Padre las Casas
-09103,Cunco,09115,Pucón
-09103,Cunco,09104,Curarrehue
-09103,Cunco,09120,Villarrica
-09103,Cunco,09105,Freire
-09103,Cunco,09110,Melipeuco
-07110,San Rafael,07106,Pelarco
-07110,San Rafael,07304,Molina
-07110,San Rafael,07307,Sagrada Familia
-07110,San Rafael,07108,Río Claro
-07110,San Rafael,07101,Talca
-07110,San Rafael,07107,Pencahue
-16301,San Carlos,07201,Cauquenes
-16301,San Carlos,16303,Ñiquén
-16301,San Carlos,16305,San Nicolás
-16301,San Carlos,16204,Ninhue
-16301,San Carlos,16304,San Fabián
-16301,San Carlos,16101,Chillán
-16301,San Carlos,16302,Coihueco
-03102,Caldera,03201,Chañaral
-03102,Caldera,03101,Copiapó
-09121,Cholchol,09102,Carahue
-09121,Cholchol,09111,Nueva Imperial
-09121,Cholchol,09101,Temuco
-09121,Cholchol,09207,Lumaco
-09121,Cholchol,09106,Galvarino
-09102,Carahue,09121,Cholchol
-09102,Carahue,09111,Nueva Imperial
-09102,Carahue,09207,Lumaco
-09102,Carahue,09116,Saavedra
-09102,Carahue,08207,Tirúa
-09102,Carahue,09117,Teodoro Schmidt
-09119,Vilcún,09101,Temuco
-09119,Vilcún,09103,Cunco
-09119,Vilcún,09112,Padre las Casas
-09119,Vilcún,09108,Lautaro
-09119,Vilcún,09203,Curacautín
-09119,Vilcún,09110,Melipeuco
-09111,Nueva Imperial,09121,Cholchol
-09111,Nueva Imperial,09102,Carahue
-09111,Nueva Imperial,09101,Temuco
-09111,Nueva Imperial,09112,Padre las Casas
-09111,Nueva Imperial,09105,Freire
-09111,Nueva Imperial,09117,Teodoro Schmidt
-09210,Traiguén,09211,Victoria
-09210,Traiguén,09207,Lumaco
-09210,Traiguén,09106,Galvarino
-09210,Traiguén,09113,Perquenco
-09210,Traiguén,09204,Ercilla
-09210,Traiguén,09206,Los Sauces
-09211,Victoria,09210,Traiguén
-09211,Victoria,09113,Perquenco
-09211,Victoria,09108,Lautaro
-09211,Victoria,09204,Ercilla
-09211,Victoria,09202,Collipulli
-09211,Victoria,09203,Curacautín
-09205,Lonquimay,08314,Alto Biobío
-09205,Lonquimay,09203,Curacautín
-09205,Lonquimay,09110,Melipeuco
-09205,Lonquimay,08308,Quilaco
-13604,Padre Hurtado,13403,Calera de Tango
-13604,Padre Hurtado,13119,Maipú
-13604,Padre Hurtado,13501,Melipilla
-13604,Padre Hurtado,13605,Peñaflor
-13604,Padre Hurtado,13503,Curacaví
-16108,San Ignacio,16104,El Carmen
-16108,San Ignacio,16101,Chillán
-16108,San Ignacio,16106,Pinto
-16108,San Ignacio,16102,Bulnes
-16108,San Ignacio,16103,Chillán Viejo
+05301,Los Andes,13203,San José de Maipo
+05301,Los Andes,13301,Colina
+05302,Calle Larga,05301,Los Andes
+05302,Calle Larga,05303,Rinconada
+05302,Calle Larga,05701,San Felipe
+05302,Calle Larga,13301,Colina
+05303,Rinconada,05301,Los Andes
+05303,Rinconada,05302,Calle Larga
+05303,Rinconada,05701,San Felipe
+05303,Rinconada,05703,Llaillay
+05303,Rinconada,05704,Panquehue
+05303,Rinconada,13301,Colina
+05303,Rinconada,13303,Tiltil
+05304,San Esteban,05301,Los Andes
+05304,San Esteban,05705,Putaendo
+05304,San Esteban,05706,Santa María
+05401,La Ligua,04203,Los Vilos
+05401,La Ligua,05402,Cabildo
+05401,La Ligua,05403,Papudo
+05401,La Ligua,05404,Petorca
+05401,La Ligua,05405,Zapallar
+05401,La Ligua,05506,Nogales
+05402,Cabildo,04204,Salamanca
+05402,Cabildo,05401,La Ligua
+05402,Cabildo,05404,Petorca
+05402,Cabildo,05506,Nogales
+05402,Cabildo,05702,Catemu
+05402,Cabildo,05705,Putaendo
 05403,Papudo,05401,La Ligua
 05403,Papudo,05405,Zapallar
-07201,Cauquenes,16301,San Carlos
-07201,Cauquenes,16202,Cobquecura
-07201,Cauquenes,16303,Ñiquén
-07201,Cauquenes,07405,Retiro
-07201,Cauquenes,07406,San Javier
-07201,Cauquenes,16201,Quirihue
-07201,Cauquenes,07404,Parral
-07201,Cauquenes,16204,Ninhue
-07201,Cauquenes,07202,Chanco
-07201,Cauquenes,07203,Pelluhue
-07201,Cauquenes,07104,Empedrado
-08206,Los Alamos,09201,Angol
-08206,Los Alamos,08201,Lebu
-08206,Los Alamos,08205,Curanilahue
-08206,Los Alamos,08203,Cañete
-04304,Punitaqui,04302,Combarbalá
-04304,Punitaqui,04303,Monte Patria
-04304,Punitaqui,04301,Ovalle
-04304,Punitaqui,04202,Canela
-06107,Las Cabras,06203,Litueche
-06107,Las Cabras,06202,La Estrella
-06107,Las Cabras,13502,Alhué
-06107,Las Cabras,13505,San Pedro
-06107,Las Cabras,06104,Coltauco
-06107,Las Cabras,06112,Peumo
-06107,Las Cabras,06113,Pichidegua
-10208,Quellón,10203,Chonchi
-01401,Pozo Almonte,01404,Huara
-01401,Pozo Almonte,02302,María Elena
-01401,Pozo Almonte,01405,Pica
-01401,Pozo Almonte,01101,Iquique
-01401,Pozo Almonte,02301,Tocopilla
-01401,Pozo Almonte,01107,Alto Hospicio
-01401,Pozo Almonte,02201,Calama
-05105,Puchuncaví,05506,Nogales
-05105,Puchuncaví,05405,Zapallar
-05105,Puchuncaví,05501,Quillota
-05105,Puchuncaví,05107,Quintero
-05105,Puchuncaví,05504,La Cruz
-07407,Villa Alegre,07406,San Javier
-07407,Villa Alegre,07401,Linares
-07407,Villa Alegre,07408,Yerbas Buenas
-16104,El Carmen,16106,Pinto
-16104,El Carmen,16108,San Ignacio
-16104,El Carmen,16102,Bulnes
-16104,El Carmen,16105,Pemuco
-10106,Los Muermos,10108,Maullín
-10106,Los Muermos,10109,Puerto Varas
-10106,Los Muermos,10101,Puerto Montt
-10106,Los Muermos,10107,Llanquihue
-10106,Los Muermos,10104,Fresia
-08303,Cabrero,16107,Quillón
-08303,Cabrero,16105,Pemuco
-08303,Cabrero,16109,Yungay
-08303,Cabrero,08313,Yumbel
-08303,Cabrero,08301,Los Angeles
-16102,Bulnes,16104,El Carmen
-16102,Bulnes,16107,Quillón
-16102,Bulnes,16101,Chillán
-16102,Bulnes,16108,San Ignacio
-16102,Bulnes,16103,Chillán Viejo
-16102,Bulnes,16105,Pemuco
-13603,Isla de Maipo,13401,San Bernardo
-13603,Isla de Maipo,13404,Paine
-13603,Isla de Maipo,13501,Melipilla
-13603,Isla de Maipo,13601,Talagante
-13603,Isla de Maipo,13402,Buin
-13603,Isla de Maipo,13602,El Monte
-06117,San Vicente,06305,Nancagua
-06117,San Vicente,06109,Malloa
-06117,San Vicente,06308,Placilla
-06117,San Vicente,06306,Palmilla
-06117,San Vicente,06310,Santa Cruz
-06117,San Vicente,06104,Coltauco
-06117,San Vicente,06301,San Fernando
-06117,San Vicente,06103,Coinco
-06117,San Vicente,06114,Quinta de Tilcoco
-06117,San Vicente,06112,Peumo
-06117,San Vicente,06113,Pichidegua
-13301,Colina,05302,Calle Larga
-13301,Colina,05301,Los Andes
-13301,Colina,05303,Rinconada
-13301,Colina,13303,Tiltil
-13301,Colina,13107,Huechuraba
-13301,Colina,13115,Lo Barnechea
-13301,Colina,13302,Lampa
-13301,Colina,13125,Quilicura
-13203,San José de Maipo,05301,Los Andes
-13203,San José de Maipo,06102,Codegua
-13203,San José de Maipo,13202,Pirque
-13203,San José de Maipo,13115,Lo Barnechea
-13203,San José de Maipo,13122,Peñalolén
-13203,San José de Maipo,13114,Las Condes
-13203,San José de Maipo,13201,Puente Alto
-13203,San José de Maipo,06110,Mostazal
-13203,San José de Maipo,13110,La Florida
-13203,San José de Maipo,06108,Machalí
-13502,Alhué,06107,Las Cabras
-13502,Alhué,06104,Coltauco
-13502,Alhué,06106,Graneros
-13502,Alhué,13404,Paine
-13502,Alhué,13501,Melipilla
-13502,Alhué,06105,Doñihue
-13502,Alhué,06101,Rancagua
-13502,Alhué,13505,San Pedro
-13502,Alhué,06110,Mostazal
-13104,Conchalí,13107,Huechuraba
-13104,Conchalí,13108,Independencia
-13104,Conchalí,13128,Renca
-13104,Conchalí,13127,Recoleta
-13104,Conchalí,13125,Quilicura
-05504,La Cruz,05105,Puchuncaví
-05504,La Cruz,05506,Nogales
-05504,La Cruz,05502,Calera
-05504,La Cruz,05501,Quillota
-08307,Negrete,08306,Nacimiento
-08307,Negrete,08301,Los Angeles
-08307,Negrete,09209,Renaico
-08307,Negrete,08305,Mulchén
-03101,Copiapó,03102,Caldera
-03101,Copiapó,03202,Diego de Almagro
-03101,Copiapó,03201,Chañaral
-03101,Copiapó,03301,Vallenar
-03101,Copiapó,03304,Huasco
-03101,Copiapó,03103,Tierra Amarilla
-16103,Chillán Viejo,16101,Chillán
-16103,Chillán Viejo,16108,San Ignacio
-16103,Chillán Viejo,16102,Bulnes
-08309,Quilleco,08312,Tucapel
-08309,Quilleco,08311,Santa Bárbara
-08309,Quilleco,08301,Los Angeles
-08309,Quilleco,08302,Antuco
-10305,Río Negro,10302,Puerto Octay
-10305,Río Negro,10301,Osorno
-10305,Río Negro,10306,San Juan de La Costa
-10305,Río Negro,10303,Purranque
-07103,Curepto,07302,Hualañé
-07103,Curepto,07307,Sagrada Familia
-07103,Curepto,07102,Constitución
-07103,Curepto,07107,Pencahue
-07103,Curepto,07303,Licantén
-10104,Fresia,10106,Los Muermos
-10104,Fresia,10105,Frutillar
-10104,Fresia,10107,Llanquihue
-10104,Fresia,10303,Purranque
-13503,Curacaví,05801,Quilpué
-13503,Curacaví,13124,Pudahuel
-13503,Curacaví,13604,Padre Hurtado
-13503,Curacaví,05102,Casablanca
-13503,Curacaví,13504,María Pinto
-13503,Curacaví,13119,Maipú
-13503,Curacaví,13501,Melipilla
-13503,Curacaví,13302,Lampa
-10303,Purranque,10105,Frutillar
-10303,Purranque,10302,Puerto Octay
-10303,Purranque,10305,Río Negro
-10303,Purranque,10104,Fresia
-09117,Teodoro Schmidt,09102,Carahue
-09117,Teodoro Schmidt,09111,Nueva Imperial
-09117,Teodoro Schmidt,09118,Toltén
-09117,Teodoro Schmidt,09116,Saavedra
-09117,Teodoro Schmidt,09114,Pitrufquén
-09117,Teodoro Schmidt,09105,Freire
-04102,Coquimbo,04103,Andacollo
-04102,Coquimbo,04301,Ovalle
-04102,Coquimbo,04101,La Serena
-13602,El Monte,13603,Isla de Maipo
-13602,El Monte,13501,Melipilla
-13602,El Monte,13601,Talagante
-13602,El Monte,13605,Peñaflor
-13116,Lo Espejo,13401,San Bernardo
-13116,Lo Espejo,13102,Cerrillos
-13116,Lo Espejo,13105,El Bosque
-13116,Lo Espejo,13130,San Miguel
-13116,Lo Espejo,13121,Pedro Aguirre Cerda
-13116,Lo Espejo,13109,La Cisterna
-11401,Chile Chico,11303,Tortel
-11401,Chile Chico,11402,Río Ibáñez
-11401,Chile Chico,11301,Cochrane
-11401,Chile Chico,11201,Aisén
-04305,Río Hurtado,04103,Andacollo
-04305,Río Hurtado,04303,Monte Patria
-04305,Río Hurtado,04301,Ovalle
-04305,Río Hurtado,04106,Vicuña
-04305,Río Hurtado,04105,Paiguano
-09115,Pucón,09103,Cunco
-09115,Pucón,14108,Panguipulli
-09115,Pucón,09104,Curarrehue
-09115,Pucón,09120,Villarrica
-06203,Litueche,06204,Marchihue
-06203,Litueche,06201,Pichilemu
-06203,Litueche,06202,La Estrella
-06203,Litueche,06205,Navidad
-06203,Litueche,13505,San Pedro
-06203,Litueche,06107,Las Cabras
-03202,Diego de Almagro,02104,Taltal
-03202,Diego de Almagro,03201,Chañaral
-03202,Diego de Almagro,03101,Copiapó
-03202,Diego de Almagro,02101,Antofagasta
-14103,Lanco,14106,Mariquina
-14103,Lanco,14108,Panguipulli
-14103,Lanco,14105,Máfil
-14103,Lanco,09109,Loncoche
-07302,Hualañé,07307,Sagrada Familia
-07302,Hualañé,07303,Licantén
-07302,Hualañé,07305,Rauco
-07302,Hualañé,07103,Curepto
-07302,Hualañé,06302,Chépica
-07302,Hualañé,06206,Paredones
-07302,Hualañé,07309,Vichuquén
-07302,Hualañé,06304,Lolol
-10105,Frutillar,10302,Puerto Octay
-10105,Frutillar,10109,Puerto Varas
-10105,Frutillar,10107,Llanquihue
-10105,Frutillar,10104,Fresia
-10105,Frutillar,10303,Purranque
-06201,Pichilemu,06206,Paredones
-06201,Pichilemu,06204,Marchihue
-06201,Pichilemu,06203,Litueche
-06201,Pichilemu,06309,Pumanque
-09208,Purén,09207,Lumaco
-09208,Purén,09201,Angol
-09208,Purén,08204,Contulmo
-09208,Purén,09206,Los Sauces
-09208,Purén,08203,Cañete
-09108,Lautaro,09119,Vilcún
-09108,Lautaro,09211,Victoria
-09108,Lautaro,09101,Temuco
-09108,Lautaro,09106,Galvarino
-09108,Lautaro,09113,Perquenco
-09108,Lautaro,09203,Curacautín
-16201,Quirihue,07201,Cauquenes
-16201,Quirihue,16202,Cobquecura
-16201,Quirihue,16204,Ninhue
-16201,Quirihue,16207,Treguaco
-13118,Macul,13122,Peñalolén
-13118,Macul,13120,Ñuñoa
-13118,Macul,13110,La Florida
-13118,Macul,13129,San Joaquín
-12103,Río Verde,12401,Natales
-12103,Río Verde,12102,Laguna Blanca
-05502,Calera,05506,Nogales
+05404,Petorca,04203,Los Vilos
+05404,Petorca,04204,Salamanca
+05404,Petorca,05401,La Ligua
+05404,Petorca,05402,Cabildo
+05405,Zapallar,05105,Puchuncaví
+05405,Zapallar,05401,La Ligua
+05405,Zapallar,05403,Papudo
+05405,Zapallar,05506,Nogales
+05501,Quillota,05103,Concón
+05501,Quillota,05105,Puchuncaví
+05501,Quillota,05107,Quintero
+05501,Quillota,05502,Calera
+05501,Quillota,05503,Hijuelas
+05501,Quillota,05504,La Cruz
+05501,Quillota,05802,Limache
+05501,Quillota,05803,Olmué
 05502,Calera,05501,Quillota
 05502,Calera,05503,Hijuelas
 05502,Calera,05504,La Cruz
-16202,Cobquecura,07201,Cauquenes
-16202,Cobquecura,16201,Quirihue
-16202,Cobquecura,16207,Treguaco
-16202,Cobquecura,07203,Pelluhue
-14108,Panguipulli,09115,Pucón
-14108,Panguipulli,14103,Lanco
-14108,Panguipulli,14105,Máfil
-14108,Panguipulli,09109,Loncoche
-14108,Panguipulli,09104,Curarrehue
-14108,Panguipulli,09120,Villarrica
-14108,Panguipulli,14104,Los Lagos
-14108,Panguipulli,14202,Futrono
-03201,Chañaral,02104,Taltal
-03201,Chañaral,03102,Caldera
-03201,Chañaral,03202,Diego de Almagro
-03201,Chañaral,03101,Copiapó
-14101,Valdivia,14106,Mariquina
-14101,Valdivia,14105,Máfil
-14101,Valdivia,14102,Corral
-14101,Valdivia,14107,Paillaco
-14101,Valdivia,14104,Los Lagos
-06104,Coltauco,06107,Las Cabras
-06104,Coltauco,06117,San Vicente
-06104,Coltauco,06103,Coinco
-06104,Coltauco,06112,Peumo
-06104,Coltauco,06105,Doñihue
-06104,Coltauco,13502,Alhué
-10403,Hualaihué,10401,Chaitén
-10403,Hualaihué,10103,Cochamó
-08304,Laja,08310,San Rosendo
-08304,Laja,08109,Santa Juana
-08304,Laja,08313,Yumbel
-08304,Laja,08306,Nacimiento
-08304,Laja,08301,Los Angeles
-08202,Arauco,08201,Lebu
-08202,Arauco,08109,Santa Juana
-08202,Arauco,08106,Lota
-08202,Arauco,08205,Curanilahue
-05501,Quillota,05105,Puchuncaví
-05501,Quillota,05803,Olmué
-05501,Quillota,05502,Calera
-05501,Quillota,05503,Hijuelas
-05501,Quillota,05103,Concón
-05501,Quillota,05107,Quintero
-05501,Quillota,05504,La Cruz
-05501,Quillota,05802,Limache
-05702,Catemu,05506,Nogales
-05702,Catemu,05402,Cabildo
-05702,Catemu,05701,San Felipe
-05702,Catemu,05705,Putaendo
-05702,Catemu,05503,Hijuelas
-05702,Catemu,05703,Llaillay
-05702,Catemu,05704,Panquehue
-10302,Puerto Octay,10105,Frutillar
-10302,Puerto Octay,10109,Puerto Varas
-10302,Puerto Octay,10301,Osorno
-10302,Puerto Octay,10304,Puyehue
-10302,Puerto Octay,10305,Río Negro
-10302,Puerto Octay,10303,Purranque
-07304,Molina,07110,San Rafael
-07304,Molina,07307,Sagrada Familia
-07304,Molina,07301,Curicó
-07304,Molina,07108,Río Claro
-07304,Molina,07109,San Clemente
-13102,Cerrillos,13401,San Bernardo
-13102,Cerrillos,13116,Lo Espejo
-13102,Cerrillos,13106,Estación Central
-13102,Cerrillos,13119,Maipú
-13102,Cerrillos,13121,Pedro Aguirre Cerda
-05303,Rinconada,05701,San Felipe
-05303,Rinconada,13303,Tiltil
-05303,Rinconada,13301,Colina
-05303,Rinconada,05302,Calle Larga
-05303,Rinconada,05301,Los Andes
-05303,Rinconada,05703,Llaillay
-05303,Rinconada,05704,Panquehue
-08112,Hualpén,08110,Talcahuano
-08112,Hualpén,08101,Concepción
-08112,Hualpén,08108,San Pedro de la Paz
-09112,Padre las Casas,09119,Vilcún
-09112,Padre las Casas,09111,Nueva Imperial
-09112,Padre las Casas,09101,Temuco
-09112,Padre las Casas,09103,Cunco
-09112,Padre las Casas,09105,Freire
-11302,O'Higgins,12401,Natales
-11302,O'Higgins,11303,Tortel
-11302,O'Higgins,11301,Cochrane
-10401,Chaitén,10403,Hualaihué
-10401,Chaitén,10404,Palena
-10401,Chaitén,10402,Futaleufú
-10401,Chaitén,11202,Cisnes
-06102,Codegua,06108,Machalí
-06102,Codegua,06106,Graneros
-06102,Codegua,13203,San José de Maipo
-06102,Codegua,06101,Rancagua
-06102,Codegua,06110,Mostazal
-02203,San Pedro de Atacama,02103,Sierra Gorda
-02203,San Pedro de Atacama,02201,Calama
-02203,San Pedro de Atacama,02101,Antofagasta
-09201,Angol,08206,Los Alamos
-09201,Angol,09208,Purén
-09201,Angol,08306,Nacimiento
-09201,Angol,09204,Ercilla
-09201,Angol,09209,Renaico
-09201,Angol,08205,Curanilahue
-09201,Angol,09202,Collipulli
-09201,Angol,09206,Los Sauces
-09201,Angol,08203,Cañete
-16107,Quillón,16206,Ránquil
-16107,Quillón,16101,Chillán
-16107,Quillón,16102,Bulnes
-16107,Quillón,08104,Florida
-16107,Quillón,16105,Pemuco
-16107,Quillón,08303,Cabrero
-16107,Quillón,08313,Yumbel
-13404,Paine,13603,Isla de Maipo
-13404,Paine,13202,Pirque
-13404,Paine,13501,Melipilla
-13404,Paine,13502,Alhué
-13404,Paine,13402,Buin
-13404,Paine,06110,Mostazal
-04103,Andacollo,04305,Río Hurtado
-04103,Andacollo,04301,Ovalle
-04103,Andacollo,04106,Vicuña
-04103,Andacollo,04101,La Serena
-04103,Andacollo,04102,Coquimbo
-02302,María Elena,02103,Sierra Gorda
-02302,María Elena,01401,Pozo Almonte
-02302,María Elena,02102,Mejillones
-02302,María Elena,01405,Pica
-02302,María Elena,02301,Tocopilla
-02302,María Elena,02201,Calama
-08312,Tucapel,16109,Yungay
-08312,Tucapel,08301,Los Angeles
-08312,Tucapel,08302,Antuco
-08312,Tucapel,08309,Quilleco
-11303,Tortel,12401,Natales
-11303,Tortel,11302,O'Higgins
-11303,Tortel,11401,Chile Chico
-11303,Tortel,11301,Cochrane
-11303,Tortel,11201,Aisén
-06306,Palmilla,06117,San Vicente
-06306,Palmilla,06310,Santa Cruz
-06306,Palmilla,06113,Pichidegua
-06306,Palmilla,06307,Peralillo
-10203,Chonchi,10207,Queilén
-10203,Chonchi,10208,Quellón
-10203,Chonchi,10201,Castro
-06204,Marchihue,06203,Litueche
-06204,Marchihue,06201,Pichilemu
-06204,Marchihue,06202,La Estrella
-06204,Marchihue,06309,Pumanque
-06204,Marchihue,06113,Pichidegua
-06204,Marchihue,06307,Peralillo
-04204,Salamanca,05404,Petorca
-04204,Salamanca,04203,Los Vilos
-04204,Salamanca,04201,Illapel
-04204,Salamanca,05402,Cabildo
-04204,Salamanca,05705,Putaendo
-06310,Santa Cruz,06309,Pumanque
-06310,Santa Cruz,06304,Lolol
-06310,Santa Cruz,06305,Nancagua
-06310,Santa Cruz,06117,San Vicente
-06310,Santa Cruz,06306,Palmilla
-06310,Santa Cruz,06302,Chépica
-06310,Santa Cruz,06307,Peralillo
-14201,La Unión,14204,Río Bueno
-14201,La Unión,10307,San Pablo
-14201,La Unión,14203,Lago Ranco
-14201,La Unión,10306,San Juan de La Costa
-14201,La Unión,14102,Corral
-14201,La Unión,14107,Paillaco
-14201,La Unión,14202,Futrono
-08204,Contulmo,09207,Lumaco
-08204,Contulmo,09208,Purén
-08204,Contulmo,08207,Tirúa
-08204,Contulmo,08203,Cañete
-10307,San Pablo,14204,Río Bueno
-10307,San Pablo,10301,Osorno
-10307,San Pablo,10304,Puyehue
-10307,San Pablo,10306,San Juan de La Costa
-10307,San Pablo,14201,La Unión
-11402,Río Ibáñez,11401,Chile Chico
-11402,Río Ibáñez,11101,Coihaique
-11402,Río Ibáñez,11201,Aisén
-07105,Maule,07101,Talca
-07105,Maule,07406,San Javier
-07105,Maule,07107,Pencahue
-07105,Maule,07109,San Clemente
-07105,Maule,07408,Yerbas Buenas
-12101,Punta Arenas,12102,Laguna Blanca
-12101,Punta Arenas,12104,San Gregorio
-09116,Saavedra,09102,Carahue
-09116,Saavedra,09117,Teodoro Schmidt
-13202,Pirque,13401,San Bernardo
-13202,Pirque,13203,San José de Maipo
-13202,Pirque,13404,Paine
-13202,Pirque,13402,Buin
-13202,Pirque,13201,Puente Alto
-13202,Pirque,06110,Mostazal
-05606,Santo Domingo,06205,Navidad
-05606,Santo Domingo,05601,San Antonio
-05606,Santo Domingo,13505,San Pedro
-13106,Estación Central,13124,Pudahuel
-13106,Estación Central,13102,Cerrillos
-13106,Estación Central,13119,Maipú
-13106,Estación Central,13117,Lo Prado
-13106,Estación Central,13126,Quinta Normal
-13106,Estación Central,13121,Pedro Aguirre Cerda
-13106,Estación Central,13101,Santiago
-07307,Sagrada Familia,07110,San Rafael
-07307,Sagrada Familia,07302,Hualañé
-07307,Sagrada Familia,07304,Molina
-07307,Sagrada Familia,07301,Curicó
-07307,Sagrada Familia,07107,Pencahue
-07307,Sagrada Familia,07305,Rauco
-07307,Sagrada Familia,07103,Curepto
-06301,San Fernando,07306,Romeral
-06301,San Fernando,06109,Malloa
-06301,San Fernando,06308,Placilla
-06301,San Fernando,06303,Chimbarongo
-06301,San Fernando,06108,Machalí
-06301,San Fernando,06117,San Vicente
-06301,San Fernando,06115,Rengo
-06301,San Fernando,07308,Teno
-16206,Ránquil,16205,Portezuelo
-16206,Ránquil,16107,Quillón
-16206,Ránquil,16101,Chillán
-16206,Ránquil,16203,Coelemu
-16206,Ránquil,08104,Florida
-16206,Ránquil,08111,Tomé
-16303,Ñiquén,16301,San Carlos
-16303,Ñiquén,07201,Cauquenes
-16303,Ñiquén,07404,Parral
-16303,Ñiquén,16304,San Fabián
-09113,Perquenco,09210,Traiguén
-09113,Perquenco,09211,Victoria
-09113,Perquenco,09106,Galvarino
-09113,Perquenco,09108,Lautaro
-06103,Coinco,06117,San Vicente
-06103,Coinco,06104,Coltauco
-06103,Coinco,06114,Quinta de Tilcoco
-06103,Coinco,06115,Rengo
-06103,Coinco,06116,Requínoa
-06103,Coinco,06111,Olivar
-06103,Coinco,06105,Doñihue
-08207,Tirúa,09102,Carahue
-08207,Tirúa,09207,Lumaco
-08207,Tirúa,08204,Contulmo
-08207,Tirúa,08203,Cañete
-10404,Palena,10401,Chaitén
-10404,Palena,10402,Futaleufú
-10404,Palena,11102,Lago Verde
-10404,Palena,11202,Cisnes
-05503,Hijuelas,05702,Catemu
-05503,Hijuelas,05506,Nogales
-05503,Hijuelas,13303,Tiltil
-05503,Hijuelas,05803,Olmué
-05503,Hijuelas,05502,Calera
+05502,Calera,05506,Nogales
 05503,Hijuelas,05501,Quillota
+05503,Hijuelas,05502,Calera
+05503,Hijuelas,05506,Nogales
+05503,Hijuelas,05702,Catemu
 05503,Hijuelas,05703,Llaillay
-10204,Curaco de Vélez,10210,Quinchao
-13131,San Ramón,13105,El Bosque
-13131,San Ramón,13112,La Pintana
-13131,San Ramón,13111,La Granja
-13131,San Ramón,13130,San Miguel
-13131,San Ramón,13129,San Joaquín
-13131,San Ramón,13109,La Cisterna
-13107,Huechuraba,13301,Colina
-13107,Huechuraba,13115,Lo Barnechea
-13107,Huechuraba,13104,Conchalí
-13107,Huechuraba,13132,Vitacura
-13107,Huechuraba,13127,Recoleta
-13107,Huechuraba,13125,Quilicura
-10205,Dalcahue,10201,Castro
-10205,Dalcahue,10202,Ancud
-10205,Dalcahue,10209,Quemchi
-10402,Futaleufú,10401,Chaitén
-10402,Futaleufú,10404,Palena
-07405,Retiro,07201,Cauquenes
-07405,Retiro,07406,San Javier
-07405,Retiro,07404,Parral
-07405,Retiro,07403,Longaví
-08201,Lebu,08206,Los Alamos
-08201,Lebu,08202,Arauco
-08201,Lebu,08205,Curanilahue
-05102,Casablanca,05801,Quilpué
-05102,Casablanca,05602,Algarrobo
-05102,Casablanca,13504,María Pinto
-05102,Casablanca,05605,El Tabo
-05102,Casablanca,05603,Cartagena
-05102,Casablanca,13503,Curacaví
-05102,Casablanca,05604,El Quisco
-06114,Quinta de Tilcoco,06109,Malloa
-06114,Quinta de Tilcoco,06117,San Vicente
-06114,Quinta de Tilcoco,06103,Coinco
-06114,Quinta de Tilcoco,06115,Rengo
-05703,Llaillay,05702,Catemu
-05703,Llaillay,13303,Tiltil
-05703,Llaillay,05303,Rinconada
-05703,Llaillay,05503,Hijuelas
-05703,Llaillay,05704,Panquehue
+05503,Hijuelas,05803,Olmué
+05503,Hijuelas,13303,Tiltil
+05504,La Cruz,05105,Puchuncaví
+05504,La Cruz,05501,Quillota
+05504,La Cruz,05502,Calera
+05504,La Cruz,05506,Nogales
 05506,Nogales,05105,Puchuncaví
-05506,Nogales,05702,Catemu
 05506,Nogales,05401,La Ligua
 05506,Nogales,05402,Cabildo
 05506,Nogales,05405,Zapallar
 05506,Nogales,05502,Calera
 05506,Nogales,05503,Hijuelas
 05506,Nogales,05504,La Cruz
-02102,Mejillones,02103,Sierra Gorda
-02102,Mejillones,02302,María Elena
-02102,Mejillones,02301,Tocopilla
-02102,Mejillones,02101,Antofagasta
-08110,Talcahuano,08107,Penco
-08110,Talcahuano,08112,Hualpén
-08110,Talcahuano,08101,Concepción
-05103,Concón,05501,Quillota
-05103,Concón,05107,Quintero
-05103,Concón,05802,Limache
-05103,Concón,05801,Quilpué
-05103,Concón,05109,Viña del Mar
-06112,Peumo,06107,Las Cabras
-06112,Peumo,06117,San Vicente
+05506,Nogales,05702,Catemu
+05601,San Antonio,05603,Cartagena
+05601,San Antonio,05606,Santo Domingo
+05601,San Antonio,13501,Melipilla
+05601,San Antonio,13504,María Pinto
+05601,San Antonio,13505,San Pedro
+05602,Algarrobo,05102,Casablanca
+05602,Algarrobo,05604,El Quisco
+05603,Cartagena,05102,Casablanca
+05603,Cartagena,05601,San Antonio
+05603,Cartagena,05605,El Tabo
+05603,Cartagena,13504,María Pinto
+05604,El Quisco,05102,Casablanca
+05604,El Quisco,05602,Algarrobo
+05604,El Quisco,05605,El Tabo
+05605,El Tabo,05102,Casablanca
+05605,El Tabo,05603,Cartagena
+05605,El Tabo,05604,El Quisco
+05606,Santo Domingo,05601,San Antonio
+05606,Santo Domingo,06205,Navidad
+05606,Santo Domingo,13505,San Pedro
+05701,San Felipe,05301,Los Andes
+05701,San Felipe,05302,Calle Larga
+05701,San Felipe,05303,Rinconada
+05701,San Felipe,05702,Catemu
+05701,San Felipe,05704,Panquehue
+05701,San Felipe,05705,Putaendo
+05701,San Felipe,05706,Santa María
+05702,Catemu,05402,Cabildo
+05702,Catemu,05503,Hijuelas
+05702,Catemu,05506,Nogales
+05702,Catemu,05701,San Felipe
+05702,Catemu,05703,Llaillay
+05702,Catemu,05704,Panquehue
+05702,Catemu,05705,Putaendo
+05703,Llaillay,05303,Rinconada
+05703,Llaillay,05503,Hijuelas
+05703,Llaillay,05702,Catemu
+05703,Llaillay,05704,Panquehue
+05703,Llaillay,13303,Tiltil
+05704,Panquehue,05303,Rinconada
+05704,Panquehue,05701,San Felipe
+05704,Panquehue,05702,Catemu
+05704,Panquehue,05703,Llaillay
+05705,Putaendo,04204,Salamanca
+05705,Putaendo,05304,San Esteban
+05705,Putaendo,05402,Cabildo
+05705,Putaendo,05701,San Felipe
+05705,Putaendo,05702,Catemu
+05705,Putaendo,05706,Santa María
+05706,Santa María,05301,Los Andes
+05706,Santa María,05304,San Esteban
+05706,Santa María,05701,San Felipe
+05706,Santa María,05705,Putaendo
+05801,Quilpué,05102,Casablanca
+05801,Quilpué,05103,Concón
+05801,Quilpué,05109,Viña del Mar
+05801,Quilpué,05802,Limache
+05801,Quilpué,05803,Olmué
+05801,Quilpué,05804,Villa Alemana
+05801,Quilpué,13302,Lampa
+05801,Quilpué,13303,Tiltil
+05801,Quilpué,13503,Curacaví
+05802,Limache,05103,Concón
+05802,Limache,05501,Quillota
+05802,Limache,05801,Quilpué
+05802,Limache,05803,Olmué
+05802,Limache,05804,Villa Alemana
+05803,Olmué,05501,Quillota
+05803,Olmué,05503,Hijuelas
+05803,Olmué,05801,Quilpué
+05803,Olmué,05802,Limache
+05803,Olmué,13303,Tiltil
+05804,Villa Alemana,05801,Quilpué
+05804,Villa Alemana,05802,Limache
+06101,Rancagua,06102,Codegua
+06101,Rancagua,06105,Doñihue
+06101,Rancagua,06106,Graneros
+06101,Rancagua,06108,Machalí
+06101,Rancagua,06111,Olivar
+06101,Rancagua,06116,Requínoa
+06101,Rancagua,13502,Alhué
+06102,Codegua,06101,Rancagua
+06102,Codegua,06106,Graneros
+06102,Codegua,06108,Machalí
+06102,Codegua,06110,Mostazal
+06102,Codegua,13203,San José de Maipo
+06103,Coinco,06104,Coltauco
+06103,Coinco,06105,Doñihue
+06103,Coinco,06111,Olivar
+06103,Coinco,06114,Quinta de Tilcoco
+06103,Coinco,06115,Rengo
+06103,Coinco,06116,Requínoa
+06103,Coinco,06117,San Vicente
+06104,Coltauco,06103,Coinco
+06104,Coltauco,06105,Doñihue
+06104,Coltauco,06107,Las Cabras
+06104,Coltauco,06112,Peumo
+06104,Coltauco,06117,San Vicente
+06104,Coltauco,13502,Alhué
+06105,Doñihue,06101,Rancagua
+06105,Doñihue,06103,Coinco
+06105,Doñihue,06104,Coltauco
+06105,Doñihue,06111,Olivar
+06105,Doñihue,13502,Alhué
+06106,Graneros,06101,Rancagua
+06106,Graneros,06102,Codegua
+06106,Graneros,06110,Mostazal
+06106,Graneros,13502,Alhué
+06107,Las Cabras,06104,Coltauco
+06107,Las Cabras,06112,Peumo
+06107,Las Cabras,06113,Pichidegua
+06107,Las Cabras,06202,La Estrella
+06107,Las Cabras,06203,Litueche
+06107,Las Cabras,13502,Alhué
+06107,Las Cabras,13505,San Pedro
+06108,Machalí,06101,Rancagua
+06108,Machalí,06102,Codegua
+06108,Machalí,06115,Rengo
+06108,Machalí,06116,Requínoa
+06108,Machalí,06301,San Fernando
+06108,Machalí,13203,San José de Maipo
+06109,Malloa,06114,Quinta de Tilcoco
+06109,Malloa,06115,Rengo
+06109,Malloa,06117,San Vicente
+06109,Malloa,06301,San Fernando
+06110,Mostazal,06102,Codegua
+06110,Mostazal,06106,Graneros
+06110,Mostazal,13202,Pirque
+06110,Mostazal,13203,San José de Maipo
+06110,Mostazal,13404,Paine
+06110,Mostazal,13502,Alhué
+06111,Olivar,06101,Rancagua
+06111,Olivar,06103,Coinco
+06111,Olivar,06105,Doñihue
+06111,Olivar,06116,Requínoa
 06112,Peumo,06104,Coltauco
+06112,Peumo,06107,Las Cabras
 06112,Peumo,06113,Pichidegua
-13115,Lo Barnechea,05301,Los Andes
-13115,Lo Barnechea,13301,Colina
-13115,Lo Barnechea,13203,San José de Maipo
-13115,Lo Barnechea,13107,Huechuraba
-13115,Lo Barnechea,13132,Vitacura
-13115,Lo Barnechea,13114,Las Condes
-07301,Curicó,07304,Molina
-07301,Curicó,07307,Sagrada Familia
-07301,Curicó,07306,Romeral
-07301,Curicó,07305,Rauco
-07301,Curicó,07308,Teno
-14105,Máfil,14106,Mariquina
-14105,Máfil,14103,Lanco
-14105,Máfil,14108,Panguipulli
-14105,Máfil,14101,Valdivia
-14105,Máfil,14104,Los Lagos
-11101,Coihaique,11402,Río Ibáñez
-11101,Coihaique,11102,Lago Verde
-11101,Coihaique,11202,Cisnes
-11101,Coihaique,11201,Aisén
-13105,El Bosque,13401,San Bernardo
-13105,El Bosque,13116,Lo Espejo
-13105,El Bosque,13131,San Ramón
-13105,El Bosque,13112,La Pintana
-13105,El Bosque,13109,La Cisterna
-07108,Río Claro,07106,Pelarco
-07108,Río Claro,07110,San Rafael
-07108,Río Claro,07304,Molina
-07108,Río Claro,07109,San Clemente
-07101,Talca,07106,Pelarco
-07101,Talca,07110,San Rafael
+06112,Peumo,06117,San Vicente
+06113,Pichidegua,06107,Las Cabras
+06113,Pichidegua,06112,Peumo
+06113,Pichidegua,06117,San Vicente
+06113,Pichidegua,06202,La Estrella
+06113,Pichidegua,06204,Marchihue
+06113,Pichidegua,06306,Palmilla
+06113,Pichidegua,06307,Peralillo
+06114,Quinta de Tilcoco,06103,Coinco
+06114,Quinta de Tilcoco,06109,Malloa
+06114,Quinta de Tilcoco,06115,Rengo
+06114,Quinta de Tilcoco,06117,San Vicente
+06115,Rengo,06103,Coinco
+06115,Rengo,06108,Machalí
+06115,Rengo,06109,Malloa
+06115,Rengo,06114,Quinta de Tilcoco
+06115,Rengo,06116,Requínoa
+06115,Rengo,06301,San Fernando
+06116,Requínoa,06101,Rancagua
+06116,Requínoa,06103,Coinco
+06116,Requínoa,06108,Machalí
+06116,Requínoa,06111,Olivar
+06116,Requínoa,06115,Rengo
+06117,San Vicente,06103,Coinco
+06117,San Vicente,06104,Coltauco
+06117,San Vicente,06109,Malloa
+06117,San Vicente,06112,Peumo
+06117,San Vicente,06113,Pichidegua
+06117,San Vicente,06114,Quinta de Tilcoco
+06117,San Vicente,06301,San Fernando
+06117,San Vicente,06305,Nancagua
+06117,San Vicente,06306,Palmilla
+06117,San Vicente,06308,Placilla
+06117,San Vicente,06310,Santa Cruz
+06201,Pichilemu,06203,Litueche
+06201,Pichilemu,06204,Marchihue
+06201,Pichilemu,06206,Paredones
+06201,Pichilemu,06309,Pumanque
+06202,La Estrella,06107,Las Cabras
+06202,La Estrella,06113,Pichidegua
+06202,La Estrella,06203,Litueche
+06202,La Estrella,06204,Marchihue
+06203,Litueche,06107,Las Cabras
+06203,Litueche,06201,Pichilemu
+06203,Litueche,06202,La Estrella
+06203,Litueche,06204,Marchihue
+06203,Litueche,06205,Navidad
+06203,Litueche,13505,San Pedro
+06204,Marchihue,06113,Pichidegua
+06204,Marchihue,06201,Pichilemu
+06204,Marchihue,06202,La Estrella
+06204,Marchihue,06203,Litueche
+06204,Marchihue,06307,Peralillo
+06204,Marchihue,06309,Pumanque
+06205,Navidad,05606,Santo Domingo
+06205,Navidad,06203,Litueche
+06205,Navidad,13505,San Pedro
+06206,Paredones,06201,Pichilemu
+06206,Paredones,06304,Lolol
+06206,Paredones,06309,Pumanque
+06206,Paredones,07302,Hualañé
+06206,Paredones,07309,Vichuquén
+06301,San Fernando,06108,Machalí
+06301,San Fernando,06109,Malloa
+06301,San Fernando,06115,Rengo
+06301,San Fernando,06117,San Vicente
+06301,San Fernando,06303,Chimbarongo
+06301,San Fernando,06308,Placilla
+06301,San Fernando,07306,Romeral
+06301,San Fernando,07308,Teno
+06302,Chépica,06303,Chimbarongo
+06302,Chépica,06304,Lolol
+06302,Chépica,06305,Nancagua
+06302,Chépica,06310,Santa Cruz
+06302,Chépica,07302,Hualañé
+06302,Chépica,07305,Rauco
+06302,Chépica,07308,Teno
+06303,Chimbarongo,06301,San Fernando
+06303,Chimbarongo,06302,Chépica
+06303,Chimbarongo,06305,Nancagua
+06303,Chimbarongo,06308,Placilla
+06303,Chimbarongo,07308,Teno
+06304,Lolol,06206,Paredones
+06304,Lolol,06302,Chépica
+06304,Lolol,06309,Pumanque
+06304,Lolol,06310,Santa Cruz
+06304,Lolol,07302,Hualañé
+06305,Nancagua,06117,San Vicente
+06305,Nancagua,06302,Chépica
+06305,Nancagua,06303,Chimbarongo
+06305,Nancagua,06308,Placilla
+06305,Nancagua,06310,Santa Cruz
+06306,Palmilla,06113,Pichidegua
+06306,Palmilla,06117,San Vicente
+06306,Palmilla,06307,Peralillo
+06306,Palmilla,06310,Santa Cruz
+06307,Peralillo,06113,Pichidegua
+06307,Peralillo,06204,Marchihue
+06307,Peralillo,06306,Palmilla
+06307,Peralillo,06309,Pumanque
+06307,Peralillo,06310,Santa Cruz
+06308,Placilla,06117,San Vicente
+06308,Placilla,06301,San Fernando
+06308,Placilla,06303,Chimbarongo
+06308,Placilla,06305,Nancagua
+06309,Pumanque,06201,Pichilemu
+06309,Pumanque,06204,Marchihue
+06309,Pumanque,06206,Paredones
+06309,Pumanque,06304,Lolol
+06309,Pumanque,06307,Peralillo
+06309,Pumanque,06310,Santa Cruz
+06310,Santa Cruz,06117,San Vicente
+06310,Santa Cruz,06302,Chépica
+06310,Santa Cruz,06304,Lolol
+06310,Santa Cruz,06305,Nancagua
+06310,Santa Cruz,06306,Palmilla
+06310,Santa Cruz,06307,Peralillo
+06310,Santa Cruz,06309,Pumanque
 07101,Talca,07105,Maule
+07101,Talca,07106,Pelarco
 07101,Talca,07107,Pencahue
 07101,Talca,07109,San Clemente
-04303,Monte Patria,04302,Combarbalá
-04303,Monte Patria,04304,Punitaqui
-04303,Monte Patria,04305,Río Hurtado
-04303,Monte Patria,04301,Ovalle
-04303,Monte Patria,04201,Illapel
-04301,Ovalle,04304,Punitaqui
-04301,Ovalle,04103,Andacollo
-04301,Ovalle,04305,Río Hurtado
-04301,Ovalle,04303,Monte Patria
-04301,Ovalle,04202,Canela
-04301,Ovalle,04102,Coquimbo
-10108,Maullín,10106,Los Muermos
+07101,Talca,07110,San Rafael
+07102,Constitución,07103,Curepto
+07102,Constitución,07104,Empedrado
+07102,Constitución,07107,Pencahue
+07102,Constitución,07202,Chanco
+07102,Constitución,07406,San Javier
+07103,Curepto,07102,Constitución
+07103,Curepto,07107,Pencahue
+07103,Curepto,07302,Hualañé
+07103,Curepto,07303,Licantén
+07103,Curepto,07307,Sagrada Familia
+07104,Empedrado,07102,Constitución
+07104,Empedrado,07201,Cauquenes
+07104,Empedrado,07202,Chanco
+07104,Empedrado,07406,San Javier
+07105,Maule,07101,Talca
+07105,Maule,07107,Pencahue
+07105,Maule,07109,San Clemente
+07105,Maule,07406,San Javier
+07105,Maule,07408,Yerbas Buenas
+07106,Pelarco,07101,Talca
+07106,Pelarco,07108,Río Claro
+07106,Pelarco,07109,San Clemente
+07106,Pelarco,07110,San Rafael
+07107,Pencahue,07101,Talca
+07107,Pencahue,07102,Constitución
+07107,Pencahue,07103,Curepto
+07107,Pencahue,07105,Maule
+07107,Pencahue,07110,San Rafael
+07107,Pencahue,07307,Sagrada Familia
+07107,Pencahue,07406,San Javier
+07108,Río Claro,07106,Pelarco
+07108,Río Claro,07109,San Clemente
+07108,Río Claro,07110,San Rafael
+07108,Río Claro,07304,Molina
+07109,San Clemente,07101,Talca
+07109,San Clemente,07105,Maule
+07109,San Clemente,07106,Pelarco
+07109,San Clemente,07108,Río Claro
+07109,San Clemente,07304,Molina
+07109,San Clemente,07402,Colbún
+07109,San Clemente,07408,Yerbas Buenas
+07110,San Rafael,07101,Talca
+07110,San Rafael,07106,Pelarco
+07110,San Rafael,07107,Pencahue
+07110,San Rafael,07108,Río Claro
+07110,San Rafael,07304,Molina
+07110,San Rafael,07307,Sagrada Familia
+07201,Cauquenes,07104,Empedrado
+07201,Cauquenes,07202,Chanco
+07201,Cauquenes,07203,Pelluhue
+07201,Cauquenes,07404,Parral
+07201,Cauquenes,07405,Retiro
+07201,Cauquenes,07406,San Javier
+07201,Cauquenes,16201,Quirihue
+07201,Cauquenes,16202,Cobquecura
+07201,Cauquenes,16204,Ninhue
+07201,Cauquenes,16301,San Carlos
+07201,Cauquenes,16303,Ñiquén
+07202,Chanco,07102,Constitución
+07202,Chanco,07104,Empedrado
+07202,Chanco,07201,Cauquenes
+07202,Chanco,07203,Pelluhue
+07203,Pelluhue,07201,Cauquenes
+07203,Pelluhue,07202,Chanco
+07203,Pelluhue,16202,Cobquecura
+07301,Curicó,07304,Molina
+07301,Curicó,07305,Rauco
+07301,Curicó,07306,Romeral
+07301,Curicó,07307,Sagrada Familia
+07301,Curicó,07308,Teno
+07302,Hualañé,06206,Paredones
+07302,Hualañé,06302,Chépica
+07302,Hualañé,06304,Lolol
+07302,Hualañé,07103,Curepto
+07302,Hualañé,07303,Licantén
+07302,Hualañé,07305,Rauco
+07302,Hualañé,07307,Sagrada Familia
+07302,Hualañé,07309,Vichuquén
+07303,Licantén,07103,Curepto
+07303,Licantén,07302,Hualañé
+07303,Licantén,07309,Vichuquén
+07304,Molina,07108,Río Claro
+07304,Molina,07109,San Clemente
+07304,Molina,07110,San Rafael
+07304,Molina,07301,Curicó
+07304,Molina,07307,Sagrada Familia
+07305,Rauco,06302,Chépica
+07305,Rauco,07301,Curicó
+07305,Rauco,07302,Hualañé
+07305,Rauco,07307,Sagrada Familia
+07305,Rauco,07308,Teno
+07306,Romeral,06301,San Fernando
+07306,Romeral,07301,Curicó
+07306,Romeral,07308,Teno
+07307,Sagrada Familia,07103,Curepto
+07307,Sagrada Familia,07107,Pencahue
+07307,Sagrada Familia,07110,San Rafael
+07307,Sagrada Familia,07301,Curicó
+07307,Sagrada Familia,07302,Hualañé
+07307,Sagrada Familia,07304,Molina
+07307,Sagrada Familia,07305,Rauco
+07308,Teno,06301,San Fernando
+07308,Teno,06302,Chépica
+07308,Teno,06303,Chimbarongo
+07308,Teno,07301,Curicó
+07308,Teno,07305,Rauco
+07308,Teno,07306,Romeral
+07309,Vichuquén,06206,Paredones
+07309,Vichuquén,07302,Hualañé
+07309,Vichuquén,07303,Licantén
+07401,Linares,07402,Colbún
+07401,Linares,07403,Longaví
+07401,Linares,07406,San Javier
+07401,Linares,07407,Villa Alegre
+07401,Linares,07408,Yerbas Buenas
+07402,Colbún,07109,San Clemente
+07402,Colbún,07401,Linares
+07402,Colbún,07403,Longaví
+07402,Colbún,07404,Parral
+07402,Colbún,07408,Yerbas Buenas
+07402,Colbún,16304,San Fabián
+07403,Longaví,07401,Linares
+07403,Longaví,07402,Colbún
+07403,Longaví,07404,Parral
+07403,Longaví,07405,Retiro
+07403,Longaví,07406,San Javier
+07404,Parral,07201,Cauquenes
+07404,Parral,07402,Colbún
+07404,Parral,07403,Longaví
+07404,Parral,07405,Retiro
+07404,Parral,16303,Ñiquén
+07404,Parral,16304,San Fabián
+07405,Retiro,07201,Cauquenes
+07405,Retiro,07403,Longaví
+07405,Retiro,07404,Parral
+07405,Retiro,07406,San Javier
+07406,San Javier,07102,Constitución
+07406,San Javier,07104,Empedrado
+07406,San Javier,07105,Maule
+07406,San Javier,07107,Pencahue
+07406,San Javier,07201,Cauquenes
+07406,San Javier,07401,Linares
+07406,San Javier,07403,Longaví
+07406,San Javier,07405,Retiro
+07406,San Javier,07407,Villa Alegre
+07406,San Javier,07408,Yerbas Buenas
+07407,Villa Alegre,07401,Linares
+07407,Villa Alegre,07406,San Javier
+07407,Villa Alegre,07408,Yerbas Buenas
+07408,Yerbas Buenas,07105,Maule
+07408,Yerbas Buenas,07109,San Clemente
+07408,Yerbas Buenas,07401,Linares
+07408,Yerbas Buenas,07402,Colbún
+07408,Yerbas Buenas,07406,San Javier
+07408,Yerbas Buenas,07407,Villa Alegre
+08101,Concepción,08103,Chiguayante
+08101,Concepción,08104,Florida
+08101,Concepción,08105,Hualqui
+08101,Concepción,08107,Penco
+08101,Concepción,08108,San Pedro de la Paz
+08101,Concepción,08110,Talcahuano
+08101,Concepción,08112,Hualpén
+08102,Coronel,08103,Chiguayante
+08102,Coronel,08105,Hualqui
+08102,Coronel,08106,Lota
+08102,Coronel,08108,San Pedro de la Paz
+08102,Coronel,08109,Santa Juana
+08103,Chiguayante,08101,Concepción
+08103,Chiguayante,08102,Coronel
+08103,Chiguayante,08105,Hualqui
+08103,Chiguayante,08108,San Pedro de la Paz
+08104,Florida,08101,Concepción
+08104,Florida,08105,Hualqui
+08104,Florida,08107,Penco
+08104,Florida,08111,Tomé
+08104,Florida,08313,Yumbel
+08104,Florida,16107,Quillón
+08104,Florida,16206,Ránquil
+08105,Hualqui,08101,Concepción
+08105,Hualqui,08102,Coronel
+08105,Hualqui,08103,Chiguayante
+08105,Hualqui,08104,Florida
+08105,Hualqui,08109,Santa Juana
+08105,Hualqui,08310,San Rosendo
+08105,Hualqui,08313,Yumbel
+08106,Lota,08102,Coronel
+08106,Lota,08109,Santa Juana
+08106,Lota,08202,Arauco
+08107,Penco,08101,Concepción
+08107,Penco,08104,Florida
+08107,Penco,08110,Talcahuano
+08107,Penco,08111,Tomé
+08108,San Pedro de la Paz,08101,Concepción
+08108,San Pedro de la Paz,08102,Coronel
+08108,San Pedro de la Paz,08103,Chiguayante
+08108,San Pedro de la Paz,08112,Hualpén
+08109,Santa Juana,08102,Coronel
+08109,Santa Juana,08105,Hualqui
+08109,Santa Juana,08106,Lota
+08109,Santa Juana,08202,Arauco
+08109,Santa Juana,08205,Curanilahue
+08109,Santa Juana,08304,Laja
+08109,Santa Juana,08306,Nacimiento
+08109,Santa Juana,08310,San Rosendo
+08110,Talcahuano,08101,Concepción
+08110,Talcahuano,08107,Penco
+08110,Talcahuano,08112,Hualpén
+08111,Tomé,08104,Florida
+08111,Tomé,08107,Penco
+08111,Tomé,16203,Coelemu
+08111,Tomé,16206,Ránquil
+08112,Hualpén,08101,Concepción
+08112,Hualpén,08108,San Pedro de la Paz
+08112,Hualpén,08110,Talcahuano
+08201,Lebu,08202,Arauco
+08201,Lebu,08205,Curanilahue
+08201,Lebu,08206,Los Alamos
+08202,Arauco,08106,Lota
+08202,Arauco,08109,Santa Juana
+08202,Arauco,08201,Lebu
+08202,Arauco,08205,Curanilahue
+08203,Cañete,08204,Contulmo
+08203,Cañete,08206,Los Alamos
+08203,Cañete,08207,Tirúa
+08203,Cañete,09201,Angol
+08203,Cañete,09208,Purén
+08204,Contulmo,08203,Cañete
+08204,Contulmo,08207,Tirúa
+08204,Contulmo,09207,Lumaco
+08204,Contulmo,09208,Purén
+08205,Curanilahue,08109,Santa Juana
+08205,Curanilahue,08201,Lebu
+08205,Curanilahue,08202,Arauco
+08205,Curanilahue,08206,Los Alamos
+08205,Curanilahue,08306,Nacimiento
+08205,Curanilahue,09201,Angol
+08206,Los Alamos,08201,Lebu
+08206,Los Alamos,08203,Cañete
+08206,Los Alamos,08205,Curanilahue
+08206,Los Alamos,09201,Angol
+08207,Tirúa,08203,Cañete
+08207,Tirúa,08204,Contulmo
+08207,Tirúa,09102,Carahue
+08207,Tirúa,09207,Lumaco
+08301,Los Angeles,08303,Cabrero
+08301,Los Angeles,08304,Laja
+08301,Los Angeles,08305,Mulchén
+08301,Los Angeles,08306,Nacimiento
+08301,Los Angeles,08307,Negrete
+08301,Los Angeles,08309,Quilleco
+08301,Los Angeles,08311,Santa Bárbara
+08301,Los Angeles,08312,Tucapel
+08301,Los Angeles,08313,Yumbel
+08301,Los Angeles,16109,Yungay
+08302,Antuco,08309,Quilleco
+08302,Antuco,08311,Santa Bárbara
+08302,Antuco,08312,Tucapel
+08302,Antuco,08314,Alto Biobío
+08302,Antuco,16106,Pinto
+08302,Antuco,16109,Yungay
+08303,Cabrero,08301,Los Angeles
+08303,Cabrero,08313,Yumbel
+08303,Cabrero,16105,Pemuco
+08303,Cabrero,16107,Quillón
+08303,Cabrero,16109,Yungay
+08304,Laja,08109,Santa Juana
+08304,Laja,08301,Los Angeles
+08304,Laja,08306,Nacimiento
+08304,Laja,08310,San Rosendo
+08304,Laja,08313,Yumbel
+08305,Mulchén,08301,Los Angeles
+08305,Mulchén,08307,Negrete
+08305,Mulchén,08308,Quilaco
+08305,Mulchén,08311,Santa Bárbara
+08305,Mulchén,09202,Collipulli
+08305,Mulchén,09209,Renaico
+08306,Nacimiento,08109,Santa Juana
+08306,Nacimiento,08205,Curanilahue
+08306,Nacimiento,08301,Los Angeles
+08306,Nacimiento,08304,Laja
+08306,Nacimiento,08307,Negrete
+08306,Nacimiento,09201,Angol
+08306,Nacimiento,09209,Renaico
+08307,Negrete,08301,Los Angeles
+08307,Negrete,08305,Mulchén
+08307,Negrete,08306,Nacimiento
+08307,Negrete,09209,Renaico
+08308,Quilaco,08305,Mulchén
+08308,Quilaco,08311,Santa Bárbara
+08308,Quilaco,08314,Alto Biobío
+08308,Quilaco,09202,Collipulli
+08308,Quilaco,09203,Curacautín
+08308,Quilaco,09205,Lonquimay
+08309,Quilleco,08301,Los Angeles
+08309,Quilleco,08302,Antuco
+08309,Quilleco,08311,Santa Bárbara
+08309,Quilleco,08312,Tucapel
+08310,San Rosendo,08105,Hualqui
+08310,San Rosendo,08109,Santa Juana
+08310,San Rosendo,08304,Laja
+08310,San Rosendo,08313,Yumbel
+08311,Santa Bárbara,08301,Los Angeles
+08311,Santa Bárbara,08302,Antuco
+08311,Santa Bárbara,08305,Mulchén
+08311,Santa Bárbara,08308,Quilaco
+08311,Santa Bárbara,08309,Quilleco
+08311,Santa Bárbara,08314,Alto Biobío
+08312,Tucapel,08301,Los Angeles
+08312,Tucapel,08302,Antuco
+08312,Tucapel,08309,Quilleco
+08312,Tucapel,16109,Yungay
+08313,Yumbel,08104,Florida
+08313,Yumbel,08105,Hualqui
+08313,Yumbel,08301,Los Angeles
+08313,Yumbel,08303,Cabrero
+08313,Yumbel,08304,Laja
+08313,Yumbel,08310,San Rosendo
+08313,Yumbel,16107,Quillón
+08314,Alto Biobío,08302,Antuco
+08314,Alto Biobío,08308,Quilaco
+08314,Alto Biobío,08311,Santa Bárbara
+08314,Alto Biobío,09205,Lonquimay
+09101,Temuco,09106,Galvarino
+09101,Temuco,09108,Lautaro
+09101,Temuco,09111,Nueva Imperial
+09101,Temuco,09112,Padre las Casas
+09101,Temuco,09119,Vilcún
+09101,Temuco,09121,Cholchol
+09102,Carahue,08207,Tirúa
+09102,Carahue,09111,Nueva Imperial
+09102,Carahue,09116,Saavedra
+09102,Carahue,09117,Teodoro Schmidt
+09102,Carahue,09121,Cholchol
+09102,Carahue,09207,Lumaco
+09103,Cunco,09104,Curarrehue
+09103,Cunco,09105,Freire
+09103,Cunco,09110,Melipeuco
+09103,Cunco,09112,Padre las Casas
+09103,Cunco,09115,Pucón
+09103,Cunco,09119,Vilcún
+09103,Cunco,09120,Villarrica
+09104,Curarrehue,09103,Cunco
+09104,Curarrehue,09110,Melipeuco
+09104,Curarrehue,09115,Pucón
+09104,Curarrehue,14108,Panguipulli
+09105,Freire,09103,Cunco
+09105,Freire,09111,Nueva Imperial
+09105,Freire,09112,Padre las Casas
+09105,Freire,09114,Pitrufquén
+09105,Freire,09117,Teodoro Schmidt
+09105,Freire,09120,Villarrica
+09106,Galvarino,09101,Temuco
+09106,Galvarino,09108,Lautaro
+09106,Galvarino,09113,Perquenco
+09106,Galvarino,09121,Cholchol
+09106,Galvarino,09207,Lumaco
+09106,Galvarino,09210,Traiguén
+09107,Gorbea,09109,Loncoche
+09107,Gorbea,09114,Pitrufquén
+09107,Gorbea,09118,Toltén
+09107,Gorbea,14106,Mariquina
+09108,Lautaro,09101,Temuco
+09108,Lautaro,09106,Galvarino
+09108,Lautaro,09113,Perquenco
+09108,Lautaro,09119,Vilcún
+09108,Lautaro,09203,Curacautín
+09108,Lautaro,09211,Victoria
+09109,Loncoche,09107,Gorbea
+09109,Loncoche,09114,Pitrufquén
+09109,Loncoche,09120,Villarrica
+09109,Loncoche,14103,Lanco
+09109,Loncoche,14106,Mariquina
+09109,Loncoche,14108,Panguipulli
+09110,Melipeuco,09103,Cunco
+09110,Melipeuco,09104,Curarrehue
+09110,Melipeuco,09119,Vilcún
+09110,Melipeuco,09203,Curacautín
+09110,Melipeuco,09205,Lonquimay
+09111,Nueva Imperial,09101,Temuco
+09111,Nueva Imperial,09102,Carahue
+09111,Nueva Imperial,09105,Freire
+09111,Nueva Imperial,09112,Padre las Casas
+09111,Nueva Imperial,09117,Teodoro Schmidt
+09111,Nueva Imperial,09121,Cholchol
+09112,Padre las Casas,09101,Temuco
+09112,Padre las Casas,09103,Cunco
+09112,Padre las Casas,09105,Freire
+09112,Padre las Casas,09111,Nueva Imperial
+09112,Padre las Casas,09119,Vilcún
+09113,Perquenco,09106,Galvarino
+09113,Perquenco,09108,Lautaro
+09113,Perquenco,09210,Traiguén
+09113,Perquenco,09211,Victoria
+09114,Pitrufquén,09105,Freire
+09114,Pitrufquén,09107,Gorbea
+09114,Pitrufquén,09109,Loncoche
+09114,Pitrufquén,09117,Teodoro Schmidt
+09114,Pitrufquén,09118,Toltén
+09114,Pitrufquén,09120,Villarrica
+09115,Pucón,09103,Cunco
+09115,Pucón,09104,Curarrehue
+09115,Pucón,09120,Villarrica
+09115,Pucón,14108,Panguipulli
+09116,Saavedra,09102,Carahue
+09116,Saavedra,09117,Teodoro Schmidt
+09117,Teodoro Schmidt,09102,Carahue
+09117,Teodoro Schmidt,09105,Freire
+09117,Teodoro Schmidt,09111,Nueva Imperial
+09117,Teodoro Schmidt,09114,Pitrufquén
+09117,Teodoro Schmidt,09116,Saavedra
+09117,Teodoro Schmidt,09118,Toltén
+09118,Toltén,09107,Gorbea
+09118,Toltén,09114,Pitrufquén
+09118,Toltén,09117,Teodoro Schmidt
+09118,Toltén,14106,Mariquina
+09119,Vilcún,09101,Temuco
+09119,Vilcún,09103,Cunco
+09119,Vilcún,09108,Lautaro
+09119,Vilcún,09110,Melipeuco
+09119,Vilcún,09112,Padre las Casas
+09119,Vilcún,09203,Curacautín
+09120,Villarrica,09103,Cunco
+09120,Villarrica,09105,Freire
+09120,Villarrica,09109,Loncoche
+09120,Villarrica,09114,Pitrufquén
+09120,Villarrica,09115,Pucón
+09120,Villarrica,14108,Panguipulli
+09121,Cholchol,09101,Temuco
+09121,Cholchol,09102,Carahue
+09121,Cholchol,09106,Galvarino
+09121,Cholchol,09111,Nueva Imperial
+09121,Cholchol,09207,Lumaco
+09201,Angol,08203,Cañete
+09201,Angol,08205,Curanilahue
+09201,Angol,08206,Los Alamos
+09201,Angol,08306,Nacimiento
+09201,Angol,09202,Collipulli
+09201,Angol,09204,Ercilla
+09201,Angol,09206,Los Sauces
+09201,Angol,09208,Purén
+09201,Angol,09209,Renaico
+09202,Collipulli,08305,Mulchén
+09202,Collipulli,08308,Quilaco
+09202,Collipulli,09201,Angol
+09202,Collipulli,09203,Curacautín
+09202,Collipulli,09204,Ercilla
+09202,Collipulli,09209,Renaico
+09202,Collipulli,09211,Victoria
+09203,Curacautín,08308,Quilaco
+09203,Curacautín,09108,Lautaro
+09203,Curacautín,09110,Melipeuco
+09203,Curacautín,09119,Vilcún
+09203,Curacautín,09202,Collipulli
+09203,Curacautín,09205,Lonquimay
+09203,Curacautín,09211,Victoria
+09204,Ercilla,09201,Angol
+09204,Ercilla,09202,Collipulli
+09204,Ercilla,09206,Los Sauces
+09204,Ercilla,09210,Traiguén
+09204,Ercilla,09211,Victoria
+09205,Lonquimay,08308,Quilaco
+09205,Lonquimay,08314,Alto Biobío
+09205,Lonquimay,09110,Melipeuco
+09205,Lonquimay,09203,Curacautín
+09206,Los Sauces,09201,Angol
+09206,Los Sauces,09204,Ercilla
+09206,Los Sauces,09207,Lumaco
+09206,Los Sauces,09208,Purén
+09206,Los Sauces,09210,Traiguén
+09207,Lumaco,08204,Contulmo
+09207,Lumaco,08207,Tirúa
+09207,Lumaco,09102,Carahue
+09207,Lumaco,09106,Galvarino
+09207,Lumaco,09121,Cholchol
+09207,Lumaco,09206,Los Sauces
+09207,Lumaco,09208,Purén
+09207,Lumaco,09210,Traiguén
+09208,Purén,08203,Cañete
+09208,Purén,08204,Contulmo
+09208,Purén,09201,Angol
+09208,Purén,09206,Los Sauces
+09208,Purén,09207,Lumaco
+09209,Renaico,08305,Mulchén
+09209,Renaico,08306,Nacimiento
+09209,Renaico,08307,Negrete
+09209,Renaico,09201,Angol
+09209,Renaico,09202,Collipulli
+09210,Traiguén,09106,Galvarino
+09210,Traiguén,09113,Perquenco
+09210,Traiguén,09204,Ercilla
+09210,Traiguén,09206,Los Sauces
+09210,Traiguén,09207,Lumaco
+09210,Traiguén,09211,Victoria
+09211,Victoria,09108,Lautaro
+09211,Victoria,09113,Perquenco
+09211,Victoria,09202,Collipulli
+09211,Victoria,09203,Curacautín
+09211,Victoria,09204,Ercilla
+09211,Victoria,09210,Traiguén
+10101,Puerto Montt,10102,Calbuco
+10101,Puerto Montt,10103,Cochamó
+10101,Puerto Montt,10106,Los Muermos
+10101,Puerto Montt,10108,Maullín
+10101,Puerto Montt,10109,Puerto Varas
+10102,Calbuco,10101,Puerto Montt
+10102,Calbuco,10108,Maullín
+10103,Cochamó,10101,Puerto Montt
+10103,Cochamó,10109,Puerto Varas
+10103,Cochamó,10403,Hualaihué
+10104,Fresia,10105,Frutillar
+10104,Fresia,10106,Los Muermos
+10104,Fresia,10107,Llanquihue
+10104,Fresia,10303,Purranque
+10105,Frutillar,10104,Fresia
+10105,Frutillar,10107,Llanquihue
+10105,Frutillar,10109,Puerto Varas
+10105,Frutillar,10302,Puerto Octay
+10105,Frutillar,10303,Purranque
+10106,Los Muermos,10101,Puerto Montt
+10106,Los Muermos,10104,Fresia
+10106,Los Muermos,10107,Llanquihue
+10106,Los Muermos,10108,Maullín
+10106,Los Muermos,10109,Puerto Varas
+10107,Llanquihue,10104,Fresia
+10107,Llanquihue,10105,Frutillar
+10107,Llanquihue,10106,Los Muermos
+10107,Llanquihue,10109,Puerto Varas
 10108,Maullín,10101,Puerto Montt
 10108,Maullín,10102,Calbuco
+10108,Maullín,10106,Los Muermos
+10109,Puerto Varas,10101,Puerto Montt
+10109,Puerto Varas,10103,Cochamó
+10109,Puerto Varas,10105,Frutillar
+10109,Puerto Varas,10106,Los Muermos
+10109,Puerto Varas,10107,Llanquihue
+10109,Puerto Varas,10302,Puerto Octay
+10109,Puerto Varas,10304,Puyehue
+10201,Castro,10203,Chonchi
+10201,Castro,10205,Dalcahue
+10202,Ancud,10205,Dalcahue
+10202,Ancud,10209,Quemchi
+10203,Chonchi,10201,Castro
+10203,Chonchi,10207,Queilén
+10203,Chonchi,10208,Quellón
+10204,Curaco de Vélez,10210,Quinchao
+10205,Dalcahue,10201,Castro
+10205,Dalcahue,10202,Ancud
+10205,Dalcahue,10209,Quemchi
+10207,Queilén,10203,Chonchi
+10208,Quellón,10203,Chonchi
+10209,Quemchi,10202,Ancud
+10209,Quemchi,10205,Dalcahue
+10210,Quinchao,10204,Curaco de Vélez
+10301,Osorno,10302,Puerto Octay
+10301,Osorno,10304,Puyehue
+10301,Osorno,10305,Río Negro
+10301,Osorno,10306,San Juan de La Costa
+10301,Osorno,10307,San Pablo
+10302,Puerto Octay,10105,Frutillar
+10302,Puerto Octay,10109,Puerto Varas
+10302,Puerto Octay,10301,Osorno
+10302,Puerto Octay,10303,Purranque
+10302,Puerto Octay,10304,Puyehue
+10302,Puerto Octay,10305,Río Negro
+10303,Purranque,10104,Fresia
+10303,Purranque,10105,Frutillar
+10303,Purranque,10302,Puerto Octay
+10303,Purranque,10305,Río Negro
+10304,Puyehue,10109,Puerto Varas
+10304,Puyehue,10301,Osorno
+10304,Puyehue,10302,Puerto Octay
+10304,Puyehue,10307,San Pablo
+10304,Puyehue,14204,Río Bueno
+10305,Río Negro,10301,Osorno
+10305,Río Negro,10302,Puerto Octay
+10305,Río Negro,10303,Purranque
+10305,Río Negro,10306,San Juan de La Costa
+10306,San Juan de La Costa,10301,Osorno
+10306,San Juan de La Costa,10305,Río Negro
+10306,San Juan de La Costa,10307,San Pablo
+10306,San Juan de La Costa,14201,La Unión
+10307,San Pablo,10301,Osorno
+10307,San Pablo,10304,Puyehue
+10307,San Pablo,10306,San Juan de La Costa
+10307,San Pablo,14201,La Unión
+10307,San Pablo,14204,Río Bueno
+10401,Chaitén,10402,Futaleufú
+10401,Chaitén,10403,Hualaihué
+10401,Chaitén,10404,Palena
+10401,Chaitén,11202,Cisnes
+10402,Futaleufú,10401,Chaitén
+10402,Futaleufú,10404,Palena
+10403,Hualaihué,10103,Cochamó
+10403,Hualaihué,10401,Chaitén
+10404,Palena,10401,Chaitén
+10404,Palena,10402,Futaleufú
+10404,Palena,11102,Lago Verde
+10404,Palena,11202,Cisnes
+11101,Coihaique,11102,Lago Verde
+11101,Coihaique,11201,Aisén
+11101,Coihaique,11202,Cisnes
+11101,Coihaique,11402,Río Ibáñez
 11102,Lago Verde,10404,Palena
 11102,Lago Verde,11101,Coihaique
 11102,Lago Verde,11202,Cisnes
-08104,Florida,16107,Quillón
-08104,Florida,16206,Ránquil
-08104,Florida,08107,Penco
-08104,Florida,08101,Concepción
-08104,Florida,08111,Tomé
-08104,Florida,08313,Yumbel
-08104,Florida,08105,Hualqui
-13504,María Pinto,05601,San Antonio
-13504,María Pinto,05102,Casablanca
-13504,María Pinto,13501,Melipilla
-13504,María Pinto,05603,Cartagena
-13504,María Pinto,13503,Curacaví
-13122,Peñalolén,13203,San José de Maipo
-13122,Peñalolén,13118,Macul
-13122,Peñalolén,13120,Ñuñoa
-13122,Peñalolén,13114,Las Condes
-13122,Peñalolén,13110,La Florida
-13122,Peñalolén,13113,La Reina
-05404,Petorca,04204,Salamanca
-05404,Petorca,05401,La Ligua
-05404,Petorca,04203,Los Vilos
-05404,Petorca,05402,Cabildo
-08101,Concepción,08107,Penco
-08101,Concepción,08112,Hualpén
-08101,Concepción,08110,Talcahuano
-08101,Concepción,08104,Florida
-08101,Concepción,08103,Chiguayante
-08101,Concepción,08108,San Pedro de la Paz
-08101,Concepción,08105,Hualqui
-10109,Puerto Varas,10106,Los Muermos
-10109,Puerto Varas,10105,Frutillar
-10109,Puerto Varas,10302,Puerto Octay
-10109,Puerto Varas,10101,Puerto Montt
-10109,Puerto Varas,10304,Puyehue
-10109,Puerto Varas,10103,Cochamó
-10109,Puerto Varas,10107,Llanquihue
+11201,Aisén,11101,Coihaique
+11201,Aisén,11202,Cisnes
+11201,Aisén,11301,Cochrane
+11201,Aisén,11303,Tortel
+11201,Aisén,11401,Chile Chico
+11201,Aisén,11402,Río Ibáñez
 11202,Cisnes,10401,Chaitén
 11202,Cisnes,10404,Palena
 11202,Cisnes,11101,Coihaique
 11202,Cisnes,11102,Lago Verde
 11202,Cisnes,11201,Aisén
-09114,Pitrufquén,09118,Toltén
-09114,Pitrufquén,09109,Loncoche
-09114,Pitrufquén,09107,Gorbea
-09114,Pitrufquén,09120,Villarrica
-09114,Pitrufquén,09105,Freire
-09114,Pitrufquén,09117,Teodoro Schmidt
-08314,Alto Biobío,09205,Lonquimay
-08314,Alto Biobío,08311,Santa Bárbara
-08314,Alto Biobío,08302,Antuco
-08314,Alto Biobío,08308,Quilaco
-13403,Calera de Tango,13401,San Bernardo
-13403,Calera de Tango,13604,Padre Hurtado
-13403,Calera de Tango,13119,Maipú
-13403,Calera de Tango,13601,Talagante
-13403,Calera de Tango,13605,Peñaflor
-08109,Santa Juana,08310,San Rosendo
-08109,Santa Juana,08304,Laja
-08109,Santa Juana,08202,Arauco
-08109,Santa Juana,08306,Nacimiento
-08109,Santa Juana,08106,Lota
-08109,Santa Juana,08205,Curanilahue
-08109,Santa Juana,08105,Hualqui
-08109,Santa Juana,08102,Coronel
-05401,La Ligua,05506,Nogales
-05401,La Ligua,05404,Petorca
-05401,La Ligua,04203,Los Vilos
-05401,La Ligua,05402,Cabildo
-05401,La Ligua,05403,Papudo
-05401,La Ligua,05405,Zapallar
-04203,Los Vilos,04204,Salamanca
-04203,Los Vilos,05404,Petorca
-04203,Los Vilos,05401,La Ligua
-04203,Los Vilos,04201,Illapel
-04203,Los Vilos,04202,Canela
-05604,El Quisco,05602,Algarrobo
-05604,El Quisco,05102,Casablanca
-05604,El Quisco,05605,El Tabo
-10101,Puerto Montt,10106,Los Muermos
-10101,Puerto Montt,10108,Maullín
-10101,Puerto Montt,10109,Puerto Varas
-10101,Puerto Montt,10102,Calbuco
-10101,Puerto Montt,10103,Cochamó
-09109,Loncoche,14106,Mariquina
-09109,Loncoche,14103,Lanco
-09109,Loncoche,14108,Panguipulli
-09109,Loncoche,09114,Pitrufquén
-09109,Loncoche,09107,Gorbea
-09109,Loncoche,09120,Villarrica
-01405,Pica,01404,Huara
-01405,Pica,01401,Pozo Almonte
-01405,Pica,02302,María Elena
-01405,Pica,02202,Ollagüe
-01405,Pica,01403,Colchane
-01405,Pica,02201,Calama
-13119,Maipú,13401,San Bernardo
-13119,Maipú,13124,Pudahuel
-13119,Maipú,13604,Padre Hurtado
-13119,Maipú,13102,Cerrillos
-13119,Maipú,13106,Estación Central
-13119,Maipú,13403,Calera de Tango
-13119,Maipú,13503,Curacaví
-04201,Illapel,04302,Combarbalá
-04201,Illapel,04204,Salamanca
-04201,Illapel,04303,Monte Patria
-04201,Illapel,04203,Los Vilos
-04201,Illapel,04202,Canela
-07406,San Javier,07201,Cauquenes
-07406,San Javier,07407,Villa Alegre
-07406,San Javier,07105,Maule
-07406,San Javier,07405,Retiro
-07406,San Javier,07102,Constitución
-07406,San Javier,07403,Longaví
-07406,San Javier,07107,Pencahue
-07406,San Javier,07401,Linares
-07406,San Javier,07104,Empedrado
-07406,San Javier,07408,Yerbas Buenas
-05605,El Tabo,05604,El Quisco
-05605,El Tabo,05102,Casablanca
-05605,El Tabo,05603,Cartagena
-06115,Rengo,06109,Malloa
-06115,Rengo,06108,Machalí
-06115,Rengo,06301,San Fernando
-06115,Rengo,06103,Coinco
-06115,Rengo,06114,Quinta de Tilcoco
-06115,Rengo,06116,Requínoa
-05304,San Esteban,05706,Santa María
-05304,San Esteban,05705,Putaendo
-05304,San Esteban,05301,Los Andes
-09104,Curarrehue,09103,Cunco
-09104,Curarrehue,09115,Pucón
-09104,Curarrehue,14108,Panguipulli
-09104,Curarrehue,09110,Melipeuco
-05107,Quintero,05105,Puchuncaví
-05107,Quintero,05501,Quillota
-05107,Quintero,05103,Concón
-14102,Corral,14201,La Unión
-14102,Corral,14101,Valdivia
-14102,Corral,14107,Paillaco
-10201,Castro,10203,Chonchi
-10201,Castro,10205,Dalcahue
-07308,Teno,07301,Curicó
-07308,Teno,07306,Romeral
-07308,Teno,07305,Rauco
-07308,Teno,06303,Chimbarongo
-07308,Teno,06301,San Fernando
-07308,Teno,06302,Chépica
-10301,Osorno,10307,San Pablo
-10301,Osorno,10302,Puerto Octay
-10301,Osorno,10304,Puyehue
-10301,Osorno,10306,San Juan de La Costa
-10301,Osorno,10305,Río Negro
-01101,Iquique,01404,Huara
-01101,Iquique,01401,Pozo Almonte
-01101,Iquique,02301,Tocopilla
-01101,Iquique,01107,Alto Hospicio
-08111,Tomé,16206,Ránquil
-08111,Tomé,16203,Coelemu
-08111,Tomé,08107,Penco
-08111,Tomé,08104,Florida
-05402,Cabildo,04204,Salamanca
-05402,Cabildo,05702,Catemu
-05402,Cabildo,05506,Nogales
-05402,Cabildo,05404,Petorca
-05402,Cabildo,05401,La Ligua
-05402,Cabildo,05705,Putaendo
-16109,Yungay,16106,Pinto
-16109,Yungay,16105,Pemuco
-16109,Yungay,08303,Cabrero
-16109,Yungay,08312,Tucapel
-16109,Yungay,08301,Los Angeles
-16109,Yungay,08302,Antuco
-13132,Vitacura,13107,Huechuraba
-13132,Vitacura,13115,Lo Barnechea
-13132,Vitacura,13123,Providencia
-13132,Vitacura,13114,Las Condes
-13132,Vitacura,13127,Recoleta
-06105,Doñihue,06104,Coltauco
-06105,Doñihue,06103,Coinco
-06105,Doñihue,06111,Olivar
-06105,Doñihue,06101,Rancagua
-06105,Doñihue,13502,Alhué
-02202,Ollagüe,01405,Pica
-02202,Ollagüe,02201,Calama
-10102,Calbuco,10108,Maullín
-10102,Calbuco,10101,Puerto Montt
-10304,Puyehue,14204,Río Bueno
-10304,Puyehue,10307,San Pablo
-10304,Puyehue,10302,Puerto Octay
-10304,Puyehue,10109,Puerto Varas
-10304,Puyehue,10301,Osorno
-13112,La Pintana,13401,San Bernardo
-13112,La Pintana,13131,San Ramón
-13112,La Pintana,13105,El Bosque
-13112,La Pintana,13111,La Granja
-13112,La Pintana,13201,Puente Alto
-13112,La Pintana,13110,La Florida
-08311,Santa Bárbara,08314,Alto Biobío
-08311,Santa Bárbara,08301,Los Angeles
-08311,Santa Bárbara,08302,Antuco
-08311,Santa Bárbara,08305,Mulchén
-08311,Santa Bárbara,08309,Quilleco
-08311,Santa Bárbara,08308,Quilaco
-13501,Melipilla,05601,San Antonio
-13501,Melipilla,13604,Padre Hurtado
-13501,Melipilla,13603,Isla de Maipo
-13501,Melipilla,13404,Paine
-13501,Melipilla,13504,María Pinto
-13501,Melipilla,13502,Alhué
-13501,Melipilla,13505,San Pedro
-13501,Melipilla,13605,Peñaflor
-13501,Melipilla,13503,Curacaví
-13501,Melipilla,13602,El Monte
-07404,Parral,07201,Cauquenes
-07404,Parral,16303,Ñiquén
-07404,Parral,07405,Retiro
-07404,Parral,07402,Colbún
-07404,Parral,16304,San Fabián
-07404,Parral,07403,Longaví
-08313,Yumbel,16107,Quillón
-08313,Yumbel,08104,Florida
-08313,Yumbel,08310,San Rosendo
-08313,Yumbel,08303,Cabrero
-08313,Yumbel,08304,Laja
-08313,Yumbel,08301,Los Angeles
-08313,Yumbel,08105,Hualqui
-08306,Nacimiento,09201,Angol
-08306,Nacimiento,08304,Laja
-08306,Nacimiento,08109,Santa Juana
-08306,Nacimiento,08307,Negrete
-08306,Nacimiento,08301,Los Angeles
-08306,Nacimiento,09209,Renaico
-08306,Nacimiento,08205,Curanilahue
-07402,Colbún,07404,Parral
-07402,Colbún,16304,San Fabián
-07402,Colbún,07403,Longaví
-07402,Colbún,07109,San Clemente
-07402,Colbún,07401,Linares
-07402,Colbún,07408,Yerbas Buenas
-08301,Los Angeles,08303,Cabrero
-08301,Los Angeles,08312,Tucapel
-08301,Los Angeles,08304,Laja
-08301,Los Angeles,16109,Yungay
-08301,Los Angeles,08307,Negrete
-08301,Los Angeles,08311,Santa Bárbara
-08301,Los Angeles,08313,Yumbel
-08301,Los Angeles,08306,Nacimiento
-08301,Los Angeles,08305,Mulchén
-08301,Los Angeles,08309,Quilleco
-09107,Gorbea,09118,Toltén
-09107,Gorbea,14106,Mariquina
-09107,Gorbea,09114,Pitrufquén
-09107,Gorbea,09109,Loncoche
-05701,San Felipe,05702,Catemu
-05701,San Felipe,05706,Santa María
-05701,San Felipe,05705,Putaendo
-05701,San Felipe,05302,Calle Larga
-05701,San Felipe,05301,Los Andes
-05701,San Felipe,05303,Rinconada
-05701,San Felipe,05704,Panquehue
-13108,Independencia,13104,Conchalí
-13108,Independencia,13128,Renca
-13108,Independencia,13127,Recoleta
-13108,Independencia,13101,Santiago
-02301,Tocopilla,01401,Pozo Almonte
-02301,Tocopilla,02302,María Elena
-02301,Tocopilla,02102,Mejillones
-02301,Tocopilla,01101,Iquique
-06202,La Estrella,06204,Marchihue
-06202,La Estrella,06203,Litueche
-06202,La Estrella,06107,Las Cabras
-06202,La Estrella,06113,Pichidegua
-13128,Renca,13124,Pudahuel
-13128,Renca,13104,Conchalí
-13128,Renca,13108,Independencia
-13128,Renca,13126,Quinta Normal
-13128,Renca,13125,Quilicura
-13128,Renca,13101,Santiago
-13128,Renca,13103,Cerro Navia
-13302,Lampa,05801,Quilpué
-13302,Lampa,13303,Tiltil
-13302,Lampa,13124,Pudahuel
-13302,Lampa,13301,Colina
-13302,Lampa,13503,Curacaví
-13302,Lampa,13125,Quilicura
+11301,Cochrane,11201,Aisén
 11301,Cochrane,11302,O'Higgins
 11301,Cochrane,11303,Tortel
 11301,Cochrane,11401,Chile Chico
-11301,Cochrane,11201,Aisén
-12201,Cabo de Hornos,12303,Timaukel
-12102,Laguna Blanca,12401,Natales
-12102,Laguna Blanca,12103,Río Verde
+11302,O'Higgins,11301,Cochrane
+11302,O'Higgins,11303,Tortel
+11302,O'Higgins,12401,Natales
+11303,Tortel,11201,Aisén
+11303,Tortel,11301,Cochrane
+11303,Tortel,11302,O'Higgins
+11303,Tortel,11401,Chile Chico
+11303,Tortel,12401,Natales
+11401,Chile Chico,11201,Aisén
+11401,Chile Chico,11301,Cochrane
+11401,Chile Chico,11303,Tortel
+11401,Chile Chico,11402,Río Ibáñez
+11402,Río Ibáñez,11101,Coihaique
+11402,Río Ibáñez,11201,Aisén
+11402,Río Ibáñez,11401,Chile Chico
+12101,Punta Arenas,12102,Laguna Blanca
+12101,Punta Arenas,12104,San Gregorio
 12102,Laguna Blanca,12101,Punta Arenas
+12102,Laguna Blanca,12103,Río Verde
 12102,Laguna Blanca,12104,San Gregorio
-06205,Navidad,06203,Litueche
-06205,Navidad,05606,Santo Domingo
-06205,Navidad,13505,San Pedro
-07309,Vichuquén,07302,Hualañé
-07309,Vichuquén,07303,Licantén
-07309,Vichuquén,06206,Paredones
-06113,Pichidegua,06204,Marchihue
-06113,Pichidegua,06202,La Estrella
-06113,Pichidegua,06107,Las Cabras
-06113,Pichidegua,06117,San Vicente
-06113,Pichidegua,06306,Palmilla
-06113,Pichidegua,06112,Peumo
-06113,Pichidegua,06307,Peralillo
-13123,Providencia,13132,Vitacura
-13123,Providencia,13120,Ñuñoa
-13123,Providencia,13114,Las Condes
-13123,Providencia,13127,Recoleta
-13123,Providencia,13113,La Reina
-13123,Providencia,13101,Santiago
-13117,Lo Prado,13124,Pudahuel
-13117,Lo Prado,13106,Estación Central
-13117,Lo Prado,13126,Quinta Normal
+12102,Laguna Blanca,12401,Natales
+12103,Río Verde,12102,Laguna Blanca
+12103,Río Verde,12401,Natales
+12104,San Gregorio,12101,Punta Arenas
+12104,San Gregorio,12102,Laguna Blanca
+12201,Cabo de Hornos,12303,Timaukel
+12301,Porvenir,12303,Timaukel
+12303,Timaukel,12201,Cabo de Hornos
+12303,Timaukel,12301,Porvenir
+12401,Natales,11302,O'Higgins
+12401,Natales,11303,Tortel
+12401,Natales,12102,Laguna Blanca
+12401,Natales,12103,Río Verde
+12401,Natales,12402,Torres del Paine
+12402,Torres del Paine,12401,Natales
+13101,Santiago,13106,Estación Central
+13101,Santiago,13108,Independencia
+13101,Santiago,13120,Ñuñoa
+13101,Santiago,13121,Pedro Aguirre Cerda
+13101,Santiago,13123,Providencia
+13101,Santiago,13126,Quinta Normal
+13101,Santiago,13127,Recoleta
+13101,Santiago,13128,Renca
+13101,Santiago,13129,San Joaquín
+13101,Santiago,13130,San Miguel
+13102,Cerrillos,13106,Estación Central
+13102,Cerrillos,13116,Lo Espejo
+13102,Cerrillos,13119,Maipú
+13102,Cerrillos,13121,Pedro Aguirre Cerda
+13102,Cerrillos,13401,San Bernardo
+13103,Cerro Navia,13117,Lo Prado
+13103,Cerro Navia,13124,Pudahuel
+13103,Cerro Navia,13126,Quinta Normal
+13103,Cerro Navia,13128,Renca
+13104,Conchalí,13107,Huechuraba
+13104,Conchalí,13108,Independencia
+13104,Conchalí,13125,Quilicura
+13104,Conchalí,13127,Recoleta
+13104,Conchalí,13128,Renca
+13105,El Bosque,13109,La Cisterna
+13105,El Bosque,13112,La Pintana
+13105,El Bosque,13116,Lo Espejo
+13105,El Bosque,13131,San Ramón
+13105,El Bosque,13401,San Bernardo
+13106,Estación Central,13101,Santiago
+13106,Estación Central,13102,Cerrillos
+13106,Estación Central,13117,Lo Prado
+13106,Estación Central,13119,Maipú
+13106,Estación Central,13121,Pedro Aguirre Cerda
+13106,Estación Central,13124,Pudahuel
+13106,Estación Central,13126,Quinta Normal
+13107,Huechuraba,13104,Conchalí
+13107,Huechuraba,13115,Lo Barnechea
+13107,Huechuraba,13125,Quilicura
+13107,Huechuraba,13127,Recoleta
+13107,Huechuraba,13132,Vitacura
+13107,Huechuraba,13301,Colina
+13108,Independencia,13101,Santiago
+13108,Independencia,13104,Conchalí
+13108,Independencia,13127,Recoleta
+13108,Independencia,13128,Renca
+13109,La Cisterna,13105,El Bosque
+13109,La Cisterna,13116,Lo Espejo
+13109,La Cisterna,13121,Pedro Aguirre Cerda
+13109,La Cisterna,13130,San Miguel
+13109,La Cisterna,13131,San Ramón
+13109,La Cisterna,13401,San Bernardo
+13110,La Florida,13111,La Granja
+13110,La Florida,13112,La Pintana
+13110,La Florida,13118,Macul
+13110,La Florida,13122,Peñalolén
+13110,La Florida,13129,San Joaquín
+13110,La Florida,13201,Puente Alto
+13110,La Florida,13203,San José de Maipo
+13111,La Granja,13110,La Florida
+13111,La Granja,13112,La Pintana
+13111,La Granja,13129,San Joaquín
+13111,La Granja,13130,San Miguel
+13111,La Granja,13131,San Ramón
+13112,La Pintana,13105,El Bosque
+13112,La Pintana,13110,La Florida
+13112,La Pintana,13111,La Granja
+13112,La Pintana,13131,San Ramón
+13112,La Pintana,13201,Puente Alto
+13112,La Pintana,13401,San Bernardo
+13113,La Reina,13114,Las Condes
+13113,La Reina,13120,Ñuñoa
+13113,La Reina,13122,Peñalolén
+13113,La Reina,13123,Providencia
+13114,Las Condes,13113,La Reina
+13114,Las Condes,13115,Lo Barnechea
+13114,Las Condes,13122,Peñalolén
+13114,Las Condes,13123,Providencia
+13114,Las Condes,13132,Vitacura
+13114,Las Condes,13203,San José de Maipo
+13115,Lo Barnechea,05301,Los Andes
+13115,Lo Barnechea,13107,Huechuraba
+13115,Lo Barnechea,13114,Las Condes
+13115,Lo Barnechea,13132,Vitacura
+13115,Lo Barnechea,13203,San José de Maipo
+13115,Lo Barnechea,13301,Colina
+13116,Lo Espejo,13102,Cerrillos
+13116,Lo Espejo,13105,El Bosque
+13116,Lo Espejo,13109,La Cisterna
+13116,Lo Espejo,13121,Pedro Aguirre Cerda
+13116,Lo Espejo,13130,San Miguel
+13116,Lo Espejo,13401,San Bernardo
 13117,Lo Prado,13103,Cerro Navia
-16305,San Nicolás,16205,Portezuelo
-16305,San Nicolás,16301,San Carlos
-16305,San Nicolás,16204,Ninhue
-16305,San Nicolás,16101,Chillán
-13601,Talagante,13401,San Bernardo
-13601,Talagante,13603,Isla de Maipo
-13601,Talagante,13403,Calera de Tango
-13601,Talagante,13605,Peñaflor
-13601,Talagante,13602,El Monte
-06302,Chépica,07302,Hualañé
-06302,Chépica,07305,Rauco
-06302,Chépica,06305,Nancagua
-06302,Chépica,06303,Chimbarongo
-06302,Chépica,06310,Santa Cruz
-06302,Chépica,07308,Teno
-06302,Chépica,06304,Lolol
-14203,Lago Ranco,14204,Río Bueno
-14203,Lago Ranco,14201,La Unión
-14203,Lago Ranco,14202,Futrono
-14107,Paillaco,14201,La Unión
-14107,Paillaco,14101,Valdivia
-14107,Paillaco,14102,Corral
-14107,Paillaco,14104,Los Lagos
-14107,Paillaco,14202,Futrono
-16204,Ninhue,16205,Portezuelo
-16204,Ninhue,16301,San Carlos
-16204,Ninhue,07201,Cauquenes
-16204,Ninhue,16201,Quirihue
-16204,Ninhue,16305,San Nicolás
-16204,Ninhue,16207,Treguaco
-08106,Lota,08202,Arauco
-08106,Lota,08109,Santa Juana
-08106,Lota,08102,Coronel
-05405,Zapallar,05105,Puchuncaví
-05405,Zapallar,05506,Nogales
-05405,Zapallar,05401,La Ligua
-05405,Zapallar,05403,Papudo
-06101,Rancagua,06108,Machalí
-06101,Rancagua,06116,Requínoa
-06101,Rancagua,06106,Graneros
-06101,Rancagua,06102,Codegua
-06101,Rancagua,06111,Olivar
-06101,Rancagua,06105,Doñihue
-06101,Rancagua,13502,Alhué
-04104,La Higuera,03303,Freirina
-04104,La Higuera,04106,Vicuña
-04104,La Higuera,03301,Vallenar
-04104,La Higuera,04101,La Serena
-04104,La Higuera,03302,Alto del Carmen
-05704,Panquehue,05702,Catemu
-05704,Panquehue,05701,San Felipe
-05704,Panquehue,05303,Rinconada
-05704,Panquehue,05703,Llaillay
-16304,San Fabián,16301,San Carlos
-16304,San Fabián,16303,Ñiquén
-16304,San Fabián,07404,Parral
-16304,San Fabián,07402,Colbún
-16304,San Fabián,16302,Coihueco
-05802,Limache,05804,Villa Alemana
-05802,Limache,05803,Olmué
-05802,Limache,05501,Quillota
-05802,Limache,05103,Concón
-05802,Limache,05801,Quilpué
-10103,Cochamó,10403,Hualaihué
-10103,Cochamó,10109,Puerto Varas
-10103,Cochamó,10101,Puerto Montt
-08302,Antuco,16106,Pinto
-08302,Antuco,08312,Tucapel
-08302,Antuco,08314,Alto Biobío
-08302,Antuco,16109,Yungay
-08302,Antuco,08311,Santa Bárbara
-08302,Antuco,08309,Quilleco
-09120,Villarrica,09103,Cunco
-09120,Villarrica,09115,Pucón
-09120,Villarrica,14108,Panguipulli
-09120,Villarrica,09114,Pitrufquén
-09120,Villarrica,09109,Loncoche
-09120,Villarrica,09105,Freire
-07102,Constitución,07406,San Javier
-07102,Constitución,07107,Pencahue
-07102,Constitución,07202,Chanco
-07102,Constitución,07104,Empedrado
-07102,Constitución,07103,Curepto
+13117,Lo Prado,13106,Estación Central
+13117,Lo Prado,13124,Pudahuel
+13117,Lo Prado,13126,Quinta Normal
+13118,Macul,13110,La Florida
+13118,Macul,13120,Ñuñoa
+13118,Macul,13122,Peñalolén
+13118,Macul,13129,San Joaquín
+13119,Maipú,13102,Cerrillos
+13119,Maipú,13106,Estación Central
+13119,Maipú,13124,Pudahuel
+13119,Maipú,13401,San Bernardo
+13119,Maipú,13403,Calera de Tango
+13119,Maipú,13503,Curacaví
+13119,Maipú,13604,Padre Hurtado
+13120,Ñuñoa,13101,Santiago
+13120,Ñuñoa,13113,La Reina
 13120,Ñuñoa,13118,Macul
 13120,Ñuñoa,13122,Peñalolén
 13120,Ñuñoa,13123,Providencia
 13120,Ñuñoa,13129,San Joaquín
-13120,Ñuñoa,13113,La Reina
-13120,Ñuñoa,13101,Santiago
-09105,Freire,09111,Nueva Imperial
-09105,Freire,09103,Cunco
-09105,Freire,09112,Padre las Casas
-09105,Freire,09114,Pitrufquén
-09105,Freire,09120,Villarrica
-09105,Freire,09117,Teodoro Schmidt
-01403,Colchane,01404,Huara
-01403,Colchane,01405,Pica
-01403,Colchane,15201,Putre
-01403,Colchane,15102,Camarones
-01403,Colchane,01402,Camiña
-13111,La Granja,13131,San Ramón
-13111,La Granja,13112,La Pintana
-13111,La Granja,13130,San Miguel
-13111,La Granja,13110,La Florida
-13111,La Granja,13129,San Joaquín
-12301,Porvenir,12303,Timaukel
-07403,Longaví,07405,Retiro
-07403,Longaví,07406,San Javier
-07403,Longaví,07404,Parral
-07403,Longaví,07402,Colbún
-07403,Longaví,07401,Linares
-09204,Ercilla,09210,Traiguén
-09204,Ercilla,09211,Victoria
-09204,Ercilla,09201,Angol
-09204,Ercilla,09202,Collipulli
-09204,Ercilla,09206,Los Sauces
-13130,San Miguel,13116,Lo Espejo
-13130,San Miguel,13131,San Ramón
-13130,San Miguel,13111,La Granja
-13130,San Miguel,13121,Pedro Aguirre Cerda
-13130,San Miguel,13129,San Joaquín
-13130,San Miguel,13109,La Cisterna
-13130,San Miguel,13101,Santiago
-09209,Renaico,09201,Angol
-09209,Renaico,08307,Negrete
-09209,Renaico,08306,Nacimiento
-09209,Renaico,09202,Collipulli
-09209,Renaico,08305,Mulchén
-04106,Vicuña,04103,Andacollo
-04106,Vicuña,04305,Río Hurtado
-04106,Vicuña,04104,La Higuera
-04106,Vicuña,04105,Paiguano
-04106,Vicuña,04101,La Serena
-04106,Vicuña,03302,Alto del Carmen
-01107,Alto Hospicio,01404,Huara
-01107,Alto Hospicio,01401,Pozo Almonte
-01107,Alto Hospicio,01101,Iquique
-03301,Vallenar,03303,Freirina
-03301,Vallenar,03101,Copiapó
-03301,Vallenar,04104,La Higuera
-03301,Vallenar,03304,Huasco
-03301,Vallenar,03103,Tierra Amarilla
-03301,Vallenar,03302,Alto del Carmen
-02201,Calama,02103,Sierra Gorda
-02201,Calama,01401,Pozo Almonte
-02201,Calama,02203,San Pedro de Atacama
-02201,Calama,02302,María Elena
-02201,Calama,01405,Pica
-02201,Calama,02202,Ollagüe
-10202,Ancud,10205,Dalcahue
-10202,Ancud,10209,Quemchi
-08205,Curanilahue,08206,Los Alamos
-08205,Curanilahue,09201,Angol
-08205,Curanilahue,08202,Arauco
-08205,Curanilahue,08201,Lebu
-08205,Curanilahue,08109,Santa Juana
-08205,Curanilahue,08306,Nacimiento
-13402,Buin,13401,San Bernardo
-13402,Buin,13603,Isla de Maipo
-13402,Buin,13404,Paine
-13402,Buin,13202,Pirque
-13402,Buin,13201,Puente Alto
-09202,Collipulli,09211,Victoria
-09202,Collipulli,09201,Angol
-09202,Collipulli,09204,Ercilla
-09202,Collipulli,09209,Renaico
-09202,Collipulli,08305,Mulchén
-09202,Collipulli,09203,Curacautín
-09202,Collipulli,08308,Quilaco
-13505,San Pedro,06203,Litueche
-13505,San Pedro,05606,Santo Domingo
-13505,San Pedro,06205,Navidad
-13505,San Pedro,05601,San Antonio
-13505,San Pedro,13501,Melipilla
-13505,San Pedro,13502,Alhué
-13505,San Pedro,06107,Las Cabras
-11201,Aisén,11303,Tortel
-11201,Aisén,11402,Río Ibáñez
-11201,Aisén,11401,Chile Chico
-11201,Aisén,11101,Coihaique
-11201,Aisén,11202,Cisnes
-11201,Aisén,11301,Cochrane
-13114,Las Condes,13203,San José de Maipo
-13114,Las Condes,13115,Lo Barnechea
-13114,Las Condes,13122,Peñalolén
-13114,Las Condes,13132,Vitacura
-13114,Las Condes,13123,Providencia
-13114,Las Condes,13113,La Reina
-13201,Puente Alto,13401,San Bernardo
-13201,Puente Alto,13203,San José de Maipo
-13201,Puente Alto,13202,Pirque
-13201,Puente Alto,13112,La Pintana
-13201,Puente Alto,13402,Buin
-13201,Puente Alto,13110,La Florida
-03304,Huasco,03303,Freirina
-03304,Huasco,03101,Copiapó
-03304,Huasco,03301,Vallenar
-07107,Pencahue,07110,San Rafael
-07107,Pencahue,07105,Maule
-07107,Pencahue,07307,Sagrada Familia
-07107,Pencahue,07101,Talca
-07107,Pencahue,07406,San Javier
-07107,Pencahue,07102,Constitución
-07107,Pencahue,07103,Curepto
-05706,Santa María,05304,San Esteban
-05706,Santa María,05701,San Felipe
-05706,Santa María,05705,Putaendo
-05706,Santa María,05301,Los Andes
-13127,Recoleta,13107,Huechuraba
-13127,Recoleta,13104,Conchalí
-13127,Recoleta,13132,Vitacura
-13127,Recoleta,13108,Independencia
-13127,Recoleta,13123,Providencia
-13127,Recoleta,13101,Santiago
-03103,Tierra Amarilla,03101,Copiapó
-03103,Tierra Amarilla,03301,Vallenar
-03103,Tierra Amarilla,03302,Alto del Carmen
-07202,Chanco,07201,Cauquenes
-07202,Chanco,07102,Constitución
-07202,Chanco,07203,Pelluhue
-07202,Chanco,07104,Empedrado
-16105,Pemuco,16104,El Carmen
-16105,Pemuco,16107,Quillón
-16105,Pemuco,16106,Pinto
-16105,Pemuco,16102,Bulnes
-16105,Pemuco,08303,Cabrero
-16105,Pemuco,16109,Yungay
-16101,Chillán,16205,Portezuelo
-16101,Chillán,16301,San Carlos
-16101,Chillán,16107,Quillón
-16101,Chillán,16206,Ránquil
-16101,Chillán,16305,San Nicolás
-16101,Chillán,16106,Pinto
-16101,Chillán,16108,San Ignacio
-16101,Chillán,16102,Bulnes
-16101,Chillán,16103,Chillán Viejo
-16101,Chillán,16302,Coihueco
-10306,San Juan de La Costa,10307,San Pablo
-10306,San Juan de La Costa,10301,Osorno
-10306,San Juan de La Costa,10305,Río Negro
-10306,San Juan de La Costa,14201,La Unión
-06116,Requínoa,06108,Machalí
-06116,Requínoa,06103,Coinco
-06116,Requínoa,06115,Rengo
-06116,Requínoa,06111,Olivar
-06116,Requínoa,06101,Rancagua
-15201,Putre,15101,Arica
-15201,Putre,01403,Colchane
-15201,Putre,15102,Camarones
-15201,Putre,15202,General Lagos
-07303,Licantén,07302,Hualañé
-07303,Licantén,07103,Curepto
-07303,Licantén,07309,Vichuquén
-08305,Mulchén,08307,Negrete
-08305,Mulchén,08311,Santa Bárbara
-08305,Mulchén,08301,Los Angeles
-08305,Mulchén,09209,Renaico
-08305,Mulchén,09202,Collipulli
-08305,Mulchén,08308,Quilaco
-09203,Curacautín,09119,Vilcún
-09203,Curacautín,09211,Victoria
-09203,Curacautín,09205,Lonquimay
-09203,Curacautín,09108,Lautaro
-09203,Curacautín,09202,Collipulli
-09203,Curacautín,09110,Melipeuco
-09203,Curacautín,08308,Quilaco
-06307,Peralillo,06204,Marchihue
-06307,Peralillo,06309,Pumanque
-06307,Peralillo,06306,Palmilla
-06307,Peralillo,06310,Santa Cruz
-06307,Peralillo,06113,Pichidegua
-06110,Mostazal,06106,Graneros
-06110,Mostazal,13203,San José de Maipo
-06110,Mostazal,06102,Codegua
-06110,Mostazal,13404,Paine
-06110,Mostazal,13202,Pirque
-06110,Mostazal,13502,Alhué
-07109,San Clemente,07106,Pelarco
-07109,San Clemente,07304,Molina
-07109,San Clemente,07105,Maule
-07109,San Clemente,07108,Río Claro
-07109,San Clemente,07101,Talca
-07109,San Clemente,07402,Colbún
-07109,San Clemente,07408,Yerbas Buenas
-07401,Linares,07407,Villa Alegre
-07401,Linares,07406,San Javier
-07401,Linares,07402,Colbún
-07401,Linares,07403,Longaví
-07401,Linares,07408,Yerbas Buenas
-04202,Canela,04302,Combarbalá
-04202,Canela,04304,Punitaqui
-04202,Canela,04301,Ovalle
-04202,Canela,04203,Los Vilos
-04202,Canela,04201,Illapel
-16207,Treguaco,16205,Portezuelo
-16207,Treguaco,16202,Cobquecura
-16207,Treguaco,16201,Quirihue
-16207,Treguaco,16204,Ninhue
-16207,Treguaco,16203,Coelemu
-12104,San Gregorio,12101,Punta Arenas
-12104,San Gregorio,12102,Laguna Blanca
-05705,Putaendo,04204,Salamanca
-05705,Putaendo,05702,Catemu
-05705,Putaendo,05304,San Esteban
-05705,Putaendo,05402,Cabildo
-05705,Putaendo,05701,San Felipe
-05705,Putaendo,05706,Santa María
-15102,Camarones,15101,Arica
-15102,Camarones,01404,Huara
-15102,Camarones,01403,Colchane
-15102,Camarones,15201,Putre
-15102,Camarones,01402,Camiña
-08105,Hualqui,08104,Florida
-08105,Hualqui,08101,Concepción
-08105,Hualqui,08103,Chiguayante
-08105,Hualqui,08310,San Rosendo
-08105,Hualqui,08109,Santa Juana
-08105,Hualqui,08313,Yumbel
-08105,Hualqui,08102,Coronel
-13126,Quinta Normal,13106,Estación Central
-13126,Quinta Normal,13128,Renca
-13126,Quinta Normal,13117,Lo Prado
+13121,Pedro Aguirre Cerda,13101,Santiago
+13121,Pedro Aguirre Cerda,13102,Cerrillos
+13121,Pedro Aguirre Cerda,13106,Estación Central
+13121,Pedro Aguirre Cerda,13109,La Cisterna
+13121,Pedro Aguirre Cerda,13116,Lo Espejo
+13121,Pedro Aguirre Cerda,13130,San Miguel
+13122,Peñalolén,13110,La Florida
+13122,Peñalolén,13113,La Reina
+13122,Peñalolén,13114,Las Condes
+13122,Peñalolén,13118,Macul
+13122,Peñalolén,13120,Ñuñoa
+13122,Peñalolén,13203,San José de Maipo
+13123,Providencia,13101,Santiago
+13123,Providencia,13113,La Reina
+13123,Providencia,13114,Las Condes
+13123,Providencia,13120,Ñuñoa
+13123,Providencia,13127,Recoleta
+13123,Providencia,13132,Vitacura
+13124,Pudahuel,13103,Cerro Navia
+13124,Pudahuel,13106,Estación Central
+13124,Pudahuel,13117,Lo Prado
+13124,Pudahuel,13119,Maipú
+13124,Pudahuel,13125,Quilicura
+13124,Pudahuel,13128,Renca
+13124,Pudahuel,13302,Lampa
+13124,Pudahuel,13503,Curacaví
+13125,Quilicura,13104,Conchalí
+13125,Quilicura,13107,Huechuraba
+13125,Quilicura,13124,Pudahuel
+13125,Quilicura,13128,Renca
+13125,Quilicura,13301,Colina
+13125,Quilicura,13302,Lampa
 13126,Quinta Normal,13101,Santiago
 13126,Quinta Normal,13103,Cerro Navia
-07203,Pelluhue,07201,Cauquenes
-07203,Pelluhue,16202,Cobquecura
-07203,Pelluhue,07202,Chanco
-16302,Coihueco,16301,San Carlos
-16302,Coihueco,16304,San Fabián
-16302,Coihueco,16101,Chillán
-16302,Coihueco,16106,Pinto
-13121,Pedro Aguirre Cerda,13102,Cerrillos
-13121,Pedro Aguirre Cerda,13116,Lo Espejo
-13121,Pedro Aguirre Cerda,13106,Estación Central
-13121,Pedro Aguirre Cerda,13130,San Miguel
-13121,Pedro Aguirre Cerda,13109,La Cisterna
-13121,Pedro Aguirre Cerda,13101,Santiago
-09206,Los Sauces,09210,Traiguén
-09206,Los Sauces,09207,Lumaco
-09206,Los Sauces,09201,Angol
-09206,Los Sauces,09208,Purén
-09206,Los Sauces,09204,Ercilla
-08203,Cañete,08206,Los Alamos
-08203,Cañete,09201,Angol
-08203,Cañete,08204,Contulmo
-08203,Cañete,09208,Purén
-08203,Cañete,08207,Tirúa
-13605,Peñaflor,13604,Padre Hurtado
+13126,Quinta Normal,13106,Estación Central
+13126,Quinta Normal,13117,Lo Prado
+13126,Quinta Normal,13128,Renca
+13127,Recoleta,13101,Santiago
+13127,Recoleta,13104,Conchalí
+13127,Recoleta,13107,Huechuraba
+13127,Recoleta,13108,Independencia
+13127,Recoleta,13123,Providencia
+13127,Recoleta,13132,Vitacura
+13128,Renca,13101,Santiago
+13128,Renca,13103,Cerro Navia
+13128,Renca,13104,Conchalí
+13128,Renca,13108,Independencia
+13128,Renca,13124,Pudahuel
+13128,Renca,13125,Quilicura
+13128,Renca,13126,Quinta Normal
+13129,San Joaquín,13101,Santiago
+13129,San Joaquín,13110,La Florida
+13129,San Joaquín,13111,La Granja
+13129,San Joaquín,13118,Macul
+13129,San Joaquín,13120,Ñuñoa
+13129,San Joaquín,13130,San Miguel
+13129,San Joaquín,13131,San Ramón
+13130,San Miguel,13101,Santiago
+13130,San Miguel,13109,La Cisterna
+13130,San Miguel,13111,La Granja
+13130,San Miguel,13116,Lo Espejo
+13130,San Miguel,13121,Pedro Aguirre Cerda
+13130,San Miguel,13129,San Joaquín
+13130,San Miguel,13131,San Ramón
+13131,San Ramón,13105,El Bosque
+13131,San Ramón,13109,La Cisterna
+13131,San Ramón,13111,La Granja
+13131,San Ramón,13112,La Pintana
+13131,San Ramón,13129,San Joaquín
+13131,San Ramón,13130,San Miguel
+13132,Vitacura,13107,Huechuraba
+13132,Vitacura,13114,Las Condes
+13132,Vitacura,13115,Lo Barnechea
+13132,Vitacura,13123,Providencia
+13132,Vitacura,13127,Recoleta
+13201,Puente Alto,13110,La Florida
+13201,Puente Alto,13112,La Pintana
+13201,Puente Alto,13202,Pirque
+13201,Puente Alto,13203,San José de Maipo
+13201,Puente Alto,13401,San Bernardo
+13201,Puente Alto,13402,Buin
+13202,Pirque,06110,Mostazal
+13202,Pirque,13201,Puente Alto
+13202,Pirque,13203,San José de Maipo
+13202,Pirque,13401,San Bernardo
+13202,Pirque,13402,Buin
+13202,Pirque,13404,Paine
+13203,San José de Maipo,05301,Los Andes
+13203,San José de Maipo,06102,Codegua
+13203,San José de Maipo,06108,Machalí
+13203,San José de Maipo,06110,Mostazal
+13203,San José de Maipo,13110,La Florida
+13203,San José de Maipo,13114,Las Condes
+13203,San José de Maipo,13115,Lo Barnechea
+13203,San José de Maipo,13122,Peñalolén
+13203,San José de Maipo,13201,Puente Alto
+13203,San José de Maipo,13202,Pirque
+13301,Colina,05301,Los Andes
+13301,Colina,05302,Calle Larga
+13301,Colina,05303,Rinconada
+13301,Colina,13107,Huechuraba
+13301,Colina,13115,Lo Barnechea
+13301,Colina,13125,Quilicura
+13301,Colina,13302,Lampa
+13301,Colina,13303,Tiltil
+13302,Lampa,05801,Quilpué
+13302,Lampa,13124,Pudahuel
+13302,Lampa,13125,Quilicura
+13302,Lampa,13301,Colina
+13302,Lampa,13303,Tiltil
+13302,Lampa,13503,Curacaví
+13303,Tiltil,05303,Rinconada
+13303,Tiltil,05503,Hijuelas
+13303,Tiltil,05703,Llaillay
+13303,Tiltil,05801,Quilpué
+13303,Tiltil,05803,Olmué
+13303,Tiltil,13301,Colina
+13303,Tiltil,13302,Lampa
+13401,San Bernardo,13102,Cerrillos
+13401,San Bernardo,13105,El Bosque
+13401,San Bernardo,13109,La Cisterna
+13401,San Bernardo,13112,La Pintana
+13401,San Bernardo,13116,Lo Espejo
+13401,San Bernardo,13119,Maipú
+13401,San Bernardo,13201,Puente Alto
+13401,San Bernardo,13202,Pirque
+13401,San Bernardo,13402,Buin
+13401,San Bernardo,13403,Calera de Tango
+13401,San Bernardo,13601,Talagante
+13401,San Bernardo,13603,Isla de Maipo
+13402,Buin,13201,Puente Alto
+13402,Buin,13202,Pirque
+13402,Buin,13401,San Bernardo
+13402,Buin,13404,Paine
+13402,Buin,13603,Isla de Maipo
+13403,Calera de Tango,13119,Maipú
+13403,Calera de Tango,13401,San Bernardo
+13403,Calera de Tango,13601,Talagante
+13403,Calera de Tango,13604,Padre Hurtado
+13403,Calera de Tango,13605,Peñaflor
+13404,Paine,06110,Mostazal
+13404,Paine,13202,Pirque
+13404,Paine,13402,Buin
+13404,Paine,13501,Melipilla
+13404,Paine,13502,Alhué
+13404,Paine,13603,Isla de Maipo
+13501,Melipilla,05601,San Antonio
+13501,Melipilla,13404,Paine
+13501,Melipilla,13502,Alhué
+13501,Melipilla,13503,Curacaví
+13501,Melipilla,13504,María Pinto
+13501,Melipilla,13505,San Pedro
+13501,Melipilla,13602,El Monte
+13501,Melipilla,13603,Isla de Maipo
+13501,Melipilla,13604,Padre Hurtado
+13501,Melipilla,13605,Peñaflor
+13502,Alhué,06101,Rancagua
+13502,Alhué,06104,Coltauco
+13502,Alhué,06105,Doñihue
+13502,Alhué,06106,Graneros
+13502,Alhué,06107,Las Cabras
+13502,Alhué,06110,Mostazal
+13502,Alhué,13404,Paine
+13502,Alhué,13501,Melipilla
+13502,Alhué,13505,San Pedro
+13503,Curacaví,05102,Casablanca
+13503,Curacaví,05801,Quilpué
+13503,Curacaví,13119,Maipú
+13503,Curacaví,13124,Pudahuel
+13503,Curacaví,13302,Lampa
+13503,Curacaví,13501,Melipilla
+13503,Curacaví,13504,María Pinto
+13503,Curacaví,13604,Padre Hurtado
+13504,María Pinto,05102,Casablanca
+13504,María Pinto,05601,San Antonio
+13504,María Pinto,05603,Cartagena
+13504,María Pinto,13501,Melipilla
+13504,María Pinto,13503,Curacaví
+13505,San Pedro,05601,San Antonio
+13505,San Pedro,05606,Santo Domingo
+13505,San Pedro,06107,Las Cabras
+13505,San Pedro,06203,Litueche
+13505,San Pedro,06205,Navidad
+13505,San Pedro,13501,Melipilla
+13505,San Pedro,13502,Alhué
+13601,Talagante,13401,San Bernardo
+13601,Talagante,13403,Calera de Tango
+13601,Talagante,13602,El Monte
+13601,Talagante,13603,Isla de Maipo
+13601,Talagante,13605,Peñaflor
+13602,El Monte,13501,Melipilla
+13602,El Monte,13601,Talagante
+13602,El Monte,13603,Isla de Maipo
+13602,El Monte,13605,Peñaflor
+13603,Isla de Maipo,13401,San Bernardo
+13603,Isla de Maipo,13402,Buin
+13603,Isla de Maipo,13404,Paine
+13603,Isla de Maipo,13501,Melipilla
+13603,Isla de Maipo,13601,Talagante
+13603,Isla de Maipo,13602,El Monte
+13604,Padre Hurtado,13119,Maipú
+13604,Padre Hurtado,13403,Calera de Tango
+13604,Padre Hurtado,13501,Melipilla
+13604,Padre Hurtado,13503,Curacaví
+13604,Padre Hurtado,13605,Peñaflor
 13605,Peñaflor,13403,Calera de Tango
 13605,Peñaflor,13501,Melipilla
 13605,Peñaflor,13601,Talagante
 13605,Peñaflor,13602,El Monte
-12303,Timaukel,12201,Cabo de Hornos
-12303,Timaukel,12301,Porvenir
-08103,Chiguayante,08105,Hualqui
-08103,Chiguayante,08102,Coronel
-08103,Chiguayante,08101,Concepción
-08103,Chiguayante,08108,San Pedro de la Paz
-10107,Llanquihue,10106,Los Muermos
-10107,Llanquihue,10105,Frutillar
-10107,Llanquihue,10109,Puerto Varas
-10107,Llanquihue,10104,Fresia
-04105,Paiguano,04305,Río Hurtado
-04105,Paiguano,04106,Vicuña
-15202,General Lagos,15101,Arica
-15202,General Lagos,15201,Putre
-08102,Coronel,08109,Santa Juana
-08102,Coronel,08106,Lota
-08102,Coronel,08105,Hualqui
-08102,Coronel,08103,Chiguayante
-08102,Coronel,08108,San Pedro de la Paz
-13110,La Florida,13203,San José de Maipo
-13110,La Florida,13118,Macul
-13110,La Florida,13122,Peñalolén
-13110,La Florida,13112,La Pintana
-13110,La Florida,13111,La Granja
-13110,La Florida,13201,Puente Alto
-13110,La Florida,13129,San Joaquín
-02101,Antofagasta,02103,Sierra Gorda
-02101,Antofagasta,02104,Taltal
-02101,Antofagasta,02203,San Pedro de Atacama
-02101,Antofagasta,03202,Diego de Almagro
-02101,Antofagasta,02102,Mejillones
-14104,Los Lagos,14108,Panguipulli
+13605,Peñaflor,13604,Padre Hurtado
+14101,Valdivia,14102,Corral
+14101,Valdivia,14104,Los Lagos
+14101,Valdivia,14105,Máfil
+14101,Valdivia,14106,Mariquina
+14101,Valdivia,14107,Paillaco
+14102,Corral,14101,Valdivia
+14102,Corral,14107,Paillaco
+14102,Corral,14201,La Unión
+14103,Lanco,09109,Loncoche
+14103,Lanco,14105,Máfil
+14103,Lanco,14106,Mariquina
+14103,Lanco,14108,Panguipulli
 14104,Los Lagos,14101,Valdivia
 14104,Los Lagos,14105,Máfil
 14104,Los Lagos,14107,Paillaco
+14104,Los Lagos,14108,Panguipulli
 14104,Los Lagos,14202,Futrono
-12402,Torres del Paine,12401,Natales
-06309,Pumanque,06206,Paredones
-06309,Pumanque,06204,Marchihue
-06309,Pumanque,06201,Pichilemu
-06309,Pumanque,06304,Lolol
-06309,Pumanque,06310,Santa Cruz
-06309,Pumanque,06307,Peralillo
-07104,Empedrado,07201,Cauquenes
-07104,Empedrado,07406,San Javier
-07104,Empedrado,07102,Constitución
-07104,Empedrado,07202,Chanco
+14105,Máfil,14101,Valdivia
+14105,Máfil,14103,Lanco
+14105,Máfil,14104,Los Lagos
+14105,Máfil,14106,Mariquina
+14105,Máfil,14108,Panguipulli
+14106,Mariquina,09107,Gorbea
+14106,Mariquina,09109,Loncoche
+14106,Mariquina,09118,Toltén
+14106,Mariquina,14101,Valdivia
+14106,Mariquina,14103,Lanco
+14106,Mariquina,14105,Máfil
+14107,Paillaco,14101,Valdivia
+14107,Paillaco,14102,Corral
+14107,Paillaco,14104,Los Lagos
+14107,Paillaco,14201,La Unión
+14107,Paillaco,14202,Futrono
+14108,Panguipulli,09104,Curarrehue
+14108,Panguipulli,09109,Loncoche
+14108,Panguipulli,09115,Pucón
+14108,Panguipulli,09120,Villarrica
+14108,Panguipulli,14103,Lanco
+14108,Panguipulli,14104,Los Lagos
+14108,Panguipulli,14105,Máfil
+14108,Panguipulli,14202,Futrono
+14201,La Unión,10306,San Juan de La Costa
+14201,La Unión,10307,San Pablo
+14201,La Unión,14102,Corral
+14201,La Unión,14107,Paillaco
+14201,La Unión,14202,Futrono
+14201,La Unión,14203,Lago Ranco
+14201,La Unión,14204,Río Bueno
+14202,Futrono,14104,Los Lagos
+14202,Futrono,14107,Paillaco
+14202,Futrono,14108,Panguipulli
+14202,Futrono,14201,La Unión
+14202,Futrono,14203,Lago Ranco
+14203,Lago Ranco,14201,La Unión
+14203,Lago Ranco,14202,Futrono
+14203,Lago Ranco,14204,Río Bueno
+14204,Río Bueno,10304,Puyehue
+14204,Río Bueno,10307,San Pablo
+14204,Río Bueno,14201,La Unión
+14204,Río Bueno,14203,Lago Ranco
+15101,Arica,15102,Camarones
+15101,Arica,15201,Putre
+15101,Arica,15202,General Lagos
+15102,Camarones,01402,Camiña
+15102,Camarones,01403,Colchane
+15102,Camarones,01404,Huara
+15102,Camarones,15101,Arica
+15102,Camarones,15201,Putre
+15201,Putre,01403,Colchane
+15201,Putre,15101,Arica
+15201,Putre,15102,Camarones
+15201,Putre,15202,General Lagos
+15202,General Lagos,15101,Arica
+15202,General Lagos,15201,Putre
+16101,Chillán,16102,Bulnes
+16101,Chillán,16103,Chillán Viejo
+16101,Chillán,16106,Pinto
+16101,Chillán,16107,Quillón
+16101,Chillán,16108,San Ignacio
+16101,Chillán,16205,Portezuelo
+16101,Chillán,16206,Ránquil
+16101,Chillán,16301,San Carlos
+16101,Chillán,16302,Coihueco
+16101,Chillán,16305,San Nicolás
+16102,Bulnes,16101,Chillán
+16102,Bulnes,16103,Chillán Viejo
+16102,Bulnes,16104,El Carmen
+16102,Bulnes,16105,Pemuco
+16102,Bulnes,16107,Quillón
+16102,Bulnes,16108,San Ignacio
+16103,Chillán Viejo,16101,Chillán
+16103,Chillán Viejo,16102,Bulnes
+16103,Chillán Viejo,16108,San Ignacio
+16104,El Carmen,16102,Bulnes
+16104,El Carmen,16105,Pemuco
+16104,El Carmen,16106,Pinto
+16104,El Carmen,16108,San Ignacio
+16105,Pemuco,08303,Cabrero
+16105,Pemuco,16102,Bulnes
+16105,Pemuco,16104,El Carmen
+16105,Pemuco,16106,Pinto
+16105,Pemuco,16107,Quillón
+16105,Pemuco,16109,Yungay
+16106,Pinto,08302,Antuco
+16106,Pinto,16101,Chillán
+16106,Pinto,16104,El Carmen
+16106,Pinto,16105,Pemuco
+16106,Pinto,16108,San Ignacio
+16106,Pinto,16109,Yungay
+16106,Pinto,16302,Coihueco
+16107,Quillón,08104,Florida
+16107,Quillón,08303,Cabrero
+16107,Quillón,08313,Yumbel
+16107,Quillón,16101,Chillán
+16107,Quillón,16102,Bulnes
+16107,Quillón,16105,Pemuco
+16107,Quillón,16206,Ránquil
+16108,San Ignacio,16101,Chillán
+16108,San Ignacio,16102,Bulnes
+16108,San Ignacio,16103,Chillán Viejo
+16108,San Ignacio,16104,El Carmen
+16108,San Ignacio,16106,Pinto
+16109,Yungay,08301,Los Angeles
+16109,Yungay,08302,Antuco
+16109,Yungay,08303,Cabrero
+16109,Yungay,08312,Tucapel
+16109,Yungay,16105,Pemuco
+16109,Yungay,16106,Pinto
+16201,Quirihue,07201,Cauquenes
+16201,Quirihue,16202,Cobquecura
+16201,Quirihue,16204,Ninhue
+16201,Quirihue,16207,Treguaco
+16202,Cobquecura,07201,Cauquenes
+16202,Cobquecura,07203,Pelluhue
+16202,Cobquecura,16201,Quirihue
+16202,Cobquecura,16207,Treguaco
+16203,Coelemu,08111,Tomé
 16203,Coelemu,16205,Portezuelo
 16203,Coelemu,16206,Ránquil
 16203,Coelemu,16207,Treguaco
-16203,Coelemu,08111,Tomé
-04101,La Serena,04103,Andacollo
-04101,La Serena,04104,La Higuera
-04101,La Serena,04106,Vicuña
-04101,La Serena,04102,Coquimbo
-07306,Romeral,07301,Curicó
-07306,Romeral,06301,San Fernando
-07306,Romeral,07308,Teno
-08108,San Pedro de la Paz,08102,Coronel
-08108,San Pedro de la Paz,08112,Hualpén
-08108,San Pedro de la Paz,08101,Concepción
-08108,San Pedro de la Paz,08103,Chiguayante
-05603,Cartagena,05601,San Antonio
-05603,Cartagena,05102,Casablanca
-05603,Cartagena,13504,María Pinto
-05603,Cartagena,05605,El Tabo
-14202,Futrono,14203,Lago Ranco
-14202,Futrono,14201,La Unión
-14202,Futrono,14108,Panguipulli
-14202,Futrono,14107,Paillaco
-14202,Futrono,14104,Los Lagos
-03302,Alto del Carmen,04104,La Higuera
-03302,Alto del Carmen,04106,Vicuña
-03302,Alto del Carmen,03301,Vallenar
-03302,Alto del Carmen,03103,Tierra Amarilla
-09110,Melipeuco,09119,Vilcún
-09110,Melipeuco,09205,Lonquimay
-09110,Melipeuco,09103,Cunco
-09110,Melipeuco,09104,Curarrehue
-09110,Melipeuco,09203,Curacautín
-07305,Rauco,07302,Hualañé
-07305,Rauco,07307,Sagrada Familia
-07305,Rauco,07301,Curicó
-07305,Rauco,07308,Teno
-07305,Rauco,06302,Chépica
-13129,San Joaquín,13118,Macul
-13129,San Joaquín,13131,San Ramón
-13129,San Joaquín,13120,Ñuñoa
-13129,San Joaquín,13111,La Granja
-13129,San Joaquín,13130,San Miguel
-13129,San Joaquín,13110,La Florida
-13129,San Joaquín,13101,Santiago
-13109,La Cisterna,13401,San Bernardo
-13109,La Cisterna,13116,Lo Espejo
-13109,La Cisterna,13131,San Ramón
-13109,La Cisterna,13105,El Bosque
-13109,La Cisterna,13130,San Miguel
-13109,La Cisterna,13121,Pedro Aguirre Cerda
-13125,Quilicura,13124,Pudahuel
-13125,Quilicura,13301,Colina
-13125,Quilicura,13107,Huechuraba
-13125,Quilicura,13104,Conchalí
-13125,Quilicura,13128,Renca
-13125,Quilicura,13302,Lampa
-13113,La Reina,13122,Peñalolén
-13113,La Reina,13123,Providencia
-13113,La Reina,13120,Ñuñoa
-13113,La Reina,13114,Las Condes
-13101,Santiago,13106,Estación Central
-13101,Santiago,13108,Independencia
-13101,Santiago,13128,Renca
-13101,Santiago,13123,Providencia
-13101,Santiago,13120,Ñuñoa
-13101,Santiago,13130,San Miguel
-13101,Santiago,13127,Recoleta
-13101,Santiago,13126,Quinta Normal
-13101,Santiago,13121,Pedro Aguirre Cerda
-13101,Santiago,13129,San Joaquín
-10210,Quinchao,10204,Curaco de Vélez
-06304,Lolol,07302,Hualañé
-06304,Lolol,06310,Santa Cruz
-06304,Lolol,06302,Chépica
-06304,Lolol,06206,Paredones
-06304,Lolol,06309,Pumanque
-10209,Quemchi,10205,Dalcahue
-10209,Quemchi,10202,Ancud
-08308,Quilaco,09205,Lonquimay
-08308,Quilaco,08314,Alto Biobío
-08308,Quilaco,08311,Santa Bárbara
-08308,Quilaco,09202,Collipulli
-08308,Quilaco,08305,Mulchén
-08308,Quilaco,09203,Curacautín
-01402,Camiña,01404,Huara
-01402,Camiña,01403,Colchane
-01402,Camiña,15102,Camarones
-07408,Yerbas Buenas,07407,Villa Alegre
-07408,Yerbas Buenas,07105,Maule
-07408,Yerbas Buenas,07406,San Javier
-07408,Yerbas Buenas,07402,Colbún
-07408,Yerbas Buenas,07109,San Clemente
-07408,Yerbas Buenas,07401,Linares
-13103,Cerro Navia,13124,Pudahuel
-13103,Cerro Navia,13128,Renca
-13103,Cerro Navia,13117,Lo Prado
-13103,Cerro Navia,13126,Quinta Normal
+16204,Ninhue,07201,Cauquenes
+16204,Ninhue,16201,Quirihue
+16204,Ninhue,16205,Portezuelo
+16204,Ninhue,16207,Treguaco
+16204,Ninhue,16301,San Carlos
+16204,Ninhue,16305,San Nicolás
+16205,Portezuelo,16101,Chillán
+16205,Portezuelo,16203,Coelemu
+16205,Portezuelo,16204,Ninhue
+16205,Portezuelo,16206,Ránquil
+16205,Portezuelo,16207,Treguaco
+16205,Portezuelo,16305,San Nicolás
+16206,Ránquil,08104,Florida
+16206,Ránquil,08111,Tomé
+16206,Ránquil,16101,Chillán
+16206,Ránquil,16107,Quillón
+16206,Ránquil,16203,Coelemu
+16206,Ránquil,16205,Portezuelo
+16207,Treguaco,16201,Quirihue
+16207,Treguaco,16202,Cobquecura
+16207,Treguaco,16203,Coelemu
+16207,Treguaco,16204,Ninhue
+16207,Treguaco,16205,Portezuelo
+16301,San Carlos,07201,Cauquenes
+16301,San Carlos,16101,Chillán
+16301,San Carlos,16204,Ninhue
+16301,San Carlos,16302,Coihueco
+16301,San Carlos,16303,Ñiquén
+16301,San Carlos,16304,San Fabián
+16301,San Carlos,16305,San Nicolás
+16302,Coihueco,16101,Chillán
+16302,Coihueco,16106,Pinto
+16302,Coihueco,16301,San Carlos
+16302,Coihueco,16304,San Fabián
+16303,Ñiquén,07201,Cauquenes
+16303,Ñiquén,07404,Parral
+16303,Ñiquén,16301,San Carlos
+16303,Ñiquén,16304,San Fabián
+16304,San Fabián,07402,Colbún
+16304,San Fabián,07404,Parral
+16304,San Fabián,16301,San Carlos
+16304,San Fabián,16302,Coihueco
+16304,San Fabián,16303,Ñiquén
+16305,San Nicolás,16101,Chillán
+16305,San Nicolás,16204,Ninhue
+16305,San Nicolás,16205,Portezuelo
+16305,San Nicolás,16301,San Carlos
