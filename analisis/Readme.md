@@ -86,11 +86,12 @@ Nota metodológica
     2020b](https://doi.org/10.2807/1560-7917.%20ES.2020.25.12.200025).
 
 El código utilizado para las estimaciones de subreporte y letalidad
-ajustada son adaptaciones para Chile del desarrollado por (Tim
-Russel)\[<a href="https://github.com/thimotei/CFR_calculation" class="uri">https://github.com/thimotei/CFR_calculation</a>\]
-disponible en su repositorio.
+ajustada son adaptaciones para Chile del desarrollado por [Tim
+Russel](https://github.com/thimotei/CFR_calculation) disponible en su
+repositorio.
 
-\#\#Los datos
+Los datos
+---------
 
 Los datos disponibles son los siguientes: \* [Estimaciones del número de
 reproducción (Re)](Re): Estimaciones por día del número de reproducción
@@ -107,10 +108,9 @@ caso](Letalidad): Estimaciones de letalidad de casos cruda y ajustada
 por subreporte por día a nivel nacional y el acumulado para cada región.
 Se incorporan además algunas visualizaciones básicas de estos datos.
 Ninguna de estas dos métricas es adecuada para realizar comparaciones
-internacionales con otros paises. Aquí pueden encontrar una
-\[explicación en simple\]
-(<a href="https://twitter.com/ccuadradon/status/1247693886195195905" class="uri">https://twitter.com/ccuadradon/status/1247693886195195905</a>)
-de por que es una mala idea intentar hacer esas comparaciones. Si pueden
+internacionales con otros paises. Aquí pueden encontrar una [explicación
+en simple](https://twitter.com/ccuadradon/status/1247693886195195905) de
+por que es una mala idea intentar hacer esas comparaciones. Si pueden
 ser útiles para comparar al interior del mismo país, así como la
 trayectoría observada por Chile en el tiempo.
 
