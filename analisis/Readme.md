@@ -24,14 +24,15 @@ Nota metodológica
 -   **Estimaciones por día del número de reproducción efectivo a nivel
     de región, servicio de salud y comuna**. El número de reproducción
     efectivo para cada tiempo (día) se calcula utilizando el método
-    desarrollado por Cori [Cori et
-    al (2020)](https://academic.oup.com/aje/article/178/9/1505/89262)
-    utilizando el paquete R. Se utiliza un intervalo serial τ = 5 días
-    [Nishiura et al
-    2020](https://www.ijidonline.com/article/S1201-9712(20)30119-3/fulltext)
-    con la variabilidad habitual entre 3 y 7 días [Sanche et al
-    2020](https://wwwnc.cdc.gov/eid/article/26/7/20-0282_article). La
-    interpretación más sencilla de este valor es el número de nuevos
+    desarrollado por Cori [(Cori et
+    al 2020)](https://academic.oup.com/aje/article/178/9/1505/89262)
+    utilizando el paquete
+    [R0](https://www.rdocumentation.org/packages/R0/versions/1.2-6). Se
+    utiliza un intervalo serial τ = 5 días [(Nishiura et
+    al 2020)](https://www.ijidonline.com/article/S1201-9712(20)30119-3/fulltext)
+    con la variabilidad habitual entre 3 y 7 días [(Sanche et
+    al 2020)](https://wwwnc.cdc.gov/eid/article/26/7/20-0282_article).
+    La interpretación más sencilla de este valor es el número de nuevos
     contagiados que produce cada caso (casos secundarios) en un
     intervalo serial en un contexto en la que no toda la población es
     susceptible y donde hay medidas epidemiológicas de control
@@ -48,8 +49,8 @@ Nota metodológica
 -   **Estimaciones de subreporte de casos sintomáticos a nivel nacional
     y regional**: Calcular el subreporte no es una tarea trivial. Más
     aún hacerlo durante una epidemia en curso. Russel y colaboradores
-    [Russel et al,
-    2020a](https://cmmid.github.io/topics/covid19/severity/global_cfr_estimates.html?fbclid=IwAR31V4DbTkUDkJJKpfJMI1M7sYxt16EMQ9yRH5Y-lV0lAIH2mbkfkFZ5zeE)
+    [(Russel et al,
+    2020a)](https://cmmid.github.io/topics/covid19/severity/global_cfr_estimates.html?fbclid=IwAR31V4DbTkUDkJJKpfJMI1M7sYxt16EMQ9yRH5Y-lV0lAIH2mbkfkFZ5zeE)
     han propuesto una metodológica que puede entregar una razonable
     aproximación al cálculo. La lógica es bastante sencilla y permite
     una aproximación rápida a la pregunta sobre que tan eficaz esta
@@ -82,8 +83,8 @@ Nota metodológica
     de un caso hasta el desenlace de interés, en este caso la muerte.
     Esta es una tasa de letalidad de caso corregida por retraso (TLCc o
     cCFR por su sigla en ingles), para lo cuál utilizamos la metodología
-    propuesta por Russel y colaboradores [Russel et al,
-    2020b](https://doi.org/10.2807/1560-7917.%20ES.2020.25.12.200025).
+    propuesta por Russel y colaboradores [(Russel et al,
+    2020b)](https://doi.org/10.2807/1560-7917.%20ES.2020.25.12.200025).
 
 El código utilizado para las estimaciones de subreporte y letalidad
 ajustada son adaptaciones para Chile del desarrollado por [Tim
