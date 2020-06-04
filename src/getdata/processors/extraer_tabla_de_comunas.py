@@ -102,10 +102,19 @@ def busca_primer_float_en_texto(sub_texto, texto="", __re=""):
         out = mo.expand(r"\1")
     return out
 
+def busca_casos_por_semana(sub_texto, texto="", __re="", largo=10):
+    sub_texto = sub_texto.strip()
+    data = re.split(' |\n',sub_texto)
+    if len(data) < 6 + largo:
+        out = ['***'] * largo
+    else:
+        data = data[6:largo+6]
+    return data
 
-def extrae_casos_como_string_desde_texto_region(texto, datos_habitantes_region):
+def extrae_casos_como_string_desde_texto_region(texto, datos_habitantes_region,inicio_sintomas=True):
     casos = []
     tasas = []
+    sintomas = []
     for h1, h2 in zip(datos_habitantes_region[:-1], datos_habitantes_region[1:]):
         re_1, _ = formatea_numero_como_re_y_string_numero(h1)
         re_2, _ = formatea_numero_como_re_y_string_numero(h2)
@@ -118,23 +127,32 @@ def extrae_casos_como_string_desde_texto_region(texto, datos_habitantes_region):
             sub_texto = mo.expand(r"\1")
             caso = busca_primer_numero_en_texto(sub_texto, texto, re_search)
             tasa = busca_primer_float_en_texto(sub_texto, texto, re_search)
+            if inicio_sintomas:
+                semanas = busca_casos_por_semana(sub_texto, texto, re_search)
         casos.append(caso)
         tasas.append(tasa)
+        sintomas.append(semanas)
     re_total_hab, _ = formatea_numero_como_re_y_string_numero(
         datos_habitantes_region[-1]
     )
-    re_final = re_total_hab + r"((.|\n)*)"
+    re_final = re_total_hab + r"([^\n]*)\n"
     mo = re.search(re_final, texto)
     if not mo:
+        ipdb.set_trace()
         total = "***"
         tasa_total = "***"
+        total_semanas = ['***'] * 10
     else:
         sub_texto = mo.expand(r"\1")
         total = busca_primer_numero_en_texto(sub_texto, texto, re_final)
         tasa_total = busca_primer_float_en_texto(sub_texto, texto, re_final)
+        if inicio_sintomas:
+            # ipdb.set_trace()
+            total_semanas = busca_casos_por_semana(sub_texto, texto, re_search)
     casos.append(total)
     tasas.append(tasa_total)
-    return casos, tasas
+    sintomas.append(total_semanas)
+    return casos, tasas, sintomas
 
 
 def extrae_tasas_como_string(texto):
@@ -159,11 +177,12 @@ def chequea_consistencia(
 
 
 def extrae_tasas_y_casos_por_region(
-    textos_tablas_de_regiones, pre_datos_de_regiones, permisivo=False
+    textos_tablas_de_regiones, pre_datos_de_regiones, permisivo=False, inicio_sintomas=True
 ):
     # heurística para extraer todas las tasas de las comunas de cada region
     tasas_comunas_por_region = []
     casos_comunas_por_region = []
+    sintomas_comunas_por_region = []
 
     for texto_tabla_region, datos_region in zip(
         textos_tablas_de_regiones, pre_datos_de_regiones
@@ -171,8 +190,8 @@ def extrae_tasas_y_casos_por_region(
         comunas = [c for c, _ in datos_region]
         habitantes = [h for _, h in datos_region]
 
-        textos_casos, textos_tasas = extrae_casos_como_string_desde_texto_region(
-            texto_tabla_region, habitantes
+        textos_casos, textos_tasas, textos_sintomas = extrae_casos_como_string_desde_texto_region(
+            texto_tabla_region, habitantes, inicio_sintomas
         )
         # textos_tasas = extrae_tasas_como_string(texto_tabla_region)
 
@@ -180,15 +199,16 @@ def extrae_tasas_y_casos_por_region(
 
         tasas_comunas_por_region.append(textos_tasas)
         casos_comunas_por_region.append(textos_casos)
+        sintomas_comunas_por_region.append(textos_sintomas)
 
-    return casos_comunas_por_region, tasas_comunas_por_region
+    return casos_comunas_por_region, tasas_comunas_por_region, sintomas_comunas_por_region
 
 
 def extrae_texto_para_cada_region(texto):
     # Extrae el texto correspondiente a las tablas con las comunas por región
     # Supone que cada de cada región comienza con un encabezado y termina
     # con la primera aparición del string `Total`
-    re_tablas_de_comunas = r"(Poblaci[^T]*Confirmado(T[^o]|To[^t]|[^T])*Total[\n ]*[.0-9]*[\n ]*[.0-9]+[\n ]*[,0-9]+)"
+    re_tablas_de_comunas = r"(Poblaci[^T]*Confirmado(T[^o]|To[^t]|[^T])*Total[\n ]*[.0-9]*[\n ]*[.0-9]+[\n ]*[,0-9]+[^\n]*\n)"
     textos_tablas_de_regiones = re.findall(re_tablas_de_comunas, texto)
 
     # Si se extrayeron menos de 16 regiones lanza un error
@@ -235,13 +255,33 @@ def genera_datos_salida(comuna, habitantes, casos, tasa):
     return out
 
 
+def genera_datos_lista(comuna, habitantes, sintomas):
+    # limpia datos
+    sintomas = [re.sub(r"\.", "", s) for s in sintomas]
+
+    # chequea posibles erroes
+    ERR = False
+    TC = False
+
+    if sintomas[0] == "***":
+        ERR = True
+    else:
+        sintomas = [int(s) for s in sintomas]
+
+    out = [habitantes, comuna] + sintomas
+    if ERR:
+        out = out + ["CHEQUEAR!"]
+    return out    
+
 def genera_archivos_de_salida(
     pre_datos_de_regiones,
     casos_por_region,
     tasas_por_region,
-    nombre_archivo="out_gs.csv",
+    sintomas_por_region,
+    nombre_archivo="out_gs",
 ):
-    with open(nombre_archivo, "w") as outfile_gs:
+    nombre_archivo_casos_tasas = nombre_archivo + '.csv'
+    with open(nombre_archivo_casos_tasas, "w") as outfile_gs:
         writer = csv.writer(outfile_gs)
         for datos_region, casos_region, tasas_region in zip(
             pre_datos_de_regiones, casos_por_region, tasas_por_region
@@ -251,6 +291,19 @@ def genera_archivos_de_salida(
                 datos = genera_datos_salida(comuna, habitantes, casos, tasa)
                 writer.writerow(datos)
             writer.writerow([])
+
+    nombre_archivo_sintomas = nombre_archivo + '.sintomas.csv'        
+    with open(nombre_archivo_sintomas, "w") as outfile_gs:
+        writer = csv.writer(outfile_gs)
+        for datos_region, sintomas_region  in zip(
+            pre_datos_de_regiones, sintomas_por_region
+        ):
+            for dr, sintomas in zip(datos_region, sintomas_region):
+                comuna, habitantes = dr
+                datos = genera_datos_lista(comuna, habitantes, sintomas)
+                writer.writerow(datos)
+            writer.writerow([])
+
 
 def main():
     # NO FUNCIONA DATOS AL REVES archivo = '../../../reports/Informe_EPI_03_04_2020.pdf'
@@ -262,12 +315,24 @@ def main():
     #archivo = '../../../reports/Informe-Epidemiológico-17_04_2020_Corregido-V2.pdf'
     #archivo = '../../../reports/Informe_EPI_PUB_20042020.pdf'
     #archivo = '../../../reports/Informe_EPI_24042020.pdf'
-    archivo = '../../../reports/Informe-EPI-27042020.pdf'
-    texto = copia_texto_desde_archivo(archivo, 5)
+    #archivo = '../../../reports/Informe-EPI-27042020.pdf'
+    #archivo = '../../../reports/Informe_EPI_01_05_2020.pdf'
+    #archivo = '../../../reports/Informe_EPI_PUB_20200505.pdf'
+    #archivo = '../../../reports/Informe-EPI-08-05-2020.pdf'
+    #archivo = '../../../reports/Informe-EPI-110520.pdf'
+    #archivo = '../../../reports/Informe_EPI_15-05-20.pdf'
+    #archivo = '../../../reports/Informe-EPI-180520.pdf'
+    #archivo = '../../../reports/Informe_EPI_22_05_2020.pdf'
+    #archivo = '../../../reports/Informe-EPI-250520.pdf'
+    #archivo = '../../../reports/InformeFinalEPI290520.pdf'
+    archivo = '../../../reports/Informe_EPI_010620.pdf'
+    texto = copia_texto_desde_archivo(archivo, 10)
     textos_tablas_de_regiones = extrae_texto_para_cada_region(texto)
     pre_datos_de_regiones = lee_datos_csv_para_heurística()
-    casos_por_region, tasas_por_region = extrae_tasas_y_casos_por_region(textos_tablas_de_regiones,pre_datos_de_regiones)
-    genera_archivos_de_salida(pre_datos_de_regiones, casos_por_region, tasas_por_region)
+    casos_por_region, tasas_por_region, sintomas_por_region = extrae_tasas_y_casos_por_region(
+            textos_tablas_de_regiones,pre_datos_de_regiones,
+            permisivo=False)
+    genera_archivos_de_salida(pre_datos_de_regiones, casos_por_region, tasas_por_region, sintomas_por_region)
 
 if __name__ == '__main__':
     main()

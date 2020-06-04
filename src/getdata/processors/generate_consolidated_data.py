@@ -1,5 +1,34 @@
 import pandas as pd
 
+sochimi_cols = [
+    'encuestados',
+    'responden',
+    'camas_total_intensivo',
+    'camas_total_intermedio',
+    'vmi_totales',
+    'hospitalizados_intensivo',
+    'hospitalizados_intermedio',
+    'hospitalizados_en_vmi',
+    'ocupacion_intesivo',
+    'ocupacion_intermedio',
+    'ocupacion_vmi',
+    'covid_en_upc',
+    'covid_en_vmi',
+    'sospecha_en_vmi',
+    'covid_mas_sospecha_en_vmi',
+    'rm_en_vmi_upca',
+    'rm_covid_en_vmi_upca',
+    'rm_covid_en_vmi_fuera_upca',
+    'covid_ecmo',
+    'covid_prono',
+    'covid_intubados_24',
+    'covid_extubados_24',
+    'covid_fallecidos_24',
+    'covid_vmi_fallecidos_24',
+]
+
+
+
 
 def generate_difference(df, strat_column=2, copy_previous=True):
     out_df = pd.DataFrame()
@@ -13,12 +42,15 @@ def generate_difference(df, strat_column=2, copy_previous=True):
 
     return out_df
 
-
 def df_to_long(df, value_name, id_vars=["codigo", "region"], var_name="fecha"):
     return df.melt(id_vars=id_vars, var_name=var_name, value_name=value_name)
 
 def df_comuna_to_long(df, value_name, id_vars=["codigo_region", "region", "codigo_comuna", "comuna"], var_name="fecha"):
     return df.melt(id_vars=id_vars, var_name=var_name, value_name=value_name)
+
+def df_sochimi_to_long(df, value_name, id_vars=["codigo_region", "region", "codigo_comuna", "comuna"], var_name="fecha"):
+    return df.melt(id_vars=id_vars, var_name=var_name, value_name=value_name)
+
 
 def generate():
     confirmados_file = "../../../csv/confirmados.csv"
@@ -53,6 +85,18 @@ def generate():
     cci_df = pd.read_csv(cci_file)
     cci_long = df_comuna_to_long(cci_df, "positivos_acumulados")
     cci_long.to_csv("../../../csv/long_confirmados_comunas_interpolado.csv", index=False, float_format="%.0f")
+
+    sochimi_file = "../../../csv/encuesta_sochimi.csv"
+    sochimi_df = pd.read_csv(sochimi_file)
+    sochimi_df.set_index('Fecha',inplace=True)
+    sochimi_long = sochimi_df.T
+    sochimi_long.index.name = 'fecha'
+    sochimi_long.columns = sochimi_cols
+    del sochimi_long['ocupacion_intesivo']
+    del sochimi_long['ocupacion_intermedio']
+    del sochimi_long['ocupacion_vmi']
+    del sochimi_long['covid_mas_sospecha_en_vmi']
+    sochimi_long.to_csv("../../../csv/long_encuesta_sochimi.csv", index=True, float_format="%.0f")
 
 if __name__ == "__main__":
     generate()
