@@ -93,26 +93,32 @@ repositorio.
 Los datos
 ---------
 
-Los datos disponibles son los siguientes: \* [Estimaciones del número de
-reproducción (Re)](Re): Estimaciones por día del número de reproducción
-efectivo a nivel de región, servicio de salud y comuna. Se incorporan
-además algunas visualizaciones básicas de estos datos. Las estimaciones
-de Re a nivel regional se construyen a partir de los reportes diarios
-del MINSAL. Las estimaciones de Re a nivel de servicios de salud y
-comuna utilizan los reportes bisemanales del MINSAL con desagregación a
-nivel comunal. \* [Estimaciones de subreporte de casos](Subreporte):
-Estimaciones de subreporte de casos sintomáticos por día a nivel
-nacional y el acumulado para cada región. Se incorporan además algunas
-visualizaciones básicas de estos datos. \* [Estimaciones de letalidad de
-caso](Letalidad): Estimaciones de letalidad de casos cruda y ajustada
-por subreporte por día a nivel nacional y el acumulado para cada región.
-Se incorporan además algunas visualizaciones básicas de estos datos.
-Ninguna de estas dos métricas es adecuada para realizar comparaciones
-internacionales con otros paises. Aquí pueden encontrar una [explicación
-en simple](https://twitter.com/ccuadradon/status/1247693886195195905) de
-por que es una mala idea intentar hacer esas comparaciones. Si pueden
-ser útiles para comparar al interior del mismo país, así como la
-trayectoría observada por Chile en el tiempo.
+Los datos disponibles son los siguientes:
+
+1.  [Estimaciones del número de reproducción (Re)](Re): Estimaciones por
+    día del número de reproducción efectivo a nivel de región, servicio
+    de salud y comuna. Se incorporan además algunas visualizaciones
+    básicas de estos datos. Las estimaciones de Re a nivel regional se
+    construyen a partir de los reportes diarios del MINSAL. Las
+    estimaciones de Re a nivel de servicios de salud y comuna utilizan
+    los reportes bisemanales del MINSAL con desagregación a nivel
+    comunal.
+
+2.  [Estimaciones de subreporte de casos](Subreporte): Estimaciones de
+    subreporte de casos sintomáticos por día a nivel nacional y el
+    acumulado para cada región. Se incorporan además algunas
+    visualizaciones básicas de estos datos.
+
+3.  [Estimaciones de letalidad de caso](Letalidad): Estimaciones de
+    letalidad de casos cruda y ajustada por subreporte por día a nivel
+    nacional y el acumulado para cada región. Se incorporan además
+    algunas visualizaciones básicas de estos datos. Ninguna de estas dos
+    métricas es adecuada para realizar comparaciones internacionales con
+    otros paises. Aquí pueden encontrar una [explicación en
+    simple](https://twitter.com/ccuadradon/status/1247693886195195905)
+    de por que es una mala idea intentar hacer esas comparaciones. Si
+    pueden ser útiles para comparar al interior del mismo país, así como
+    la trayectoría observada por Chile en el tiempo.
 
 **DISCLAIMER**: Hay que tener mucho ojo con los datos presentados en
 este repositorio, pues en su mayoría provienen de información oficial
