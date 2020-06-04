@@ -13,12 +13,13 @@ import update_csv
 import datetime
 from getdata.scraping.helpers.utils import git_commit_and_push
 from getdata.scraping.helpers.constants import (
+    BASE_PATH,
     NOTIFICATIONS_CSV_PATH,
     PATIENTS_ICU_CSV_PATH,
     CONFIRMED_COMUNAS_CSV_PATH,
     PCRS_REGION
 )
-
+cmd.run("git pull", shell=True, cwd=BASE_PATH)
 update_csv.update_csv_all([NOTIFICATIONS_CSV_PATH, PATIENTS_ICU_CSV_PATH, CONFIRMED_COMUNAS_CSV_PATH, PCRS_REGION], [1, 2, 4, 5])
 timestamp = datetime.datetime.now()
 message = "Actualizacion de csv a las " + str(timestamp)
