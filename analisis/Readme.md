@@ -126,8 +126,8 @@ este repositorio, pues en su mayoría provienen de información oficial
 que ha esta en entredicho en varias ocasiones. Las estimaciones son tan
 buenas como la calidad de los datos. No obstante, tanto los datos de
 casos confirmados, como las estadísticas de fallecidos COVID-19 pueden
-estar sujetos a importantes errores de medición. La interpretación
-juiciosa de estos resultados, a la luz de las limitaciones de los datos,
+estar sujetos a importantes errores de medición. Estos últimos días la autoridad ha reconocido la existencia de un [número mayor de fallecidos](https://www.latercera.com/nacional/noticia/manalich-anuncia-correccion-en-cifra-de-fallecidos-con-covid-19-incorpora-a-653-personas-y-eleva-cifra-total-a-2290/VR2N2AWOIZAGJHDTDRWA7AON3M/) lo que aún no esta incorporado en las cifras retrospectivas, con lo cuál se subestima tanto la letalidad como el subreporte de casos.
+La interpretación juiciosa de estos resultados, a la luz de las limitaciones de los datos,
 es esencial, por lo que llamamos a la prudencia en los usos que se le
 den.
 
