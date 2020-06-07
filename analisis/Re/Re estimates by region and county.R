@@ -85,11 +85,7 @@ for (i in 0:nrow(table(cases_reg$codigo))){
 }
 
 
-# # Generate joint database for other analysis
-# joindata <- left_join(cases_reg,R0_data %>% mutate(time=t_end), by=c("codigo","time"))
-# setwd("~/Dropbox/COVID19/Google trends Mobility")
-# save(joindata, file="Re_data.R")
-  
+# Save
 R0_data<-left_join(R0_data %>% mutate(time=t_end) %>% filter(!is.na(`Mean(R)`)),
                        cases_reg)                  
 save(R0_data, file="Re_region.R")
@@ -252,9 +248,6 @@ ggsave("~/Documents/GitHub/covid19-data/analisis/Re/graphs/Re deaths region ulti
 
 # Comparación Re para Chile con datos de casos, UCI y muertes ---------------------
 
-# plot(Re, "R") + labs(title="", y="Re", x="Date")
-# ggsave("Re Chile.png")
-
 # Estimaciones Re por casos para Chile
 t_start <- seq(2, nrow(cases_reg %>% filter(codigo==0))-13)   
 t_end <- t_start + 13       
@@ -287,36 +280,14 @@ Re_death <- estimate_R(incid = death_reg %>% filter(codigo==0) %>% dplyr::pull(n
                          t_end = t_end)))
 cbind(tail( Re_death$R$`Mean(R)`, n=1),tail(Re_death$R$`Quantile.0.025(R)`, n=1),tail( Re_death$R$`Quantile.0.975(R)`, n=1))
 
-# Estimaciones Re por intubaciones en UCI para Chile
-
-uci <- read_csv("https://raw.githubusercontent.com/jorgeperezrojas/covid19-data/master/csv/long_encuesta_sochimi.csv")
-
-t_start <- seq(2, nrow(uci %>% filter(!is.na(covid_intubados_24)))-13)   
-t_end <- t_start + 13       
-
-Re_uci <- estimate_R(incid = uci %>% filter(covid_intubados_24>0) %>% dplyr::pull(covid_intubados_24),
-                     method="uncertain_si",
-                     config = make_config(list(
-                       mean_si = 6.48, std_si= 3.83,
-                       min_mean_si = 4.48, max_mean_si = 8.48,
-                       std_std_si = 0.5, std_mean_si= 1, 
-                       min_std_si = 1.83, max_std_si = 5.83,
-                       t_start = t_start, 
-                       t_end = t_end)))
-plot(Re_uci)
-cbind(tail(Re_uci$R$`Mean(R)`, n=1),tail(Re_uci$R$`Quantile.0.025(R)`, n=1),tail(Re_uci$R$`Quantile.0.975(R)`, n=1))
-
 
 Re_cases2 <- Re_cases$R %>% dplyr::select(t_start, t_end, `Mean(R)`, `Quantile.0.05(R)`,`Quantile.0.95(R)`) %>%
              mutate(Metodo="Casos confirmados")
 Re_death2 <- Re_death$R %>% dplyr::select(t_start, t_end, `Mean(R)`, `Quantile.0.05(R)`,`Quantile.0.95(R)`) %>%
              mutate(Metodo="Muertes",
-                     t_end=t_end+14)
-Re_uci2 <- Re_uci$R %>% dplyr::select(t_start, t_end, `Mean(R)`, `Quantile.0.05(R)`,`Quantile.0.95(R)`) %>%
-           mutate(Metodo="UCI",
-                   t_end=t_end+55)
+                     t_end=t_end+12)
 
-Re_comparison <- bind_rows(Re_cases2,Re_death2, Re_uci2)
+Re_comparison <- bind_rows(Re_cases2,Re_death2)
 
 ggplot(Re_comparison %>% filter(t_end>=24), aes(x=t_end, y=`Mean(R)`, color=Metodo, group=Metodo))+
   geom_line() + 
@@ -331,6 +302,10 @@ ggplot(Re_comparison %>% filter(t_end>=24), aes(x=t_end, y=`Mean(R)`, color=Meto
                          Se utilizan las nuevas muertes y nuevos casos confirmados COVID-19 reportadas por región para este análisis.
                          Cuadrado C. Escuela de Salud Pública. Universidad de Chile. Update: ",tail(R0_data$date,n=1))) +
   theme_minimal() 
+ggsave("Re comparasion casos y muertes Chile.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
+ggsave("~/Documents/GitHub/covid19-data/analisis/Re/graphs/Re comparasion casos y muertes Chile.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
+
+
 
 # R estimation by county ------------------------------------------------------------
 
@@ -443,7 +418,37 @@ load(file="Re_muni.R")
 # Graficos - Región Metropolitana
 
 # Agregar data de cuarentena
-load("cuarentena_comuna.R")
+
+library(googlesheets4)
+
+### Cargar datos cuarentenas
+data <-read_sheet("https://docs.google.com/spreadsheets/d/1IjirW9zoW5H-x8AnQcQaKXZXiS1tCuTs0PxSkNxYE0g/edit#gid=0",
+                  sheet = "Sheet1", range = cell_rows(c(2, NA)))
+
+data$comuna <- zoo::na.locf(data$...1 ) # Rellenar NA de comuna
+data <- data %>% slice(.,1:(which(data == "Cordones sanitarios", arr.ind=TRUE)[1]-2))  # Eliminar data redundante
+data$...2 <- data$...1 <- NULL
+
+# Limpiar base colapsando por comuna y asignando 1 a las comunas con al menos una parte de ella en cuarentena en cada día
+data$comuna <- sub(pattern=" urbano",replacement = "", x=data$comuna)  # Eliminar "urbano" de algunas comunas
+data <- data %>% group_by(comuna) %>% mutate_each(funs(as.numeric)) %>%
+  summarise_all(funs(sum)) %>%  ungroup() %>%
+  mutate_at(vars(-comuna),funs(ifelse(.>0,1,0)))
+
+# Pasar a formato long y arreglar fechas
+cuarentena_long <- tidyr:::gather(data, dia, cuarentena,colnames(data)[2]:tail(colnames(data),n=1), factor_key=F)
+cuarentena_long <- cuarentena_long %>% separate(dia, sep ="-", c("day","month"))  %>%
+  mutate(year=2020,
+         month=tolower(month),
+         month=ifelse(month=="mar",3,
+                      ifelse(month=="abr",4,
+                             ifelse(month=="may",5,
+                                    ifelse(month=="jun",6,
+                                           ifelse(month=="jul",7,NA))))),
+         date=lubridate::make_date(year, month, day),
+         semana=lubridate::week(date))
+
+cuarentena_long <- cuarentena_long %>% dplyr::select(-day,-month,-year)
 cuarentena_long  <- cuarentena_long %>% dplyr::select(comuna,date,cuarentena)
 cuarentena_long$comuna <- stringi::stri_trans_general(cuarentena_long$comuna,"Latin-ASCII") # Eliminar acentos
 R0_data_muni2$comuna <- stringi::stri_trans_general(R0_data_muni2$comuna ,"Latin-ASCII") # Eliminar acentos
@@ -492,18 +497,18 @@ aes(x=t_end, y=`Mean(R)`, group=comuna))+
   geom_point() + 
   geom_ribbon(aes(ymin=`Quantile.0.05(R)`,ymax=`Quantile.0.95(R)`), alpha = 0.5) +
   geom_hline(yintercept=1, linetype="solid", color = "darkgray", size=0.6) +
-  scale_y_continuous(breaks = scales::pretty_breaks(n = 10), limits=c(0,3.5)) +
+  scale_y_continuous(breaks = scales::pretty_breaks(n = 10), limits=c(0,3)) +
   labs(title="Número de reproducción efectivo (Re) en comunas RM, últimas 2 semanas",
        y="Re",x="Días desde inicio del brote",
        caption = paste0("El número de reproducción efectivo (Re) indica cuantos nuevos casos produce de manera directa cada caso conocido.
-                         En color naranja se indica los períodos bajo cuarentena de cada comuna. Cálculos en base a un intervalo serial de 5 días (rango 3-7) y un período de 14 días. 
+                         Cálculos en base a un intervalo serial de 5 días (rango 3-7) y un período de 14 días. 
                          Cuadrado C. Escuela de Salud Pública. Universidad de Chile. Update: ",tail(R0_data_muniRM$date,n=1))) +
   theme_minimal() +
   theme_minimal() +
-  geom_segment(aes(y=-Inf, yend=Inf,x=t_end, xend=t_end, alpha=cuarentena),
-               inherit.aes = F,colour="coral", size=4)+
-  scale_alpha_continuous(range=c(0,0.1))+
-  guides(alpha=F) +
+  # geom_segment(aes(y=-Inf, yend=Inf,x=t_end, xend=t_end, alpha=cuarentena),
+  #              inherit.aes = F,colour="coral", size=4)+
+  # scale_alpha_continuous(range=c(0,0.1))+
+  # guides(alpha=F) +
   facet_wrap(comuna ~ .)
 
 # Excluyo manualmente comunas con muy pocos casos
