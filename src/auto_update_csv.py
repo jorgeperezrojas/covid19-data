@@ -6,6 +6,8 @@
 # 3: muertes
 # 4: confirmados acumulados por comuna
 # 5: PCRs por region
+
+#Only adds files modified by update_csv
 #-------------------------------------------------------------------
 
 import subprocess as cmd
