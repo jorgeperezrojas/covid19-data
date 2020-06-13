@@ -22,7 +22,7 @@ PCRS_REGION = "{}/csv/pcrs_region.csv".format(BASE_PATH)
 CRON_EXECUTABLE = "{}/src/update_files.py".format(BASE_PATH)
 CRON_EXECUTABLE_CSV = "{}/src/auto_update_csv.py".format(BASE_PATH)
 NATIONAL_REPORT_PATH = "{}/csv/resumen_nacional.csv".format(BASE_PATH)
-INFOGRAM_LINK = "https://infogram.com/cifras-oficiales-12-de-junio-1hzj4oz7ok372pw"
+INFOGRAM_LINK = "https://infogram.com/cifras-oficiales-13-de-junio-1ho16vekyzqv2nq"
 
 SCOPE_FEEDS = "https://spreadsheets.google.com/feeds"
 SCOPE_SPREADSHEET = "https://www.googleapis.com/auth/spreadsheets"
