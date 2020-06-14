@@ -12,6 +12,7 @@ Los datos disponibles son los siguientes:
 * [confirmados_comunas.csv](csv/confirmados_comunas.csv): Total de pacientes confirmados como positivos de COVID19 por comuna para datos reportados desde el lunes 30 de marzo (según el Minsal estos datos se liberarán los lunes, miércoles y viernes de cada semana)
 * [pacientes_en_uci.csv](csv/pacientes_en_uci.csv): Total de pacientes hospitalizados en la Unidad de Cuidados Intensivos (UCI) por región desde el 1 de abril de 2020
 * [muertes.csv](csv/muertes.csv): Total de muertes por COVID19 por región desde el 1 de abril de 2020
+* [muertes_deis](csv/muertes_deis/): Total de muertes por mes en las comunas de la RM desde el año 2000 a mayo de 2020 registradas por el Departamento de Estadísticas e Información de Salud (DEIS) del Ministerio de Salud ([Fuente](https://public.tableau.com/profile/deis4231#!/vizhome/HechosVitalesdesdeel2000/Defunciones))
 * [notificaciones.csv](csv/notificaciones.csv): Total de casos notificados (tests) por tipo de institución (ISP, Hospital, Privado) desde el 1 de abril de 2020 (Este es un dato un tanto ambiguo. El Minsal lo reporta como "tests notificados" pero parece estar ligado mas a un "reporte de sospecha" en el sistema Epivigila.)
 * [resumen_nacional.csv](csv/resumen_nacional.csv): Cantidad total de contagiados y muertos en todo el país ordenados por día. No reportamos los pacientes "recuperados" pues la estadística reportada por el Minsal es nada más que una fórmula (`recuperados[t] = confirmados[t-14] - muertos[t]`).
 
