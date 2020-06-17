@@ -4,7 +4,7 @@
 ################# Re estimates of COVID-19 in Chile                      ###################
 ################# Cuadrado C.                                            ###################
 ################# Escuela de Salud Pública. Universidad de Chile         ###################
-################# v1 Last Update: Mayo 31, 2020                          ###################
+################# v1 Last Update: Junio 17, 2020                          ###################
 ############################################################################################
 
 # Load libraries
@@ -84,7 +84,6 @@ for (i in 0:nrow(table(cases_reg$codigo))){
   rm(data_temp)  
 }
 
-
 # Save
 R0_data<-left_join(R0_data %>% mutate(time=t_end) %>% filter(!is.na(`Mean(R)`)),
                        cases_reg)                  
@@ -112,7 +111,6 @@ ggplot(R0_data %>% filter(time>20 & codigo!=0), aes(x=t_end, y=`Mean(R)`))+
   facet_wrap(region ~ .) 
 ggsave("Re region completo.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
 ggsave("~/Documents/GitHub/covid19-data/analisis/Re/graphs/Re region completo.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
-
 
 # Graficos - Region ultimas 2 semanas
 ggplot(R0_data %>% filter(time>tail(R0_data$time,n=1)-14 & codigo!=0), aes(x=t_end, y=`Mean(R)`, group=region))+
@@ -178,7 +176,7 @@ R0_data <- as.data.frame(matrix(NA, nrow = 1,ncol = ncol(Re$R)+1))
 colnames(R0_data) <- c(colnames(Re$R),"codigo")
 
 # Loop over each region
-for (i in 0:(nrow(table(death_reg$codigo))-1)){
+for (i in 0:(nrow(table(death_reg$codigo)))){
   t_start <- seq(2, nrow(death_reg %>% filter(codigo==i))-13)   
   t_end <- t_start + 13    
   R0est <- estimate_R(incid = death_reg %>% filter(codigo==i) %>% dplyr::pull(new_deaths),
@@ -443,7 +441,7 @@ cuarentena_long <- cuarentena_long %>% separate(dia, sep ="-", c("day","month"))
          month=ifelse(month=="mar",3,
                       ifelse(month=="abr",4,
                              ifelse(month=="may",5,
-                                    ifelse(month=="jun",6,
+                                    ifelse(month=="june",6,
                                            ifelse(month=="jul",7,NA))))),
          date=lubridate::make_date(year, month, day),
          semana=lubridate::week(date))
@@ -457,9 +455,9 @@ R0_data_muni3 <- left_join(R0_data_muni2,cuarentena_long)
 R0_data_muni3$cuarentena <- tidyr::replace_na(R0_data_muni3$cuarentena,0)
 
 # Excluyo manualmente comunas con muy pocos casos
-R0_data_muniRM <- R0_data_muni3 %>% filter(region=="Metropolitana") %>%
-  filter(comuna!="Alhue") %>%
-  filter(comuna!="Maria Pinto")
+R0_data_muniRM <- R0_data_muni3 %>% filter(region=="Metropolitana")
+  # filter(comuna!="Alhue") %>%
+  # filter(comuna!="Maria Pinto")
 
 ggplot(R0_data_muniRM,
        aes(x=t_end, y=`Mean(R)`, group=comuna))+
@@ -471,8 +469,10 @@ ggplot(R0_data_muniRM,
   labs(title="Número de reproducción efectivo (Re) en comunas RM",
        y="Re",x="Días desde inicio del brote",
        caption = paste0("El número de reproducción efectivo (Re) indica cuantos nuevos casos produce de manera directa cada caso conocido.
-                         En color naranja se indica los períodos bajo cuarentena de cada comuna. Cálculos en base a un intervalo serial de 5 días (rango 3-7) y un período de 14 días. 
+                         En color naranja se indica los períodos bajo cuarentena de cada comuna. Cálculos en base a un intervalo serial de 5 días (rango 3-7) y un período de 14 días.
                          Cuadrado C. Escuela de Salud Pública. Universidad de Chile. Update: ",tail(R0_data_muniRM$date,n=1))) +
+        # caption = paste0("El número de reproducción efectivo (Re) indica cuantos nuevos casos produce de manera directa cada caso conocido.
+        #                  Cuadrado C. Escuela de Salud Pública. Universidad de Chile. Update: ",tail(R0_data_muniRM$date,n=1))) +
   theme_minimal() +
   theme_minimal() +
   geom_segment(aes(y=-Inf, yend=Inf,x=t_end, xend=t_end, alpha=cuarentena),
@@ -487,9 +487,9 @@ ggsave("~/Documents/GitHub/covid19-data/analisis/Re/graphs/Re municipios RM tota
 # Graficos - Región Metropolitana
 
 # Excluyo manualmente comunas con muy pocos casos y solo últimos 14 días
-R0_data_muniRM <- R0_data_muni3 %>% filter(region=="Metropolitana" & time>tail(R0_data_muni3$time,n=1)-14) %>%
-  filter(comuna!="Alhue") %>%
-  filter(comuna!="Maria Pinto")
+R0_data_muniRM <- R0_data_muni3 %>% filter(region=="Metropolitana" & time>tail(R0_data_muni3$time,n=1)-14)
+  # filter(comuna!="Alhue") %>%
+  # filter(comuna!="Maria Pinto")
 
 ggplot(R0_data_muniRM,
 aes(x=t_end, y=`Mean(R)`, group=comuna))+
@@ -518,17 +518,20 @@ ggsave("~/Documents/GitHub/covid19-data/analisis/Re/graphs/Re municipios RM ulti
 
 # Graficos de Re por comuna para cada región últimas 2 semanas
 for (i in 1:length(unique(R0_data_muni2$codigo_region))){
-ggplot(R0_data_muni2 %>% filter(codigo_region==i & time>tail(R0_data_muni3$time,n=1)-14), aes(x=t_end, y=`Mean(R)`, group=comuna))+
+ggplot(R0_data_muni2 %>% filter(codigo_region==i & time>tail(R0_data_muni3$time,n=1)-14), 
+       aes(x=t_end, y=`Mean(R)`, group=comuna))+
   geom_line() + 
   geom_point() + 
   geom_ribbon(aes(ymin=`Quantile.0.05(R)`,ymax=`Quantile.0.95(R)`), alpha = 0.5) +
   geom_hline(yintercept=1, linetype="solid", color = "darkgray", size=0.6) +
-  scale_y_continuous(breaks = scales::pretty_breaks(n = 10), limits=c(0,5)) +
+  scale_y_continuous(breaks = scales::pretty_breaks(n = 10), limits=c(0,3)) +
   labs(y="Re",x="Días desde inicio",
        caption = paste0("Cuadrado C. Escuela de Salud Pública. Universidad de Chile. Update: ",tail(R0_data_muni2$date,n=1))) +
   theme_minimal() +
   facet_wrap(comuna ~ .)
   ggsave(paste0("Re municipios - Region ",i,".png"), width = 10*2.5, height = 10*2.5, units = "cm", dpi=300, limitsize = FALSE)
+  ggsave(paste0("~/Documents/GitHub/covid19-data/analisis/Re/graphs/Re municipios - Region",i,".png"), width = 10*2.5, height = 10*2.5, units = "cm", dpi=300, limitsize = FALSE)
+  
 }
 
 # Re por Servicio de Salud ------------------------------------------------------------

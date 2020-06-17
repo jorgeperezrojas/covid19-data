@@ -213,10 +213,23 @@ cCFR <- ggplot(m.ur.cfr.Chile %>% filter(!is.na(cCFR)), aes(date, cCFR)) + geom_
         geom_ribbon(aes(ymax=cCFR_UQ,ymin=cCFR_LQ), alpha = 0.5) +
         scale_y_continuous(breaks = scales::pretty_breaks(n = 10), limits=c(0,0.1), labels = scales::percent) +
         labs(y="Tasa de letalidad ajustada por retraso",x="Fecha", 
-        # labs(y="Delay-adjusted case fatality ratio (cCFR)",x="Date", 
              title = "Estimación de letalidad COVID-19 ajustada por retraso, Chile",
              caption = paste("Cuadrado C. Escuela de Salud Pública. Universidad de Chile.",Sys.Date()))
 cCFR   
+
+
+cCFR2 <- ggplot(m.ur.cfr.Chile %>% filter(!is.na(cCFR)), aes(date, cCFR)) + 
+  geom_line(aes(color="Ajustada por retraso")) + geom_point(aes(color="Ajustada por retraso")) +
+  geom_ribbon(aes(ymax=cCFR_UQ,ymin=cCFR_LQ, fill="band"), show.legend=FALSE, alpha = 0.2) +
+  geom_line(aes(date, nCFR, color="Cruda")) + geom_point(aes(date, nCFR, color="Cruda")) +
+  geom_ribbon(aes(ymax=nCFR_UQ,ymin=nCFR_LQ, fill="band2"), show.legend=FALSE, alpha = 0.2) +
+  scale_y_continuous(breaks = scales::pretty_breaks(n = 10), limits=c(0,0.05), labels = scales::percent) +
+  labs(y="Tasa de letalidad ajustada por retraso",x="Fecha") +
+  scale_color_manual(values = c("goldenrod1", "firebrick3"), name="Tasa de letalidad") +
+  scale_fill_manual(values = c("firebrick3","goldenrod1")) +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+cCFR2
 
     underreport
     ggsave("underreport.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
@@ -226,7 +239,10 @@ cCFR
     ggsave("cCFR.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
     ggsave("~/Documents/GitHub/covid19-data/analisis/Letalidad/letalidad Chile.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
     
-
+    cCFR2
+    ggsave("cCFR2.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
+    ggsave("~/Documents/GitHub/covid19-data/analisis/Letalidad/letalidad Chile 2.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
+    
 
 # Analysis by region ------------------------------------------------------
 
@@ -309,7 +325,7 @@ cCFR
     readr::write_excel_csv2(m.case.fatality.region.clean,
                             "~/Documents/GitHub/covid19-data/analisis/Letalidad/Letalidad_regiones.csv")
     
-    underreport.reg <- ggplot(data=underreport.byregionfinal, aes(reorder(region, -underreporting_estimate, sum),underreporting_estimate))+
+   underreport.reg <- ggplot(data=underreport.byregionfinal %>% filter(total_deaths>25), aes(reorder(region, -underreporting_estimate, sum),underreporting_estimate))+
       geom_col(fill = "#FF6666") +
       geom_errorbar(aes(ymin = lower, ymax = upper), width=0.2) +
       geom_text(aes(label = scales::percent(underreporting_estimate), 
@@ -320,7 +336,8 @@ cCFR
       labs(y="Subreporte casos sintomáticos COVID-19 (% del total de casos)",x="", 
            title = "Estimación de subreporte de casos COVID-19 en Chile por Región",
            caption = paste("Cuadrado C. Escuela de Salud Pública. Universidad de Chile. 
-                            Se gráfican regiones con más de 10 fallecimientos a la fecha.
+                           Líneas negras verticales representan el intervalo de credibilidad (95%) de la estimación.
+                           Se grafica subreporte para regiones con más de 30 muertes acumuladas.
                            Update:",Sys.Date())) +
       scale_y_continuous(breaks = scales::pretty_breaks(n = 10), limits=c(0,1), labels = scales::percent) +
       theme(axis.text.x = element_text(angle = 45)) +
@@ -341,7 +358,7 @@ cCFR
       labs(y="Tasa de letalidad ajustada por retraso",x="Región", 
            title = "Estimación de letalidad COVID-19 ajustada por retraso por Región, Chile",
            caption = paste("Cuadrado C. Escuela de Salud Pública. Universidad de Chile. 
-                            Se gráfican regiones con más de 10 fallecimientos a la fecha.
+                            Líneas negras verticales representan el intervalo de credibilidad (95%) de la estimación.
                            Update:",Sys.Date())) +
       scale_y_continuous(breaks = scales::pretty_breaks(n = 10), limits=c(0,0.1), labels = scales::percent) +
       theme(axis.text.x = element_text(angle = 45)) +
