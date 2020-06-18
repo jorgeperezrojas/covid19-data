@@ -16,6 +16,8 @@
 # Load libraries
 library(tidyverse)
 library(padr)
+library(tidyr)
+
 
 # Set parameters
 zmeanHDT <- 13 # Original parameters used by Russel et al
@@ -33,7 +35,6 @@ cCFREstimateRange <- c(1.23, 1.53)
 hospitalisation_to_death_truncated <- function(x) {
   plnorm(x + 1, muHDT, sigmaHDT) - plnorm(x, muHDT, sigmaHDT)
 }
-
 
 # Define CFR function -----------------------------------------------------
 
@@ -104,7 +105,6 @@ allTogetherClean2 <- allDatDesc %>%
   ) %>% 
   dplyr::filter(total_deaths > 10)
 
-
 reportDataFinal <- allTogetherClean2 %>%
   dplyr::select(country, total_cases, total_deaths, underreporting_estimate, lower,
                 upper) %>%
@@ -133,9 +133,13 @@ colnames(m.ur.cfr.Chile) <- c("nCFR","cCFR","total_deaths","cum_known_t" ,"total
                                "nCFR_UQ","nCFR_LQ","cCFR_UQ", "cCFR_LQ","underreporting_estimate",
                                 "lower","upper","quantile25","quantile75")
 
+which(allDatDesc$new_deaths > 0)[1]
+allDatDesc %>% slice(which(allDatDesc$new_deaths > 0)[1]:n())
+
 # Loop over each day
 for (i in 1:nrow(allDatDesc %>% 
-                     dplyr::filter(country=="Chile"))){
+                 dplyr::filter(country=="Chile") %>% slice(which(allDatDesc$new_deaths > 0)[1]:n())
+                 )){
   m.ur.cfr.Chile[i,] <- allDatDesc %>%
   dplyr::filter(country=="Chile") %>%
   padr::pad() %>%
@@ -230,24 +234,23 @@ cCFR
 
 # Analysis by region ------------------------------------------------------
 
-    cases <- read_csv("https://raw.githubusercontent.com/jorgeperezrojas/covid19-data/master/csv/confirmados.csv")
-    deaths <- read_csv("https://raw.githubusercontent.com/jorgeperezrojas/covid19-data/master/csv/muertes.csv")
+    cases <- read_csv("https://raw.githubusercontent.com/MinCiencia/Datos-COVID19/master/output/producto3/CasosTotalesCumulativo_std.csv")
+    deaths <- read_csv("https://raw.githubusercontent.com/MinCiencia/Datos-COVID19/master/output/producto14/FallecidosCumulativo_std.csv")
     
-    library(tidyr)
-    deaths_long <- gather(deaths, date, deaths, "04/01/2020":rev(names(deaths))[1])
-    deaths_long
+    deaths <- deaths %>% rename(deaths=Total)
+    cases <- cases %>% rename(cases=Total)
     
-    cases_long <- gather(cases, date, cases, "03/07/2020":rev(names(cases))[1])
-    cases_long
-    
-    region.data <- left_join(deaths_long,cases_long)
+    region.data <- left_join(deaths,cases)
     
     region.data.desc <- region.data %>% 
+      dplyr::rename(date=Fecha,
+                    region=Region) %>% 
       dplyr::arrange(region, date) %>% 
-      dplyr::mutate(date = lubridate::mdy(date))%>% 
+      dplyr::mutate(date = lubridate::ymd(date)) %>%
       dplyr::group_by(region) %>%
       dplyr::mutate(new_cases = cases-lag(cases), 
-                    new_deaths = deaths-lag(deaths)) %>%
+                    new_deaths = deaths-lag(deaths),
+                    new_deaths = ifelse(new_deaths<0,0,new_deaths)) %>%
       dplyr::ungroup() %>%
       dplyr::select(date, region, new_cases, new_deaths)
 
@@ -350,5 +353,153 @@ cCFR
     fatality.reg
     ggsave("fatality.reg.png")
     ggsave("~/Documents/GitHub/covid19-data/analisis/Letalidad/Letalidad por Región Chile.png", width = 12*2.5, height = 9*2.5, units = "cm", dpi=300, limitsize = FALSE)
+    
+    
+#### Run analysis for Region by date  -----------------------------------------------------------
+    
+    # Create matrix of results
+    m.ur.cfr.region.Chile <- as.data.frame(matrix(NA, nrow = nrow(region.data.desc), 
+                                           ncol = 15))
+    current <- as.data.frame(matrix(NA, nrow = nrow(region.data.desc %>% filter(region=="Antofagasta")), 
+                                    ncol = 15))
+    
+    # Assign names to variables
+    colnames(m.ur.cfr.region.Chile) <- c("nCFR","cCFR","total_deaths","cum_known_t" ,"total_cases",             
+                                  "nCFR_UQ","nCFR_LQ","cCFR_UQ", "cCFR_LQ","underreporting_estimate",
+                                  "lower","upper","quantile25","quantile75","region")
+    
+    colnames(current) <- c("nCFR","cCFR","total_deaths","cum_known_t" ,"total_cases",             
+                                         "nCFR_UQ","nCFR_LQ","cCFR_UQ", "cCFR_LQ","underreporting_estimate",
+                                         "lower","upper","quantile25","quantile75","region")
+    
+    # Loop over each day
+  
+    length(unique(region.data.desc$region))
+    
+    for (j in unique(region.data.desc$region)){
+      for (i in 1:nrow(region.data.desc %>%
+                       dplyr::filter(region==j) %>%
+                       slice(which(new_deaths > 0)[1]:n()))){
+      current[i,] <- region.data.desc %>%
+        dplyr::filter(region==j) %>%
+        padr::pad() %>%
+        slice(., which(new_deaths > 0)[1]:(n()-i)) %>%
+        dplyr::mutate(new_cases = tidyr::replace_na(new_cases, 0),
+                      new_deaths = tidyr::replace_na(new_deaths, 0)) %>%
+        dplyr::mutate(cum_deaths = sum(new_deaths)) %>%
+        dplyr::filter(cum_deaths > 0) %>%
+        dplyr::select(-cum_deaths) %>%
+        dplyr::do(scale_cfr(., delay_fun = hospitalisation_to_death_truncated)) %>%
+        dplyr::filter(cum_known_t > 0 & cum_known_t >= total_deaths)  %>%
+        dplyr::mutate(nCFR_UQ = binom.test(total_deaths, total_cases)$conf.int[2],
+                      nCFR_LQ = binom.test(total_deaths, total_cases)$conf.int[1],
+                      cCFR_UQ = binom.test(total_deaths, cum_known_t)$conf.int[2],
+                      cCFR_LQ = binom.test(total_deaths, cum_known_t)$conf.int[1],
+                      underreporting_estimate = cCFRBaseline / (100*cCFR),
+                      lower = cCFREstimateRange[1] / (100 * cCFR_UQ),
+                      upper = cCFREstimateRange[2] / (100 * cCFR_LQ),
+                      quantile25 = binom.test(total_deaths, cum_known_t, conf.level = 0.5)$conf.int[1],
+                      quantile75 = binom.test(total_deaths, cum_known_t, conf.level = 0.5)$conf.int[2])
+    }
+    m.ur.cfr.region.Chile <- bind_rows(m.ur.cfr.region.Chile, current %>% mutate())
+    }
+
+    i=10
+    
+    nrow(region.data.desc %>%
+           dplyr::filter(region==j) %>%
+           slice(which(new_deaths > 0)[1]:n()))
+    View(region.data.desc %>%
+           dplyr::filter(region==j) %>%
+           slice(which(new_deaths > 0)[1]:n()))
+    
+    region.data.desc %>%
+      dplyr::filter(region==j) %>% 
+      dplyr::summarise(cum_deaths = sum(new_deaths, na.rm = T)) %>% pull(cum_deaths)
+    
+    View(region.data.desc %>%
+                 dplyr::filter(region==j) %>% 
+                 dplyr::mutate(cum_deaths = sum(new_deaths, na.rm = T)) %>% 
+                 dplyr::filter(cum_deaths > 1))
+    
+    sum(region.data.desc$new_deaths)
+    
+    i=66
+    region.data.desc %>%
+      dplyr::filter(region==j) %>%
+      # slice(which(new_deaths > 0)[1]:n())  %>% 
+      padr::pad() %>%
+      slice(., which(new_deaths > 0)[1]:(n()-i)) %>%
+      dplyr::mutate(new_cases = tidyr::replace_na(new_cases, 0),
+                    new_deaths = tidyr::replace_na(new_deaths, 0)) %>%
+      dplyr::mutate(cum_deaths = sum(new_deaths)) %>%
+      dplyr::filter(cum_deaths > 0) %>%
+      dplyr::select(-cum_deaths) %>%
+      dplyr::do(scale_cfr(., delay_fun = hospitalisation_to_death_truncated)) %>%
+      dplyr::filter(cum_known_t > 0 & cum_known_t >= total_deaths)  %>%
+      dplyr::mutate(nCFR_UQ = binom.test(total_deaths, total_cases)$conf.int[2],
+                    nCFR_LQ = binom.test(total_deaths, total_cases)$conf.int[1],
+                    cCFR_UQ = binom.test(total_deaths, cum_known_t)$conf.int[2],
+                    cCFR_LQ = binom.test(total_deaths, cum_known_t)$conf.int[1],
+                    underreporting_estimate = cCFRBaseline / (100*cCFR),
+                    lower = cCFREstimateRange[1] / (100 * cCFR_UQ),
+                    upper = cCFREstimateRange[2] / (100 * cCFR_LQ),
+                    quantile25 = binom.test(total_deaths, cum_known_t, conf.level = 0.5)$conf.int[1],
+                    quantile75 = binom.test(total_deaths, cum_known_t, conf.level = 0.5)$conf.int[2],
+                    region=j)
+    
+    table(region.data.desc$region)
+    
+    j="Metropolitana"
+    
+    for (i in 1:nrow(region.data.desc %>%
+                     dplyr::filter(region==j) %>%
+                     slice(which(new_deaths > 0)[1]:n()))){
+      current[i,] <- region.data.desc %>%
+        dplyr::filter(region==j) %>%
+        padr::pad() %>%
+        slice(., which(new_deaths > 0)[1]:(n()-i)) %>%
+        dplyr::mutate(new_cases = tidyr::replace_na(new_cases, 0),
+                      new_deaths = tidyr::replace_na(new_deaths, 0)) %>%
+        dplyr::mutate(cum_deaths = sum(new_deaths)) %>%
+        dplyr::filter(cum_deaths > 0) %>%
+        dplyr::select(-cum_deaths) %>%
+        dplyr::do(scale_cfr(., delay_fun = hospitalisation_to_death_truncated)) %>%
+        dplyr::filter(cum_known_t > 0 & cum_known_t >= total_deaths)  %>%
+        dplyr::mutate(nCFR_UQ = binom.test(total_deaths, total_cases)$conf.int[2],
+                      nCFR_LQ = binom.test(total_deaths, total_cases)$conf.int[1],
+                      cCFR_UQ = binom.test(total_deaths, cum_known_t)$conf.int[2],
+                      cCFR_LQ = binom.test(total_deaths, cum_known_t)$conf.int[1],
+                      underreporting_estimate = cCFRBaseline / (100*cCFR),
+                      lower = cCFREstimateRange[1] / (100 * cCFR_UQ),
+                      upper = cCFREstimateRange[2] / (100 * cCFR_LQ),
+                      quantile25 = binom.test(total_deaths, cum_known_t, conf.level = 0.5)$conf.int[1],
+                      quantile75 = binom.test(total_deaths, cum_known_t, conf.level = 0.5)$conf.int[2])
+    }
+  
+    View(region.data.desc %>%
+           dplyr::filter(region==j) %>%
+           slice(which(new_deaths > 0)[1]:n()))
+    i=81
+    region.data.desc %>%
+      dplyr::filter(region==j) %>%
+      padr::pad() %>%
+      slice(., which(new_deaths > 0)[1]:(n()-i)) %>%
+      dplyr::mutate(new_cases = tidyr::replace_na(new_cases, 0),
+                    new_deaths = tidyr::replace_na(new_deaths, 0)) %>%
+      dplyr::mutate(cum_deaths = sum(new_deaths)) %>%
+      dplyr::filter(cum_deaths > 0) %>%
+      dplyr::select(-cum_deaths) %>%
+      dplyr::do(scale_cfr(., delay_fun = hospitalisation_to_death_truncated)) %>%
+      dplyr::filter(cum_known_t > 0 & cum_known_t >= total_deaths)  %>%
+      dplyr::mutate(nCFR_UQ = binom.test(total_deaths, total_cases)$conf.int[2],
+                    nCFR_LQ = binom.test(total_deaths, total_cases)$conf.int[1],
+                    cCFR_UQ = binom.test(total_deaths, cum_known_t)$conf.int[2],
+                    cCFR_LQ = binom.test(total_deaths, cum_known_t)$conf.int[1],
+                    underreporting_estimate = cCFRBaseline / (100*cCFR),
+                    lower = cCFREstimateRange[1] / (100 * cCFR_UQ),
+                    upper = cCFREstimateRange[2] / (100 * cCFR_LQ),
+                    quantile25 = binom.test(total_deaths, cum_known_t, conf.level = 0.5)$conf.int[1],
+                    quantile75 = binom.test(total_deaths, cum_known_t, conf.level = 0.5)$conf.int[2])
     
  
