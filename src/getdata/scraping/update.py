@@ -61,7 +61,7 @@ def update_files():
                     "region_id": regions_data.index(name_region) + 1,
                     "new_daily_cases": undotter(row[2]),
                     "confirmed": undotter(row[1]),
-                    "deaths": undotter(row[5]),
+                    "deaths": undotter(row[6]),
                 }
 
     # add latest gov confirmed data to csv
@@ -86,7 +86,7 @@ def update_files():
             .replace('"', "")
             .replace(".", ""),
             "dia": date,
-            "muertes": rows[-1][5].replace(",", "").replace('"', "").replace(".", ""),
+            "muertes": rows[-1][6].replace(",", "").replace('"', "").replace(".", ""),
         }
         national_data.append(national_dict)
 
