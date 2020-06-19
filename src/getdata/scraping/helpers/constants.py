@@ -22,7 +22,7 @@ PCRS_REGION = "{}/csv/pcrs_region.csv".format(BASE_PATH)
 CRON_EXECUTABLE = "{}/src/update_files.py".format(BASE_PATH)
 CRON_EXECUTABLE_CSV = "{}/src/auto_update_csv.py".format(BASE_PATH)
 NATIONAL_REPORT_PATH = "{}/csv/resumen_nacional.csv".format(BASE_PATH)
-INFOGRAM_LINK = "https://infogram.com/oficiales-18-de-junio-1hkv2nggqq5n6x3"
+INFOGRAM_LINK = "https://infogram.com/oficiales-19-de-junio-1hke60rdkpq365r"
 
 SCOPE_FEEDS = "https://spreadsheets.google.com/feeds"
 SCOPE_SPREADSHEET = "https://www.googleapis.com/auth/spreadsheets"
