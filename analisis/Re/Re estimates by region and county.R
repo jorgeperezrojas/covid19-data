@@ -430,8 +430,8 @@ data$...2 <- data$...1 <- NULL
 # Limpiar base colapsando por comuna y asignando 1 a las comunas con al menos una parte de ella en cuarentena en cada día
 data$comuna <- sub(pattern=" urbano",replacement = "", x=data$comuna)  # Eliminar "urbano" de algunas comunas
 data <- data %>% group_by(comuna) %>% mutate_each(funs(as.numeric)) %>%
-  summarise_all(funs(sum)) %>%  ungroup() %>%
-  mutate_at(vars(-comuna),funs(ifelse(.>0,1,0)))
+                 summarise_all(funs(sum)) %>%  ungroup() %>%
+                 mutate_at(vars(-comuna),funs(ifelse(.>0,1,0)))
 
 # Pasar a formato long y arreglar fechas
 cuarentena_long <- tidyr:::gather(data, dia, cuarentena,colnames(data)[2]:tail(colnames(data),n=1), factor_key=F)
@@ -454,10 +454,8 @@ R0_data_muni2$comuna <- stringi::stri_trans_general(R0_data_muni2$comuna ,"Latin
 R0_data_muni3 <- left_join(R0_data_muni2,cuarentena_long)
 R0_data_muni3$cuarentena <- tidyr::replace_na(R0_data_muni3$cuarentena,0)
 
-# Excluyo manualmente comunas con muy pocos casos
+# Subset RM
 R0_data_muniRM <- R0_data_muni3 %>% filter(region=="Metropolitana")
-  # filter(comuna!="Alhue") %>%
-  # filter(comuna!="Maria Pinto")
 
 ggplot(R0_data_muniRM,
        aes(x=t_end, y=`Mean(R)`, group=comuna))+
@@ -483,13 +481,10 @@ ggplot(R0_data_muniRM,
 ggsave("Re municipios RM total.png", width = 10*3, height = 10*3, units = "cm", dpi=300, limitsize = FALSE)
 ggsave("~/Documents/GitHub/covid19-data/analisis/Re/graphs/Re municipios RM total.png", width = 10*3, height = 10*3, units = "cm", dpi=300, limitsize = FALSE)
 
-
 # Graficos - Región Metropolitana
 
-# Excluyo manualmente comunas con muy pocos casos y solo últimos 14 días
+# Subset RM solo últimos 14 días
 R0_data_muniRM <- R0_data_muni3 %>% filter(region=="Metropolitana" & time>tail(R0_data_muni3$time,n=1)-14)
-  # filter(comuna!="Alhue") %>%
-  # filter(comuna!="Maria Pinto")
 
 ggplot(R0_data_muniRM,
 aes(x=t_end, y=`Mean(R)`, group=comuna))+
@@ -511,7 +506,6 @@ aes(x=t_end, y=`Mean(R)`, group=comuna))+
   # guides(alpha=F) +
   facet_wrap(comuna ~ .)
 
-# Excluyo manualmente comunas con muy pocos casos
 ggsave("Re municipios RM ultimas 2 semanas.png", width = 10*2.5, height = 10*2.5, units = "cm", dpi=300, limitsize = FALSE)
 ggsave("~/Documents/GitHub/covid19-data/analisis/Re/graphs/Re municipios RM ultimas 2 semanas.png", width = 10*2.5, height = 10*2.5, units = "cm", dpi=300, limitsize = FALSE)
 
@@ -545,7 +539,6 @@ SS_provincia_comuna <- read_excel("SS provincia comuna.xls",
                                   col_types = c("numeric", "text", "text", 
                                                 "text", "text", "numeric", "text", 
                                                 "numeric"))
-
 # Reshape and clean data
 cases_muni$positivos_acumulados <- ifelse(cases_muni$positivos_acumulados=="-",0,cases_muni$positivos_acumulados)
 cases_muni$positivos_acumulados <- as.numeric(cases_muni$positivos_acumulados)
@@ -559,7 +552,6 @@ cases_muni <- cases_muni %>% group_by(comuna) %>% arrange(lubridate::mdy(fecha))
     new_cases=tidyr::replace_na(new_cases,0),
     new_cases=ifelse(new_cases<0,0,new_cases),
     time = seq(1,length(date))) %>% ungroup() %>% arrange(comuna,date)
-
 
 # Merge with health regions (SS) dataset
 cases_ss <- left_join(cases_muni, SS_provincia_comuna, by = "codigo_comuna") %>% 
