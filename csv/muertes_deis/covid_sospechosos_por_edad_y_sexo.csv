@@ -1,0 +1,673 @@
+edad,sexo,region,sospechosos
+< 1,Hombre,Arica,1
+1 a 4,Hombre,Arica,1
+5 a 9,Hombre,Arica,0
+10 a 14,Hombre,Arica,0
+15 a 19,Hombre,Arica,0
+20 a 24,Hombre,Arica,4
+25 a 29,Hombre,Arica,5
+30 a 34,Hombre,Arica,13
+35 a 39,Hombre,Arica,15
+40 a 44,Hombre,Arica,24
+45 a 49,Hombre,Arica,28
+50 a 54,Hombre,Arica,55
+55 a 59,Hombre,Arica,73
+60 a 64,Hombre,Arica,110
+65 a 69,Hombre,Arica,132
+70 a 74,Hombre,Arica,160
+75 a 79,Hombre,Arica,209
+80 a 84,Hombre,Arica,119
+85 a 89,Hombre,Arica,125
+90 a 99,Hombre,Arica,69
+100 +,Hombre,Arica,1
+< 1,Mujer,Arica,1
+1 a 4,Mujer,Arica,2
+5 a 9,Mujer,Arica,0
+10 a 14,Mujer,Arica,1
+15 a 19,Mujer,Arica,0
+20 a 24,Mujer,Arica,1
+25 a 29,Mujer,Arica,5
+30 a 34,Mujer,Arica,6
+35 a 39,Mujer,Arica,5
+40 a 44,Mujer,Arica,11
+45 a 49,Mujer,Arica,17
+50 a 54,Mujer,Arica,25
+55 a 59,Mujer,Arica,34
+60 a 64,Mujer,Arica,58
+65 a 69,Mujer,Arica,90
+70 a 74,Mujer,Arica,116
+75 a 79,Mujer,Arica,141
+80 a 84,Mujer,Arica,113
+85 a 89,Mujer,Arica,168
+90 a 99,Mujer,Arica,118
+100 +,Mujer,Arica,14
+< 1,Hombre,Tarapacá,1
+1 a 4,Hombre,Tarapacá,1
+5 a 9,Hombre,Tarapacá,0
+10 a 14,Hombre,Tarapacá,0
+15 a 19,Hombre,Tarapacá,0
+20 a 24,Hombre,Tarapacá,4
+25 a 29,Hombre,Tarapacá,5
+30 a 34,Hombre,Tarapacá,13
+35 a 39,Hombre,Tarapacá,15
+40 a 44,Hombre,Tarapacá,24
+45 a 49,Hombre,Tarapacá,28
+50 a 54,Hombre,Tarapacá,55
+55 a 59,Hombre,Tarapacá,73
+60 a 64,Hombre,Tarapacá,110
+65 a 69,Hombre,Tarapacá,132
+70 a 74,Hombre,Tarapacá,160
+75 a 79,Hombre,Tarapacá,209
+80 a 84,Hombre,Tarapacá,119
+85 a 89,Hombre,Tarapacá,125
+90 a 99,Hombre,Tarapacá,69
+100 +,Hombre,Tarapacá,1
+< 1,Mujer,Tarapacá,1
+1 a 4,Mujer,Tarapacá,2
+5 a 9,Mujer,Tarapacá,0
+10 a 14,Mujer,Tarapacá,1
+15 a 19,Mujer,Tarapacá,0
+20 a 24,Mujer,Tarapacá,1
+25 a 29,Mujer,Tarapacá,5
+30 a 34,Mujer,Tarapacá,6
+35 a 39,Mujer,Tarapacá,5
+40 a 44,Mujer,Tarapacá,11
+45 a 49,Mujer,Tarapacá,17
+50 a 54,Mujer,Tarapacá,25
+55 a 59,Mujer,Tarapacá,34
+60 a 64,Mujer,Tarapacá,58
+65 a 69,Mujer,Tarapacá,90
+70 a 74,Mujer,Tarapacá,116
+75 a 79,Mujer,Tarapacá,141
+80 a 84,Mujer,Tarapacá,113
+85 a 89,Mujer,Tarapacá,168
+90 a 99,Mujer,Tarapacá,118
+100 +,Mujer,Tarapacá,14
+< 1,Hombre,Antofagasta,1
+1 a 4,Hombre,Antofagasta,1
+5 a 9,Hombre,Antofagasta,0
+10 a 14,Hombre,Antofagasta,0
+15 a 19,Hombre,Antofagasta,0
+20 a 24,Hombre,Antofagasta,4
+25 a 29,Hombre,Antofagasta,5
+30 a 34,Hombre,Antofagasta,13
+35 a 39,Hombre,Antofagasta,15
+40 a 44,Hombre,Antofagasta,24
+45 a 49,Hombre,Antofagasta,28
+50 a 54,Hombre,Antofagasta,55
+55 a 59,Hombre,Antofagasta,73
+60 a 64,Hombre,Antofagasta,110
+65 a 69,Hombre,Antofagasta,132
+70 a 74,Hombre,Antofagasta,160
+75 a 79,Hombre,Antofagasta,209
+80 a 84,Hombre,Antofagasta,119
+85 a 89,Hombre,Antofagasta,125
+90 a 99,Hombre,Antofagasta,69
+100 +,Hombre,Antofagasta,1
+< 1,Mujer,Antofagasta,1
+1 a 4,Mujer,Antofagasta,2
+5 a 9,Mujer,Antofagasta,0
+10 a 14,Mujer,Antofagasta,1
+15 a 19,Mujer,Antofagasta,0
+20 a 24,Mujer,Antofagasta,1
+25 a 29,Mujer,Antofagasta,5
+30 a 34,Mujer,Antofagasta,6
+35 a 39,Mujer,Antofagasta,5
+40 a 44,Mujer,Antofagasta,11
+45 a 49,Mujer,Antofagasta,17
+50 a 54,Mujer,Antofagasta,25
+55 a 59,Mujer,Antofagasta,34
+60 a 64,Mujer,Antofagasta,58
+65 a 69,Mujer,Antofagasta,90
+70 a 74,Mujer,Antofagasta,116
+75 a 79,Mujer,Antofagasta,141
+80 a 84,Mujer,Antofagasta,113
+85 a 89,Mujer,Antofagasta,168
+90 a 99,Mujer,Antofagasta,118
+100 +,Mujer,Antofagasta,14
+< 1,Hombre,Atacama,1
+1 a 4,Hombre,Atacama,1
+5 a 9,Hombre,Atacama,0
+10 a 14,Hombre,Atacama,0
+15 a 19,Hombre,Atacama,0
+20 a 24,Hombre,Atacama,4
+25 a 29,Hombre,Atacama,5
+30 a 34,Hombre,Atacama,13
+35 a 39,Hombre,Atacama,15
+40 a 44,Hombre,Atacama,24
+45 a 49,Hombre,Atacama,28
+50 a 54,Hombre,Atacama,55
+55 a 59,Hombre,Atacama,73
+60 a 64,Hombre,Atacama,110
+65 a 69,Hombre,Atacama,132
+70 a 74,Hombre,Atacama,160
+75 a 79,Hombre,Atacama,209
+80 a 84,Hombre,Atacama,119
+85 a 89,Hombre,Atacama,125
+90 a 99,Hombre,Atacama,69
+100 +,Hombre,Atacama,1
+< 1,Mujer,Atacama,1
+1 a 4,Mujer,Atacama,2
+5 a 9,Mujer,Atacama,0
+10 a 14,Mujer,Atacama,1
+15 a 19,Mujer,Atacama,0
+20 a 24,Mujer,Atacama,1
+25 a 29,Mujer,Atacama,5
+30 a 34,Mujer,Atacama,6
+35 a 39,Mujer,Atacama,5
+40 a 44,Mujer,Atacama,11
+45 a 49,Mujer,Atacama,17
+50 a 54,Mujer,Atacama,25
+55 a 59,Mujer,Atacama,34
+60 a 64,Mujer,Atacama,58
+65 a 69,Mujer,Atacama,90
+70 a 74,Mujer,Atacama,116
+75 a 79,Mujer,Atacama,141
+80 a 84,Mujer,Atacama,113
+85 a 89,Mujer,Atacama,168
+90 a 99,Mujer,Atacama,118
+100 +,Mujer,Atacama,14
+< 1,Hombre,Coquimbo,1
+1 a 4,Hombre,Coquimbo,1
+5 a 9,Hombre,Coquimbo,0
+10 a 14,Hombre,Coquimbo,0
+15 a 19,Hombre,Coquimbo,0
+20 a 24,Hombre,Coquimbo,4
+25 a 29,Hombre,Coquimbo,5
+30 a 34,Hombre,Coquimbo,13
+35 a 39,Hombre,Coquimbo,15
+40 a 44,Hombre,Coquimbo,24
+45 a 49,Hombre,Coquimbo,28
+50 a 54,Hombre,Coquimbo,55
+55 a 59,Hombre,Coquimbo,73
+60 a 64,Hombre,Coquimbo,110
+65 a 69,Hombre,Coquimbo,132
+70 a 74,Hombre,Coquimbo,160
+75 a 79,Hombre,Coquimbo,209
+80 a 84,Hombre,Coquimbo,119
+85 a 89,Hombre,Coquimbo,125
+90 a 99,Hombre,Coquimbo,69
+100 +,Hombre,Coquimbo,1
+< 1,Mujer,Coquimbo,1
+1 a 4,Mujer,Coquimbo,2
+5 a 9,Mujer,Coquimbo,0
+10 a 14,Mujer,Coquimbo,1
+15 a 19,Mujer,Coquimbo,0
+20 a 24,Mujer,Coquimbo,1
+25 a 29,Mujer,Coquimbo,5
+30 a 34,Mujer,Coquimbo,6
+35 a 39,Mujer,Coquimbo,5
+40 a 44,Mujer,Coquimbo,11
+45 a 49,Mujer,Coquimbo,17
+50 a 54,Mujer,Coquimbo,25
+55 a 59,Mujer,Coquimbo,34
+60 a 64,Mujer,Coquimbo,58
+65 a 69,Mujer,Coquimbo,90
+70 a 74,Mujer,Coquimbo,116
+75 a 79,Mujer,Coquimbo,141
+80 a 84,Mujer,Coquimbo,113
+85 a 89,Mujer,Coquimbo,168
+90 a 99,Mujer,Coquimbo,118
+100 +,Mujer,Coquimbo,14
+< 1,Hombre,Valparaíso,1
+1 a 4,Hombre,Valparaíso,1
+5 a 9,Hombre,Valparaíso,0
+10 a 14,Hombre,Valparaíso,0
+15 a 19,Hombre,Valparaíso,0
+20 a 24,Hombre,Valparaíso,4
+25 a 29,Hombre,Valparaíso,5
+30 a 34,Hombre,Valparaíso,13
+35 a 39,Hombre,Valparaíso,15
+40 a 44,Hombre,Valparaíso,24
+45 a 49,Hombre,Valparaíso,28
+50 a 54,Hombre,Valparaíso,55
+55 a 59,Hombre,Valparaíso,73
+60 a 64,Hombre,Valparaíso,110
+65 a 69,Hombre,Valparaíso,132
+70 a 74,Hombre,Valparaíso,160
+75 a 79,Hombre,Valparaíso,209
+80 a 84,Hombre,Valparaíso,119
+85 a 89,Hombre,Valparaíso,125
+90 a 99,Hombre,Valparaíso,69
+100 +,Hombre,Valparaíso,1
+< 1,Mujer,Valparaíso,1
+1 a 4,Mujer,Valparaíso,2
+5 a 9,Mujer,Valparaíso,0
+10 a 14,Mujer,Valparaíso,1
+15 a 19,Mujer,Valparaíso,0
+20 a 24,Mujer,Valparaíso,1
+25 a 29,Mujer,Valparaíso,5
+30 a 34,Mujer,Valparaíso,6
+35 a 39,Mujer,Valparaíso,5
+40 a 44,Mujer,Valparaíso,11
+45 a 49,Mujer,Valparaíso,17
+50 a 54,Mujer,Valparaíso,25
+55 a 59,Mujer,Valparaíso,34
+60 a 64,Mujer,Valparaíso,58
+65 a 69,Mujer,Valparaíso,90
+70 a 74,Mujer,Valparaíso,116
+75 a 79,Mujer,Valparaíso,141
+80 a 84,Mujer,Valparaíso,113
+85 a 89,Mujer,Valparaíso,168
+90 a 99,Mujer,Valparaíso,118
+100 +,Mujer,Valparaíso,14
+< 1,Hombre,RM,1
+1 a 4,Hombre,RM,1
+5 a 9,Hombre,RM,0
+10 a 14,Hombre,RM,0
+15 a 19,Hombre,RM,0
+20 a 24,Hombre,RM,4
+25 a 29,Hombre,RM,5
+30 a 34,Hombre,RM,13
+35 a 39,Hombre,RM,15
+40 a 44,Hombre,RM,24
+45 a 49,Hombre,RM,28
+50 a 54,Hombre,RM,55
+55 a 59,Hombre,RM,73
+60 a 64,Hombre,RM,110
+65 a 69,Hombre,RM,132
+70 a 74,Hombre,RM,160
+75 a 79,Hombre,RM,209
+80 a 84,Hombre,RM,119
+85 a 89,Hombre,RM,125
+90 a 99,Hombre,RM,69
+100 +,Hombre,RM,1
+< 1,Mujer,RM,1
+1 a 4,Mujer,RM,2
+5 a 9,Mujer,RM,0
+10 a 14,Mujer,RM,1
+15 a 19,Mujer,RM,0
+20 a 24,Mujer,RM,1
+25 a 29,Mujer,RM,5
+30 a 34,Mujer,RM,6
+35 a 39,Mujer,RM,5
+40 a 44,Mujer,RM,11
+45 a 49,Mujer,RM,17
+50 a 54,Mujer,RM,25
+55 a 59,Mujer,RM,34
+60 a 64,Mujer,RM,58
+65 a 69,Mujer,RM,90
+70 a 74,Mujer,RM,116
+75 a 79,Mujer,RM,141
+80 a 84,Mujer,RM,113
+85 a 89,Mujer,RM,168
+90 a 99,Mujer,RM,118
+100 +,Mujer,RM,14
+< 1,Hombre,O'Higgins,1
+1 a 4,Hombre,O'Higgins,1
+5 a 9,Hombre,O'Higgins,0
+10 a 14,Hombre,O'Higgins,0
+15 a 19,Hombre,O'Higgins,0
+20 a 24,Hombre,O'Higgins,4
+25 a 29,Hombre,O'Higgins,5
+30 a 34,Hombre,O'Higgins,13
+35 a 39,Hombre,O'Higgins,15
+40 a 44,Hombre,O'Higgins,24
+45 a 49,Hombre,O'Higgins,28
+50 a 54,Hombre,O'Higgins,55
+55 a 59,Hombre,O'Higgins,73
+60 a 64,Hombre,O'Higgins,110
+65 a 69,Hombre,O'Higgins,132
+70 a 74,Hombre,O'Higgins,160
+75 a 79,Hombre,O'Higgins,209
+80 a 84,Hombre,O'Higgins,119
+85 a 89,Hombre,O'Higgins,125
+90 a 99,Hombre,O'Higgins,69
+100 +,Hombre,O'Higgins,1
+< 1,Mujer,O'Higgins,1
+1 a 4,Mujer,O'Higgins,2
+5 a 9,Mujer,O'Higgins,0
+10 a 14,Mujer,O'Higgins,1
+15 a 19,Mujer,O'Higgins,0
+20 a 24,Mujer,O'Higgins,1
+25 a 29,Mujer,O'Higgins,5
+30 a 34,Mujer,O'Higgins,6
+35 a 39,Mujer,O'Higgins,5
+40 a 44,Mujer,O'Higgins,11
+45 a 49,Mujer,O'Higgins,17
+50 a 54,Mujer,O'Higgins,25
+55 a 59,Mujer,O'Higgins,34
+60 a 64,Mujer,O'Higgins,58
+65 a 69,Mujer,O'Higgins,90
+70 a 74,Mujer,O'Higgins,116
+75 a 79,Mujer,O'Higgins,141
+80 a 84,Mujer,O'Higgins,113
+85 a 89,Mujer,O'Higgins,168
+90 a 99,Mujer,O'Higgins,118
+100 +,Mujer,O'Higgins,14
+< 1,Hombre,Maule,1
+1 a 4,Hombre,Maule,1
+5 a 9,Hombre,Maule,0
+10 a 14,Hombre,Maule,0
+15 a 19,Hombre,Maule,0
+20 a 24,Hombre,Maule,4
+25 a 29,Hombre,Maule,5
+30 a 34,Hombre,Maule,13
+35 a 39,Hombre,Maule,15
+40 a 44,Hombre,Maule,24
+45 a 49,Hombre,Maule,28
+50 a 54,Hombre,Maule,55
+55 a 59,Hombre,Maule,73
+60 a 64,Hombre,Maule,110
+65 a 69,Hombre,Maule,132
+70 a 74,Hombre,Maule,160
+75 a 79,Hombre,Maule,209
+80 a 84,Hombre,Maule,119
+85 a 89,Hombre,Maule,125
+90 a 99,Hombre,Maule,69
+100 +,Hombre,Maule,1
+< 1,Mujer,Maule,1
+1 a 4,Mujer,Maule,2
+5 a 9,Mujer,Maule,0
+10 a 14,Mujer,Maule,1
+15 a 19,Mujer,Maule,0
+20 a 24,Mujer,Maule,1
+25 a 29,Mujer,Maule,5
+30 a 34,Mujer,Maule,6
+35 a 39,Mujer,Maule,5
+40 a 44,Mujer,Maule,11
+45 a 49,Mujer,Maule,17
+50 a 54,Mujer,Maule,25
+55 a 59,Mujer,Maule,34
+60 a 64,Mujer,Maule,58
+65 a 69,Mujer,Maule,90
+70 a 74,Mujer,Maule,116
+75 a 79,Mujer,Maule,141
+80 a 84,Mujer,Maule,113
+85 a 89,Mujer,Maule,168
+90 a 99,Mujer,Maule,118
+100 +,Mujer,Maule,14
+< 1,Hombre,Ñuble,1
+1 a 4,Hombre,Ñuble,1
+5 a 9,Hombre,Ñuble,0
+10 a 14,Hombre,Ñuble,0
+15 a 19,Hombre,Ñuble,0
+20 a 24,Hombre,Ñuble,4
+25 a 29,Hombre,Ñuble,5
+30 a 34,Hombre,Ñuble,13
+35 a 39,Hombre,Ñuble,15
+40 a 44,Hombre,Ñuble,24
+45 a 49,Hombre,Ñuble,28
+50 a 54,Hombre,Ñuble,55
+55 a 59,Hombre,Ñuble,73
+60 a 64,Hombre,Ñuble,110
+65 a 69,Hombre,Ñuble,132
+70 a 74,Hombre,Ñuble,160
+75 a 79,Hombre,Ñuble,209
+80 a 84,Hombre,Ñuble,119
+85 a 89,Hombre,Ñuble,125
+90 a 99,Hombre,Ñuble,69
+100 +,Hombre,Ñuble,1
+< 1,Mujer,Ñuble,1
+1 a 4,Mujer,Ñuble,2
+5 a 9,Mujer,Ñuble,0
+10 a 14,Mujer,Ñuble,1
+15 a 19,Mujer,Ñuble,0
+20 a 24,Mujer,Ñuble,1
+25 a 29,Mujer,Ñuble,5
+30 a 34,Mujer,Ñuble,6
+35 a 39,Mujer,Ñuble,5
+40 a 44,Mujer,Ñuble,11
+45 a 49,Mujer,Ñuble,17
+50 a 54,Mujer,Ñuble,25
+55 a 59,Mujer,Ñuble,34
+60 a 64,Mujer,Ñuble,58
+65 a 69,Mujer,Ñuble,90
+70 a 74,Mujer,Ñuble,116
+75 a 79,Mujer,Ñuble,141
+80 a 84,Mujer,Ñuble,113
+85 a 89,Mujer,Ñuble,168
+90 a 99,Mujer,Ñuble,118
+100 +,Mujer,Ñuble,14
+< 1,Hombre,Biobío,1
+1 a 4,Hombre,Biobío,1
+5 a 9,Hombre,Biobío,0
+10 a 14,Hombre,Biobío,0
+15 a 19,Hombre,Biobío,0
+20 a 24,Hombre,Biobío,4
+25 a 29,Hombre,Biobío,5
+30 a 34,Hombre,Biobío,13
+35 a 39,Hombre,Biobío,15
+40 a 44,Hombre,Biobío,24
+45 a 49,Hombre,Biobío,28
+50 a 54,Hombre,Biobío,55
+55 a 59,Hombre,Biobío,73
+60 a 64,Hombre,Biobío,110
+65 a 69,Hombre,Biobío,132
+70 a 74,Hombre,Biobío,160
+75 a 79,Hombre,Biobío,209
+80 a 84,Hombre,Biobío,119
+85 a 89,Hombre,Biobío,125
+90 a 99,Hombre,Biobío,69
+100 +,Hombre,Biobío,1
+< 1,Mujer,Biobío,1
+1 a 4,Mujer,Biobío,2
+5 a 9,Mujer,Biobío,0
+10 a 14,Mujer,Biobío,1
+15 a 19,Mujer,Biobío,0
+20 a 24,Mujer,Biobío,1
+25 a 29,Mujer,Biobío,5
+30 a 34,Mujer,Biobío,6
+35 a 39,Mujer,Biobío,5
+40 a 44,Mujer,Biobío,11
+45 a 49,Mujer,Biobío,17
+50 a 54,Mujer,Biobío,25
+55 a 59,Mujer,Biobío,34
+60 a 64,Mujer,Biobío,58
+65 a 69,Mujer,Biobío,90
+70 a 74,Mujer,Biobío,116
+75 a 79,Mujer,Biobío,141
+80 a 84,Mujer,Biobío,113
+85 a 89,Mujer,Biobío,168
+90 a 99,Mujer,Biobío,118
+100 +,Mujer,Biobío,14
+< 1,Hombre,La Araucanía,1
+1 a 4,Hombre,La Araucanía,1
+5 a 9,Hombre,La Araucanía,0
+10 a 14,Hombre,La Araucanía,0
+15 a 19,Hombre,La Araucanía,0
+20 a 24,Hombre,La Araucanía,4
+25 a 29,Hombre,La Araucanía,5
+30 a 34,Hombre,La Araucanía,13
+35 a 39,Hombre,La Araucanía,15
+40 a 44,Hombre,La Araucanía,24
+45 a 49,Hombre,La Araucanía,28
+50 a 54,Hombre,La Araucanía,55
+55 a 59,Hombre,La Araucanía,73
+60 a 64,Hombre,La Araucanía,110
+65 a 69,Hombre,La Araucanía,132
+70 a 74,Hombre,La Araucanía,160
+75 a 79,Hombre,La Araucanía,209
+80 a 84,Hombre,La Araucanía,119
+85 a 89,Hombre,La Araucanía,125
+90 a 99,Hombre,La Araucanía,69
+100 +,Hombre,La Araucanía,1
+< 1,Mujer,La Araucanía,1
+1 a 4,Mujer,La Araucanía,2
+5 a 9,Mujer,La Araucanía,0
+10 a 14,Mujer,La Araucanía,1
+15 a 19,Mujer,La Araucanía,0
+20 a 24,Mujer,La Araucanía,1
+25 a 29,Mujer,La Araucanía,5
+30 a 34,Mujer,La Araucanía,6
+35 a 39,Mujer,La Araucanía,5
+40 a 44,Mujer,La Araucanía,11
+45 a 49,Mujer,La Araucanía,17
+50 a 54,Mujer,La Araucanía,25
+55 a 59,Mujer,La Araucanía,34
+60 a 64,Mujer,La Araucanía,58
+65 a 69,Mujer,La Araucanía,90
+70 a 74,Mujer,La Araucanía,116
+75 a 79,Mujer,La Araucanía,141
+80 a 84,Mujer,La Araucanía,113
+85 a 89,Mujer,La Araucanía,168
+90 a 99,Mujer,La Araucanía,118
+100 +,Mujer,La Araucanía,14
+< 1,Hombre,Los Ríos,1
+1 a 4,Hombre,Los Ríos,1
+5 a 9,Hombre,Los Ríos,0
+10 a 14,Hombre,Los Ríos,0
+15 a 19,Hombre,Los Ríos,0
+20 a 24,Hombre,Los Ríos,4
+25 a 29,Hombre,Los Ríos,5
+30 a 34,Hombre,Los Ríos,13
+35 a 39,Hombre,Los Ríos,15
+40 a 44,Hombre,Los Ríos,24
+45 a 49,Hombre,Los Ríos,28
+50 a 54,Hombre,Los Ríos,55
+55 a 59,Hombre,Los Ríos,73
+60 a 64,Hombre,Los Ríos,110
+65 a 69,Hombre,Los Ríos,132
+70 a 74,Hombre,Los Ríos,160
+75 a 79,Hombre,Los Ríos,209
+80 a 84,Hombre,Los Ríos,119
+85 a 89,Hombre,Los Ríos,125
+90 a 99,Hombre,Los Ríos,69
+100 +,Hombre,Los Ríos,1
+< 1,Mujer,Los Ríos,1
+1 a 4,Mujer,Los Ríos,2
+5 a 9,Mujer,Los Ríos,0
+10 a 14,Mujer,Los Ríos,1
+15 a 19,Mujer,Los Ríos,0
+20 a 24,Mujer,Los Ríos,1
+25 a 29,Mujer,Los Ríos,5
+30 a 34,Mujer,Los Ríos,6
+35 a 39,Mujer,Los Ríos,5
+40 a 44,Mujer,Los Ríos,11
+45 a 49,Mujer,Los Ríos,17
+50 a 54,Mujer,Los Ríos,25
+55 a 59,Mujer,Los Ríos,34
+60 a 64,Mujer,Los Ríos,58
+65 a 69,Mujer,Los Ríos,90
+70 a 74,Mujer,Los Ríos,116
+75 a 79,Mujer,Los Ríos,141
+80 a 84,Mujer,Los Ríos,113
+85 a 89,Mujer,Los Ríos,168
+90 a 99,Mujer,Los Ríos,118
+100 +,Mujer,Los Ríos,14
+< 1,Hombre,Los Lagos,1
+1 a 4,Hombre,Los Lagos,1
+5 a 9,Hombre,Los Lagos,0
+10 a 14,Hombre,Los Lagos,0
+15 a 19,Hombre,Los Lagos,0
+20 a 24,Hombre,Los Lagos,4
+25 a 29,Hombre,Los Lagos,5
+30 a 34,Hombre,Los Lagos,13
+35 a 39,Hombre,Los Lagos,15
+40 a 44,Hombre,Los Lagos,24
+45 a 49,Hombre,Los Lagos,28
+50 a 54,Hombre,Los Lagos,55
+55 a 59,Hombre,Los Lagos,73
+60 a 64,Hombre,Los Lagos,110
+65 a 69,Hombre,Los Lagos,132
+70 a 74,Hombre,Los Lagos,160
+75 a 79,Hombre,Los Lagos,209
+80 a 84,Hombre,Los Lagos,119
+85 a 89,Hombre,Los Lagos,125
+90 a 99,Hombre,Los Lagos,69
+100 +,Hombre,Los Lagos,1
+< 1,Mujer,Los Lagos,1
+1 a 4,Mujer,Los Lagos,2
+5 a 9,Mujer,Los Lagos,0
+10 a 14,Mujer,Los Lagos,1
+15 a 19,Mujer,Los Lagos,0
+20 a 24,Mujer,Los Lagos,1
+25 a 29,Mujer,Los Lagos,5
+30 a 34,Mujer,Los Lagos,6
+35 a 39,Mujer,Los Lagos,5
+40 a 44,Mujer,Los Lagos,11
+45 a 49,Mujer,Los Lagos,17
+50 a 54,Mujer,Los Lagos,25
+55 a 59,Mujer,Los Lagos,34
+60 a 64,Mujer,Los Lagos,58
+65 a 69,Mujer,Los Lagos,90
+70 a 74,Mujer,Los Lagos,116
+75 a 79,Mujer,Los Lagos,141
+80 a 84,Mujer,Los Lagos,113
+85 a 89,Mujer,Los Lagos,168
+90 a 99,Mujer,Los Lagos,118
+100 +,Mujer,Los Lagos,14
+< 1,Hombre,Aysén,1
+1 a 4,Hombre,Aysén,1
+5 a 9,Hombre,Aysén,0
+10 a 14,Hombre,Aysén,0
+15 a 19,Hombre,Aysén,0
+20 a 24,Hombre,Aysén,4
+25 a 29,Hombre,Aysén,5
+30 a 34,Hombre,Aysén,13
+35 a 39,Hombre,Aysén,15
+40 a 44,Hombre,Aysén,24
+45 a 49,Hombre,Aysén,28
+50 a 54,Hombre,Aysén,55
+55 a 59,Hombre,Aysén,73
+60 a 64,Hombre,Aysén,110
+65 a 69,Hombre,Aysén,132
+70 a 74,Hombre,Aysén,160
+75 a 79,Hombre,Aysén,209
+80 a 84,Hombre,Aysén,119
+85 a 89,Hombre,Aysén,125
+90 a 99,Hombre,Aysén,69
+100 +,Hombre,Aysén,1
+< 1,Mujer,Aysén,1
+1 a 4,Mujer,Aysén,2
+5 a 9,Mujer,Aysén,0
+10 a 14,Mujer,Aysén,1
+15 a 19,Mujer,Aysén,0
+20 a 24,Mujer,Aysén,1
+25 a 29,Mujer,Aysén,5
+30 a 34,Mujer,Aysén,6
+35 a 39,Mujer,Aysén,5
+40 a 44,Mujer,Aysén,11
+45 a 49,Mujer,Aysén,17
+50 a 54,Mujer,Aysén,25
+55 a 59,Mujer,Aysén,34
+60 a 64,Mujer,Aysén,58
+65 a 69,Mujer,Aysén,90
+70 a 74,Mujer,Aysén,116
+75 a 79,Mujer,Aysén,141
+80 a 84,Mujer,Aysén,113
+85 a 89,Mujer,Aysén,168
+90 a 99,Mujer,Aysén,118
+100 +,Mujer,Aysén,14
+< 1,Hombre,Magallanes,1
+1 a 4,Hombre,Magallanes,1
+5 a 9,Hombre,Magallanes,0
+10 a 14,Hombre,Magallanes,0
+15 a 19,Hombre,Magallanes,0
+20 a 24,Hombre,Magallanes,4
+25 a 29,Hombre,Magallanes,5
+30 a 34,Hombre,Magallanes,13
+35 a 39,Hombre,Magallanes,15
+40 a 44,Hombre,Magallanes,24
+45 a 49,Hombre,Magallanes,28
+50 a 54,Hombre,Magallanes,55
+55 a 59,Hombre,Magallanes,73
+60 a 64,Hombre,Magallanes,110
+65 a 69,Hombre,Magallanes,132
+70 a 74,Hombre,Magallanes,160
+75 a 79,Hombre,Magallanes,209
+80 a 84,Hombre,Magallanes,119
+85 a 89,Hombre,Magallanes,125
+90 a 99,Hombre,Magallanes,69
+100 +,Hombre,Magallanes,1
+< 1,Mujer,Magallanes,1
+1 a 4,Mujer,Magallanes,2
+5 a 9,Mujer,Magallanes,0
+10 a 14,Mujer,Magallanes,1
+15 a 19,Mujer,Magallanes,0
+20 a 24,Mujer,Magallanes,1
+25 a 29,Mujer,Magallanes,5
+30 a 34,Mujer,Magallanes,6
+35 a 39,Mujer,Magallanes,5
+40 a 44,Mujer,Magallanes,11
+45 a 49,Mujer,Magallanes,17
+50 a 54,Mujer,Magallanes,25
+55 a 59,Mujer,Magallanes,34
+60 a 64,Mujer,Magallanes,58
+65 a 69,Mujer,Magallanes,90
+70 a 74,Mujer,Magallanes,116
+75 a 79,Mujer,Magallanes,141
+80 a 84,Mujer,Magallanes,113
+85 a 89,Mujer,Magallanes,168
+90 a 99,Mujer,Magallanes,118
+100 +,Mujer,Magallanes,14
