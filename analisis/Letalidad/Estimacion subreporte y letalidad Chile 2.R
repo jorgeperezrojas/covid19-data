@@ -68,7 +68,6 @@ scale_cfr <- function(data_1_in, delay_fun){
              cum_known_t = round(cumulative_known_t), total_cases = sum(case_incidence))
 }
 
-
 #### Run analysis for Chile by date  -----------------------------------------------------------
 
 # Load data
@@ -91,6 +90,7 @@ covidchile <- left_join(cases,deaths)
 
 covidchile <- covidchile %>% mutate(new_deaths=tidyr::replace_na(new_deaths,0),
                                     deaths = cumsum(new_deaths)) %>% filter(deaths>0)
+covidchile
 
 # Create matrix of results
 m.ur.cfr.Chile <- as.data.frame(matrix(NA, nrow = nrow(covidchile), ncol = 15))
@@ -103,7 +103,7 @@ colnames(m.ur.cfr.Chile) <- c("date","nCFR","cCFR","total_deaths","cum_known_t" 
 # Loop over each day
 for (i in 1:(nrow(covidchile)-2)){
   m.ur.cfr.Chile[i,] <- covidchile %>%
-  padr::pad() %>%
+  # padr::pad() %>%
   slice(., 1:(n()-i)) %>%
   dplyr::mutate(new_cases = tidyr::replace_na(new_cases, 0),
                 new_deaths = tidyr::replace_na(new_deaths, 0)) %>%
@@ -138,21 +138,23 @@ m.ur.cfr.Chile<- m.ur.cfr.Chile %>% dplyr::mutate(underreporting_estimate = ifel
 
 m.ur.cfr.Chile <- m.ur.cfr.Chile %>% arrange(date) %>% mutate(new_cases=total_cases-lag(total_cases),
                                                               expected_cases = new_cases*(1+underreporting_estimate)) %>%
-                                     slice(., 10:(n()-7)) # Filtro primeras 10 y últimos 7 observaciones
+                                     slice(., 7:(n()-7)) # Filtro primeras 7 y últimos 7 observaciones
 
 m.ur.cfr.Chile.clean <- m.ur.cfr.Chile %>% dplyr::filter(!is.na(nCFR) & !is.na(new_cases))%>%
                           dplyr::select(date, new_cases, total_cases, total_deaths, underreporting_estimate, lower,
                                         upper) %>%
-                          dplyr::mutate(underreporting_estimate = 1-ifelse(underreporting_estimate <= 1, underreporting_estimate, 1)) %>%
-                          dplyr::mutate(lower = 1-ifelse(upper <= 1, upper, 1)) %>%
+                          dplyr::mutate(underreporting_estimate = 1-underreporting_estimate) %>%
+                          dplyr::mutate(lower2 = 1-upper) %>%
                           dplyr::mutate(upper = 1-lower) %>%
+                          dplyr::mutate(lower = lower2) %>%
                           dplyr::mutate(underreporting_estimate = signif(underreporting_estimate, 2)) %>%
                           dplyr::mutate(lower = signif(lower, 2)) %>%
                           dplyr::mutate(upper = signif(upper, 2)) %>%
                           dplyr::mutate(underreporting_estimate_clean = paste0(underreporting_estimate*100,
                                                                                "% (",lower*100,"% - ",upper*100,"%)"),
                                         expected_new_cases = round(new_cases*(1+underreporting_estimate))) %>% 
-                          dplyr::arrange(desc(date))
+                          dplyr::arrange(desc(date)) %>%
+                          dplyr::select(date, underreporting_estimate, lower, upper, underreporting_estimate_clean)
 m.ur.cfr.Chile.clean
 readr::write_excel_csv2(m.ur.cfr.Chile.clean,
                        "~/Documents/GitHub/covid19-data/analisis/Subreporte/Subreporte_Chile.csv")
@@ -161,7 +163,8 @@ m.case.fatality.Chile.clean  <- m.ur.cfr.Chile %>% dplyr::filter(!is.na(nCFR) & 
                                 dplyr::select(date, new_cases, total_cases, total_deaths,
                                               nCFR, nCFR_LQ, nCFR_UQ, cCFR, cCFR_LQ, cCFR_UQ) %>%
                                 mutate(letalidad_caso_cruda = paste0(signif(nCFR,3)*100, "% (",signif(nCFR_LQ,3)*100,"% - ",signif(nCFR_UQ,3)*100,"%)"),
-                                       letalidad_caso_aj_retraso = paste0(signif(cCFR,3)*100, "% (",signif(cCFR_LQ,3)*100,"% - ",signif(cCFR_UQ,3)*100,"%)"))
+                                       letalidad_caso_aj_retraso = paste0(signif(cCFR,3)*100, "% (",signif(cCFR_LQ,3)*100,"% - ",signif(cCFR_UQ,3)*100,"%)")) %>%
+                                dplyr::select(-new_cases, -total_cases, -total_deaths)
 m.case.fatality.Chile.clean
 readr::write_excel_csv2(m.case.fatality.Chile.clean,
                         "~/Documents/GitHub/covid19-data/analisis/Letalidad/Letalidad_Chile.csv")
@@ -173,7 +176,6 @@ underreport <- ggplot(m.ur.cfr.Chile %>% filter(!is.na(underreporting_estimate))
        labs(y="Subreporte de casos sintomáticos COVID-19 (% del total de casos)",x="Fecha", 
            title = "Estimación de subreporte de casos COVID-19, Chile",
            caption = paste("Cuadrado C. Escuela de Salud Pública. Universidad de Chile. Update:",Sys.Date()))
-
 underreport
 
 cCFR <- ggplot(m.ur.cfr.Chile %>% filter(!is.na(cCFR)), aes(date, cCFR)) + geom_line() + geom_point() +
@@ -248,7 +250,7 @@ cCFR2
     
     underreport.byregion <- region.data.desc %>%
       dplyr::group_by(region) %>%
-      padr::pad() %>%
+      slice(., 1:(n()-7)) %>% # últimas 7 observaciones
       # dplyr::mutate(new_cases = tidyr::replace_na(new_cases, 0),
       #               new_deaths = tidyr::replace_na(new_deaths, 0)) %>%
       dplyr::group_by(region) %>%
@@ -289,19 +291,19 @@ cCFR2
       dplyr::arrange(desc(underreporting_estimate))
     
     underreport.byregionfinal
-    readr::write_excel_csv2(underreport.byregionfinal,
+    readr::write_excel_csv2(underreport.byregionfinal %>% filter(region!="Chile") %>% dplyr::select(-total_cases,-total_deaths),
                             "~/Documents/GitHub/covid19-data/analisis/Subreporte/Subreporte_regiones.csv")
     
-    m.case.fatality.region.clean  <- underreport.byregion %>% 
-      dplyr::select(region, total_cases, total_deaths,
-                    nCFR, nCFR_LQ, nCFR_UQ, cCFR, cCFR_LQ, cCFR_UQ) %>%
+    m.case.fatality.region.clean  <- underreport.byregion %>% filter(region!="Chile") %>%
+      dplyr::select(region, nCFR, nCFR_LQ, nCFR_UQ, cCFR, cCFR_LQ, cCFR_UQ) %>%
       mutate(letalidad_caso_cruda = paste0(signif(nCFR,3)*100, "% (",signif(nCFR_LQ,3)*100,"% - ",signif(nCFR_UQ,3)*100,"%)"),
              letalidad_caso_aj_retraso = paste0(signif(cCFR,3)*100, "% (",signif(cCFR_LQ,3)*100,"% - ",signif(cCFR_UQ,3)*100,"%)"))
     m.case.fatality.region.clean
     readr::write_excel_csv2(m.case.fatality.region.clean,
                             "~/Documents/GitHub/covid19-data/analisis/Letalidad/Letalidad_regiones.csv")
     
-   underreport.reg <- ggplot(data=underreport.byregionfinal %>% filter(total_deaths>30), aes(reorder(region, -underreporting_estimate, sum),underreporting_estimate))+
+   underreport.reg <- ggplot(data=underreport.byregionfinal %>% filter(total_deaths>30 & underreporting_estimate>0 & region!="Chile"), 
+                             aes(reorder(region, -underreporting_estimate, sum),underreporting_estimate))+
       geom_col(fill = "#FF6666") +
       geom_errorbar(aes(ymin = lower, ymax = upper), width=0.2) +
       geom_text(aes(label = scales::percent(underreporting_estimate), 
@@ -313,7 +315,8 @@ cCFR2
            title = "Estimación de subreporte de casos COVID-19 en Chile por Región",
            caption = paste("Cuadrado C. Escuela de Salud Pública. Universidad de Chile. 
                            Líneas negras verticales representan el intervalo de credibilidad (95%) de la estimación.
-                           Se grafica subreporte para regiones con más de 30 muertes acumuladas.
+                           Se grafica subreporte para regiones con más de 30 muertes acumuladas y 
+                           subreporte estimado mayor a 0% promedio.
                            Update:",Sys.Date())) +
       scale_y_continuous(breaks = scales::pretty_breaks(n = 10), limits=c(0,1), labels = scales::percent) +
       theme(axis.text.x = element_text(angle = 45)) +
@@ -407,7 +410,7 @@ cCFR2
       current[i,] <- region.data.desc %>%
           dplyr::filter(region==j) %>%
           dplyr::filter(deaths > 1) %>%
-          padr::pad() %>%
+          # padr::pad() %>%
           slice(., 1:(n()-i)) %>%
           dplyr::mutate(new_cases = tidyr::replace_na(new_cases, 0),
                         new_deaths = tidyr::replace_na(new_deaths, 0)) %>%
@@ -485,7 +488,7 @@ cCFR2
                                  aes(date, underreporting_estimate, color=region)) + geom_line() + geom_point() +
       # geom_ribbon(aes(ymin=lower,ymax=upper), alpha = 0.5) +
       scale_y_continuous(breaks = scales::pretty_breaks(n = 10), limits=c(0,1), labels = scales::percent) +
-      labs(y="Subreporte de casos sintomáticos COVID-19 (% del total de casos)",x="Fecha", 
+      labs(y="Subreporte de casos sintomáticos COVID-19 (% del total de casos)",x="Fecha", colour="Región",
            title = "Estimación de subreporte de casos COVID-19, Chile",
            caption = paste("Cuadrado C. Escuela de Salud Pública. Universidad de Chile.
                            Se grafican tiempo-región con >10 fallecidos acumulados.
@@ -498,7 +501,7 @@ cCFR2
                           aes(date, cCFR, color=region)) + geom_line() + geom_point() +
       # geom_ribbon(aes(ymax=cCFR_UQ,ymin=cCFR_LQ), alpha = 0.1) +
       scale_y_continuous(breaks = scales::pretty_breaks(n = 10), limits=c(0,0.1), labels = scales::percent) +
-      labs(y="Tasa de letalidad ajustada por retraso",x="Fecha", 
+      labs(y="Tasa de letalidad ajustada por retraso",x="Fecha", colour="Región",
            title = "Estimación de letalidad COVID-19 ajustada por retraso, Regiones de Chile",
            caption = paste("Cuadrado C. Escuela de Salud Pública. Universidad de Chile.
                            Se grafican tiempo-región con >10 fallecidos acumulados.
@@ -510,7 +513,7 @@ cCFR2
                           aes(date, nCFR, color=region)) + geom_line() + geom_point() +
       # geom_ribbon(aes(ymax=nCFR_UQ,ymin=nCFR_LQ), alpha = 0.1) +
       scale_y_continuous(breaks = scales::pretty_breaks(n = 10), limits=c(0,0.1), labels = scales::percent) +
-      labs(y="Tasa de letalidad cruda",x="Fecha", 
+      labs(y="Tasa de letalidad cruda",x="Fecha",  colour="Región",
            title = "Estimación de letalidad COVID-19 cruda, Regiones de Chile",
            caption = paste("Cuadrado C. Escuela de Salud Pública. Universidad de Chile.
                            Se grafican tiempo-región con >10 fallecidos acumulados.
@@ -518,6 +521,7 @@ cCFR2
       theme_minimal()
     nCFR_reg_ts
     
+    underreport_reg_ts
     ggsave("underreport_reg_ts.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
     ggsave("~/Documents/GitHub/covid19-data/analisis/Subreporte/subreporte por region y tiempo.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
     

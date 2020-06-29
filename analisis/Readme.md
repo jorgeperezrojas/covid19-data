@@ -1,7 +1,7 @@
 Análisis de datos COVID-19 Chile - Escuela de Salud Pública UChile
 ==================================================================
 
-En este respositorio encontrarás resultados de algunos análisis que
+En este repositorio encontrarás resultados de algunos análisis que
 realizamos como parte de los reportes que un equipo de académicos y
 académicas de la [Escuela de Salud Pública de la Universidad de
 Chile](http://www.saludpublica.uchile.cl) realiza semana a semana. Los
@@ -9,12 +9,12 @@ informes semanales que están publicados directamente en la página web de
 la Escuela, no obstante este repositorio tiene por objetivo dejar
 disponible para la comunidad las bases de datos procesadas, gráficos y
 código utilizado. La mayor parte de los datos utilizados para estos
-análizados son obtenidos directamente del repositorio de a [Jorge
+analizados son obtenidos directamente del repositorio de a [Jorge
 Pérez](https://github.com/jorgeperezrojas/covid19-data) quien
 gentilmente aloja también nuestros resultados.
 
-¡Pueden usar los datos para lo que quieran! Agreguenos en sus
-agradecimientos si lo usan para publicar algo 🥰. Pueden escribir a
+¡Pueden usar los datos para lo que quieran! Agréguenos en sus
+agradecimientos sí lo usan para publicar algo 🥰. Pueden escribir a
 ccuadrado\_arroba\_uchile.cl si notan cualquier error o tienen alguna
 pregunta de los datos.
 
@@ -31,7 +31,10 @@ Nota metodológica
     utiliza un intervalo serial τ = 5 días [(Nishiura et
     al 2020)](https://www.ijidonline.com/article/S1201-9712(20)30119-3/fulltext)
     con la variabilidad habitual entre 3 y 7 días [(Sanche et
-    al 2020)](https://wwwnc.cdc.gov/eid/article/26/7/20-0282_article).
+    al 2020)](https://wwwnc.cdc.gov/eid/article/26/7/20-0282_article) con una
+    ventana de 14 días para la estimación. El detalle del seteo utilizado
+    para reproducibilidad puede encontrarse en el script  en la
+    sección [Estimaciones del número de reproducción (Re)](Re). 
     La interpretación más sencilla de este valor es el número de nuevos
     contagiados que produce cada caso (casos secundarios) en un
     intervalo serial en un contexto en la que no toda la población es
@@ -84,7 +87,7 @@ Nota metodológica
     Esta es una tasa de letalidad de caso corregida por retraso (TLCc o
     cCFR por su sigla en ingles), para lo cuál utilizamos la metodología
     propuesta por Russel y colaboradores [(Russel et al,
-    2020b)](https://doi.org/10.2807/1560-7917.%20ES.2020.25.12.200025).
+    2020b)](https://www.eurosurveillance.org/content/10.2807/1560-7917.ES.2020.25.12.2000256).
 
 El código utilizado para las estimaciones de subreporte y letalidad
 ajustada son adaptaciones para Chile del desarrollado por [Tim
@@ -103,30 +106,42 @@ Los datos disponibles son los siguientes:
     construyen a partir de los reportes diarios del MINSAL. Las
     estimaciones de Re a nivel de servicios de salud y comuna utilizan
     los reportes bisemanales del MINSAL con desagregación a nivel
-    comunal.
+    comunal. Una nota de cautela adicional sobre los datos a nivel comunal: los 
+    reportes han tenido variaciones en su frecuencia y los días en que se reportan.
+    A modo de ejemplo, el último reporte presento una distancia de 5 días entre
+    los datos reportados entre reporte y reporte, lo que hace que los resultados
+    de las interpolaciones de casos entre fechas sea mucho más incierta.
+    Mientras no tengamos datos diarios de casos por comuna nuestras estimaciones
+    a nivel de comuna y servicio de salud están sujetas a alta incertidumbre.
 
 2.  [Estimaciones de subreporte de casos](Subreporte): Estimaciones de
     subreporte de casos sintomáticos por día a nivel nacional y el
     acumulado para cada región. Se incorporan además algunas
-    visualizaciones básicas de estos datos.
+    visualizaciones básicas de estos datos. Una nota de cautela: los datos
+    de nivel regional para fallecidos no han sido ajustados retrospectivamente
+    por la autoridad. Esto es evidente con el salto de casi 600 fallecidos a inicios
+    de Junio, mayoritariamente en la RM. Esos fallecidos deben ser incorporados
+    a la fecha respectiva de ocurrencia del fallecimiento, lo que aún no ocurre
+    en las series oficiales que publica el Ministerio de Ciencias. Esto hace que
+    el subreporte y la letalidad estén muy subestimados durante Mayo (y quizás Abril).
 
 3.  [Estimaciones de letalidad de caso](Letalidad): Estimaciones de
     letalidad de casos cruda y ajustada por subreporte por día a nivel
     nacional y el acumulado para cada región. Se incorporan además
     algunas visualizaciones básicas de estos datos. Ninguna de estas dos
     métricas es adecuada para realizar comparaciones internacionales con
-    otros paises. Aquí pueden encontrar una [explicación en
+    otros países. Aquí pueden encontrar una [explicación en
     simple](https://twitter.com/ccuadradon/status/1247693886195195905)
-    de por que es una mala idea intentar hacer esas comparaciones. Si
+    de por qué es una mala idea intentar hacer esas comparaciones. Si
     pueden ser útiles para comparar al interior del mismo país, así como
-    la trayectoría observada por Chile en el tiempo.
+    la trayectoria observada por Chile en el tiempo.
 
 **DISCLAIMER**: Hay que tener mucho ojo con los datos presentados en
 este repositorio, pues en su mayoría provienen de información oficial
 que ha esta en entredicho en varias ocasiones. Las estimaciones son tan
 buenas como la calidad de los datos. No obstante, tanto los datos de
 casos confirmados, como las estadísticas de fallecidos COVID-19 pueden
-estar sujetos a importantes errores de medición. Estos últimos días la autoridad ha reconocido la existencia de un [número mayor de fallecidos](https://www.latercera.com/nacional/noticia/manalich-anuncia-correccion-en-cifra-de-fallecidos-con-covid-19-incorpora-a-653-personas-y-eleva-cifra-total-a-2290/VR2N2AWOIZAGJHDTDRWA7AON3M/) lo que aún no esta incorporado en las cifras retrospectivas, con lo cuál se subestima tanto la letalidad como el subreporte de casos.
+estar sujetos a importantes errores de medición. A principios de Junio la autoridad ha reconocido la existencia de un [número mayor de fallecidos](https://www.latercera.com/nacional/noticia/manalich-anuncia-correccion-en-cifra-de-fallecidos-con-covid-19-incorpora-a-653-personas-y-eleva-cifra-total-a-2290/VR2N2AWOIZAGJHDTDRWA7AON3M/) lo que aún no esta incorporado en las cifras retrospectivas, con lo cuál se subestima tanto la letalidad como el subreporte de casos.
 La interpretación juiciosa de estos resultados, a la luz de las limitaciones de los datos,
 es esencial, por lo que llamamos a la prudencia en los usos que se le
 den.

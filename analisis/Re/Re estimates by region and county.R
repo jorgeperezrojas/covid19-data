@@ -15,6 +15,7 @@ library("tidyr")
 library("dplyr")
 library("readr")
 library("ggplot2")
+library("readxl")
 
 # Set working directory
 setwd("~/Dropbox/COVID19/Estimaciones Re")
@@ -22,41 +23,53 @@ setwd("~/Dropbox/COVID19/Estimaciones Re")
 # R estimation by Regions ---------------------------------
 
 # Download data by region
-cases <- read_csv("https://raw.githubusercontent.com/jorgeperezrojas/covid19-data/master/csv/confirmados.csv")
+cases <- read_csv("https://raw.githubusercontent.com/MinCiencia/Datos-COVID19/master/output/producto13/CasosNuevosCumulativo_std.csv")
+admin.codes <- read_excel("~/Documents/GitHub/UC-UCH-COVID-lab/underreporting/cut_2018_v03.xls")
+
+# Recode region names and codes
+admin.codes.reg <- admin.codes %>% rename(region=`Nombre Región`, codigo=`Código Región`) %>% 
+                                   dplyr::select(region, codigo) %>% group_by(codigo) %>% summarise_all(first)
+admin.codes.reg$region <- ifelse(admin.codes.reg$region=="La Araucanía","Araucanía", admin.codes.reg$region)
+admin.codes.reg$region <- ifelse(admin.codes.reg$region=="Aysén del General Carlos Ibáñez del Campo","Aysén", admin.codes.reg$region)
+admin.codes.reg$region <- ifelse(admin.codes.reg$region=="Libertador General Bernardo O'Higgins","O’Higgins", admin.codes.reg$region)
+admin.codes.reg$region <- ifelse(admin.codes.reg$region=="Magallanes y de la Antártica Chilena","Magallanes", admin.codes.reg$region)
+admin.codes.reg$region <- ifelse(admin.codes.reg$region=="Metropolitana de Santiago","Metropolitana", admin.codes.reg$region)
 
 # Reshape and clean data
-cases_long <- gather(cases, date, cases, "03/07/2020":rev(names(cases))[1])
-cases_long
 
-cases_reg <- cases_long %>% group_by(region) %>%  dplyr::mutate(date = lubridate::mdy(date),
-                                                                new_cases = cases-lag(cases),
-                                                                week = lubridate::isoweek(date),
-                                                                time = seq(1,length(date)),
-                                                                new_cases = tidyr::replace_na(new_cases,0)) 
+cases_reg <- cases %>% rename(region=Region,
+                              date=Fecha,
+                              new_cases=Total) %>% group_by(region) %>%  
+                        dplyr::mutate(date = lubridate::ymd(date),
+                                      week = lubridate::isoweek(date),
+                                      time = seq(1,length(date)),
+                                      new_cases = tidyr::replace_na(new_cases,0),
+                                      region=ifelse(region=="Total", "Chile", region)) 
 
-cases_reg <- bind_rows(cases_reg, cases_reg %>% dplyr::group_by(date, week) %>%  dplyr::summarise(new_cases=sum(new_cases,na.rm = T),
-                                                                cases=sum(cases,na.rm = T)) %>%
-                                                dplyr::mutate(region="Chile",codigo=0,
-                                                            time = seq(1,length(date))))
+  
+cases_reg <- left_join(cases_reg, admin.codes.reg, by="region")
+cases_reg$codigo <- ifelse(cases_reg$region=="Chile", 0, as.numeric(cases_reg$codigo))
+table(cases_reg$region, cases_reg$codigo)
 
-
-# Example for RM (Biweekly Re)
-t_start <- seq(2, nrow(cases_reg %>% filter(codigo==13 & cases>0  & !is.na(new_cases)))-13)   
+# Example for Antofagasta (Biweekly Re)
+t_start <- seq(2, nrow(cases_reg %>% filter(codigo==2 & !is.na(new_cases)))-13)   
 t_end <- t_start + 13       
 
 rm(Re)
-Re <- estimate_R(incid = cases_reg %>% filter(codigo==13 & cases>0 & !is.na(new_cases)) %>% dplyr::pull(new_cases),
+Re <- estimate_R(incid = cases_reg %>% filter(codigo==2 & !is.na(new_cases)) %>% dplyr::pull(new_cases),
                  method="uncertain_si",
                  config = make_config(list(
-                   mean_si = 6.48, std_si= 3.83,
-                   min_mean_si = 4.48, max_mean_si = 8.48,
+                   mean_si = 5, std_si= 3.8,
+                   min_mean_si = 3, max_mean_si = 7,
                    std_std_si = 0.5, std_mean_si= 1, 
-                   min_std_si = 1.83, max_std_si = 5.83,
+                   min_std_si = 1.8, max_std_si = 5.8,
                    t_start = t_start, 
                    t_end = t_end)))
 Re_cases <- Re
 plot(Re)
 cbind(tail(Re$R$`Mean(R)`, n=1),tail(Re$R$`Quantile.0.025(R)`, n=1),tail(Re$R$`Quantile.0.975(R)`, n=1))
+ggsave("Re Antofagasta completo.png", width = 10*2.5, height = 8*2.5, units = "cm", dpi=300, limitsize = FALSE)
+
 
 # Create empty dataset for loop
 R0_data <- as.data.frame(matrix(NA, nrow = 1,ncol = ncol(Re$R)+1))
@@ -95,12 +108,12 @@ readr::write_excel_csv2(R0_data %>% filter(!is.na(region)) %>%  dplyr::select(da
                         paste0("~/Documents/GitHub/covid19-data/analisis/Re/data/Re_region_",tail(R0_data$date,n=1),".csv"))
 
 # Graficos - Region
-ggplot(R0_data %>% filter(time>20 & codigo!=0), aes(x=t_end, y=`Mean(R)`))+
+ggplot(R0_data %>% filter(time>15 & codigo!=0), aes(x=t_end, y=`Mean(R)`))+
   geom_line() + 
   geom_point() + 
   geom_ribbon(aes(ymin=`Quantile.0.05(R)`,ymax=`Quantile.0.95(R)`), alpha = 0.5) +
   geom_hline(yintercept=1, linetype="solid", color = "darkgray", size=0.6) +
-  scale_y_continuous(breaks = scales::pretty_breaks(n = 5), limits=c(0,15)) +
+  # scale_y_continuous(limits=c(0,7)) +
   labs(title="Número de reproducción efectivo (Re) por Región.",
        y="Re",x="Días desde inicio del brote",
        caption = paste0("El número de reproducción efectivo (Re) indica cuantos nuevos casos produce de manera directa cada caso conocido.
@@ -108,7 +121,7 @@ ggplot(R0_data %>% filter(time>20 & codigo!=0), aes(x=t_end, y=`Mean(R)`))+
                          Cuadrado C. Escuela de Salud Pública. Universidad de Chile. Update: ",tail(R0_data$date,n=1))) +
   theme_minimal() +
   theme_minimal() +
-  facet_wrap(region ~ .) 
+  facet_wrap(region ~ .,scales = "free") 
 ggsave("Re region completo.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
 ggsave("~/Documents/GitHub/covid19-data/analisis/Re/graphs/Re region completo.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
 
@@ -118,7 +131,7 @@ ggplot(R0_data %>% filter(time>tail(R0_data$time,n=1)-14 & codigo!=0), aes(x=t_e
   geom_point() + 
   geom_ribbon(aes(ymin=`Quantile.0.05(R)`,ymax=`Quantile.0.95(R)`), alpha = 0.5) +
   geom_hline(yintercept=1, linetype="solid", color = "darkgray", size=0.6) +
-  scale_y_continuous(breaks = scales::pretty_breaks(n = 5), limits=c(0,3)) +
+  scale_y_continuous(limits=c(0,2.5)) +
   labs(title="Número de reproducción efectivo (Re) por Región. Últimas 2 semanas.",
        y="Re",x="Días desde inicio del brote",
        caption = paste0("El número de reproducción efectivo (Re) indica cuantos nuevos casos produce de manera directa cada caso conocido.
@@ -130,185 +143,184 @@ ggplot(R0_data %>% filter(time>tail(R0_data$time,n=1)-14 & codigo!=0), aes(x=t_e
 ggsave("Re region ultimas 2 semanas.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
 ggsave("~/Documents/GitHub/covid19-data/analisis/Re/graphs/Re region ultimas 2 semanas.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
 
-# R estimation by Regions - death data ---------------------------------
-
-# Download data by region
-deaths <- read_csv("https://raw.githubusercontent.com/jorgeperezrojas/covid19-data/master/csv/muertes.csv")
-
-# Reshape and clean data
-death_long <- gather(deaths, date, deaths, "04/01/2020":rev(names(deaths))[1])
-death_long
-
-death_reg <- death_long %>% group_by(region) %>%  dplyr::mutate(date = lubridate::mdy(date),
-                                                                new_deaths = deaths-lag(deaths),
-                                                                week = lubridate::isoweek(date),
-                                                                time = seq(1,length(date)),
-                                                                new_deaths = tidyr::replace_na(new_deaths,0)) 
-
-death_reg <- bind_rows(death_reg, death_reg %>% dplyr::group_by(date, week) %>%  dplyr::summarise(new_deaths=sum(new_deaths,na.rm = T),
-                                                                                                  deaths=sum(deaths,na.rm = T)) %>%
-                         dplyr::mutate(region="Chile",codigo=0,
-                                       time = seq(1,length(date))))
-
-
-# Example for RM (Biweekly Re)
-t_start <- seq(2, nrow(death_reg %>% filter(codigo==13 & deaths>0  & !is.na(new_deaths)))-13)   
-t_end <- t_start + 13       
-
-rm(Re)
-Re <- estimate_R(incid = death_reg %>% filter(codigo==13 & deaths>0) %>% dplyr::pull(new_deaths),
-                 method="uncertain_si",
-                 config = make_config(list(
-                   mean_si = 6.48, std_si= 3.83,
-                   min_mean_si = 4.48, max_mean_si = 8.48,
-                   std_std_si = 0.5, std_mean_si= 1, 
-                   min_std_si = 1.83, max_std_si = 5.83,
-                   t_start = t_start, 
-                   t_end = t_end)))
-plot(Re)
-Re_death <- Re
-cbind(tail(Re$R$`Mean(R)`, n=1),tail(Re$R$`Quantile.0.025(R)`, n=1),tail(Re$R$`Quantile.0.975(R)`, n=1))
-
-# Create empty dataset for loop
-R0_data <- as.data.frame(matrix(NA, nrow = 1,ncol = ncol(Re$R)+1))
-
-# Assign names to variables
-colnames(R0_data) <- c(colnames(Re$R),"codigo")
-
-# Loop over each region
-for (i in 0:(nrow(table(death_reg$codigo)))){
-  t_start <- seq(2, nrow(death_reg %>% filter(codigo==i))-13)   
-  t_end <- t_start + 13    
-  R0est <- estimate_R(incid = death_reg %>% filter(codigo==i) %>% dplyr::pull(new_deaths),
-                      method="uncertain_si",
-                      config = make_config(list(
-                        mean_si = 5, std_si= 3.8,
-                        min_mean_si = 3, max_mean_si = 7,
-                        std_std_si = 0.5, std_mean_si= 1, 
-                        min_std_si = 1.8, max_std_si = 5.8,
-                        t_start = t_start, 
-                        t_end = t_end)))
-  Re <- R0est$R
-  data_temp <- Re %>% mutate(codigo=i) 
-  R0_data <- bind_rows(R0_data %>% filter(!is.na(codigo)),data_temp)
-  rm(data_temp)  
-}
-
-# Save data 
-
-R0_data<-left_join(R0_data %>% mutate(time=t_end) %>% filter(!is.na(`Mean(R)`)),
-                   cases_reg)                  
-save(R0_data, file="Re_deaths_region.R")
-
-readr::write_excel_csv2(R0_data %>% filter(!is.na(region)),
-                        paste0("Re_deaths_region.R",tail(R0_data$date,n=1),".csv"))
-readr::write_excel_csv2(R0_data %>% filter(!is.na(region)) %>%  dplyr::select(date, week, region, `Mean(R)`,`Quantile.0.025(R)`,`Quantile.0.975(R)`),
-                        paste0("~/Documents/GitHub/covid19-data/analisis/Re/data/Re_deaths_region.R",tail(R0_data$date,n=1),".csv"))
-
-# Graficos - Region
-ggplot(R0_data %>% filter(time>20 & codigo!=0), aes(x=t_end, y=`Mean(R)`))+
-  geom_line() + 
-  geom_point() + 
-  geom_ribbon(aes(ymin=`Quantile.0.05(R)`,ymax=`Quantile.0.95(R)`), alpha = 0.5) +
-  geom_hline(yintercept=1, linetype="solid", color = "darkgray", size=0.6) +
-  scale_y_continuous(breaks = scales::pretty_breaks(n = 5), limits=c(0,15)) +
-  labs(title="Número de reproducción efectivo (Re) por Región.",
-       y="Re",x="Días desde inicio del brote",
-       caption = paste0("El número de reproducción efectivo (Re) indica cuantos nuevos casos produce de manera directa cada caso conocido.
-                         Cálculos en base a un intervalo serial de 5 días (rango 3-7) y un período de 14 días.
-                         Se utilizan las nuevas muertes COVID-19 reportadas por región para este análisis.
-                         Cuadrado C. Escuela de Salud Pública. Universidad de Chile. Update: ",tail(R0_data$date,n=1))) +
-  theme_minimal() +
-  theme_minimal() +
-  facet_wrap(region ~ .) 
-ggsave("Re deaths region completo.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
-ggsave("~/Documents/GitHub/covid19-data/analisis/Re/graphs/Re deaths region completo.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
-
-
-# Graficos - Region ultimas 2 semanas
-ggplot(R0_data %>% filter(time>tail(R0_data$time,n=1)-14 & codigo!=0), aes(x=t_end, y=`Mean(R)`, group=region))+
-  geom_line() + 
-  geom_point() + 
-  geom_ribbon(aes(ymin=`Quantile.0.05(R)`,ymax=`Quantile.0.95(R)`), alpha = 0.5) +
-  geom_hline(yintercept=1, linetype="solid", color = "darkgray", size=0.6) +
-  scale_y_continuous(breaks = scales::pretty_breaks(n = 5), limits=c(0,3)) +
-  labs(title="Número de reproducción efectivo (Re) por Región. Últimas 2 semanas.",
-       y="Re",x="Días desde inicio del brote",
-       caption = paste0("El número de reproducción efectivo (Re) indica cuantos nuevos casos produce de manera directa cada caso conocido.
-                         Cálculos en base a un intervalo serial de 5 días (rango 3-7) y un período de 14 días.
-                         Se utilizan las nuevas muertes COVID-19 reportadas por región para este análisis.
-                         Cuadrado C. Escuela de Salud Pública. Universidad de Chile. Update: ",tail(R0_data$date,n=1))) +
-  theme_minimal() +
-  theme_minimal() +
-  facet_wrap(region ~ .) 
-ggsave("Re deaths region ultimas 2 semanas.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
-ggsave("~/Documents/GitHub/covid19-data/analisis/Re/graphs/Re deaths region ultimas 2 semanas.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
-
-# Comparación Re para Chile con datos de casos, UCI y muertes ---------------------
-
-# Estimaciones Re por casos para Chile
-t_start <- seq(2, nrow(cases_reg %>% filter(codigo==0))-13)   
-t_end <- t_start + 13       
-
-rm(Re_cases)
-Re_cases <- estimate_R(incid = cases_reg %>% filter(codigo==0) %>% dplyr::pull(new_cases),
-                 method="uncertain_si",
-                 config = make_config(list(
-                   mean_si = 6.48, std_si= 3.83,
-                   min_mean_si = 4.48, max_mean_si = 8.48,
-                   std_std_si = 0.5, std_mean_si= 1, 
-                   min_std_si = 1.83, max_std_si = 5.83,
-                   t_start = t_start, 
-                   t_end = t_end)))
-cbind(tail( Re_cases$R$`Mean(R)`, n=1),tail(Re_cases$R$`Quantile.0.025(R)`, n=1),tail( Re_cases$R$`Quantile.0.975(R)`, n=1))
-
-# Estimaciones Re por muertes para Chile
-t_start <- seq(2, nrow(death_reg %>% filter(codigo==0))-13)   
-t_end <- t_start + 13       
-
-rm(Re_death)
-Re_death <- estimate_R(incid = death_reg %>% filter(codigo==0) %>% dplyr::pull(new_deaths),
-                       method="uncertain_si",
-                       config = make_config(list(
-                         mean_si = 6.48, std_si= 3.83,
-                         min_mean_si = 4.48, max_mean_si = 8.48,
-                         std_std_si = 0.5, std_mean_si= 1, 
-                         min_std_si = 1.83, max_std_si = 5.83,
-                         t_start = t_start, 
-                         t_end = t_end)))
-cbind(tail( Re_death$R$`Mean(R)`, n=1),tail(Re_death$R$`Quantile.0.025(R)`, n=1),tail( Re_death$R$`Quantile.0.975(R)`, n=1))
-
-
-Re_cases2 <- Re_cases$R %>% dplyr::select(t_start, t_end, `Mean(R)`, `Quantile.0.05(R)`,`Quantile.0.95(R)`) %>%
-             mutate(Metodo="Casos confirmados")
-Re_death2 <- Re_death$R %>% dplyr::select(t_start, t_end, `Mean(R)`, `Quantile.0.05(R)`,`Quantile.0.95(R)`) %>%
-             mutate(Metodo="Muertes",
-                     t_end=t_end+12)
-
-Re_comparison <- bind_rows(Re_cases2,Re_death2)
-
-ggplot(Re_comparison %>% filter(t_end>=24), aes(x=t_end, y=`Mean(R)`, color=Metodo, group=Metodo))+
-  geom_line() + 
-  geom_point() + 
-  geom_ribbon(aes(ymin=`Quantile.0.05(R)`,ymax=`Quantile.0.95(R)`), alpha = 0.5) +
-  geom_hline(yintercept=1, linetype="solid", color = "darkgray", size=0.6) +
-  scale_y_continuous(breaks = scales::pretty_breaks(n = 5), limits=c(0,4)) +
-  labs(title="Número de reproducción efectivo (Re) en Chile",
-       y="Re",x="Días desde inicio del brote",
-       caption = paste0("El número de reproducción efectivo (Re) indica cuantos nuevos casos produce de manera directa cada caso conocido.
-                         Cálculos en base a un intervalo serial de 6.5 días (rango 4.5-8.5) y un período de 14 días.
-                         Se utilizan las nuevas muertes y nuevos casos confirmados COVID-19 reportadas por región para este análisis.
-                         Cuadrado C. Escuela de Salud Pública. Universidad de Chile. Update: ",tail(R0_data$date,n=1))) +
-  theme_minimal() 
-ggsave("Re comparasion casos y muertes Chile.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
-ggsave("~/Documents/GitHub/covid19-data/analisis/Re/graphs/Re comparasion casos y muertes Chile.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
-
-
+# # R estimation by Regions - death data ---------------------------------
+# 
+# # Download data by region
+# deaths <- read_csv("https://raw.githubusercontent.com/jorgeperezrojas/covid19-data/master/csv/muertes.csv")
+# 
+# # Reshape and clean data
+# death_long <- gather(deaths, date, deaths, "04/01/2020":rev(names(deaths))[1])
+# death_long
+# 
+# death_reg <- death_long %>% group_by(region) %>%  dplyr::mutate(date = lubridate::mdy(date),
+#                                                                 new_deaths = deaths-lag(deaths),
+#                                                                 week = lubridate::isoweek(date),
+#                                                                 time = seq(1,length(date)),
+#                                                                 new_deaths = tidyr::replace_na(new_deaths,0)) 
+# 
+# death_reg <- bind_rows(death_reg, death_reg %>% dplyr::group_by(date, week) %>%  dplyr::summarise(new_deaths=sum(new_deaths,na.rm = T),
+#                                                                                                   deaths=sum(deaths,na.rm = T)) %>%
+#                          dplyr::mutate(region="Chile",codigo=0,
+#                                        time = seq(1,length(date))))
+# 
+# 
+# # Example for RM (Biweekly Re)
+# t_start <- seq(2, nrow(death_reg %>% filter(codigo==13 & deaths>0  & !is.na(new_deaths)))-13)   
+# t_end <- t_start + 13       
+# 
+# rm(Re)
+# Re <- estimate_R(incid = death_reg %>% filter(codigo==13 & deaths>0) %>% dplyr::pull(new_deaths),
+#                  method="uncertain_si",
+#                  config = make_config(list(
+#                    mean_si = 6.48, std_si= 3.83,
+#                    min_mean_si = 4.48, max_mean_si = 8.48,
+#                    std_std_si = 0.5, std_mean_si= 1, 
+#                    min_std_si = 1.83, max_std_si = 5.83,
+#                    t_start = t_start, 
+#                    t_end = t_end)))
+# plot(Re)
+# Re_death <- Re
+# cbind(tail(Re$R$`Mean(R)`, n=1),tail(Re$R$`Quantile.0.025(R)`, n=1),tail(Re$R$`Quantile.0.975(R)`, n=1))
+# 
+# # Create empty dataset for loop
+# R0_data <- as.data.frame(matrix(NA, nrow = 1,ncol = ncol(Re$R)+1))
+# 
+# # Assign names to variables
+# colnames(R0_data) <- c(colnames(Re$R),"codigo")
+# 
+# # Loop over each region
+# for (i in 0:(nrow(table(death_reg$codigo)))){
+#   t_start <- seq(2, nrow(death_reg %>% filter(codigo==i))-13)   
+#   t_end <- t_start + 13    
+#   R0est <- estimate_R(incid = death_reg %>% filter(codigo==i) %>% dplyr::pull(new_deaths),
+#                       method="uncertain_si",
+#                       config = make_config(list(
+#                         mean_si = 5, std_si= 3.8,
+#                         min_mean_si = 3, max_mean_si = 7,
+#                         std_std_si = 0.5, std_mean_si= 1, 
+#                         min_std_si = 1.8, max_std_si = 5.8,
+#                         t_start = t_start, 
+#                         t_end = t_end)))
+#   Re <- R0est$R
+#   data_temp <- Re %>% mutate(codigo=i) 
+#   R0_data <- bind_rows(R0_data %>% filter(!is.na(codigo)),data_temp)
+#   rm(data_temp)  
+# }
+# 
+# # Save data 
+# 
+# R0_data<-left_join(R0_data %>% mutate(time=t_end) %>% filter(!is.na(`Mean(R)`)),
+#                    cases_reg)                  
+# save(R0_data, file="Re_deaths_region.R")
+# 
+# readr::write_excel_csv2(R0_data %>% filter(!is.na(region)),
+#                         paste0("Re_deaths_region.R",tail(R0_data$date,n=1),".csv"))
+# readr::write_excel_csv2(R0_data %>% filter(!is.na(region)) %>%  dplyr::select(date, week, region, `Mean(R)`,`Quantile.0.025(R)`,`Quantile.0.975(R)`),
+#                         paste0("~/Documents/GitHub/covid19-data/analisis/Re/data/Re_deaths_region.R",tail(R0_data$date,n=1),".csv"))
+# 
+# # Graficos - Region
+# ggplot(R0_data %>% filter(time>20 & codigo!=0), aes(x=t_end, y=`Mean(R)`))+
+#   geom_line() + 
+#   geom_point() + 
+#   geom_ribbon(aes(ymin=`Quantile.0.05(R)`,ymax=`Quantile.0.95(R)`), alpha = 0.5) +
+#   geom_hline(yintercept=1, linetype="solid", color = "darkgray", size=0.6) +
+#   scale_y_continuous(breaks = scales::pretty_breaks(n = 5), limits=c(0,15)) +
+#   labs(title="Número de reproducción efectivo (Re) por Región.",
+#        y="Re",x="Días desde inicio del brote",
+#        caption = paste0("El número de reproducción efectivo (Re) indica cuantos nuevos casos produce de manera directa cada caso conocido.
+#                          Cálculos en base a un intervalo serial de 5 días (rango 3-7) y un período de 14 días.
+#                          Se utilizan las nuevas muertes COVID-19 reportadas por región para este análisis.
+#                          Cuadrado C. Escuela de Salud Pública. Universidad de Chile. Update: ",tail(R0_data$date,n=1))) +
+#   theme_minimal() +
+#   theme_minimal() +
+#   facet_wrap(region ~ .) 
+# ggsave("Re deaths region completo.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
+# ggsave("~/Documents/GitHub/covid19-data/analisis/Re/graphs/Re deaths region completo.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
+# 
+# 
+# # Graficos - Region ultimas 2 semanas
+# ggplot(R0_data %>% filter(time>tail(R0_data$time,n=1)-14 & codigo!=0), aes(x=t_end, y=`Mean(R)`, group=region))+
+#   geom_line() + 
+#   geom_point() + 
+#   geom_ribbon(aes(ymin=`Quantile.0.05(R)`,ymax=`Quantile.0.95(R)`), alpha = 0.5) +
+#   geom_hline(yintercept=1, linetype="solid", color = "darkgray", size=0.6) +
+#   scale_y_continuous(breaks = scales::pretty_breaks(n = 5), limits=c(0,3)) +
+#   labs(title="Número de reproducción efectivo (Re) por Región. Últimas 2 semanas.",
+#        y="Re",x="Días desde inicio del brote",
+#        caption = paste0("El número de reproducción efectivo (Re) indica cuantos nuevos casos produce de manera directa cada caso conocido.
+#                          Cálculos en base a un intervalo serial de 5 días (rango 3-7) y un período de 14 días.
+#                          Se utilizan las nuevas muertes COVID-19 reportadas por región para este análisis.
+#                          Cuadrado C. Escuela de Salud Pública. Universidad de Chile. Update: ",tail(R0_data$date,n=1))) +
+#   theme_minimal() +
+#   theme_minimal() +
+#   facet_wrap(region ~ .) 
+# ggsave("Re deaths region ultimas 2 semanas.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
+# ggsave("~/Documents/GitHub/covid19-data/analisis/Re/graphs/Re deaths region ultimas 2 semanas.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
+# 
+# # Comparación Re para Chile con datos de casos, UCI y muertes ---------------------
+# 
+# # Estimaciones Re por casos para Chile
+# t_start <- seq(2, nrow(cases_reg %>% filter(codigo==0))-13)   
+# t_end <- t_start + 13       
+# 
+# rm(Re_cases)
+# Re_cases <- estimate_R(incid = cases_reg %>% filter(codigo==0) %>% dplyr::pull(new_cases),
+#                  method="uncertain_si",
+#                  config = make_config(list(
+#                    mean_si = 6.48, std_si= 3.83,
+#                    min_mean_si = 4.48, max_mean_si = 8.48,
+#                    std_std_si = 0.5, std_mean_si= 1, 
+#                    min_std_si = 1.83, max_std_si = 5.83,
+#                    t_start = t_start, 
+#                    t_end = t_end)))
+# cbind(tail( Re_cases$R$`Mean(R)`, n=1),tail(Re_cases$R$`Quantile.0.025(R)`, n=1),tail( Re_cases$R$`Quantile.0.975(R)`, n=1))
+# 
+# # Estimaciones Re por muertes para Chile
+# t_start <- seq(2, nrow(death_reg %>% filter(codigo==0))-13)   
+# t_end <- t_start + 13       
+# 
+# rm(Re_death)
+# Re_death <- estimate_R(incid = death_reg %>% filter(codigo==0) %>% dplyr::pull(new_deaths),
+#                        method="uncertain_si",
+#                        config = make_config(list(
+#                          mean_si = 6.48, std_si= 3.83,
+#                          min_mean_si = 4.48, max_mean_si = 8.48,
+#                          std_std_si = 0.5, std_mean_si= 1, 
+#                          min_std_si = 1.83, max_std_si = 5.83,
+#                          t_start = t_start, 
+#                          t_end = t_end)))
+# cbind(tail( Re_death$R$`Mean(R)`, n=1),tail(Re_death$R$`Quantile.0.025(R)`, n=1),tail( Re_death$R$`Quantile.0.975(R)`, n=1))
+# 
+# 
+# Re_cases2 <- Re_cases$R %>% dplyr::select(t_start, t_end, `Mean(R)`, `Quantile.0.05(R)`,`Quantile.0.95(R)`) %>%
+#              mutate(Metodo="Casos confirmados")
+# Re_death2 <- Re_death$R %>% dplyr::select(t_start, t_end, `Mean(R)`, `Quantile.0.05(R)`,`Quantile.0.95(R)`) %>%
+#              mutate(Metodo="Muertes",
+#                      t_end=t_end+12)
+# 
+# Re_comparison <- bind_rows(Re_cases2,Re_death2)
+# 
+# ggplot(Re_comparison %>% filter(t_end>=24), aes(x=t_end, y=`Mean(R)`, color=Metodo, group=Metodo))+
+#   geom_line() + 
+#   geom_point() + 
+#   geom_ribbon(aes(ymin=`Quantile.0.05(R)`,ymax=`Quantile.0.95(R)`), alpha = 0.5) +
+#   geom_hline(yintercept=1, linetype="solid", color = "darkgray", size=0.6) +
+#   scale_y_continuous(breaks = scales::pretty_breaks(n = 5), limits=c(0,4)) +
+#   labs(title="Número de reproducción efectivo (Re) en Chile",
+#        y="Re",x="Días desde inicio del brote",
+#        caption = paste0("El número de reproducción efectivo (Re) indica cuantos nuevos casos produce de manera directa cada caso conocido.
+#                          Cálculos en base a un intervalo serial de 6.5 días (rango 4.5-8.5) y un período de 14 días.
+#                          Se utilizan las nuevas muertes y nuevos casos confirmados COVID-19 reportadas por región para este análisis.
+#                          Cuadrado C. Escuela de Salud Pública. Universidad de Chile. Update: ",tail(R0_data$date,n=1))) +
+#   theme_minimal() 
+# ggsave("Re comparasion casos y muertes Chile.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
+# ggsave("~/Documents/GitHub/covid19-data/analisis/Re/graphs/Re comparasion casos y muertes Chile.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
+# 
+# 
 
 # R estimation by county ------------------------------------------------------------
 
 # Download data by county
-
 cases_muni <- read_csv("https://raw.githubusercontent.com/jorgeperezrojas/covid19-data/master/csv/long_confirmados_comunas_interpolado.csv")
                   
 # Reshape and clean data
@@ -326,11 +338,11 @@ cases_muni <- cases_muni %>% group_by(comuna) %>% arrange(lubridate::mdy(fecha))
                                             time = seq(1,length(date))) %>% ungroup() %>% arrange(comuna,date)
 
 # Example for Recoleta (Weekly Re)
-t_start <- seq(2, nrow(cases_muni %>% filter(comuna=="Vitacura"))-13)   
+t_start <- seq(2, nrow(cases_muni %>% filter(comuna=="Calama"))-13)   
 t_end <- t_start + 13       
 
 rm(Re)
-Re <- estimate_R(incid = cases_muni %>% filter(comuna=="Vitacura") %>% dplyr::pull(new_cases),
+Re <- estimate_R(incid = cases_muni %>% filter(comuna=="Calama") %>% dplyr::pull(new_cases),
                  method="uncertain_si",
                  config = make_config(list(
                    mean_si = 5, std_si= 3.8,
@@ -341,6 +353,7 @@ Re <- estimate_R(incid = cases_muni %>% filter(comuna=="Vitacura") %>% dplyr::pu
                    t_end = t_end)))
 plot(Re)  
 cbind(tail(Re$R$`Mean(R)`, n=1),tail(Re$R$`Quantile.0.025(R)`, n=1),tail(Re$R$`Quantile.0.975(R)`, n=1))
+ggsave("Re Calama completo.png", width = 10*2.5, height = 8*2.5, units = "cm", dpi=300, limitsize = FALSE)
 
 # Create empty dataset for loop
 R0_data_muni <- as.data.frame(matrix(NA, nrow = 1,ncol = ncol(Re$R)+1))
@@ -382,7 +395,6 @@ for (i in comunas){
   R0_data_muni <- bind_rows(R0_data_muni,data_temp)
   rm(data_temp)
 }
-
 
 R0_data_muni2<-left_join(R0_data_muni %>% mutate(time=t_end) %>% filter(!is.na(`Mean(R)`)),
                         cases_muni %>% dplyr::select(comuna,codigo_comuna, region, codigo_region, date, time))                  
@@ -505,10 +517,8 @@ aes(x=t_end, y=`Mean(R)`, group=comuna))+
   # scale_alpha_continuous(range=c(0,0.1))+
   # guides(alpha=F) +
   facet_wrap(comuna ~ .)
-
 ggsave("Re municipios RM ultimas 2 semanas.png", width = 10*2.5, height = 10*2.5, units = "cm", dpi=300, limitsize = FALSE)
 ggsave("~/Documents/GitHub/covid19-data/analisis/Re/graphs/Re municipios RM ultimas 2 semanas.png", width = 10*2.5, height = 10*2.5, units = "cm", dpi=300, limitsize = FALSE)
-
 
 # Graficos de Re por comuna para cada región últimas 2 semanas
 for (i in 1:length(unique(R0_data_muni2$codigo_region))){
