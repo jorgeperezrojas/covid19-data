@@ -1,50 +1,87 @@
 [
     {
-        "region": "Tarapacá"
+        "region_name": "Sin región de origen",
+        "region_id": 0,
+        "gob_code": 16
     },
     {
-        "region": "Antofagasta"
+        "region_name": "Tarapacá",
+        "region_id": 1,
+        "gob_code": 1
     },
     {
-        "region": "Atacama"
+        "region_name": "Antofagasta",
+        "region_id": 2,
+        "gob_code": 2
     },
     {
-        "region": "Coquimbo"
+        "region_name": "Atacama",
+        "region_id": 3,
+        "gob_code": 3
     },
     {
-        "region": "Valparaíso"
+        "region_name": "Coquimbo",
+        "region_id": 4,
+        "gob_code": 4
     },
     {
-        "region": "O’Higgins"
+        "region_name": "Valparaíso",
+        "region_id": 5,
+        "gob_code": 5
     },
     {
-        "region": "Maule"
+        "region_name": "O’Higgins",
+        "region_id": 6,
+        "gob_code": 7
     },
     {
-        "region": "Biobío"
+        "region_name": "Maule",
+        "region_id": 7,
+        "gob_code": 8
     },
     {
-        "region": "Araucanía"
+        "region_name": "Biobío",
+        "region_id": 8,
+        "gob_code": 10
     },
     {
-        "region": "Los Lagos"
+        "region_name": "Araucanía",
+        "region_id": 9,
+        "gob_code": 11
     },
     {
-        "region": "Aysén"
+        "region_name": "Los Lagos",
+        "region_id": 10,
+        "gob_code": 13
     },
     {
-        "region": "Magallanes"
+        "region_name": "Aysén",
+        "region_id": 11,
+        "gob_code": 14
     },
     {
-        "region": "RM"
+        "region_name": "Magallanes",
+        "region_id": 12,
+        "gob_code": 15
     },
     {
-        "region": "Los Ríos"
+        "region_name": "RM",
+        "region_id": 13,
+        "gob_code": 6
     },
     {
-        "region": "Arica y Parinacota"
+        "region_name": "Los Ríos",
+        "region_id": 14,
+        "gob_code": 12
     },
     {
-        "region": "Ñuble"
+        "region_name": "Arica y Parinacota",
+        "region_id": 15,
+        "gob_code": 0
+    },
+    {
+        "region_name": "Ñuble",
+        "region_id": 16,
+        "gob_code": 9
     }
 ]

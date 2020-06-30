@@ -52,28 +52,27 @@ def update_files():
     dict_per_region = dict()
 
     # prepare the new gov data
-
+    i = 0
     for row in rows:
         for name_region in regions_data:
-            if row[0] == name_region["region"]:
+            if i == name_region["gob_code"]:
                 dict_per_region[regions_data.index(name_region)] = {
-                    "region": row[0],
-                    "region_id": regions_data.index(name_region) + 1,
+                    "region": name_region["region_name"],
                     "new_daily_cases": undotter(row[2]),
                     "confirmed": undotter(row[1]),
-                    "deaths": undotter(row[6]),
+                    "deaths": undotter(row[7]),
                 }
-
+        i += 1
     # add latest gov confirmed data to csv
     for row in confirmed_data:
-        row[date] = str(dict_per_region[int(row["codigo"]) - 1]["confirmed"])
+        row[date] = str(dict_per_region[int(row["codigo"])]["confirmed"])
     with open(CONFIRMED_CSV_PATH, "w", newline="") as csv_file:
         writer = csv.DictWriter(csv_file, fieldnames=confirmed_header)
         writer.writeheader()
         writer.writerows(confirmed_data)
     # add latest gov death data to csv
     for row in deaths_data:
-        row[date] = str(dict_per_region[int(row["codigo"]) - 1]["deaths"])
+        row[date] = str(dict_per_region[int(row["codigo"])]["deaths"])
     with open(DEATHS_CSV_PATH, "w", newline="") as csv_file:
         writer = csv.DictWriter(csv_file, fieldnames=deaths_header)
         writer.writeheader()
@@ -86,7 +85,7 @@ def update_files():
             .replace('"', "")
             .replace(".", ""),
             "dia": date,
-            "muertes": rows[-1][6].replace(",", "").replace('"', "").replace(".", ""),
+            "muertes": rows[-1][7].replace(",", "").replace('"', "").replace(".", ""),
         }
         national_data.append(national_dict)
 

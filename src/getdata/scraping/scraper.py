@@ -12,7 +12,7 @@ def get_gov_page():
     uclient.close()
     page_soup = soup(page_html, "html.parser")
     scripts = page_soup.find_all("script")[7].string
-    data_string = re.search(r"\],\[\"Arica y(.*)\"\]\]\]", scripts).group()
+    data_string = re.search(r"\],\[\"Arica(.*)\"\]\]\]", scripts).group()
     data = data_string.replace("],", "").replace('"["', '"],["').replace("]]]", "]")
 
     return ast.literal_eval(data)
