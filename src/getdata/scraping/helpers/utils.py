@@ -5,6 +5,7 @@ from .constants import REGIONS_JSON_FILE, BASE_PATH
 
 
 def undotter(string_number):
+    string_number = str(string_number)
     return (
         0
         if string_number == ""

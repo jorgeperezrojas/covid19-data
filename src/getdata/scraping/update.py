@@ -80,12 +80,12 @@ def update_files():
 
     if date != national_data[-1]["dia"]:
         national_dict = {
-            "confirmados": rows[-1][1]
+            "confirmados": str(rows[-1][1])
             .replace(",", "")
             .replace('"', "")
             .replace(".", ""),
             "dia": date,
-            "muertes": rows[-1][7].replace(",", "").replace('"', "").replace(".", ""),
+            "muertes": str(rows[-1][7]).replace(",", "").replace('"', "").replace(".", ""),
         }
         national_data.append(national_dict)
 
