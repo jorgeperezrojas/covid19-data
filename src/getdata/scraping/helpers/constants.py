@@ -22,7 +22,7 @@ PCRS_REGION = "{}/csv/pcrs_region.csv".format(BASE_PATH)
 CRON_EXECUTABLE = "{}/src/update_files.py".format(BASE_PATH)
 CRON_EXECUTABLE_CSV = "{}/src/auto_update_csv.py".format(BASE_PATH)
 NATIONAL_REPORT_PATH = "{}/csv/resumen_nacional.csv".format(BASE_PATH)
-INFOGRAM_LINK = "https://infogram.com/infografia-parte2-1ho16v9oz5vv4nq"
+INFOGRAM_LINK = "https://infogram.com/dgd-infografia-parte3-1hzj4odyo8176pw"
 
 SCOPE_FEEDS = "https://spreadsheets.google.com/feeds"
 SCOPE_SPREADSHEET = "https://www.googleapis.com/auth/spreadsheets"
