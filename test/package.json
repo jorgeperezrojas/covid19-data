@@ -1,0 +1,17 @@
+{
+  "name": "covid19-data-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/@hapi/lab/bin/lab ./test.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@hapi/code": "^8.0.1",
+    "@hapi/lab": "^22.0.4",
+    "csvdata": "^1.7.0",
+    "luxon": "^1.24.1"
+  }
+}
