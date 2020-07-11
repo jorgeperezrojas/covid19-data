@@ -21,11 +21,11 @@ from getdata.scraping.helpers.constants import (
     CONFIRMED_COMUNAS_CSV_PATH,
     PCRS_REGION
 )
-cmd.run("git pull", shell=True, cwd=BASE_PATH) 
+cmd.run("git pull --force", shell=True, cwd=BASE_PATH) 
 update_csv.update_csv_all([NOTIFICATIONS_CSV_PATH, PATIENTS_ICU_CSV_PATH, CONFIRMED_COMUNAS_CSV_PATH, PCRS_REGION], [1, 2, 4, 5])
 timestamp = datetime.datetime.now()
 message = "Actualizacion de csv a las " + str(timestamp)
-cmd.run("git pull", shell=True, cwd=BASE_PATH) 
+cmd.run("git pull --force", shell=True, cwd=BASE_PATH) 
 cmd.run("git add {}".format(NOTIFICATIONS_CSV_PATH), shell=True, cwd=BASE_PATH)
 cmd.run("git add {}".format(PATIENTS_ICU_CSV_PATH), shell=True, cwd=BASE_PATH)
 cmd.run("git add {}".format(CONFIRMED_COMUNAS_CSV_PATH), shell=True, cwd=BASE_PATH)
