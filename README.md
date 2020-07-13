@@ -1,5 +1,7 @@
 # Datos COVID19 Chile
 
+![CSV Testing](https://github.com/jorgeperezrojas/covid19-data/workflows/CSV%20Testing/badge.svg)
+
 En este respositorio encontrarás versiones .csv de datos de COVID19 en Chile, la mayor parte de ellos obtenidos desde [esta planilla](https://docs.google.com/spreadsheets/d/1mLx2L8nMaRZu0Sy4lyFniDewl6jDcgnxB_d0lHG-boc). Los datos en la planilla se actualizan con cada nuevo informe en pdf entregado por el [Minsal](https://www.minsal.cl/) (sí, **en pdf**🤦‍♂️). Los datos en este repositorio los actualizaremos tan frecuemtemente como podamos (idealmente una vez al día) y dependiendo de si el Minsal sigue entregando informes y no cambia demasiado los formatos.
 
 ¡Pueden usar los datos para lo que quieran! Pero por favor🙏 sean responsables si hacen predicciones con ellos. Cualquiera que quiera ayudar es muy bienvenid@. Pueden hacer un *Pull Request*, abrir un *Issue* o escribir a jperez_arroba_dcc.uchile.cl.
