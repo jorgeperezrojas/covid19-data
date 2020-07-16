@@ -12,6 +12,7 @@
     "@hapi/code": "^8.0.1",
     "@hapi/lab": "^22.0.4",
     "csvdata": "^1.7.0",
-    "luxon": "^1.24.1"
+    "luxon": "^1.24.1",
+    "merge-anything": "^3.0.4"
   }
 }
