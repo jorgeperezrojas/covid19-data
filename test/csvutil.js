@@ -2,20 +2,10 @@
 const path = require('path');
 
 const csvdata = require('csvdata');
-const merge = require('merge-anything');
 
 const { expect } = require('@hapi/code');
 const { DateTime } = require('luxon');
 
-const CSV_CHECK_OPTIONS = {
-	delimiter: ',',
-	duplicates: false,
-	emptyLines: true,
-	emptyValues: false,
-	encoding: 'utf8',
-	limit: false,
-	log: true
-};
 const DATE_FORMAT = 'M/d/yyyy';
 
 class CsvUtil
@@ -80,10 +70,10 @@ class CsvUtil
 
 module.exports = (lab, files, run, optionsOverride = {}) =>
 {
-	for (const filename of files)
+	for (const filename in files)
 	{
-		const config = merge.merge(CSV_CHECK_OPTIONS, optionsOverride);
-		const csv = new CsvUtil(lab, filename, config);
+		const checkConfig = files[filename];
+		const csv = new CsvUtil(lab, filename, checkConfig);
 		lab.experiment(filename, () => {
 			csv.check();
 			run(csv);
