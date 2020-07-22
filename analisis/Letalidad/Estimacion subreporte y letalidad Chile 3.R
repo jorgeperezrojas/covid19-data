@@ -42,7 +42,6 @@ hospitalisation_to_death_truncated <- function(x) {
   plnorm(x + 1, muHDT, sigmaHDT) - plnorm(x, muHDT, sigmaHDT)
 }
 
-
 # Define CFR function -----------------------------------------------------
 
 # Function to work out correction CFR
@@ -85,7 +84,6 @@ cases <- cases %>% rename(region= Region, date=Fecha, cases=Total) %>% group_by(
                 new_cases=tidyr::replace_na(new_cases,0),
                 new_cases=ifelse(new_cases<0,0,new_cases),
                 time = seq(1,length(date))) %>% ungroup() %>% filter(region=="Total") %>% dplyr::select(-region)
-
 covidchile <- left_join(cases,deaths)
 
 covidchile <- covidchile %>% mutate(new_deaths=tidyr::replace_na(new_deaths,0),
@@ -137,8 +135,8 @@ m.ur.cfr.Chile<- m.ur.cfr.Chile %>% dplyr::mutate(underreporting_estimate = ifel
                                                                                          "% (",lower*100,"% - ",upper*100,"%)"))
 
 m.ur.cfr.Chile <- m.ur.cfr.Chile %>% arrange(date) %>% mutate(new_cases=total_cases-lag(total_cases),
-                                                              expected_cases = new_cases*(1+underreporting_estimate)) %>%
-                                     slice(., 7:(n()-7)) # Filtro primeras 7 y últimos 7 observaciones
+                                                              expected_cases = new_cases*(1+underreporting_estimate))
+                                     # slice(., 7:(n()-7)) # Filtro primeras 7 y últimos 7 observaciones
 
 m.ur.cfr.Chile.clean <- m.ur.cfr.Chile %>% dplyr::filter(!is.na(nCFR) & !is.na(new_cases))%>%
                           dplyr::select(date, new_cases, total_cases, total_deaths, underreporting_estimate, lower,
@@ -191,7 +189,7 @@ cCFR2 <- ggplot(m.ur.cfr.Chile %>% filter(!is.na(cCFR)), aes(date, cCFR)) +
   geom_ribbon(aes(ymax=cCFR_UQ,ymin=cCFR_LQ, fill="band"), show.legend=FALSE, alpha = 0.2) +
   geom_line(aes(date, nCFR, color="Cruda")) + geom_point(aes(date, nCFR, color="Cruda")) +
   geom_ribbon(aes(ymax=nCFR_UQ,ymin=nCFR_LQ, fill="band2"), show.legend=FALSE, alpha = 0.2) +
-  scale_y_continuous(breaks = scales::pretty_breaks(n = 10), limits=c(0,0.05), labels = scales::percent) +
+  scale_y_continuous(breaks = scales::pretty_breaks(n = 10), limits=c(0,0.08), labels = scales::percent) +
   labs(y="Tasa de letalidad ajustada por retraso",x="Fecha") +
   scale_color_manual(values = c("firebrick3","goldenrod1"), name="Tasa de letalidad") +
   scale_fill_manual(values = c("firebrick3","goldenrod1")) +
@@ -263,15 +261,20 @@ cCFR2
                     nCFR_LQ = binom.test(total_deaths, total_cases)$conf.int[1],
                     cCFR_UQ = binom.test(total_deaths, cum_known_t)$conf.int[2],
                     cCFR_LQ = binom.test(total_deaths, cum_known_t)$conf.int[1],
-                    underreporting_estimate = cCFRBaseline / (100*cCFR),
-                    lower = cCFREstimateRange[1] / (100 * cCFR_UQ),
-                    upper = cCFREstimateRange[2] / (100 * cCFR_LQ),
+                    underreporting_estimate = 1-(cCFRBaseline / (100*cCFR)),
+                    underreporting_estimate = ifelse(underreporting_estimate<0,0,underreporting_estimate),
+                    lower = 1-(cCFREstimateRange[2] / (100 * cCFR_LQ)),
+                    upper = 1-(cCFREstimateRange[1] / (100 * cCFR_UQ)),
+                    lower = ifelse(lower<0,0,lower),
+                    upper = ifelse(upper>1,1,upper),
+                    mu = cum_known_t*underreporting_estimate,
+                    sd = cum_known_t*underreporting_estimate*(1-underreporting_estimate),
                     quantile25 = binom.test(total_deaths, cum_known_t, conf.level = 0.5)$conf.int[1],
                     quantile75 = binom.test(total_deaths, cum_known_t, conf.level = 0.5)$conf.int[2]
       ) %>% 
       dplyr::filter(total_deaths > 10)
-    underreport.byregion
-    
+    View(underreport.byregion)
+  
     underreport.byregionfinal <- underreport.byregion %>%
       dplyr::select(region, total_cases, total_deaths, underreporting_estimate, lower,
                     upper) %>%
@@ -302,7 +305,7 @@ cCFR2
     readr::write_excel_csv2(m.case.fatality.region.clean,
                             "~/Documents/GitHub/covid19-data/analisis/Letalidad/Letalidad_regiones.csv")
     
-   underreport.reg <- ggplot(data=underreport.byregionfinal %>% filter(total_deaths>30 & underreporting_estimate>0 & region!="Chile"), 
+   underreport.reg <- ggplot(data=underreport.byregionfinal %>% filter(total_deaths>10 & underreporting_estimate>0 & region!="Chile"), 
                              aes(reorder(region, -underreporting_estimate, sum),underreporting_estimate))+
       geom_col(fill = "#FF6666") +
       geom_errorbar(aes(ymin = lower, ymax = upper), width=0.2) +
@@ -315,7 +318,7 @@ cCFR2
            title = "Estimación de subreporte de casos COVID-19 en Chile por Región",
            caption = paste("Cuadrado C. Escuela de Salud Pública. Universidad de Chile. 
                            Líneas negras verticales representan el intervalo de credibilidad (95%) de la estimación.
-                           Se grafica subreporte para regiones con más de 30 muertes acumuladas y 
+                           Se grafica subreporte para regiones con más de 10 muertes acumuladas y 
                            subreporte estimado mayor a 0% promedio.
                            Update:",Sys.Date())) +
       scale_y_continuous(breaks = scales::pretty_breaks(n = 10), limits=c(0,1), labels = scales::percent) +
@@ -403,6 +406,20 @@ cCFR2
     
     region.data.desc <- region.data.desc %>% filter(region!="Atacama" & region!="Aysén") # Filter regions without deaths
     
+    library(boot)
+    n=1000
+    underreportFunc <- function(data,i){1-(data$cCFRB[i] /data$cCFR[i])}
+    
+    beta.CFRBase <- prevalence::betaExpert(best = cCFRBaseline/100, 
+                                           lower = cCFREstimateRange[1]/100, 
+                                           upper = cCFREstimateRange[2]/100, p = 0.95, 
+                                           method = "mean")
+
+    set.seed(1)
+    cCFRB <- rbeta(n, beta.CFRBase$alpha, beta.CFRBase$beta)
+    # cCFR <- rbeta(n, beta.CFR$alpha, beta.CFR$beta)
+    # data.sim <- as.data.frame(cbind(cCFRB,cCFR))
+    
     for (j in unique(region.data.desc$region)){
       for (i in 1:(nrow(region.data.desc %>%
                        dplyr::filter(region==j) %>%
@@ -423,13 +440,29 @@ cCFR2
                         nCFR_LQ = binom.test(total_deaths, total_cases)$conf.int[1],
                         cCFR_UQ = binom.test(total_deaths, cum_known_t)$conf.int[2],
                         cCFR_LQ = binom.test(total_deaths, cum_known_t)$conf.int[1],
-                        underreporting_estimate = cCFRBaseline / (100*cCFR),
-                        lower = cCFREstimateRange[1] / (100 * cCFR_UQ),
-                        upper = cCFREstimateRange[2] / (100 * cCFR_LQ),
+                        # underreporting_estimate = 1-(cCFRBaseline / (100*cCFR)),
+                        # underreporting_estimate = ifelse(underreporting_estimate<0,0,underreporting_estimate),
+                        # lower = 1-(cCFREstimateRange[2] / (100 * cCFR_LQ)),
+                        # upper = 1-(cCFREstimateRange[1] / (100 * cCFR_UQ)),
+                        # lower = ifelse(lower<0,0,lower),
+                        # upper = ifelse(upper>1,1,upper),
                         quantile25 = binom.test(total_deaths, cum_known_t, conf.level = 0.5)$conf.int[1],
                         quantile75 = binom.test(total_deaths, cum_known_t, conf.level = 0.5)$conf.int[2],
                         region = j,
                         date = zoo::as.Date(date))
+      beta.CFR <- prevalence::betaExpert(best = current$cCFR[i], 
+                                         lower = current$cCFR_LQ[i], 
+                                         upper = current$cCFR_UQ[i], p = 0.95, 
+                                         method = "mean")
+      set.seed(1)
+      cCFR <- rbeta(n, beta.CFR$alpha, beta.CFR$beta)
+      data.sim <- as.data.frame(cbind(cCFRB,cCFR))
+      bootundereport <- boot(data=data.sim, statistic=underreportFunc, R=n, parallel = "multicore")
+      ci <- boot.ci(bootundereport,  type = "bca")
+      current$underreporting_estimate2[i] <- ifelse(mean(bootundereport$t)<0,0,mean(bootundereport$t))
+      current$sd2[i] <- sd(bootundereport$t)
+      current$lower2[i] = ifelse(ci$bca[4]<0,0,ci$bca[4])
+      current$upper2[i] = ifelse(ci$bca[5]>1,1,ci$bca[5])
       }
       m.ur.cfr.region.Chile <- bind_rows(m.ur.cfr.region.Chile, current)
     }
@@ -522,15 +555,15 @@ cCFR2
     nCFR_reg_ts
     
     underreport_reg_ts
-    # ggsave("underreport_reg_ts.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
+    ggsave("underreport_reg_ts.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
     ggsave("~/Documents/GitHub/covid19-data/analisis/Subreporte/subreporte por region y tiempo.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
     
     cCFR_reg_ts
-    # ggsave("cCFR_reg_ts.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
+    ggsave("cCFR_reg_ts.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
     ggsave("~/Documents/GitHub/covid19-data/analisis/Letalidad/letalidad por region y tiempo", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
     
     nCFR_reg_ts
-    # ggsave("nCFR_reg_ts.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
+    ggsave("nCFR_reg_ts", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
     ggsave("~/Documents/GitHub/covid19-data/analisis/Letalidad/letalidad por region y tiempo 2.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
     
   
