@@ -172,7 +172,7 @@ readr::write_excel_csv2(m.case.fatality.Chile.clean,
 # Graph results
 underreport <- ggplot(m.ur.cfr.Chile %>% filter(!is.na(underreporting_estimate)), aes(date, 1-underreporting_estimate)) + geom_line() + geom_point() +
        geom_ribbon(aes(ymin=1-upper,ymax=1-lower), alpha = 0.5) +
-       scale_y_continuous(breaks = scales::pretty_breaks(n = 10), limits=c(0,1), labels = scales::percent) +
+       scale_y_continuous(breaks = scales::pretty_breaks(n = 10), limits=c(0,1), labels = scales::percent_format(accuracy = 1L)) +
        labs(y="Subreporte de casos sintomáticos COVID-19 (% del total de casos)",x="Fecha", 
            title = "Estimación de subreporte de casos COVID-19, Chile",
            caption = paste("Cuadrado C. Escuela de Salud Pública. Universidad de Chile. Update:",Sys.Date()))
@@ -180,7 +180,7 @@ underreport
 
 cCFR <- ggplot(m.ur.cfr.Chile %>% filter(!is.na(cCFR)), aes(date, cCFR)) + geom_line() + geom_point() +
         geom_ribbon(aes(ymax=cCFR_UQ,ymin=cCFR_LQ), alpha = 0.5) +
-        scale_y_continuous(breaks = scales::pretty_breaks(n = 10), limits=c(0,0.1), labels = scales::percent) +
+        scale_y_continuous(breaks = scales::pretty_breaks(n = 10), limits=c(0,0.1), labels = scales::percent_format(accuracy = 1L)) +
         labs(y="Tasa de letalidad ajustada por retraso",x="Fecha", 
              title = "Estimación de letalidad COVID-19 ajustada por retraso, Chile",
              caption = paste("Cuadrado C. Escuela de Salud Pública. Universidad de Chile.",Sys.Date()))
@@ -191,7 +191,7 @@ cCFR2 <- ggplot(m.ur.cfr.Chile %>% filter(!is.na(cCFR)), aes(date, cCFR)) +
   geom_ribbon(aes(ymax=cCFR_UQ,ymin=cCFR_LQ, fill="band"), show.legend=FALSE, alpha = 0.2) +
   geom_line(aes(date, nCFR, color="Cruda")) + geom_point(aes(date, nCFR, color="Cruda")) +
   geom_ribbon(aes(ymax=nCFR_UQ,ymin=nCFR_LQ, fill="band2"), show.legend=FALSE, alpha = 0.2) +
-  scale_y_continuous(breaks = scales::pretty_breaks(n = 10), limits=c(0,0.05), labels = scales::percent) +
+  scale_y_continuous(breaks = scales::pretty_breaks(n = 10), limits=c(0,0.05), labels = scales::percent_format(accuracy = 1L)) +
   labs(y="Tasa de letalidad ajustada por retraso",x="Fecha") +
   scale_color_manual(values = c("firebrick3","goldenrod1"), name="Tasa de letalidad") +
   scale_fill_manual(values = c("firebrick3","goldenrod1")) +
@@ -200,15 +200,15 @@ cCFR2 <- ggplot(m.ur.cfr.Chile %>% filter(!is.na(cCFR)), aes(date, cCFR)) +
 cCFR2
 
     underreport
-    ggsave("underreport.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
+    # ggsave("underreport.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
     ggsave("~/Documents/GitHub/covid19-data/analisis/Subreporte/subreporte Chile.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
     
     cCFR
-    ggsave("cCFR.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
+    # ggsave("cCFR.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
     ggsave("~/Documents/GitHub/covid19-data/analisis/Letalidad/letalidad Chile.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
     
     cCFR2
-    ggsave("cCFR2.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
+    # ggsave("cCFR2.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
     ggsave("~/Documents/GitHub/covid19-data/analisis/Letalidad/letalidad Chile 2.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
     
 
@@ -302,7 +302,7 @@ cCFR2
     readr::write_excel_csv2(m.case.fatality.region.clean,
                             "~/Documents/GitHub/covid19-data/analisis/Letalidad/Letalidad_regiones.csv")
     
-   underreport.reg <- ggplot(data=underreport.byregionfinal %>% filter(total_deaths>30 & underreporting_estimate>0 & region!="Chile"), 
+   underreport.reg <- ggplot(data=underreport.byregionfinal %>% filter(total_deaths>10 & underreporting_estimate>0 & region!="Chile"), 
                              aes(reorder(region, -underreporting_estimate, sum),underreporting_estimate))+
       geom_col(fill = "#FF6666") +
       geom_errorbar(aes(ymin = lower, ymax = upper), width=0.2) +
@@ -315,15 +315,15 @@ cCFR2
            title = "Estimación de subreporte de casos COVID-19 en Chile por Región",
            caption = paste("Cuadrado C. Escuela de Salud Pública. Universidad de Chile. 
                            Líneas negras verticales representan el intervalo de credibilidad (95%) de la estimación.
-                           Se grafica subreporte para regiones con más de 30 muertes acumuladas y 
+                           Se grafica subreporte para regiones con más de 10 muertes acumuladas y 
                            subreporte estimado mayor a 0% promedio.
                            Update:",Sys.Date())) +
-      scale_y_continuous(breaks = scales::pretty_breaks(n = 10), limits=c(0,1), labels = scales::percent) +
+      scale_y_continuous(breaks = scales::pretty_breaks(n = 10), limits=c(0,1), labels = scales::percent_format(accuracy = 1L)) +
       theme(axis.text.x = element_text(angle = 45)) +
       theme_minimal()
     
     underreport.reg
-    ggsave("underreport.reg.png")
+    # ggsave("underreport.reg.png")
     ggsave("~/Documents/GitHub/covid19-data/analisis/Subreporte/Subreporte por Región Chile.png", width = 12*2.5, height = 9*2.5, units = "cm", dpi=300, limitsize = FALSE)
     
     fatality.reg <- ggplot(data=m.case.fatality.region.clean, aes(reorder(region, -cCFR, sum),cCFR))+
@@ -339,12 +339,12 @@ cCFR2
            caption = paste("Cuadrado C. Escuela de Salud Pública. Universidad de Chile. 
                             Líneas negras verticales representan el intervalo de credibilidad (95%) de la estimación.
                            Update:",Sys.Date())) +
-      scale_y_continuous(breaks = scales::pretty_breaks(n = 10), limits=c(0,0.1), labels = scales::percent) +
+      scale_y_continuous(breaks = scales::pretty_breaks(n = 10), limits=c(0,0.1), labels = scales::percent_format(accuracy = 1L)) +
       theme(axis.text.x = element_text(angle = 45)) +
       theme_minimal()
     
     fatality.reg
-    ggsave("fatality.reg.png")
+    # ggsave("fatality.reg.png")
     ggsave("~/Documents/GitHub/covid19-data/analisis/Letalidad/Letalidad por Región Chile.png", width = 12*2.5, height = 9*2.5, units = "cm", dpi=300, limitsize = FALSE)
     
 #### Run analysis for Chile by day and region ------------------------------------------------------
@@ -484,41 +484,40 @@ cCFR2
                             "~/Documents/GitHub/covid19-data/analisis/Letalidad/Letalidad_Regiones_serie.csv")
     
     # Graph results
-    underreport_reg_ts <- ggplot(m.ur.cfr.region.Chile.clean %>% filter(deaths>10), 
+    underreport_reg_ts <- ggplot(m.ur.cfr.region.Chile.clean %>% filter(deaths>0), 
                                  aes(date, underreporting_estimate, color=region)) + geom_line() + geom_point() +
       # geom_ribbon(aes(ymin=lower,ymax=upper), alpha = 0.5) +
-      scale_y_continuous(breaks = scales::pretty_breaks(n = 10), limits=c(0,1), labels = scales::percent) +
+      scale_y_continuous(breaks = scales::pretty_breaks(n = 10), limits=c(0,1), labels = scales::percent_format(accuracy = 1L)) +
       labs(y="Subreporte de casos sintomáticos COVID-19 (% del total de casos)",x="Fecha", colour="Región",
            title = "Estimación de subreporte de casos COVID-19, Chile",
            caption = paste("Cuadrado C. Escuela de Salud Pública. Universidad de Chile.
-                           Se grafican tiempo-región con >10 fallecidos acumulados.
-                           Update:",Sys.Date()))+
-      theme_minimal()
-    
+                           Se grafican tiempo-región con 1 o más fallecidos acumulados.
+                           Update:",Sys.Date()))+ facet_wrap(region~.) +
+      theme_minimal() + theme(legend.position = "none")
     underreport_reg_ts
     
-    cCFR_reg_ts <- ggplot(m.case.fatality.region.Chile.clean %>% filter(deaths>10), 
+    cCFR_reg_ts <- ggplot(m.case.fatality.region.Chile.clean %>% filter(deaths>0), 
                           aes(date, cCFR, color=region)) + geom_line() + geom_point() +
       # geom_ribbon(aes(ymax=cCFR_UQ,ymin=cCFR_LQ), alpha = 0.1) +
-      scale_y_continuous(breaks = scales::pretty_breaks(n = 10), limits=c(0,0.1), labels = scales::percent) +
+      scale_y_continuous(breaks = scales::pretty_breaks(n = 5), limits=c(0,0.1), labels = scales::percent_format(accuracy = 1L)) +
       labs(y="Tasa de letalidad ajustada por retraso",x="Fecha", colour="Región",
            title = "Estimación de letalidad COVID-19 ajustada por retraso, Regiones de Chile",
            caption = paste("Cuadrado C. Escuela de Salud Pública. Universidad de Chile.
-                           Se grafican tiempo-región con >10 fallecidos acumulados.
-                           Update:",Sys.Date())) +
-      theme_minimal()
+                           Se grafican tiempo-región con 1 o más fallecidos acumulados.
+                           Update:",Sys.Date())) + facet_wrap(region~.) +
+      theme_minimal() + theme(legend.position = "none")
     cCFR_reg_ts  
     
-    nCFR_reg_ts <- ggplot(m.case.fatality.region.Chile.clean %>% filter(deaths>10), 
+    nCFR_reg_ts <- ggplot(m.case.fatality.region.Chile.clean %>% filter(deaths>0), 
                           aes(date, nCFR, color=region)) + geom_line() + geom_point() +
       # geom_ribbon(aes(ymax=nCFR_UQ,ymin=nCFR_LQ), alpha = 0.1) +
-      scale_y_continuous(breaks = scales::pretty_breaks(n = 10), limits=c(0,0.1), labels = scales::percent) +
+      scale_y_continuous(breaks = scales::pretty_breaks(n = 5), limits=c(0,0.05), labels = scales::percent_format(accuracy = 1L)) +
       labs(y="Tasa de letalidad cruda",x="Fecha",  colour="Región",
            title = "Estimación de letalidad COVID-19 cruda, Regiones de Chile",
            caption = paste("Cuadrado C. Escuela de Salud Pública. Universidad de Chile.
-                           Se grafican tiempo-región con >10 fallecidos acumulados.
-                           Update:",Sys.Date())) +
-      theme_minimal()
+                           Se grafican tiempo-región con 1 o más fallecidos acumulados.
+                           Update:",Sys.Date())) + facet_wrap(region~.) +
+      theme_minimal() + theme(legend.position = "none")
     nCFR_reg_ts
     
     underreport_reg_ts
@@ -527,7 +526,7 @@ cCFR2
     
     cCFR_reg_ts
     # ggsave("cCFR_reg_ts.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
-    ggsave("~/Documents/GitHub/covid19-data/analisis/Letalidad/letalidad por region y tiempo", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
+    ggsave("~/Documents/GitHub/covid19-data/analisis/Letalidad/letalidad por region y tiempo.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
     
     nCFR_reg_ts
     # ggsave("nCFR_reg_ts.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
