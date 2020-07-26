@@ -2,6 +2,7 @@
 const path = require('path');
 
 const csvdata = require('csvdata');
+const Enumerable = require('linq');
 
 const { expect } = require('@hapi/code');
 const { DateTime } = require('luxon');
@@ -10,12 +11,12 @@ const DATE_FORMAT = 'M/d/yyyy';
 
 class CsvUtil
 {
-	constructor(lab, filename, checkConfig)
+	constructor(lab, filename, config)
 	{
 		this.filename = filename;
 		this.fullPath = path.join(__dirname, '../csv', filename);
 		this.lab = lab;
-		this.checkConfig = checkConfig;
+		this.config = config;
 	}
 
 	async load() {
@@ -26,7 +27,7 @@ class CsvUtil
 
 	check() {
 		this.lab.test('File check: ' + this.filename, async() => {
-			const ok = await csvdata.check(this.fullPath, this.checkConfig);
+			const ok = await csvdata.check(this.fullPath, this.config.check);
 			expect(ok).to.be.true();
 		});
 	}
@@ -66,14 +67,46 @@ class CsvUtil
 			}
 		});
 	}
+
+	testContiguousTotal(testName, run)
+	{
+		this.lab.test(testName, async () =>
+		{
+			await this.load();
+			if (!this.data.length)
+				return;
+
+			const firstRow = this.data[0];
+			const keys = Object.keys(firstRow);
+			const validKeys = Enumerable
+				.from(keys)
+				.where(key => key.includes('/'));
+			const pairs = validKeys
+				.zip(validKeys.skip(1), (key1, key2) => ({ key1, key2 }))
+				.toArray();
+			for (const pair of pairs)
+			{
+				const totalValue1 = Enumerable
+					.from(this.data)
+					.select(row => row[pair.key1])
+					.sum();
+				const totalValue2 = Enumerable
+					.from(this.data)
+					.select(row => row[pair.key2])
+					.sum();
+				const info = `Columns: ${pair.key1} and ${pair.key2}`;
+				run(totalValue1, totalValue2, info);
+			}
+		});
+	}
 }
 
 module.exports = (lab, files, run, optionsOverride = {}) =>
 {
 	for (const filename in files)
 	{
-		const checkConfig = files[filename];
-		const csv = new CsvUtil(lab, filename, checkConfig);
+		const config = files[filename];
+		const csv = new CsvUtil(lab, filename, config);
 		lab.experiment(filename, () => {
 			csv.check();
 			run(csv);
