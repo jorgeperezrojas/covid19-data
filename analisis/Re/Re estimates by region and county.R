@@ -441,9 +441,9 @@ data$...2 <- data$...1 <- NULL
 
 # Limpiar base colapsando por comuna y asignando 1 a las comunas con al menos una parte de ella en cuarentena en cada día
 data$comuna <- sub(pattern=" urbano",replacement = "", x=data$comuna)  # Eliminar "urbano" de algunas comunas
-data <- data %>% group_by(comuna) %>% mutate_each(funs(as.numeric)) %>%
-                 summarise_all(funs(sum)) %>%  ungroup() %>%
-                 mutate_at(vars(-comuna),funs(ifelse(.>0,1,0)))
+data <- data %>% group_by(comuna) %>% mutate_each(~as.numeric(.)) %>%
+                 summarise_all(~sum(.)) %>%  ungroup() %>%
+                 mutate_at(vars(-comuna),~ifelse(.>0,1,0))
 
 # Pasar a formato long y arreglar fechas
 cuarentena_long <- tidyr:::gather(data, dia, cuarentena,colnames(data)[2]:tail(colnames(data),n=1), factor_key=F)
@@ -454,7 +454,7 @@ cuarentena_long <- cuarentena_long %>% separate(dia, sep ="-", c("day","month"))
                       ifelse(month=="abr",4,
                              ifelse(month=="may",5,
                                     ifelse(month=="june",6,
-                                           ifelse(month=="jul",7,NA))))),
+                                           ifelse(month=="july",7,NA))))),
          date=lubridate::make_date(year, month, day),
          semana=lubridate::week(date))
 
@@ -478,19 +478,18 @@ ggplot(R0_data_muniRM,
   scale_y_continuous(breaks = scales::pretty_breaks(n = 10), limits=c(0,4)) +
   labs(title="Número de reproducción efectivo (Re) en comunas RM",
        y="Re",x="Días desde inicio del brote",
-       caption = paste0("El número de reproducción efectivo (Re) indica cuantos nuevos casos produce de manera directa cada caso conocido.
-                         En color naranja se indica los períodos bajo cuarentena de cada comuna. Cálculos en base a un intervalo serial de 5 días (rango 3-7) y un período de 14 días.
+       # caption = paste0("El número de reproducción efectivo (Re) indica cuantos nuevos casos produce de manera directa cada caso conocido.
+       #                   En color naranja se indica los períodos bajo cuarentena de cada comuna. Cálculos en base a un intervalo serial de 5 días (rango 3-7) y un período de 14 días.
+       #                   Cuadrado C. Escuela de Salud Pública. Universidad de Chile. Update: ",tail(R0_data_muniRM$date,n=1))) +
+        caption = paste0("El número de reproducción efectivo (Re) indica cuantos nuevos casos produce de manera directa cada caso conocido.
                          Cuadrado C. Escuela de Salud Pública. Universidad de Chile. Update: ",tail(R0_data_muniRM$date,n=1))) +
-        # caption = paste0("El número de reproducción efectivo (Re) indica cuantos nuevos casos produce de manera directa cada caso conocido.
-        #                  Cuadrado C. Escuela de Salud Pública. Universidad de Chile. Update: ",tail(R0_data_muniRM$date,n=1))) +
   theme_minimal() +
-  theme_minimal() +
-  geom_segment(aes(y=-Inf, yend=Inf,x=t_end, xend=t_end, alpha=cuarentena),
-               inherit.aes = F,colour="coral", size=4)+
-  scale_alpha_continuous(range=c(0,0.1))+
-  guides(alpha=F) +
+  # geom_segment(aes(y=-Inf, yend=Inf,x=t_end, xend=t_end, alpha=cuarentena),
+  #              inherit.aes = F,colour="coral", size=4)+
+  # scale_alpha_continuous(range=c(0,0.1))+
+  # guides(alpha=F) +
   facet_wrap(comuna ~ ., scales = "free") 
-ggsave("Re municipios RM total.png", width = 10*3, height = 10*3, units = "cm", dpi=300, limitsize = FALSE)
+# ggsave("Re municipios RM total.png", width = 10*3, height = 10*3, units = "cm", dpi=300, limitsize = FALSE)
 ggsave("~/Documents/GitHub/covid19-data/analisis/Re/graphs/Re municipios RM total.png", width = 10*3, height = 10*3, units = "cm", dpi=300, limitsize = FALSE)
 
 # Graficos - Región Metropolitana
@@ -517,7 +516,7 @@ aes(x=t_end, y=`Mean(R)`, group=comuna))+
   # scale_alpha_continuous(range=c(0,0.1))+
   # guides(alpha=F) +
   facet_wrap(comuna ~ .)
-ggsave("Re municipios RM ultimas 2 semanas.png", width = 10*2.5, height = 10*2.5, units = "cm", dpi=300, limitsize = FALSE)
+# ggsave("Re municipios RM ultimas 2 semanas.png", width = 10*2.5, height = 10*2.5, units = "cm", dpi=300, limitsize = FALSE)
 ggsave("~/Documents/GitHub/covid19-data/analisis/Re/graphs/Re municipios RM ultimas 2 semanas.png", width = 10*2.5, height = 10*2.5, units = "cm", dpi=300, limitsize = FALSE)
 
 # Graficos de Re por comuna para cada región últimas 2 semanas
@@ -533,9 +532,8 @@ ggplot(R0_data_muni2 %>% filter(codigo_region==i & time>tail(R0_data_muni3$time,
        caption = paste0("Cuadrado C. Escuela de Salud Pública. Universidad de Chile. Update: ",tail(R0_data_muni2$date,n=1))) +
   theme_minimal() +
   facet_wrap(comuna ~ .)
-  ggsave(paste0("Re municipios - Region ",i,".png"), width = 10*2.5, height = 10*2.5, units = "cm", dpi=300, limitsize = FALSE)
+  # ggsave(paste0("Re municipios - Region ",i,".png"), width = 10*2.5, height = 10*2.5, units = "cm", dpi=300, limitsize = FALSE)
   ggsave(paste0("~/Documents/GitHub/covid19-data/analisis/Re/graphs/Re municipios - Region",i,".png"), width = 10*2.5, height = 10*2.5, units = "cm", dpi=300, limitsize = FALSE)
-  
 }
 
 # Re por Servicio de Salud ------------------------------------------------------------
@@ -544,7 +542,6 @@ ggplot(R0_data_muni2 %>% filter(codigo_region==i & time>tail(R0_data_muni3$time,
 
 cases_muni <- read_csv("https://raw.githubusercontent.com/jorgeperezrojas/covid19-data/master/csv/long_confirmados_comunas_interpolado.csv")
 
-library(readxl)
 SS_provincia_comuna <- read_excel("SS provincia comuna.xls", 
                                   col_types = c("numeric", "text", "text", 
                                                 "text", "text", "numeric", "text", 
@@ -687,7 +684,7 @@ ggplot(R0_data_ss2 %>% filter(time>20), aes(x=t_end, y=`Mean(R)`, group=ss))+
   theme_minimal() +
   theme_minimal() +
   facet_wrap(ss ~ .) 
-ggsave("Re SS completo.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
+# ggsave("Re SS completo.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
 ggsave("~/Documents/GitHub/covid19-data/analisis/Re/graphs/Re SS completo.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
 
 
@@ -705,7 +702,7 @@ ggplot(R0_data_ss2 %>% filter(time>tail(R0_data_ss2$time,n=1)-14), aes(x=t_end, 
   theme_minimal() +
   theme_minimal() +
   facet_wrap(ss ~ .) 
-ggsave("Re SS ultimas 2 semanas.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
+# ggsave("Re SS ultimas 2 semanas.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
 ggsave("~/Documents/GitHub/covid19-data/analisis/Re/graphs/Re SS ultimas 2 semanas.png", width = 12*2.5, height = 12*2.5, units = "cm", dpi=300, limitsize = FALSE)
 
                   
