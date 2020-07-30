@@ -45671,3 +45671,1041 @@ codigo_region,region,codigo_comuna,comuna,fecha,positivos_acumulados
 12,Magallanes,12104,San Gregorio,7/24/2020,2
 12,Magallanes,12303,Timaukel,7/24/2020,0
 12,Magallanes,12402,Torres del Paine,7/24/2020,0
+15,Arica y Parinacota,15101,Arica,7/25/2020,3987
+15,Arica y Parinacota,15102,Camarones,7/25/2020,14
+15,Arica y Parinacota,15202,General Lagos,7/25/2020,1
+15,Arica y Parinacota,15201,Putre,7/25/2020,36
+1,Tarapacá,1107,Alto Hospicio,7/25/2020,2384
+1,Tarapacá,1402,Camiña,7/25/2020,43
+1,Tarapacá,1403,Colchane,7/25/2020,87
+1,Tarapacá,1404,Huara,7/25/2020,132
+1,Tarapacá,1101,Iquique,7/25/2020,4448
+1,Tarapacá,1405,Pica,7/25/2020,199
+1,Tarapacá,1401,Pozo Almonte,7/25/2020,587
+2,Antofagasta,2101,Antofagasta,7/25/2020,6813
+2,Antofagasta,2201,Calama,7/25/2020,6126
+2,Antofagasta,2302,María Elena,7/25/2020,308
+2,Antofagasta,2102,Mejillones,7/25/2020,455
+2,Antofagasta,2202,Ollagüe,7/25/2020,21
+2,Antofagasta,2203,San Pedro de Atacama,7/25/2020,239
+2,Antofagasta,2103,Sierra Gorda,7/25/2020,62
+2,Antofagasta,2104,Taltal,7/25/2020,121
+2,Antofagasta,2301,Tocopilla,7/25/2020,265
+3,Atacama,3302,Alto del Carmen,7/25/2020,10
+3,Atacama,3102,Caldera,7/25/2020,72
+3,Atacama,3201,Chañaral,7/25/2020,41
+3,Atacama,3101,Copiapó,7/25/2020,1395
+3,Atacama,3202,Diego de Almagro,7/25/2020,52
+3,Atacama,3303,Freirina,7/25/2020,49
+3,Atacama,3304,Huasco,7/25/2020,27
+3,Atacama,3103,Tierra Amarilla,7/25/2020,131
+3,Atacama,3301,Vallenar,7/25/2020,445
+4,Coquimbo,4103,Andacollo,7/25/2020,51
+4,Coquimbo,4202,Canela,7/25/2020,22
+4,Coquimbo,4302,Combarbalá,7/25/2020,32
+4,Coquimbo,4102,Coquimbo,7/25/2020,2086
+4,Coquimbo,4201,Illapel,7/25/2020,249
+4,Coquimbo,4104,La Higuera,7/25/2020,38
+4,Coquimbo,4101,La Serena,7/25/2020,1769
+4,Coquimbo,4203,Los Vilos,7/25/2020,95
+4,Coquimbo,4303,Monte Patria,7/25/2020,253
+4,Coquimbo,4301,Ovalle,7/25/2020,1155
+4,Coquimbo,4105,Paiguano,7/25/2020,9
+4,Coquimbo,4304,Punitaqui,7/25/2020,83
+4,Coquimbo,4305,Río Hurtado,7/25/2020,25
+4,Coquimbo,4204,Salamanca,7/25/2020,95
+4,Coquimbo,4106,Vicuña,7/25/2020,118
+5,Valparaíso,5602,Algarrobo,7/25/2020,108
+5,Valparaíso,5402,Cabildo,7/25/2020,278
+5,Valparaíso,5502,Calera,7/25/2020,677
+5,Valparaíso,5302,Calle Larga,7/25/2020,229
+5,Valparaíso,5603,Cartagena,7/25/2020,172
+5,Valparaíso,5102,Casablanca,7/25/2020,185
+5,Valparaíso,5702,Catemu,7/25/2020,111
+5,Valparaíso,5103,Concón,7/25/2020,477
+5,Valparaíso,5604,El Quisco,7/25/2020,163
+5,Valparaíso,5605,El Tabo,7/25/2020,204
+5,Valparaíso,5503,Hijuelas,7/25/2020,173
+5,Valparaíso,5201,Isla de Pascua,7/25/2020,5
+5,Valparaíso,5104,Juan Fernández,7/25/2020,0
+5,Valparaíso,5504,La Cruz,7/25/2020,174
+5,Valparaíso,5401,La Ligua,7/25/2020,340
+5,Valparaíso,5802,Limache,7/25/2020,719
+5,Valparaíso,5703,Llaillay,7/25/2020,306
+5,Valparaíso,5301,Los Andes,7/25/2020,957
+5,Valparaíso,5506,Nogales,7/25/2020,159
+5,Valparaíso,5803,Olmué,7/25/2020,140
+5,Valparaíso,5704,Panquehue,7/25/2020,110
+5,Valparaíso,5403,Papudo,7/25/2020,79
+5,Valparaíso,5404,Petorca,7/25/2020,83
+5,Valparaíso,5105,Puchuncaví,7/25/2020,156
+5,Valparaíso,5705,Putaendo,7/25/2020,209
+5,Valparaíso,5501,Quillota,7/25/2020,1416
+5,Valparaíso,5801,Quilpué,7/25/2020,1453
+5,Valparaíso,5107,Quintero,7/25/2020,374
+5,Valparaíso,5303,Rinconada,7/25/2020,164
+5,Valparaíso,5601,San Antonio,7/25/2020,1222
+5,Valparaíso,5304,San Esteban,7/25/2020,209
+5,Valparaíso,5701,San Felipe,7/25/2020,1065
+5,Valparaíso,5706,Santa María,7/25/2020,217
+5,Valparaíso,5606,Santo Domingo,7/25/2020,144
+5,Valparaíso,5101,Valparaíso,7/25/2020,3737
+5,Valparaíso,5804,Villa Alemana,7/25/2020,1405
+5,Valparaíso,5109,Viña del Mar,7/25/2020,3535
+5,Valparaíso,5405,Zapallar,7/25/2020,69
+13,Metropolitana,13502,Alhué,7/25/2020,171
+13,Metropolitana,13402,Buin,7/25/2020,2244
+13,Metropolitana,13403,Calera de Tango,7/25/2020,555
+13,Metropolitana,13102,Cerrillos,7/25/2020,2916
+13,Metropolitana,13103,Cerro Navia,7/25/2020,6198
+13,Metropolitana,13301,Colina,7/25/2020,4448
+13,Metropolitana,13104,Conchalí,7/25/2020,5925
+13,Metropolitana,13503,Curacaví,7/25/2020,842
+13,Metropolitana,13105,El Bosque,7/25/2020,6186
+13,Metropolitana,13602,El Monte,7/25/2020,1125
+13,Metropolitana,13106,Estación Central,7/25/2020,6010
+13,Metropolitana,13107,Huechuraba,7/25/2020,3636
+13,Metropolitana,13108,Independencia,7/25/2020,6239
+13,Metropolitana,13603,Isla de Maipo,7/25/2020,881
+13,Metropolitana,13109,La Cisterna,7/25/2020,3070
+13,Metropolitana,13110,La Florida,7/25/2020,13079
+13,Metropolitana,13111,La Granja,7/25/2020,6813
+13,Metropolitana,13112,La Pintana,7/25/2020,9716
+13,Metropolitana,13113,La Reina,7/25/2020,2124
+13,Metropolitana,13302,Lampa,7/25/2020,3367
+13,Metropolitana,13114,Las Condes,7/25/2020,5597
+13,Metropolitana,13115,Lo Barnechea,7/25/2020,3130
+13,Metropolitana,13116,Lo Espejo,7/25/2020,4055
+13,Metropolitana,13117,Lo Prado,7/25/2020,4657
+13,Metropolitana,13118,Macul,7/25/2020,4714
+13,Metropolitana,13119,Maipú,7/25/2020,13887
+13,Metropolitana,13504,María Pinto,7/25/2020,346
+13,Metropolitana,13501,Melipilla,7/25/2020,3655
+13,Metropolitana,13120,Ñuñoa,7/25/2020,5280
+13,Metropolitana,13604,Padre Hurtado,7/25/2020,2026
+13,Metropolitana,13404,Paine,7/25/2020,1782
+13,Metropolitana,13121,Pedro Aguirre Cerda,7/25/2020,4146
+13,Metropolitana,13605,Peñaflor,7/25/2020,2732
+13,Metropolitana,13122,Peñalolén,7/25/2020,11316
+13,Metropolitana,13202,Pirque,7/25/2020,1057
+13,Metropolitana,13123,Providencia,7/25/2020,3055
+13,Metropolitana,13124,Pudahuel,7/25/2020,9384
+13,Metropolitana,13201,Puente Alto,7/25/2020,21966
+13,Metropolitana,13125,Quilicura,7/25/2020,8692
+13,Metropolitana,13126,Quinta Normal,7/25/2020,5661
+13,Metropolitana,13127,Recoleta,7/25/2020,8162
+13,Metropolitana,13128,Renca,7/25/2020,7911
+13,Metropolitana,13401,San Bernardo,7/25/2020,10611
+13,Metropolitana,13129,San Joaquín,7/25/2020,4782
+13,Metropolitana,13203,San José de Maipo,7/25/2020,604
+13,Metropolitana,13130,San Miguel,7/25/2020,4975
+13,Metropolitana,13505,San Pedro,7/25/2020,220
+13,Metropolitana,13131,San Ramón,7/25/2020,4356
+13,Metropolitana,13101,Santiago,7/25/2020,14375
+13,Metropolitana,13601,Talagante,7/25/2020,1573
+13,Metropolitana,13303,Tiltil,7/25/2020,543
+13,Metropolitana,13132,Vitacura,7/25/2020,1452
+6,O’Higgins,6302,Chépica,7/25/2020,142
+6,O’Higgins,6303,Chimbarongo,7/25/2020,170
+6,O’Higgins,6102,Codegua,7/25/2020,191
+6,O’Higgins,6103,Coinco,7/25/2020,107
+6,O’Higgins,6104,Coltauco,7/25/2020,180
+6,O’Higgins,6105,Doñihue,7/25/2020,375
+6,O’Higgins,6106,Graneros,7/25/2020,452
+6,O’Higgins,6202,La Estrella,7/25/2020,34
+6,O’Higgins,6107,Las Cabras,7/25/2020,191
+6,O’Higgins,6203,Litueche,7/25/2020,77
+6,O’Higgins,6304,Lolol,7/25/2020,46
+6,O’Higgins,6108,Machalí,7/25/2020,938
+6,O’Higgins,6109,Malloa,7/25/2020,107
+6,O’Higgins,6204,Marchihue,7/25/2020,27
+6,O’Higgins,6110,Mostazal,7/25/2020,233
+6,O’Higgins,6305,Nancagua,7/25/2020,91
+6,O’Higgins,6205,Navidad,7/25/2020,76
+6,O’Higgins,6111,Olivar,7/25/2020,191
+6,O’Higgins,6306,Palmilla,7/25/2020,39
+6,O’Higgins,6206,Paredones,7/25/2020,20
+6,O’Higgins,6307,Peralillo,7/25/2020,53
+6,O’Higgins,6112,Peumo,7/25/2020,61
+6,O’Higgins,6113,Pichidegua,7/25/2020,142
+6,O’Higgins,6201,Pichilemu,7/25/2020,54
+6,O’Higgins,6308,Placilla,7/25/2020,63
+6,O’Higgins,6309,Pumanque,7/25/2020,4
+6,O’Higgins,6114,Quinta de Tilcoco,7/25/2020,98
+6,O’Higgins,6101,Rancagua,7/25/2020,5506
+6,O’Higgins,6115,Rengo,7/25/2020,926
+6,O’Higgins,6116,Requínoa,7/25/2020,369
+6,O’Higgins,6301,San Fernando,7/25/2020,403
+6,O’Higgins,6117,San Vicente,7/25/2020,413
+6,O’Higgins,6310,Santa Cruz,7/25/2020,169
+7,Maule,7201,Cauquenes,7/25/2020,390
+7,Maule,7202,Chanco,7/25/2020,46
+7,Maule,7402,Colbún,7/25/2020,180
+7,Maule,7102,Constitución,7/25/2020,331
+7,Maule,7103,Curepto,7/25/2020,45
+7,Maule,7301,Curicó,7/25/2020,1935
+7,Maule,7104,Empedrado,7/25/2020,30
+7,Maule,7302,Hualañé,7/25/2020,115
+7,Maule,7303,Licantén,7/25/2020,21
+7,Maule,7401,Linares,7/25/2020,653
+7,Maule,7403,Longaví,7/25/2020,258
+7,Maule,7105,Maule,7/25/2020,410
+7,Maule,7304,Molina,7/25/2020,252
+7,Maule,7404,Parral,7/25/2020,262
+7,Maule,7106,Pelarco,7/25/2020,91
+7,Maule,7203,Pelluhue,7/25/2020,64
+7,Maule,7107,Pencahue,7/25/2020,54
+7,Maule,7305,Rauco,7/25/2020,99
+7,Maule,7405,Retiro,7/25/2020,135
+7,Maule,7108,Río Claro,7/25/2020,87
+7,Maule,7306,Romeral,7/25/2020,244
+7,Maule,7307,Sagrada Familia,7/25/2020,87
+7,Maule,7109,San Clemente,7/25/2020,491
+7,Maule,7406,San Javier,7/25/2020,406
+7,Maule,7110,San Rafael,7/25/2020,125
+7,Maule,7101,Talca,7/25/2020,1831
+7,Maule,7308,Teno,7/25/2020,232
+7,Maule,7309,Vichuquén,7/25/2020,6
+7,Maule,7407,Villa Alegre,7/25/2020,132
+7,Maule,7408,Yerbas Buenas,7/25/2020,120
+16,Ñuble,16102,Bulnes,7/25/2020,348
+16,Ñuble,16101,Chillán,7/25/2020,1680
+16,Ñuble,16103,Chillán Viejo,7/25/2020,284
+16,Ñuble,16202,Cobquecura,7/25/2020,1
+16,Ñuble,16203,Coelemu,7/25/2020,73
+16,Ñuble,16302,Coihueco,7/25/2020,199
+16,Ñuble,16104,El Carmen,7/25/2020,94
+16,Ñuble,16204,Ninhue,7/25/2020,45
+16,Ñuble,16303,Ñiquén,7/25/2020,60
+16,Ñuble,16105,Pemuco,7/25/2020,102
+16,Ñuble,16106,Pinto,7/25/2020,65
+16,Ñuble,16205,Portezuelo,7/25/2020,21
+16,Ñuble,16107,Quillón,7/25/2020,176
+16,Ñuble,16201,Quirihue,7/25/2020,62
+16,Ñuble,16206,Ránquil,7/25/2020,41
+16,Ñuble,16301,San Carlos,7/25/2020,481
+16,Ñuble,16304,San Fabián,7/25/2020,14
+16,Ñuble,16108,San Ignacio,7/25/2020,169
+16,Ñuble,16305,San Nicolás,7/25/2020,112
+16,Ñuble,16207,Treguaco,7/25/2020,6
+16,Ñuble,16109,Yungay,7/25/2020,125
+8,Biobío,8314,Alto Biobío,7/25/2020,171
+8,Biobío,8302,Antuco,7/25/2020,57
+8,Biobío,8202,Arauco,7/25/2020,336
+8,Biobío,8303,Cabrero,7/25/2020,144
+8,Biobío,8203,Cañete,7/25/2020,87
+8,Biobío,8103,Chiguayante,7/25/2020,542
+8,Biobío,8101,Concepción,7/25/2020,1669
+8,Biobío,8204,Contulmo,7/25/2020,45
+8,Biobío,8102,Coronel,7/25/2020,1278
+8,Biobío,8205,Curanilahue,7/25/2020,181
+8,Biobío,8104,Florida,7/25/2020,51
+8,Biobío,8112,Hualpén,7/25/2020,715
+8,Biobío,8105,Hualqui,7/25/2020,202
+8,Biobío,8304,Laja,7/25/2020,169
+8,Biobío,8201,Lebu,7/25/2020,41
+8,Biobío,8206,Los Álamos,7/25/2020,126
+8,Biobío,8301,Los Ángeles,7/25/2020,1099
+8,Biobío,8106,Lota,7/25/2020,395
+8,Biobío,8305,Mulchén,7/25/2020,127
+8,Biobío,8306,Nacimiento,7/25/2020,159
+8,Biobío,8307,Negrete,7/25/2020,131
+8,Biobío,8107,Penco,7/25/2020,410
+8,Biobío,8308,Quilaco,7/25/2020,16
+8,Biobío,8309,Quilleco,7/25/2020,46
+8,Biobío,8108,San Pedro de la Paz,7/25/2020,872
+8,Biobío,8310,San Rosendo,7/25/2020,34
+8,Biobío,8311,Santa Bárbara,7/25/2020,130
+8,Biobío,8109,Santa Juana,7/25/2020,86
+8,Biobío,8110,Talcahuano,7/25/2020,1149
+8,Biobío,8207,Tirúa,7/25/2020,30
+8,Biobío,8111,Tomé,7/25/2020,377
+8,Biobío,8312,Tucapel,7/25/2020,147
+8,Biobío,8313,Yumbel,7/25/2020,202
+9,Araucanía,9201,Angol,7/25/2020,455
+9,Araucanía,9102,Carahue,7/25/2020,90
+9,Araucanía,9121,Cholchol,7/25/2020,36
+9,Araucanía,9202,Collipulli,7/25/2020,69
+9,Araucanía,9103,Cunco,7/25/2020,82
+9,Araucanía,9203,Curacautín,7/25/2020,31
+9,Araucanía,9104,Curarrehue,7/25/2020,4
+9,Araucanía,9204,Ercilla,7/25/2020,33
+9,Araucanía,9105,Freire,7/25/2020,120
+9,Araucanía,9106,Galvarino,7/25/2020,133
+9,Araucanía,9107,Gorbea,7/25/2020,38
+9,Araucanía,9108,Lautaro,7/25/2020,152
+9,Araucanía,9109,Loncoche,7/25/2020,83
+9,Araucanía,9205,Lonquimay,7/25/2020,71
+9,Araucanía,9206,Los Sauces,7/25/2020,22
+9,Araucanía,9207,Lumaco,7/25/2020,42
+9,Araucanía,9110,Melipeuco,7/25/2020,11
+9,Araucanía,9111,Nueva Imperial,7/25/2020,130
+9,Araucanía,9112,Padre Las Casas,7/25/2020,216
+9,Araucanía,9113,Perquenco,7/25/2020,43
+9,Araucanía,9114,Pitrufquén,7/25/2020,98
+9,Araucanía,9115,Pucón,7/25/2020,79
+9,Araucanía,9208,Purén,7/25/2020,38
+9,Araucanía,9209,Renaico,7/25/2020,54
+9,Araucanía,9116,Saavedra,7/25/2020,99
+9,Araucanía,9101,Temuco,7/25/2020,1129
+9,Araucanía,9117,Teodoro Schmidt,7/25/2020,31
+9,Araucanía,9118,Toltén,7/25/2020,17
+9,Araucanía,9210,Traiguén,7/25/2020,52
+9,Araucanía,9211,Victoria,7/25/2020,192
+9,Araucanía,9119,Vilcún,7/25/2020,136
+9,Araucanía,9120,Villarrica,7/25/2020,104
+14,Los Ríos,14102,Corral,7/25/2020,26
+14,Los Ríos,14202,Futrono,7/25/2020,61
+14,Los Ríos,14201,La Unión,7/25/2020,100
+14,Los Ríos,14203,Lago Ranco,7/25/2020,7
+14,Los Ríos,14103,Lanco,7/25/2020,28
+14,Los Ríos,14104,Los Lagos,7/25/2020,63
+14,Los Ríos,14105,Máfil,7/25/2020,23
+14,Los Ríos,14106,Mariquina,7/25/2020,36
+14,Los Ríos,14107,Paillaco,7/25/2020,35
+14,Los Ríos,14108,Panguipulli,7/25/2020,65
+14,Los Ríos,14204,Río Bueno,7/25/2020,33
+14,Los Ríos,14101,Valdivia,7/25/2020,418
+10,Los Lagos,10202,Ancud,7/25/2020,108
+10,Los Lagos,10102,Calbuco,7/25/2020,172
+10,Los Lagos,10201,Castro,7/25/2020,17
+10,Los Lagos,10401,Chaitén,7/25/2020,11
+10,Los Lagos,10203,Chonchi,7/25/2020,1
+10,Los Lagos,10103,Cochamó,7/25/2020,13
+10,Los Lagos,10204,Curaco de Vélez,7/25/2020,18
+10,Los Lagos,10205,Dalcahue,7/25/2020,7
+10,Los Lagos,10104,Fresia,7/25/2020,31
+10,Los Lagos,10105,Frutillar,7/25/2020,146
+10,Los Lagos,10402,Futaleufú,7/25/2020,1
+10,Los Lagos,10403,Hualaihué,7/25/2020,20
+10,Los Lagos,10107,Llanquihue,7/25/2020,88
+10,Los Lagos,10106,Los Muermos,7/25/2020,49
+10,Los Lagos,10108,Maullín,7/25/2020,59
+10,Los Lagos,10301,Osorno,7/25/2020,649
+10,Los Lagos,10404,Palena,7/25/2020,0
+10,Los Lagos,10101,Puerto Montt,7/25/2020,1552
+10,Los Lagos,10302,Puerto Octay,7/25/2020,9
+10,Los Lagos,10109,Puerto Varas,7/25/2020,130
+10,Los Lagos,10206,Puqueldón,7/25/2020,0
+10,Los Lagos,10303,Purranque,7/25/2020,90
+10,Los Lagos,10304,Puyehue,7/25/2020,19
+10,Los Lagos,10207,Queilén,7/25/2020,1
+10,Los Lagos,10208,Quellón,7/25/2020,6
+10,Los Lagos,10209,Quemchi,7/25/2020,14
+10,Los Lagos,10210,Quinchao,7/25/2020,4
+10,Los Lagos,10305,Río Negro,7/25/2020,51
+10,Los Lagos,10306,San Juan de la Costa,7/25/2020,43
+10,Los Lagos,10307,San Pablo,7/25/2020,15
+11,Aysén,11201,Aisén,7/25/2020,38
+11,Aysén,11401,Chile Chico,7/25/2020,1
+11,Aysén,11202,Cisnes,7/25/2020,0
+11,Aysén,11301,Cochrane,7/25/2020,0
+11,Aysén,11101,Coyhaique,7/25/2020,30
+11,Aysén,11203,Guaitecas,7/25/2020,0
+11,Aysén,11102,Lago Verde,7/25/2020,0
+11,Aysén,11302,O'Higgins,7/25/2020,0
+11,Aysén,11402,Río Ibáñez,7/25/2020,0
+11,Aysén,11303,Tortel,7/25/2020,0
+12,Magallanes,12202,Antártica,7/25/2020,0
+12,Magallanes,12201,Cabo de Hornos,7/25/2020,22
+12,Magallanes,12102,Laguna Blanca,7/25/2020,0
+12,Magallanes,12401,Natales,7/25/2020,52
+12,Magallanes,12301,Porvenir,7/25/2020,10
+12,Magallanes,12302,Primavera,7/25/2020,1
+12,Magallanes,12101,Punta Arenas,7/25/2020,1509
+12,Magallanes,12103,Río Verde,7/25/2020,0
+12,Magallanes,12104,San Gregorio,7/25/2020,2
+12,Magallanes,12303,Timaukel,7/25/2020,0
+12,Magallanes,12402,Torres del Paine,7/25/2020,0
+15,Arica y Parinacota,15101,Arica,7/26/2020,4130
+15,Arica y Parinacota,15102,Camarones,7/26/2020,15
+15,Arica y Parinacota,15202,General Lagos,7/26/2020,1
+15,Arica y Parinacota,15201,Putre,7/26/2020,37
+1,Tarapacá,1107,Alto Hospicio,7/26/2020,2392
+1,Tarapacá,1402,Camiña,7/26/2020,43
+1,Tarapacá,1403,Colchane,7/26/2020,88
+1,Tarapacá,1404,Huara,7/26/2020,132
+1,Tarapacá,1101,Iquique,7/26/2020,4474
+1,Tarapacá,1405,Pica,7/26/2020,201
+1,Tarapacá,1401,Pozo Almonte,7/26/2020,591
+2,Antofagasta,2101,Antofagasta,7/26/2020,6894
+2,Antofagasta,2201,Calama,7/26/2020,6185
+2,Antofagasta,2302,María Elena,7/26/2020,311
+2,Antofagasta,2102,Mejillones,7/26/2020,460
+2,Antofagasta,2202,Ollagüe,7/26/2020,21
+2,Antofagasta,2203,San Pedro de Atacama,7/26/2020,244
+2,Antofagasta,2103,Sierra Gorda,7/26/2020,64
+2,Antofagasta,2104,Taltal,7/26/2020,122
+2,Antofagasta,2301,Tocopilla,7/26/2020,269
+3,Atacama,3302,Alto del Carmen,7/26/2020,11
+3,Atacama,3102,Caldera,7/26/2020,77
+3,Atacama,3201,Chañaral,7/26/2020,46
+3,Atacama,3101,Copiapó,7/26/2020,1521
+3,Atacama,3202,Diego de Almagro,7/26/2020,53
+3,Atacama,3303,Freirina,7/26/2020,50
+3,Atacama,3304,Huasco,7/26/2020,29
+3,Atacama,3103,Tierra Amarilla,7/26/2020,144
+3,Atacama,3301,Vallenar,7/26/2020,451
+4,Coquimbo,4103,Andacollo,7/26/2020,51
+4,Coquimbo,4202,Canela,7/26/2020,23
+4,Coquimbo,4302,Combarbalá,7/26/2020,33
+4,Coquimbo,4102,Coquimbo,7/26/2020,2156
+4,Coquimbo,4201,Illapel,7/26/2020,252
+4,Coquimbo,4104,La Higuera,7/26/2020,43
+4,Coquimbo,4101,La Serena,7/26/2020,1829
+4,Coquimbo,4203,Los Vilos,7/26/2020,102
+4,Coquimbo,4303,Monte Patria,7/26/2020,254
+4,Coquimbo,4301,Ovalle,7/26/2020,1163
+4,Coquimbo,4105,Paiguano,7/26/2020,9
+4,Coquimbo,4304,Punitaqui,7/26/2020,85
+4,Coquimbo,4305,Río Hurtado,7/26/2020,26
+4,Coquimbo,4204,Salamanca,7/26/2020,104
+4,Coquimbo,4106,Vicuña,7/26/2020,120
+5,Valparaíso,5602,Algarrobo,7/26/2020,108
+5,Valparaíso,5402,Cabildo,7/26/2020,278
+5,Valparaíso,5502,Calera,7/26/2020,686
+5,Valparaíso,5302,Calle Larga,7/26/2020,231
+5,Valparaíso,5603,Cartagena,7/26/2020,173
+5,Valparaíso,5102,Casablanca,7/26/2020,188
+5,Valparaíso,5702,Catemu,7/26/2020,113
+5,Valparaíso,5103,Concón,7/26/2020,478
+5,Valparaíso,5604,El Quisco,7/26/2020,165
+5,Valparaíso,5605,El Tabo,7/26/2020,205
+5,Valparaíso,5503,Hijuelas,7/26/2020,175
+5,Valparaíso,5201,Isla de Pascua,7/26/2020,5
+5,Valparaíso,5104,Juan Fernández,7/26/2020,0
+5,Valparaíso,5504,La Cruz,7/26/2020,178
+5,Valparaíso,5401,La Ligua,7/26/2020,344
+5,Valparaíso,5802,Limache,7/26/2020,725
+5,Valparaíso,5703,Llaillay,7/26/2020,311
+5,Valparaíso,5301,Los Andes,7/26/2020,962
+5,Valparaíso,5506,Nogales,7/26/2020,164
+5,Valparaíso,5803,Olmué,7/26/2020,142
+5,Valparaíso,5704,Panquehue,7/26/2020,112
+5,Valparaíso,5403,Papudo,7/26/2020,80
+5,Valparaíso,5404,Petorca,7/26/2020,85
+5,Valparaíso,5105,Puchuncaví,7/26/2020,157
+5,Valparaíso,5705,Putaendo,7/26/2020,212
+5,Valparaíso,5501,Quillota,7/26/2020,1425
+5,Valparaíso,5801,Quilpué,7/26/2020,1462
+5,Valparaíso,5107,Quintero,7/26/2020,376
+5,Valparaíso,5303,Rinconada,7/26/2020,165
+5,Valparaíso,5601,San Antonio,7/26/2020,1230
+5,Valparaíso,5304,San Esteban,7/26/2020,210
+5,Valparaíso,5701,San Felipe,7/26/2020,1069
+5,Valparaíso,5706,Santa María,7/26/2020,218
+5,Valparaíso,5606,Santo Domingo,7/26/2020,144
+5,Valparaíso,5101,Valparaíso,7/26/2020,3762
+5,Valparaíso,5804,Villa Alemana,7/26/2020,1410
+5,Valparaíso,5109,Viña del Mar,7/26/2020,3552
+5,Valparaíso,5405,Zapallar,7/26/2020,70
+13,Metropolitana,13502,Alhué,7/26/2020,175
+13,Metropolitana,13402,Buin,7/26/2020,2254
+13,Metropolitana,13403,Calera de Tango,7/26/2020,557
+13,Metropolitana,13102,Cerrillos,7/26/2020,2928
+13,Metropolitana,13103,Cerro Navia,7/26/2020,6214
+13,Metropolitana,13301,Colina,7/26/2020,4459
+13,Metropolitana,13104,Conchalí,7/26/2020,5940
+13,Metropolitana,13503,Curacaví,7/26/2020,844
+13,Metropolitana,13105,El Bosque,7/26/2020,6201
+13,Metropolitana,13602,El Monte,7/26/2020,1129
+13,Metropolitana,13106,Estación Central,7/26/2020,6025
+13,Metropolitana,13107,Huechuraba,7/26/2020,3653
+13,Metropolitana,13108,Independencia,7/26/2020,6251
+13,Metropolitana,13603,Isla de Maipo,7/26/2020,897
+13,Metropolitana,13109,La Cisterna,7/26/2020,3084
+13,Metropolitana,13110,La Florida,7/26/2020,13115
+13,Metropolitana,13111,La Granja,7/26/2020,6827
+13,Metropolitana,13112,La Pintana,7/26/2020,9751
+13,Metropolitana,13113,La Reina,7/26/2020,2127
+13,Metropolitana,13302,Lampa,7/26/2020,3377
+13,Metropolitana,13114,Las Condes,7/26/2020,5615
+13,Metropolitana,13115,Lo Barnechea,7/26/2020,3140
+13,Metropolitana,13116,Lo Espejo,7/26/2020,4066
+13,Metropolitana,13117,Lo Prado,7/26/2020,4666
+13,Metropolitana,13118,Macul,7/26/2020,4723
+13,Metropolitana,13119,Maipú,7/26/2020,13921
+13,Metropolitana,13504,María Pinto,7/26/2020,348
+13,Metropolitana,13501,Melipilla,7/26/2020,3674
+13,Metropolitana,13120,Ñuñoa,7/26/2020,5282
+13,Metropolitana,13604,Padre Hurtado,7/26/2020,2034
+13,Metropolitana,13404,Paine,7/26/2020,1788
+13,Metropolitana,13121,Pedro Aguirre Cerda,7/26/2020,4157
+13,Metropolitana,13605,Peñaflor,7/26/2020,2742
+13,Metropolitana,13122,Peñalolén,7/26/2020,11348
+13,Metropolitana,13202,Pirque,7/26/2020,1057
+13,Metropolitana,13123,Providencia,7/26/2020,3069
+13,Metropolitana,13124,Pudahuel,7/26/2020,9399
+13,Metropolitana,13201,Puente Alto,7/26/2020,22031
+13,Metropolitana,13125,Quilicura,7/26/2020,8709
+13,Metropolitana,13126,Quinta Normal,7/26/2020,5677
+13,Metropolitana,13127,Recoleta,7/26/2020,8182
+13,Metropolitana,13128,Renca,7/26/2020,7968
+13,Metropolitana,13401,San Bernardo,7/26/2020,10643
+13,Metropolitana,13129,San Joaquín,7/26/2020,4791
+13,Metropolitana,13203,San José de Maipo,7/26/2020,610
+13,Metropolitana,13130,San Miguel,7/26/2020,4975
+13,Metropolitana,13505,San Pedro,7/26/2020,220
+13,Metropolitana,13131,San Ramón,7/26/2020,4362
+13,Metropolitana,13101,Santiago,7/26/2020,14416
+13,Metropolitana,13601,Talagante,7/26/2020,1583
+13,Metropolitana,13303,Tiltil,7/26/2020,545
+13,Metropolitana,13132,Vitacura,7/26/2020,1457
+6,O’Higgins,6302,Chépica,7/26/2020,145
+6,O’Higgins,6303,Chimbarongo,7/26/2020,173
+6,O’Higgins,6102,Codegua,7/26/2020,193
+6,O’Higgins,6103,Coinco,7/26/2020,109
+6,O’Higgins,6104,Coltauco,7/26/2020,187
+6,O’Higgins,6105,Doñihue,7/26/2020,378
+6,O’Higgins,6106,Graneros,7/26/2020,454
+6,O’Higgins,6202,La Estrella,7/26/2020,34
+6,O’Higgins,6107,Las Cabras,7/26/2020,193
+6,O’Higgins,6203,Litueche,7/26/2020,78
+6,O’Higgins,6304,Lolol,7/26/2020,46
+6,O’Higgins,6108,Machalí,7/26/2020,942
+6,O’Higgins,6109,Malloa,7/26/2020,111
+6,O’Higgins,6204,Marchihue,7/26/2020,27
+6,O’Higgins,6110,Mostazal,7/26/2020,235
+6,O’Higgins,6305,Nancagua,7/26/2020,91
+6,O’Higgins,6205,Navidad,7/26/2020,76
+6,O’Higgins,6111,Olivar,7/26/2020,193
+6,O’Higgins,6306,Palmilla,7/26/2020,39
+6,O’Higgins,6206,Paredones,7/26/2020,20
+6,O’Higgins,6307,Peralillo,7/26/2020,53
+6,O’Higgins,6112,Peumo,7/26/2020,62
+6,O’Higgins,6113,Pichidegua,7/26/2020,146
+6,O’Higgins,6201,Pichilemu,7/26/2020,54
+6,O’Higgins,6308,Placilla,7/26/2020,64
+6,O’Higgins,6309,Pumanque,7/26/2020,4
+6,O’Higgins,6114,Quinta de Tilcoco,7/26/2020,101
+6,O’Higgins,6101,Rancagua,7/26/2020,5534
+6,O’Higgins,6115,Rengo,7/26/2020,943
+6,O’Higgins,6116,Requínoa,7/26/2020,373
+6,O’Higgins,6301,San Fernando,7/26/2020,413
+6,O’Higgins,6117,San Vicente,7/26/2020,420
+6,O’Higgins,6310,Santa Cruz,7/26/2020,173
+7,Maule,7201,Cauquenes,7/26/2020,393
+7,Maule,7202,Chanco,7/26/2020,47
+7,Maule,7402,Colbún,7/26/2020,183
+7,Maule,7102,Constitución,7/26/2020,340
+7,Maule,7103,Curepto,7/26/2020,46
+7,Maule,7301,Curicó,7/26/2020,1955
+7,Maule,7104,Empedrado,7/26/2020,30
+7,Maule,7302,Hualañé,7/26/2020,115
+7,Maule,7303,Licantén,7/26/2020,22
+7,Maule,7401,Linares,7/26/2020,669
+7,Maule,7403,Longaví,7/26/2020,260
+7,Maule,7105,Maule,7/26/2020,417
+7,Maule,7304,Molina,7/26/2020,255
+7,Maule,7404,Parral,7/26/2020,264
+7,Maule,7106,Pelarco,7/26/2020,96
+7,Maule,7203,Pelluhue,7/26/2020,65
+7,Maule,7107,Pencahue,7/26/2020,55
+7,Maule,7305,Rauco,7/26/2020,100
+7,Maule,7405,Retiro,7/26/2020,136
+7,Maule,7108,Río Claro,7/26/2020,89
+7,Maule,7306,Romeral,7/26/2020,248
+7,Maule,7307,Sagrada Familia,7/26/2020,88
+7,Maule,7109,San Clemente,7/26/2020,494
+7,Maule,7406,San Javier,7/26/2020,416
+7,Maule,7110,San Rafael,7/26/2020,125
+7,Maule,7101,Talca,7/26/2020,1850
+7,Maule,7308,Teno,7/26/2020,237
+7,Maule,7309,Vichuquén,7/26/2020,6
+7,Maule,7407,Villa Alegre,7/26/2020,134
+7,Maule,7408,Yerbas Buenas,7/26/2020,121
+16,Ñuble,16102,Bulnes,7/26/2020,349
+16,Ñuble,16101,Chillán,7/26/2020,1683
+16,Ñuble,16103,Chillán Viejo,7/26/2020,284
+16,Ñuble,16202,Cobquecura,7/26/2020,1
+16,Ñuble,16203,Coelemu,7/26/2020,73
+16,Ñuble,16302,Coihueco,7/26/2020,200
+16,Ñuble,16104,El Carmen,7/26/2020,94
+16,Ñuble,16204,Ninhue,7/26/2020,45
+16,Ñuble,16303,Ñiquén,7/26/2020,60
+16,Ñuble,16105,Pemuco,7/26/2020,102
+16,Ñuble,16106,Pinto,7/26/2020,65
+16,Ñuble,16205,Portezuelo,7/26/2020,21
+16,Ñuble,16107,Quillón,7/26/2020,176
+16,Ñuble,16201,Quirihue,7/26/2020,62
+16,Ñuble,16206,Ránquil,7/26/2020,41
+16,Ñuble,16301,San Carlos,7/26/2020,482
+16,Ñuble,16304,San Fabián,7/26/2020,14
+16,Ñuble,16108,San Ignacio,7/26/2020,169
+16,Ñuble,16305,San Nicolás,7/26/2020,112
+16,Ñuble,16207,Treguaco,7/26/2020,6
+16,Ñuble,16109,Yungay,7/26/2020,126
+8,Biobío,8314,Alto Biobío,7/26/2020,171
+8,Biobío,8302,Antuco,7/26/2020,59
+8,Biobío,8202,Arauco,7/26/2020,345
+8,Biobío,8303,Cabrero,7/26/2020,144
+8,Biobío,8203,Cañete,7/26/2020,95
+8,Biobío,8103,Chiguayante,7/26/2020,552
+8,Biobío,8101,Concepción,7/26/2020,1683
+8,Biobío,8204,Contulmo,7/26/2020,46
+8,Biobío,8102,Coronel,7/26/2020,1295
+8,Biobío,8205,Curanilahue,7/26/2020,187
+8,Biobío,8104,Florida,7/26/2020,55
+8,Biobío,8112,Hualpén,7/26/2020,725
+8,Biobío,8105,Hualqui,7/26/2020,204
+8,Biobío,8304,Laja,7/26/2020,172
+8,Biobío,8201,Lebu,7/26/2020,42
+8,Biobío,8206,Los Álamos,7/26/2020,129
+8,Biobío,8301,Los Ángeles,7/26/2020,1111
+8,Biobío,8106,Lota,7/26/2020,401
+8,Biobío,8305,Mulchén,7/26/2020,128
+8,Biobío,8306,Nacimiento,7/26/2020,161
+8,Biobío,8307,Negrete,7/26/2020,132
+8,Biobío,8107,Penco,7/26/2020,418
+8,Biobío,8308,Quilaco,7/26/2020,16
+8,Biobío,8309,Quilleco,7/26/2020,47
+8,Biobío,8108,San Pedro de la Paz,7/26/2020,883
+8,Biobío,8310,San Rosendo,7/26/2020,34
+8,Biobío,8311,Santa Bárbara,7/26/2020,134
+8,Biobío,8109,Santa Juana,7/26/2020,86
+8,Biobío,8110,Talcahuano,7/26/2020,1181
+8,Biobío,8207,Tirúa,7/26/2020,31
+8,Biobío,8111,Tomé,7/26/2020,381
+8,Biobío,8312,Tucapel,7/26/2020,148
+8,Biobío,8313,Yumbel,7/26/2020,203
+9,Araucanía,9201,Angol,7/26/2020,458
+9,Araucanía,9102,Carahue,7/26/2020,91
+9,Araucanía,9121,Cholchol,7/26/2020,36
+9,Araucanía,9202,Collipulli,7/26/2020,69
+9,Araucanía,9103,Cunco,7/26/2020,82
+9,Araucanía,9203,Curacautín,7/26/2020,31
+9,Araucanía,9104,Curarrehue,7/26/2020,4
+9,Araucanía,9204,Ercilla,7/26/2020,36
+9,Araucanía,9105,Freire,7/26/2020,121
+9,Araucanía,9106,Galvarino,7/26/2020,133
+9,Araucanía,9107,Gorbea,7/26/2020,38
+9,Araucanía,9108,Lautaro,7/26/2020,153
+9,Araucanía,9109,Loncoche,7/26/2020,83
+9,Araucanía,9205,Lonquimay,7/26/2020,71
+9,Araucanía,9206,Los Sauces,7/26/2020,22
+9,Araucanía,9207,Lumaco,7/26/2020,42
+9,Araucanía,9110,Melipeuco,7/26/2020,11
+9,Araucanía,9111,Nueva Imperial,7/26/2020,130
+9,Araucanía,9112,Padre Las Casas,7/26/2020,217
+9,Araucanía,9113,Perquenco,7/26/2020,43
+9,Araucanía,9114,Pitrufquén,7/26/2020,98
+9,Araucanía,9115,Pucón,7/26/2020,79
+9,Araucanía,9208,Purén,7/26/2020,38
+9,Araucanía,9209,Renaico,7/26/2020,55
+9,Araucanía,9116,Saavedra,7/26/2020,99
+9,Araucanía,9101,Temuco,7/26/2020,1136
+9,Araucanía,9117,Teodoro Schmidt,7/26/2020,31
+9,Araucanía,9118,Toltén,7/26/2020,17
+9,Araucanía,9210,Traiguén,7/26/2020,52
+9,Araucanía,9211,Victoria,7/26/2020,194
+9,Araucanía,9119,Vilcún,7/26/2020,138
+9,Araucanía,9120,Villarrica,7/26/2020,104
+14,Los Ríos,14102,Corral,7/26/2020,26
+14,Los Ríos,14202,Futrono,7/26/2020,61
+14,Los Ríos,14201,La Unión,7/26/2020,101
+14,Los Ríos,14203,Lago Ranco,7/26/2020,7
+14,Los Ríos,14103,Lanco,7/26/2020,28
+14,Los Ríos,14104,Los Lagos,7/26/2020,63
+14,Los Ríos,14105,Máfil,7/26/2020,26
+14,Los Ríos,14106,Mariquina,7/26/2020,36
+14,Los Ríos,14107,Paillaco,7/26/2020,36
+14,Los Ríos,14108,Panguipulli,7/26/2020,65
+14,Los Ríos,14204,Río Bueno,7/26/2020,34
+14,Los Ríos,14101,Valdivia,7/26/2020,422
+10,Los Lagos,10202,Ancud,7/26/2020,110
+10,Los Lagos,10102,Calbuco,7/26/2020,176
+10,Los Lagos,10201,Castro,7/26/2020,20
+10,Los Lagos,10401,Chaitén,7/26/2020,11
+10,Los Lagos,10203,Chonchi,7/26/2020,1
+10,Los Lagos,10103,Cochamó,7/26/2020,13
+10,Los Lagos,10204,Curaco de Vélez,7/26/2020,18
+10,Los Lagos,10205,Dalcahue,7/26/2020,7
+10,Los Lagos,10104,Fresia,7/26/2020,34
+10,Los Lagos,10105,Frutillar,7/26/2020,148
+10,Los Lagos,10402,Futaleufú,7/26/2020,1
+10,Los Lagos,10403,Hualaihué,7/26/2020,20
+10,Los Lagos,10107,Llanquihue,7/26/2020,97
+10,Los Lagos,10106,Los Muermos,7/26/2020,51
+10,Los Lagos,10108,Maullín,7/26/2020,61
+10,Los Lagos,10301,Osorno,7/26/2020,665
+10,Los Lagos,10404,Palena,7/26/2020,0
+10,Los Lagos,10101,Puerto Montt,7/26/2020,1643
+10,Los Lagos,10302,Puerto Octay,7/26/2020,9
+10,Los Lagos,10109,Puerto Varas,7/26/2020,134
+10,Los Lagos,10206,Puqueldón,7/26/2020,0
+10,Los Lagos,10303,Purranque,7/26/2020,90
+10,Los Lagos,10304,Puyehue,7/26/2020,19
+10,Los Lagos,10207,Queilén,7/26/2020,1
+10,Los Lagos,10208,Quellón,7/26/2020,7
+10,Los Lagos,10209,Quemchi,7/26/2020,14
+10,Los Lagos,10210,Quinchao,7/26/2020,4
+10,Los Lagos,10305,Río Negro,7/26/2020,52
+10,Los Lagos,10306,San Juan de la Costa,7/26/2020,43
+10,Los Lagos,10307,San Pablo,7/26/2020,16
+11,Aysén,11201,Aisén,7/26/2020,38
+11,Aysén,11401,Chile Chico,7/26/2020,1
+11,Aysén,11202,Cisnes,7/26/2020,0
+11,Aysén,11301,Cochrane,7/26/2020,0
+11,Aysén,11101,Coyhaique,7/26/2020,30
+11,Aysén,11203,Guaitecas,7/26/2020,0
+11,Aysén,11102,Lago Verde,7/26/2020,0
+11,Aysén,11302,O'Higgins,7/26/2020,0
+11,Aysén,11402,Río Ibáñez,7/26/2020,0
+11,Aysén,11303,Tortel,7/26/2020,0
+12,Magallanes,12202,Antártica,7/26/2020,0
+12,Magallanes,12201,Cabo de Hornos,7/26/2020,22
+12,Magallanes,12102,Laguna Blanca,7/26/2020,0
+12,Magallanes,12401,Natales,7/26/2020,52
+12,Magallanes,12301,Porvenir,7/26/2020,10
+12,Magallanes,12302,Primavera,7/26/2020,1
+12,Magallanes,12101,Punta Arenas,7/26/2020,1517
+12,Magallanes,12103,Río Verde,7/26/2020,0
+12,Magallanes,12104,San Gregorio,7/26/2020,2
+12,Magallanes,12303,Timaukel,7/26/2020,0
+12,Magallanes,12402,Torres del Paine,7/26/2020,0
+15,Arica y Parinacota,15101,Arica,7/27/2020,4211
+15,Arica y Parinacota,15102,Camarones,7/27/2020,15
+15,Arica y Parinacota,15202,General Lagos,7/27/2020,1
+15,Arica y Parinacota,15201,Putre,7/27/2020,37
+1,Tarapacá,1107,Alto Hospicio,7/27/2020,2414
+1,Tarapacá,1402,Camiña,7/27/2020,39
+1,Tarapacá,1403,Colchane,7/27/2020,89
+1,Tarapacá,1404,Huara,7/27/2020,133
+1,Tarapacá,1101,Iquique,7/27/2020,4552
+1,Tarapacá,1405,Pica,7/27/2020,205
+1,Tarapacá,1401,Pozo Almonte,7/27/2020,602
+2,Antofagasta,2101,Antofagasta,7/27/2020,6974
+2,Antofagasta,2201,Calama,7/27/2020,6243
+2,Antofagasta,2302,María Elena,7/27/2020,313
+2,Antofagasta,2102,Mejillones,7/27/2020,464
+2,Antofagasta,2202,Ollagüe,7/27/2020,21
+2,Antofagasta,2203,San Pedro de Atacama,7/27/2020,248
+2,Antofagasta,2103,Sierra Gorda,7/27/2020,66
+2,Antofagasta,2104,Taltal,7/27/2020,123
+2,Antofagasta,2301,Tocopilla,7/27/2020,273
+3,Atacama,3302,Alto del Carmen,7/27/2020,11
+3,Atacama,3102,Caldera,7/27/2020,77
+3,Atacama,3201,Chañaral,7/27/2020,46
+3,Atacama,3101,Copiapó,7/27/2020,1532
+3,Atacama,3202,Diego de Almagro,7/27/2020,53
+3,Atacama,3303,Freirina,7/27/2020,50
+3,Atacama,3304,Huasco,7/27/2020,29
+3,Atacama,3103,Tierra Amarilla,7/27/2020,145
+3,Atacama,3301,Vallenar,7/27/2020,451
+4,Coquimbo,4103,Andacollo,7/27/2020,51
+4,Coquimbo,4202,Canela,7/27/2020,24
+4,Coquimbo,4302,Combarbalá,7/27/2020,33
+4,Coquimbo,4102,Coquimbo,7/27/2020,2210
+4,Coquimbo,4201,Illapel,7/27/2020,255
+4,Coquimbo,4104,La Higuera,7/27/2020,46
+4,Coquimbo,4101,La Serena,7/27/2020,1875
+4,Coquimbo,4203,Los Vilos,7/27/2020,108
+4,Coquimbo,4303,Monte Patria,7/27/2020,255
+4,Coquimbo,4301,Ovalle,7/27/2020,1169
+4,Coquimbo,4105,Paiguano,7/27/2020,9
+4,Coquimbo,4304,Punitaqui,7/27/2020,87
+4,Coquimbo,4305,Río Hurtado,7/27/2020,26
+4,Coquimbo,4204,Salamanca,7/27/2020,111
+4,Coquimbo,4106,Vicuña,7/27/2020,122
+5,Valparaíso,5602,Algarrobo,7/27/2020,109
+5,Valparaíso,5402,Cabildo,7/27/2020,279
+5,Valparaíso,5502,Calera,7/27/2020,696
+5,Valparaíso,5302,Calle Larga,7/27/2020,233
+5,Valparaíso,5603,Cartagena,7/27/2020,174
+5,Valparaíso,5102,Casablanca,7/27/2020,192
+5,Valparaíso,5702,Catemu,7/27/2020,115
+5,Valparaíso,5103,Concón,7/27/2020,479
+5,Valparaíso,5604,El Quisco,7/27/2020,167
+5,Valparaíso,5605,El Tabo,7/27/2020,207
+5,Valparaíso,5503,Hijuelas,7/27/2020,177
+5,Valparaíso,5201,Isla de Pascua,7/27/2020,5
+5,Valparaíso,5104,Juan Fernández,7/27/2020,0
+5,Valparaíso,5504,La Cruz,7/27/2020,183
+5,Valparaíso,5401,La Ligua,7/27/2020,348
+5,Valparaíso,5802,Limache,7/27/2020,731
+5,Valparaíso,5703,Llaillay,7/27/2020,316
+5,Valparaíso,5301,Los Andes,7/27/2020,967
+5,Valparaíso,5506,Nogales,7/27/2020,169
+5,Valparaíso,5803,Olmué,7/27/2020,145
+5,Valparaíso,5704,Panquehue,7/27/2020,114
+5,Valparaíso,5403,Papudo,7/27/2020,81
+5,Valparaíso,5404,Petorca,7/27/2020,87
+5,Valparaíso,5105,Puchuncaví,7/27/2020,159
+5,Valparaíso,5705,Putaendo,7/27/2020,215
+5,Valparaíso,5501,Quillota,7/27/2020,1434
+5,Valparaíso,5801,Quilpué,7/27/2020,1472
+5,Valparaíso,5107,Quintero,7/27/2020,379
+5,Valparaíso,5303,Rinconada,7/27/2020,167
+5,Valparaíso,5601,San Antonio,7/27/2020,1238
+5,Valparaíso,5304,San Esteban,7/27/2020,212
+5,Valparaíso,5701,San Felipe,7/27/2020,1074
+5,Valparaíso,5706,Santa María,7/27/2020,220
+5,Valparaíso,5606,Santo Domingo,7/27/2020,145
+5,Valparaíso,5101,Valparaíso,7/27/2020,3789
+5,Valparaíso,5804,Villa Alemana,7/27/2020,1416
+5,Valparaíso,5109,Viña del Mar,7/27/2020,3571
+5,Valparaíso,5405,Zapallar,7/27/2020,71
+13,Metropolitana,13502,Alhué,7/27/2020,180
+13,Metropolitana,13402,Buin,7/27/2020,2265
+13,Metropolitana,13403,Calera de Tango,7/27/2020,560
+13,Metropolitana,13102,Cerrillos,7/27/2020,2942
+13,Metropolitana,13103,Cerro Navia,7/27/2020,6233
+13,Metropolitana,13301,Colina,7/27/2020,4472
+13,Metropolitana,13104,Conchalí,7/27/2020,5957
+13,Metropolitana,13503,Curacaví,7/27/2020,847
+13,Metropolitana,13105,El Bosque,7/27/2020,6217
+13,Metropolitana,13602,El Monte,7/27/2020,1134
+13,Metropolitana,13106,Estación Central,7/27/2020,6041
+13,Metropolitana,13107,Huechuraba,7/27/2020,3673
+13,Metropolitana,13108,Independencia,7/27/2020,6265
+13,Metropolitana,13603,Isla de Maipo,7/27/2020,915
+13,Metropolitana,13109,La Cisterna,7/27/2020,3100
+13,Metropolitana,13110,La Florida,7/27/2020,13156
+13,Metropolitana,13111,La Granja,7/27/2020,6843
+13,Metropolitana,13112,La Pintana,7/27/2020,9791
+13,Metropolitana,13113,La Reina,7/27/2020,2131
+13,Metropolitana,13302,Lampa,7/27/2020,3389
+13,Metropolitana,13114,Las Condes,7/27/2020,5635
+13,Metropolitana,13115,Lo Barnechea,7/27/2020,3152
+13,Metropolitana,13116,Lo Espejo,7/27/2020,4078
+13,Metropolitana,13117,Lo Prado,7/27/2020,4676
+13,Metropolitana,13118,Macul,7/27/2020,4734
+13,Metropolitana,13119,Maipú,7/27/2020,13960
+13,Metropolitana,13504,María Pinto,7/27/2020,351
+13,Metropolitana,13501,Melipilla,7/27/2020,3696
+13,Metropolitana,13120,Ñuñoa,7/27/2020,5285
+13,Metropolitana,13604,Padre Hurtado,7/27/2020,2042
+13,Metropolitana,13404,Paine,7/27/2020,1794
+13,Metropolitana,13121,Pedro Aguirre Cerda,7/27/2020,4170
+13,Metropolitana,13605,Peñaflor,7/27/2020,2753
+13,Metropolitana,13122,Peñalolén,7/27/2020,11384
+13,Metropolitana,13202,Pirque,7/27/2020,1058
+13,Metropolitana,13123,Providencia,7/27/2020,3084
+13,Metropolitana,13124,Pudahuel,7/27/2020,9415
+13,Metropolitana,13201,Puente Alto,7/27/2020,22105
+13,Metropolitana,13125,Quilicura,7/27/2020,8729
+13,Metropolitana,13126,Quinta Normal,7/27/2020,5695
+13,Metropolitana,13127,Recoleta,7/27/2020,8205
+13,Metropolitana,13128,Renca,7/27/2020,8032
+13,Metropolitana,13401,San Bernardo,7/27/2020,10679
+13,Metropolitana,13129,San Joaquín,7/27/2020,4802
+13,Metropolitana,13203,San José de Maipo,7/27/2020,617
+13,Metropolitana,13130,San Miguel,7/27/2020,4961
+13,Metropolitana,13505,San Pedro,7/27/2020,221
+13,Metropolitana,13131,San Ramón,7/27/2020,4368
+13,Metropolitana,13101,Santiago,7/27/2020,14463
+13,Metropolitana,13601,Talagante,7/27/2020,1594
+13,Metropolitana,13303,Tiltil,7/27/2020,548
+13,Metropolitana,13132,Vitacura,7/27/2020,1463
+6,O’Higgins,6302,Chépica,7/27/2020,148
+6,O’Higgins,6303,Chimbarongo,7/27/2020,175
+6,O’Higgins,6102,Codegua,7/27/2020,195
+6,O’Higgins,6103,Coinco,7/27/2020,110
+6,O’Higgins,6104,Coltauco,7/27/2020,193
+6,O’Higgins,6105,Doñihue,7/27/2020,380
+6,O’Higgins,6106,Graneros,7/27/2020,456
+6,O’Higgins,6202,La Estrella,7/27/2020,34
+6,O’Higgins,6107,Las Cabras,7/27/2020,194
+6,O’Higgins,6203,Litueche,7/27/2020,78
+6,O’Higgins,6304,Lolol,7/27/2020,46
+6,O’Higgins,6108,Machalí,7/27/2020,945
+6,O’Higgins,6109,Malloa,7/27/2020,114
+6,O’Higgins,6204,Marchihue,7/27/2020,27
+6,O’Higgins,6110,Mostazal,7/27/2020,236
+6,O’Higgins,6305,Nancagua,7/27/2020,91
+6,O’Higgins,6205,Navidad,7/27/2020,75
+6,O’Higgins,6111,Olivar,7/27/2020,195
+6,O’Higgins,6306,Palmilla,7/27/2020,39
+6,O’Higgins,6206,Paredones,7/27/2020,20
+6,O’Higgins,6307,Peralillo,7/27/2020,53
+6,O’Higgins,6112,Peumo,7/27/2020,62
+6,O’Higgins,6113,Pichidegua,7/27/2020,149
+6,O’Higgins,6201,Pichilemu,7/27/2020,54
+6,O’Higgins,6308,Placilla,7/27/2020,64
+6,O’Higgins,6309,Pumanque,7/27/2020,4
+6,O’Higgins,6114,Quinta de Tilcoco,7/27/2020,104
+6,O’Higgins,6101,Rancagua,7/27/2020,5558
+6,O’Higgins,6115,Rengo,7/27/2020,958
+6,O’Higgins,6116,Requínoa,7/27/2020,376
+6,O’Higgins,6301,San Fernando,7/27/2020,422
+6,O’Higgins,6117,San Vicente,7/27/2020,426
+6,O’Higgins,6310,Santa Cruz,7/27/2020,176
+7,Maule,7201,Cauquenes,7/27/2020,396
+7,Maule,7202,Chanco,7/27/2020,47
+7,Maule,7402,Colbún,7/27/2020,186
+7,Maule,7102,Constitución,7/27/2020,348
+7,Maule,7103,Curepto,7/27/2020,46
+7,Maule,7301,Curicó,7/27/2020,1972
+7,Maule,7104,Empedrado,7/27/2020,30
+7,Maule,7302,Hualañé,7/27/2020,115
+7,Maule,7303,Licantén,7/27/2020,22
+7,Maule,7401,Linares,7/27/2020,682
+7,Maule,7403,Longaví,7/27/2020,261
+7,Maule,7105,Maule,7/27/2020,423
+7,Maule,7304,Molina,7/27/2020,258
+7,Maule,7404,Parral,7/27/2020,265
+7,Maule,7106,Pelarco,7/27/2020,100
+7,Maule,7203,Pelluhue,7/27/2020,65
+7,Maule,7107,Pencahue,7/27/2020,55
+7,Maule,7305,Rauco,7/27/2020,101
+7,Maule,7405,Retiro,7/27/2020,136
+7,Maule,7108,Río Claro,7/27/2020,91
+7,Maule,7306,Romeral,7/27/2020,251
+7,Maule,7307,Sagrada Familia,7/27/2020,88
+7,Maule,7109,San Clemente,7/27/2020,497
+7,Maule,7406,San Javier,7/27/2020,424
+7,Maule,7110,San Rafael,7/27/2020,125
+7,Maule,7101,Talca,7/27/2020,1865
+7,Maule,7308,Teno,7/27/2020,241
+7,Maule,7309,Vichuquén,7/27/2020,6
+7,Maule,7407,Villa Alegre,7/27/2020,136
+7,Maule,7408,Yerbas Buenas,7/27/2020,121
+16,Ñuble,16102,Bulnes,7/27/2020,359
+16,Ñuble,16101,Chillán,7/27/2020,1708
+16,Ñuble,16103,Chillán Viejo,7/27/2020,286
+16,Ñuble,16202,Cobquecura,7/27/2020,2
+16,Ñuble,16203,Coelemu,7/27/2020,75
+16,Ñuble,16302,Coihueco,7/27/2020,204
+16,Ñuble,16104,El Carmen,7/27/2020,98
+16,Ñuble,16204,Ninhue,7/27/2020,48
+16,Ñuble,16303,Ñiquén,7/27/2020,60
+16,Ñuble,16105,Pemuco,7/27/2020,102
+16,Ñuble,16106,Pinto,7/27/2020,66
+16,Ñuble,16205,Portezuelo,7/27/2020,22
+16,Ñuble,16107,Quillón,7/27/2020,178
+16,Ñuble,16201,Quirihue,7/27/2020,62
+16,Ñuble,16206,Ránquil,7/27/2020,44
+16,Ñuble,16301,San Carlos,7/27/2020,489
+16,Ñuble,16304,San Fabián,7/27/2020,13
+16,Ñuble,16108,San Ignacio,7/27/2020,173
+16,Ñuble,16305,San Nicolás,7/27/2020,114
+16,Ñuble,16207,Treguaco,7/27/2020,6
+16,Ñuble,16109,Yungay,7/27/2020,130
+8,Biobío,8314,Alto Biobío,7/27/2020,171
+8,Biobío,8302,Antuco,7/27/2020,60
+8,Biobío,8202,Arauco,7/27/2020,352
+8,Biobío,8303,Cabrero,7/27/2020,144
+8,Biobío,8203,Cañete,7/27/2020,102
+8,Biobío,8103,Chiguayante,7/27/2020,560
+8,Biobío,8101,Concepción,7/27/2020,1694
+8,Biobío,8204,Contulmo,7/27/2020,46
+8,Biobío,8102,Coronel,7/27/2020,1309
+8,Biobío,8205,Curanilahue,7/27/2020,192
+8,Biobío,8104,Florida,7/27/2020,59
+8,Biobío,8112,Hualpén,7/27/2020,733
+8,Biobío,8105,Hualqui,7/27/2020,206
+8,Biobío,8304,Laja,7/27/2020,175
+8,Biobío,8201,Lebu,7/27/2020,43
+8,Biobío,8206,Los Álamos,7/27/2020,132
+8,Biobío,8301,Los Ángeles,7/27/2020,1120
+8,Biobío,8106,Lota,7/27/2020,405
+8,Biobío,8305,Mulchén,7/27/2020,128
+8,Biobío,8306,Nacimiento,7/27/2020,163
+8,Biobío,8307,Negrete,7/27/2020,132
+8,Biobío,8107,Penco,7/27/2020,425
+8,Biobío,8308,Quilaco,7/27/2020,16
+8,Biobío,8309,Quilleco,7/27/2020,48
+8,Biobío,8108,San Pedro de la Paz,7/27/2020,892
+8,Biobío,8310,San Rosendo,7/27/2020,34
+8,Biobío,8311,Santa Bárbara,7/27/2020,137
+8,Biobío,8109,Santa Juana,7/27/2020,86
+8,Biobío,8110,Talcahuano,7/27/2020,1206
+8,Biobío,8207,Tirúa,7/27/2020,31
+8,Biobío,8111,Tomé,7/27/2020,384
+8,Biobío,8312,Tucapel,7/27/2020,149
+8,Biobío,8313,Yumbel,7/27/2020,203
+9,Araucanía,9201,Angol,7/27/2020,464
+9,Araucanía,9102,Carahue,7/27/2020,94
+9,Araucanía,9121,Cholchol,7/27/2020,36
+9,Araucanía,9202,Collipulli,7/27/2020,70
+9,Araucanía,9103,Cunco,7/27/2020,83
+9,Araucanía,9203,Curacautín,7/27/2020,31
+9,Araucanía,9104,Curarrehue,7/27/2020,4
+9,Araucanía,9204,Ercilla,7/27/2020,42
+9,Araucanía,9105,Freire,7/27/2020,122
+9,Araucanía,9106,Galvarino,7/27/2020,133
+9,Araucanía,9107,Gorbea,7/27/2020,38
+9,Araucanía,9108,Lautaro,7/27/2020,156
+9,Araucanía,9109,Loncoche,7/27/2020,83
+9,Araucanía,9205,Lonquimay,7/27/2020,71
+9,Araucanía,9206,Los Sauces,7/27/2020,23
+9,Araucanía,9207,Lumaco,7/27/2020,42
+9,Araucanía,9110,Melipeuco,7/27/2020,11
+9,Araucanía,9111,Nueva Imperial,7/27/2020,131
+9,Araucanía,9112,Padre Las Casas,7/27/2020,218
+9,Araucanía,9113,Perquenco,7/27/2020,44
+9,Araucanía,9114,Pitrufquén,7/27/2020,99
+9,Araucanía,9115,Pucón,7/27/2020,79
+9,Araucanía,9208,Purén,7/27/2020,38
+9,Araucanía,9209,Renaico,7/27/2020,57
+9,Araucanía,9116,Saavedra,7/27/2020,99
+9,Araucanía,9101,Temuco,7/27/2020,1150
+9,Araucanía,9117,Teodoro Schmidt,7/27/2020,31
+9,Araucanía,9118,Toltén,7/27/2020,17
+9,Araucanía,9210,Traiguén,7/27/2020,53
+9,Araucanía,9211,Victoria,7/27/2020,197
+9,Araucanía,9119,Vilcún,7/27/2020,141
+9,Araucanía,9120,Villarrica,7/27/2020,105
+14,Los Ríos,14102,Corral,7/27/2020,26
+14,Los Ríos,14202,Futrono,7/27/2020,61
+14,Los Ríos,14201,La Unión,7/27/2020,101
+14,Los Ríos,14203,Lago Ranco,7/27/2020,7
+14,Los Ríos,14103,Lanco,7/27/2020,28
+14,Los Ríos,14104,Los Lagos,7/27/2020,63
+14,Los Ríos,14105,Máfil,7/27/2020,29
+14,Los Ríos,14106,Mariquina,7/27/2020,36
+14,Los Ríos,14107,Paillaco,7/27/2020,37
+14,Los Ríos,14108,Panguipulli,7/27/2020,65
+14,Los Ríos,14204,Río Bueno,7/27/2020,34
+14,Los Ríos,14101,Valdivia,7/27/2020,425
+10,Los Lagos,10202,Ancud,7/27/2020,111
+10,Los Lagos,10102,Calbuco,7/27/2020,179
+10,Los Lagos,10201,Castro,7/27/2020,23
+10,Los Lagos,10401,Chaitén,7/27/2020,11
+10,Los Lagos,10203,Chonchi,7/27/2020,1
+10,Los Lagos,10103,Cochamó,7/27/2020,13
+10,Los Lagos,10204,Curaco de Vélez,7/27/2020,18
+10,Los Lagos,10205,Dalcahue,7/27/2020,7
+10,Los Lagos,10104,Fresia,7/27/2020,37
+10,Los Lagos,10105,Frutillar,7/27/2020,149
+10,Los Lagos,10402,Futaleufú,7/27/2020,1
+10,Los Lagos,10403,Hualaihué,7/27/2020,20
+10,Los Lagos,10107,Llanquihue,7/27/2020,105
+10,Los Lagos,10106,Los Muermos,7/27/2020,53
+10,Los Lagos,10108,Maullín,7/27/2020,63
+10,Los Lagos,10301,Osorno,7/27/2020,678
+10,Los Lagos,10404,Palena,7/27/2020,0
+10,Los Lagos,10101,Puerto Montt,7/27/2020,1722
+10,Los Lagos,10302,Puerto Octay,7/27/2020,9
+10,Los Lagos,10109,Puerto Varas,7/27/2020,137
+10,Los Lagos,10206,Puqueldón,7/27/2020,0
+10,Los Lagos,10303,Purranque,7/27/2020,90
+10,Los Lagos,10304,Puyehue,7/27/2020,19
+10,Los Lagos,10207,Queilén,7/27/2020,0
+10,Los Lagos,10208,Quellón,7/27/2020,7
+10,Los Lagos,10209,Quemchi,7/27/2020,14
+10,Los Lagos,10210,Quinchao,7/27/2020,2
+10,Los Lagos,10305,Río Negro,7/27/2020,52
+10,Los Lagos,10306,San Juan de la Costa,7/27/2020,43
+10,Los Lagos,10307,San Pablo,7/27/2020,16
+11,Aysén,11201,Aisén,7/27/2020,41
+11,Aysén,11401,Chile Chico,7/27/2020,1
+11,Aysén,11202,Cisnes,7/27/2020,0
+11,Aysén,11301,Cochrane,7/27/2020,0
+11,Aysén,11101,Coyhaique,7/27/2020,30
+11,Aysén,11203,Guaitecas,7/27/2020,0
+11,Aysén,11102,Lago Verde,7/27/2020,0
+11,Aysén,11302,O'Higgins,7/27/2020,0
+11,Aysén,11402,Río Ibáñez,7/27/2020,0
+11,Aysén,11303,Tortel,7/27/2020,0
+12,Magallanes,12202,Antártica,7/27/2020,0
+12,Magallanes,12201,Cabo de Hornos,7/27/2020,22
+12,Magallanes,12102,Laguna Blanca,7/27/2020,0
+12,Magallanes,12401,Natales,7/27/2020,52
+12,Magallanes,12301,Porvenir,7/27/2020,10
+12,Magallanes,12302,Primavera,7/27/2020,1
+12,Magallanes,12101,Punta Arenas,7/27/2020,1530
+12,Magallanes,12103,Río Verde,7/27/2020,0
+12,Magallanes,12104,San Gregorio,7/27/2020,2
+12,Magallanes,12303,Timaukel,7/27/2020,0
+12,Magallanes,12402,Torres del Paine,7/27/2020,0
