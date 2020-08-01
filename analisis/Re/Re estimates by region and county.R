@@ -16,6 +16,7 @@ library("dplyr")
 library("readr")
 library("ggplot2")
 library("readxl")
+library("googlesheets4")
 
 # Set working directory
 setwd("~/Dropbox/COVID19/Estimaciones Re")
@@ -322,7 +323,9 @@ ggsave("~/Documents/GitHub/covid19-data/analisis/Re/graphs/Re region ultimas 2 s
 
 # Download data by county
 cases_muni <- read_csv("https://raw.githubusercontent.com/jorgeperezrojas/covid19-data/master/csv/long_confirmados_comunas_interpolado.csv")
-                  
+data <-read_sheet("https://docs.google.com/spreadsheets/d/1IjirW9zoW5H-x8AnQcQaKXZXiS1tCuTs0PxSkNxYE0g/edit#gid=0",
+                  sheet = "Sheet1", range = cell_rows(c(2, NA)))
+
 # Reshape and clean data
 cases_muni$positivos_acumulados <- ifelse(cases_muni$positivos_acumulados=="-",0,cases_muni$positivos_acumulados)
 cases_muni$positivos_acumulados <- as.numeric(cases_muni$positivos_acumulados)
@@ -428,13 +431,6 @@ load(file="Re_muni.R")
 # Graficos - Región Metropolitana
 
 # Agregar data de cuarentena
-
-library(googlesheets4)
-
-### Cargar datos cuarentenas
-data <-read_sheet("https://docs.google.com/spreadsheets/d/1IjirW9zoW5H-x8AnQcQaKXZXiS1tCuTs0PxSkNxYE0g/edit#gid=0",
-                  sheet = "Sheet1", range = cell_rows(c(2, NA)))
-
 data$comuna <- zoo::na.locf(data$...1 ) # Rellenar NA de comuna
 data <- data %>% slice(.,1:(which(data == "Cordones sanitarios", arr.ind=TRUE)[1]-2))  # Eliminar data redundante
 data$...2 <- data$...1 <- NULL
